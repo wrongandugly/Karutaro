@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KARUTARO — Você pede. Ele caça.</title>
+<style>
+  :root{
+    --ink:#0a0a0a; --paper:#ffffff; --red:#BB141D; --grey:#6f6f6f;
+    --soft:#f4f4f2;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  body{font-family:"Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", sans-serif;
+    background:#e9e9e6; color:var(--ink)}
+  .phone{max-width:430px; margin:0 auto; background:var(--paper);
+    min-height:100vh; box-shadow:0 0 0 1px #ccc}
+  header{border-bottom:3px solid var(--ink); padding:18px 20px 14px;
+    display:flex; justify-content:space-between; align-items:flex-end}
+  .wordmark{font-size:34px; font-weight:900; letter-spacing:-1.5px; line-height:.95}
+  .wordmark .dot{color:var(--red)}
+  .tagline{font-size:11px; font-weight:700; letter-spacing:2.2px; text-transform:uppercase; margin-top:5px}
+  .hamb{font-size:22px; font-weight:900; line-height:1; padding-bottom:4px}
+  .subbar{display:flex; justify-content:space-between; gap:10px; padding:8px 20px;
+    border-bottom:1px solid var(--ink);
+    font-size:11px; font-weight:700; letter-spacing:1.2px; text-transform:uppercase}
+  .subbar .live{color:var(--red); text-align:right}
+  .kicker{font-size:11px; font-weight:900; letter-spacing:2.4px; text-transform:uppercase; color:var(--red)}
+  /* ---------- character ---------- */
+  .char{text-align:center; flex:none}
+  .char img{height:122px; width:auto; display:block; margin:0 auto; transform-origin:50% 90%}
+  .char .cap{font-size:10.5px; font-weight:700; letter-spacing:.4px; color:var(--grey); margin-top:4px; max-width:140px; line-height:1.35}
+  @keyframes kbob{0%,100%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-4px) rotate(.6deg)}}
+  @keyframes khunt{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-5px) rotate(2deg)}}
+  @keyframes kfound{0%,100%{transform:translateY(0)}30%{transform:translateY(-10px)}55%{transform:translateY(0)}75%{transform:translateY(-5px)}}
+  @keyframes kwatch{0%,100%{transform:translateY(3px) rotate(1deg)}50%{transform:translateY(1px) rotate(.4deg)}}
+  .st-procurando{animation:kbob 3s ease-in-out infinite}
+  .st-cacando{animation:khunt .9s ease-in-out infinite}
+  .st-achou{animation:kfound 1.2s ease-in-out infinite}
+  .st-vigiando{animation:kwatch 4.5s ease-in-out infinite}
+  /* ---------- form ---------- */
+  .talk{margin:22px 20px 0; border:3px solid var(--ink); padding:18px 16px 16px}
+  .talk h2{font-size:21px; font-weight:900; letter-spacing:-.3px; text-transform:uppercase}
+  .talk p{font-size:13px; color:#333; line-height:1.45; margin:6px 0 12px}
+  .field{border:2px solid var(--ink); padding:9px 12px; margin-bottom:9px}
+  .field .lab{font-size:10px; font-weight:900; letter-spacing:2px; text-transform:uppercase; color:var(--grey)}
+  .field input{border:none; outline:none; width:100%; font-size:16px; font-weight:700;
+    margin-top:3px; font-family:inherit; background:transparent; color:var(--ink)}
+  .field input::placeholder{color:#a9a9a4; font-weight:400}
+  .postbtn{display:block; width:100%; text-align:center; background:var(--red); color:#fff;
+    border:none; cursor:pointer; font-size:15px; font-weight:900; letter-spacing:2px;
+    text-transform:uppercase; padding:15px 0; margin-top:4px; font-family:inherit}
+  .talk .fine{font-size:11px; color:var(--grey); text-align:center; margin-top:9px; line-height:1.5}
+  .talk .ok{font-size:13px; font-weight:900; color:var(--red); text-align:center; margin-top:9px; display:none}
+  /* ---------- poster ---------- */
+  .hunt{padding:22px 20px 6px}
+  .hunt h1{font-size:27px; font-weight:900; line-height:1.08; letter-spacing:-.5px; margin:8px 0 6px}
+  .hunt .spec{font-size:14px; color:#222; line-height:1.45}
+  .hunt .spec b{font-weight:900}
+  .statusrow{display:flex; gap:8px; margin:14px 0 4px; flex-wrap:wrap}
+  .chip{border:2px solid var(--ink); padding:5px 10px; font-size:11px; font-weight:900;
+    letter-spacing:1px; text-transform:uppercase; background:var(--paper)}
+  .chip.red{background:var(--red); border-color:var(--red); color:#fff}
+  .chip.solid{background:var(--ink); color:#fff}
+  .ceiling{font-size:34px; font-weight:900; letter-spacing:-1px; color:var(--red); margin-top:6px}
+  .ceiling small{font-size:12px; font-weight:700; letter-spacing:.5px; color:var(--grey)}
+  /* ---------- delivery ---------- */
+  .delivery{padding:14px 20px 4px}
+  .delivery-head{display:flex; justify-content:space-between; align-items:baseline;
+    border-top:3px solid var(--ink); padding-top:14px; margin-bottom:4px}
+  .delivery-head h2{font-size:19px; font-weight:900; letter-spacing:-.3px; text-transform:uppercase}
+  .delivery-head .when{font-size:11px; font-weight:700; letter-spacing:1.2px; text-transform:uppercase; color:var(--grey)}
+  .counts{font-size:13px; line-height:1.55; color:#262626; padding:10px 0 2px}
+  .counts b{font-weight:900}
+  .fit{display:flex; gap:12px; border-bottom:1px solid #d8d8d4; padding:14px 0}
+  .fit img{width:74px; height:74px; object-fit:cover; flex:none; border:2px solid var(--ink); background:var(--soft)}
+  .fit .noimg{width:74px; height:74px; flex:none; border:2px solid var(--ink); background:var(--soft);
+    display:flex; align-items:center; justify-content:center; font-size:22px}
+  .fit .body{flex:1; min-width:0}
+  .fit .num{font-size:10px; font-weight:900; letter-spacing:2px; color:var(--red); text-transform:uppercase}
+  .fit .t{font-size:14.5px; font-weight:900; line-height:1.3; margin:3px 0}
+  .fit .p{font-size:21px; font-weight:900; letter-spacing:-.5px}
+  .fit .m{font-size:11px; font-weight:700; letter-spacing:.6px; text-transform:uppercase; color:var(--grey); margin-top:3px}
+  .fit .open{display:inline-block; margin-top:7px; background:var(--ink); color:#fff; text-decoration:none;
+    font-size:10.5px; font-weight:900; letter-spacing:1.4px; text-transform:uppercase; padding:7px 12px}
+  /* ---------- quase / discards ---------- */
+  .near-sec{margin-top:22px}
+  .near-head{font-size:15px; font-weight:900; letter-spacing:1px; text-transform:uppercase;
+    border-top:3px solid var(--ink); padding-top:14px}
+  .near-sub{font-size:12.5px; color:var(--grey); line-height:1.5; margin:6px 0 2px}
+  .fit .over{font-size:12px; font-weight:900; color:var(--red); letter-spacing:0; white-space:nowrap}
+  .fit .reason{font-size:12.5px; font-weight:700; color:var(--red); line-height:1.45; margin-top:5px}
+  .verdict{border:3px solid var(--ink); padding:14px 14px 10px; margin:14px 0 4px}
+  .verdict .v-head{font-size:11px; font-weight:900; letter-spacing:2px; color:var(--red); text-transform:uppercase}
+  .verdict p{font-size:13.5px; line-height:1.55; color:#262626; margin-top:7px}
+  .verdict p.v-first{font-size:15px; font-weight:900; color:var(--ink); line-height:1.45}
+  .trap{border:2px solid var(--red); padding:14px 14px 12px; margin:14px 0}
+  .trap .num{font-size:11px; font-weight:900; letter-spacing:2px; color:var(--red); text-transform:uppercase}
+  .trap p{font-size:13.5px; line-height:1.55; color:#262626; margin-top:6px}
+  .empty{border:2px dashed #b9b9b3; padding:18px 14px; margin:14px 0; text-align:center}
+  .empty .big{font-size:17px; font-weight:900; line-height:1.35}
+  .empty .small{font-size:12.5px; color:var(--grey); margin-top:5px; line-height:1.5}
+  footer{margin-top:26px; border-top:3px solid var(--ink); padding:14px 20px 26px;
+    font-size:11px; line-height:1.6; color:var(--grey)}
+  footer .fm{font-weight:900; color:var(--ink); letter-spacing:1.5px; text-transform:uppercase; font-size:11px}
+  .clearbtn{background:none; border:none; color:var(--grey); font-size:11px; font-weight:700;
+    letter-spacing:1px; text-transform:uppercase; cursor:pointer; text-decoration:underline; padding:4px 0}
+</style>
+</head>
+<body>
+<div class="phone">
+
+  <header>
+    <div>
+      <div class="wordmark">KARUTARO<span class="dot">.</span></div>
+      <div class="tagline">カルタロ · Você pede. Ele caça.</div>
+    </div>
+    <div class="char">
+      <img id="karu-img" class="st-procurando" src="assets/pose-759144caa8.webp" alt="Karutaro">
+      <div class="cap" id="karu-cap">Pronto pra caçar.</div>
+    </div>
+    <div class="hamb">≡</div>
+  </header>
+  <div class="subbar">
+    <span>Quadro de procuras · protótipo</span>
+    <span class="live" id="robot-state">● Karutaro carregando…</span>
+  </div>
+
+  <!-- ============ TALK TO THE ROBOT ============ -->
+  <section class="talk">
+    <h2>Falar com o Karutaro</h2>
+    <p>Diga uma vez o que você quer comprar. O KARUTARO varre os classificados e leilões do Japão a cada 6 horas e traz a entrega aqui — você não precisa ficar procurando.</p>
+    <form id="want-form">
+      <div class="field"><div class="lab">O que você quer</div>
+        <input id="f-what" type="text" placeholder="ex.: Nintendo Switch, rodas 225/65R17…" required></div>
+      <div class="field"><div class="lab">Teto (opcional)</div>
+        <input id="f-ceiling" type="number" min="0" inputmode="numeric" placeholder="¥ — máximo que você paga"></div>
+      <div class="field"><div class="lab">Detalhes / especificações (opcional)</div>
+        <input id="f-details" type="text" placeholder="modelo, tamanho, cor, o que decide…"></div>
+      <div class="field"><div class="lab">Precisa até (opcional)</div>
+        <input id="f-deadline" type="date"></div>
+      <button class="postbtn" type="submit">Mandar o Karutaro caçar</button>
+    </form>
+    <div class="ok" id="form-ok">✔ Falta um toque: confirme a procura na tela do GitHub que abriu. A entrega cai aqui em alguns minutos.</div>
+    <div class="fine">Grátis · Nenhuma compra acontece aqui — o quadro só acha; você negocia fora, direto com o vendedor.</div>
+  </section>
+
+  <!-- ============ CURRENT WANT POSTER ============ -->
+  <section class="hunt" id="poster" style="display:none">
+    <div class="kicker" id="poster-kicker">Quero Nº 001</div>
+    <h1 id="poster-what"></h1>
+    <p class="spec" id="poster-spec"></p>
+    <div class="ceiling" id="poster-ceiling"></div>
+    <div class="statusrow" id="poster-chips"></div>
+  </section>
+
+  <!-- ============ DELIVERY ============ -->
+  <section class="delivery" id="delivery" style="display:none">
+    <div class="delivery-head">
+      <h2>A entrega do Karutaro</h2>
+      <span class="when" id="delivery-when"></span>
+    </div>
+    <div id="delivery-body"></div>
+  </section>
+
+  <section class="delivery" id="virgin">
+    <div class="empty">
+      <div class="big">Nenhuma procura — fale com o Karutaro.</div>
+      <div class="small">O quadro está virgem. Escreva ali em cima o que você quer comprar e o KARUTARO começa a caçar sozinho, a cada 6 horas.</div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="fm">KARUTARO. — Você pede. Ele caça.</div>
+    Quadro do Karutaro · Wrong and Ugly.<br>
+    Ele só lê páginas públicas — nunca compra, nunca fala com vendedor.<br>
+    Fontes varridas: Yahoo! Auctions · Jimoty · Up Garage · Rakuten.
+  </footer>
+
+</div>
+<script>
+const $ = id => document.getElementById(id);
+const yen = n => n === null || n === undefined ? "—" : "¥" + Number(n).toLocaleString("ja-JP");
+const pad = n => String(n).padStart(3, "0");
+const POSES = {
+  procurando: "assets/pose-759144caa8.webp",
+  cacando: "assets/pose-70e2f0d6f3.webp",
+  achou: "assets/pose-0611d5b213.webp",
+  vigiando: "assets/pose-70d7e3d2b8.webp"
+};
+const CAPTIONS = {
+  procurando: "Pronto pra caçar.",
+  cacando: "Caçando…",
+  achou: "Achei! Olha a entrega 👇",
+  vigiando: "De vigia — nada novo por enquanto."
+};
+function setPose(state){
+  const img = $("karu-img");
+  if(!img) return;
+  if(POSES[state]) img.src = POSES[state];
+  img.className = "st-" + state;
+  $("karu-cap").textContent = CAPTIONS[state] || "";
+}
+function kindLabel(f){
+  if(f.kind !== "auction") return "";
+  return f.buyout ? " · leilão — compra imediata" : " · lance atual";
+}
+function fmtDate(iso){
+  if(!iso) return "";
+  const d = new Date(iso);
+  return d.toLocaleDateString("pt-BR") + " · " + d.toLocaleTimeString("pt-BR",{hour:"2-digit",minute:"2-digit"});
+}
+async function loadState(){
+  let st;
+  try{
+    const r = await fetch("board.json", {cache:"no-store"});
+    st = await r.json();
+  }catch(e){
+    $("robot-state").textContent = "● Karutaro fora do ar agora — tenta de novo em um minuto";
+    setPose("procurando");
+    return;
+  }
+  render(st);
+}
+function render(st){
+  const want = st.want, res = st.results;
+  const has = want && want.active && want.what;
+  $("virgin").style.display = has ? "none" : "block";
+  $("poster").style.display = has ? "block" : "none";
+  $("delivery").style.display = has ? "block" : "none";
+  if(!has){
+    $("robot-state").textContent = "● Karutaro esperando uma procura";
+    setPose("procurando");
+    return;
+  }
+  $("robot-state").textContent = res && res.swept_at
+    ? "● última varredura " + fmtDate(res.swept_at)
+    : "● procura registrada — primeira varredura em breve";
+  if(!res || !res.swept_at) setPose("cacando");
+  else if(res.fits && res.fits.length) setPose("achou");
+  else setPose("vigiando");
+  $("poster-kicker").textContent = "Quero Nº " + pad(want.number || 1) + " — sua procura";
+  $("poster-what").textContent = want.what;
+  let spec = "";
+  if(want.details) spec += want.details + " ";
+  if(want.deadline) spec += "· Precisa até <b>" + want.deadline + "</b>";
+  $("poster-spec").innerHTML = spec;
+  $("poster-ceiling").innerHTML = want.ceiling
+    ? yen(want.ceiling) + " <small>TETO — ACIMA DISSO, SÓ APARECE NO QUASE</small>"
+    : "<small>SEM TETO DEFINIDO</small>";
+  $("poster-chips").innerHTML =
+    '<span class="chip red">Caçando</span>' +
+    '<span class="chip">Varredura a cada 6h</span>' +
+    '<span class="chip solid">Postada ' + fmtDate(want.posted_at) + '</span>';
+  // delivery
+  const body = $("delivery-body");
+  if(!res || !res.swept_at){
+    $("delivery-when").textContent = "";
+    body.innerHTML = '<div class="empty"><div class="big">O Karutaro ainda não varreu.</div>' +
+      '<div class="small">A primeira entrega aparece depois da próxima varredura (a cada 6 horas). Segue vigiando.</div></div>';
+    return;
+  }
+  $("delivery-when").textContent = "Última varredura " + fmtDate(res.swept_at);
+  let h = '';
+  if(res.verdict && res.verdict.length){
+    h += '<div class="verdict"><div class="v-head">Resumo do Karutaro</div>' +
+      res.verdict.map((line, i) => '<p class="' + (i === 0 ? 'v-first' : '') + '">' + escapeHtml(line) + '</p>').join("") +
+      '</div>';
+  }
+  h += '<p class="counts">O Karutaro olhou <b>' + res.swept + ' anúncios</b>, descartou <b>' +
+    res.rejected + '</b> (acima do teto, fora da procura ou repetidos) e guardou <b>' +
+    res.fits_total + '</b>.</p>';
+  if(res.fits && res.fits.length){
+    res.fits.forEach((f, i) => {
+      h += '<div class="fit">' +
+        (f.image ? '<img src="' + f.image + '" alt="" loading="lazy">'
+                 : '<div class="noimg">▣</div>') +
+        '<div class="body"><div class="num">Achado ' + pad(i+1) + '</div>' +
+        '<div class="t">' + escapeHtml(f.title) + '</div>' +
+        '<div class="p">' + yen(f.price) + '</div>' +
+        '<div class="m">' + f.source + kindLabel(f) + '</div>' +
+        '<a class="open" href="' + f.url + '" target="_blank" rel="noopener">Abrir o anúncio</a>' +
+        '</div></div>';
+    });
+  } else {
+    h += '<div class="empty"><div class="big">O Karutaro ainda não achou nada — segue vigiando.</div>' +
+      '<div class="small">Nada dentro do teto e das especificações nesta varredura. A procura continua viva.</div></div>';
+  }
+  const nearList = (res.near || []).concat(res.unconfirmed || []);
+  if(nearList.length){
+    h += '<div class="near-sec"><div class="near-head">QUASE — acima do teto ou por confirmar</div>' +
+      '<p class="near-sub">Estes NÃO são achados confirmados: ou passaram do teto, ou o título não confirma o encaixe. Ficam aqui, com o motivo, pra você decidir.</p>';
+    nearList.forEach((f, i) => {
+      h += '<div class="fit near-item">' +
+        (f.image ? '<img src="' + f.image + '" alt="" loading="lazy">'
+                 : '<div class="noimg">▣</div>') +
+        '<div class="body"><div class="num">Quase ' + pad(i+1) + '</div>' +
+        '<div class="t">' + escapeHtml(f.title) + '</div>' +
+        '<div class="p">' + yen(f.price) + (f.over ? ' <span class="over">+' + yen(f.over) + ' acima do teto</span>' : '') + '</div>' +
+        (f.reason ? '<div class="reason">✕ Descartado: ' + escapeHtml(f.reason) + '</div>' : '') +
+        '<div class="m">' + f.source + kindLabel(f) + '</div>' +
+        '<a class="open" href="' + f.url + '" target="_blank" rel="noopener">Abrir o anúncio</a>' +
+        '</div></div>';
+    });
+    h += '</div>';
+  }
+  if(res.examples && res.examples.length){
+    h += '<div class="near-sec"><div class="near-head">O filtro em ação</div>' +
+      '<p class="near-sub">Exemplos de anúncios que o Karutaro descartou nesta varredura — pra você ver o critério funcionando.</p>';
+    res.examples.forEach(f => {
+      h += '<div class="fit near-item">' +
+        (f.image ? '<img src="' + f.image + '" alt="" loading="lazy">'
+                 : '<div class="noimg">▣</div>') +
+        '<div class="body"><div class="num">Descartado</div>' +
+        '<div class="t">' + escapeHtml(f.title) + '</div>' +
+        '<div class="p">' + yen(f.price) + '</div>' +
+        (f.reason ? '<div class="reason">✕ ' + escapeHtml(f.reason) + '</div>' : '') +
+        '<div class="m">' + f.source + kindLabel(f) + '</div>' +
+        '<a class="open" href="' + f.url + '" target="_blank" rel="noopener">Abrir o anúncio</a>' +
+        '</div></div>';
+    });
+    h += '</div>';
+  }
+  if(res.notes && res.notes.length){
+    h += '<div class="trap"><div class="num">⚠ Armadilhas &amp; notas do Karutaro</div>' +
+      res.notes.map(n => "<p>" + escapeHtml(n) + "</p>").join("") + '</div>';
+  }
+  if(res.sources && res.sources.length){
+    h += '<p class="counts">Fontes: ' + res.sources.map(s =>
+      "<b>" + s.name + "</b> " + (s.status === "ok" ? "(" + s.found + " vistos)" : "(não respondeu)")
+    ).join(" · ") + '</p>';
+  }
+  body.innerHTML = h;
+}
+function escapeHtml(s){
+  return String(s||"").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+}
+$("want-form").addEventListener("submit", ev => {
+  ev.preventDefault();
+  const what = $("f-what").value.trim();
+  if(!what) return;
+  const body = "O quê: " + what + "\n" +
+    "Teto (¥): " + ($("f-ceiling").value || "") + "\n" +
+    "Detalhes: " + ($("f-details").value.trim() || "") + "\n" +
+    "Prazo: " + ($("f-deadline").value || "") + "\n\n<!-- karutaro:quero -->";
+  const url = "https://github.com/wrongandugly/karutaro/issues/new?title=" +
+    encodeURIComponent("QUERO: " + what) + "&body=" + encodeURIComponent(body);
+  window.open(url, "_blank");
+  $("form-ok").style.display = "block";
+  $("want-form").reset();
+  setPose("cacando");
+  $("robot-state").textContent = "● procura enviada — o Karutaro já saiu pra caçar";
+});
+
+loadState();
+setInterval(loadState, 60000);
+</script>
+</body>
+</html>
