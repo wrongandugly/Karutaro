@@ -1,7 +1,7 @@
 {
  "want_number": 1,
  "want_what": "CX-5 キャリア",
- "swept_at": "2026-11-24T23:33:47+09:00",
+ "swept_at": "2026-11-25T04:05:13+09:00",
  "fits": [],
  "fits_total": 0,
  "near": [
@@ -66,7 +66,7 @@
    "has_bolts": true
   }
  ],
- "near_total": 53,
+ "near_total": 52,
  "unconfirmed": [
   {
    "title": "ワケアリ!【メーカー不明】キャリアステー",
@@ -111,17 +111,8 @@
    "has_bolts": false
   }
  ],
- "unconfirmed_total": 24,
+ "unconfirmed_total": 23,
  "examples": [
-  {
-   "title": "【INNO RV-INNO】スキーキャリア 2本セット 鍵付き シルバー 中古品",
-   "price": 3000,
-   "url": "https://auctions.yahoo.co.jp/jp/auction/v1252335715",
-   "image": "https://auc-pctr.c.yimg.jp/i/auctions.c.yimg.jp/images.auctions.yahoo.co.jp/image/dr000/auc0211/user/f2f07dc9c812e48abf293df40bec637b0db40615387941153f2091fdea47e5e0/i-img1200x900-17946511759070aly9my30590.jpg?pri=l&w=300&h=300&up=0&nf_src=sy&nf_path=images/auc/pc/top/image/1.0.3/na_170x170.png&nf_st=200",
-   "source": "Yahoo! Auctions",
-   "kind": "auction",
-   "reason": "parece ser só o acessório de prancha, sem a base — e você ainda não tem a base"
-  },
   {
    "title": "【THULE】727 スノーキャリア",
    "price": 3850,
@@ -131,6 +122,20 @@
    "kind": "shop",
    "item_id": "25219891",
    "shop": "アップガレージ 津店",
+   "reason": "parece ser só o acessório de prancha, sem a base — e você ainda não tem a base",
+   "unit_only": false,
+   "has_keys": false,
+   "has_bolts": false
+  },
+  {
+   "title": "TERZO  スキーキャリア",
+   "price": 15290,
+   "url": "https://www.upgarage.com/ec/item/25090456",
+   "image": "https://static.upgcf.com/image/00000/2610/2610103/2610103011865/2610103011865s0.jpg",
+   "source": "Up Garage",
+   "kind": "shop",
+   "item_id": "25090456",
+   "shop": "アップガレージ 美原北インター店",
    "reason": "parece ser só o acessório de prancha, sem a base — e você ainda não tem a base",
    "unit_only": false,
    "has_keys": false,
