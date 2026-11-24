@@ -1,0 +1,10 @@
+[2026-11-24T23:19:06+09:00] === QUERO Nº 1: CX-5 キャリア ===
+[2026-11-24T23:19:06+09:00] fitment profile active: CX-5 (KE) (sweep queries: 5)
+[2026-11-24T23:19:17+09:00] Yahoo! Auctions: 57 listings swept
+[2026-11-24T23:19:27+09:00] Yahoo!フリマ: FAILED HTTPError: HTTP Error 404: Not Found
+[2026-11-24T23:19:28+09:00] Jimoty: FAILED RuntimeError: no keyword page reachable: CX-5: HTTP 403; キャリア: HTTP 403; スキー: HTTP 403
+[2026-11-24T23:19:34+09:00] Up Garage: 50 listings swept
+[2026-11-24T23:19:52+09:00] Mercari: FAILED RuntimeError: no Mercari items captured (API shape changed or bot wall)
+[2026-11-24T23:20:04+09:00] Rakuten: FAILED RuntimeError: no item links in response (bot wall or empty shell)
+[2026-11-24T23:20:17+09:00] delivery ready: 0 fits / 53 near / 24 unconfirmed / 2 examples / 107 swept / 107 rejected (sources ok: Yahoo! Auctions, Up Garage)
+[2026-11-24T23:20:17+09:00] board updated for QUERO Nº 1
