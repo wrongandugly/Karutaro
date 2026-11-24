@@ -1053,6 +1053,18 @@ def hunt_fact(want):
         "unconfirmed": [], "unconfirmed_total": 0, "examples": [],
         "swept": 0, "rejected": 0, "notes": [], "sources": [],
     }
+    prev_file = BASE / f"results-{want.get('number')}.json"
+    if prev_file.exists():
+        try:
+            prev = json.loads(prev_file.read_text(encoding="utf-8"))
+            age_h = (datetime.now(JST) - datetime.fromisoformat(
+                prev["swept_at"])).total_seconds() / 3600
+            if prev.get("kind") == "fato" and prev.get("eye") == "on" and age_h < 20:
+                log(f"fact delivery still fresh ({age_h:.1f}h) — "
+                    "facts change slowly; skipping the re-read")
+                return prev
+        except Exception:
+            pass
     if not GEMINI_KEY:
         base["eye"] = "off"
         base["verdict"] = ["O olho ainda não foi ligado — falta a chave "
@@ -1066,8 +1078,12 @@ def hunt_fact(want):
         queries, criteria = eye_plan(want)
     except Exception as e:
         log(f"eye plan failed: {type(e).__name__}: {e}")
-        base["verdict"] = ["O olho piscou na hora de planejar a busca — "
-                           "tenta de novo na próxima varredura."]
+        if getattr(e, "code", None) == 429:
+            base["verdict"] = ["A cota grátis do olho acabou por hoje — "
+                               "ele tenta de novo amanhã."]
+        else:
+            base["verdict"] = ["O olho piscou na hora de planejar a busca — "
+                               "tenta de novo na próxima varredura."]
         base["criteria"], base["places"] = [], []
         base["answered"] = 0
         return base
@@ -1091,6 +1107,7 @@ def hunt_fact(want):
         f"({skipped} aggregator results skipped)")
 
     places = []
+    time.sleep(13)  # free-tier pace: ~5 Gemini calls/minute max
     for cand in candidates:
         try:
             text = html_to_text(fetch(cand["url"]))
@@ -1107,7 +1124,7 @@ def hunt_fact(want):
                 f"({sum(1 for a in answers if a['verdict'] != 'nao_diz')} answered)")
         except Exception as e:
             log(f"eye read failed {cand['url']}: {type(e).__name__}: {e}")
-        time.sleep(SLEEP_BETWEEN)
+        time.sleep(13)  # free-tier pace between eye calls
 
     answered_places = [p for p in places
                        if any(a["verdict"] != "nao_diz" for a in p["answers"])]
