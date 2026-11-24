@@ -9,7 +9,7 @@ delivery with a rule-built verdict summary (the resuminho), and writes
 it all to results.json. No LLM calls. One source failing never
 kills the run.
 """
-import json, re, sys, time, urllib.error, urllib.parse, urllib.request
+import json, os, re, sys, time, urllib.error, urllib.parse, urllib.request
 from datetime import datetime, timezone, timedelta
 from html import unescape
 from pathlib import Path
@@ -20,6 +20,9 @@ RESULTS_FILE = BASE / "results.json"
 WANTS_FILE = BASE / "wants.json"
 BOARD_FILE = BASE / "board.json"
 LOG_FILE = BASE / "hunter.log"
+FACTS_FILE = BASE / "facts.json"
+GEMINI_KEY = os.environ.get("GEMINI_API_KEY", "")
+GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-2.5-flash")
 
 UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/126.0 Safari/537.36")
@@ -899,6 +902,273 @@ def hunt(want):
     return results
 
 
+# ---------------- the eye (fact hunts) ----------------
+# The eye reads official pages and answers ONLY what the page says.
+# The algorithm leashes it: a verdict without a verbatim quote found
+# in the fetched page text is downgraded to "nao_diz". AI perceives,
+# the algorithm decides — the eye never invents.
+
+AGGREGATOR_HOSTS = (
+    "jalan.net", "rakuten.co.jp", "tripadvisor", "jtb.co.jp",
+    "booking.com", "expedia", "hotels.com", "ikyu.com", "agoda",
+    "trivago", "relux.jp", "rurubu", "yahoo.co.jp", "google.",
+    "amazon.", "trip.com", "kkday", "klook",
+)
+
+
+def html_to_text(html):
+    h = re.sub(r"(?is)<(script|style|noscript)[^>]*>.*?</\\1>", " ", html or "")
+    h = re.sub(r"(?s)<[^>]+>", " ", h)
+    return re.sub(r"\\s+", " ", unescape(h)).strip()
+
+
+def gemini_json(prompt):
+    if not GEMINI_KEY:
+        raise RuntimeError("GEMINI_API_KEY missing — the eye is off")
+    url = ("https://generativelanguage.googleapis.com/v1beta/models/"
+           + GEMINI_MODEL + ":generateContent")
+    payload = {
+        "contents": [{"parts": [{"text": prompt}]}],
+        "generationConfig": {"temperature": 0.1,
+                             "responseMimeType": "application/json"},
+    }
+    req = urllib.request.Request(
+        url, data=json.dumps(payload).encode("utf-8"), method="POST",
+        headers={"Content-Type": "application/json",
+                 "x-goog-api-key": GEMINI_KEY})
+    with urllib.request.urlopen(req, timeout=60) as r:
+        data = json.loads(r.read().decode("utf-8", "replace"))
+    text = data["candidates"][0]["content"]["parts"][0]["text"]
+    return json.loads(text)
+
+
+def eye_plan(want):
+    """One eye call: turn the PT want into JP searches + criteria."""
+    prompt = (
+        "Você é o planejador de buscas do Karutaro. O usuário procura um "
+        "FATO ou LUGAR, não um produto.\n"
+        f"Procura: \"{want.get('what')}\"\n"
+        f"Detalhes/critérios: \"{want.get('details') or ''}\"\n"
+        "Responda SOMENTE um JSON assim: "
+        '{"queries": ["...","...","..."], "criteria": '
+        '[{"id":"...","label":"...","ask_jp":"..."}]}\n'
+        "- queries: 3 buscas em JAPONÊS para achar as páginas OFICIAIS dos "
+        "lugares (inclua a palavra 公式 em pelo menos duas).\n"
+        "- criteria: UMA pergunta por critério citado nos detalhes. "
+        "id = palavra curta sem espaços; label = a pergunta em português, "
+        "curta (ex.: \"Pode tatuagem?\"); ask_jp = a mesma pergunta em "
+        "japonês. Se os detalhes não citarem critério, crie um critério "
+        "único a partir da procura."
+    )
+    plan = gemini_json(prompt)
+    queries = [q for q in plan.get("queries", []) if q][:3]
+    criteria = []
+    for c in plan.get("criteria", [])[:4]:
+        if c.get("id") and c.get("ask_jp"):
+            criteria.append({"id": str(c["id"]),
+                             "label": str(c.get("label") or c["id"]),
+                             "ask_jp": str(c["ask_jp"])})
+    if not queries:
+        queries = [(want.get("what") or "") + " 公式"]
+    if not criteria:
+        criteria = [{"id": "geral", "label": want.get("details") or "Confere?",
+                     "ask_jp": want.get("what") or ""}]
+    return queries, criteria
+
+
+def ddg_search(query, limit=10):
+    """DuckDuckGo HTML/Lite search — no key needed. Returns [{title,url}]."""
+    out, seen = [], set()
+    for base in ("https://html.duckduckgo.com/html/?q=",
+                 "https://lite.duckduckgo.com/lite/?q="):
+        try:
+            html = fetch(base + urllib.parse.quote(query))
+        except Exception as e:
+            log(f"ddg search failed ({base.split('/')[2]}): {type(e).__name__}")
+            continue
+        for m in re.finditer(r'href="([^"]+)"[^>]*>([^<]{2,120})</a>', html):
+            href, title = m.group(1), unescape(m.group(2)).strip()
+            um = re.search(r"[?&]uddg=([^&]+)", href)
+            if um:
+                href = urllib.parse.unquote(um.group(1))
+            if not href.startswith("http") or href in seen:
+                continue
+            if "duckduckgo.com" in href:
+                continue
+            seen.add(href)
+            out.append({"title": title, "url": href})
+            if len(out) >= limit:
+                return out
+        if out:
+            return out
+    return out
+
+
+def _squash(s):
+    return re.sub(r"\\s+", "", (s or "")).lower()
+
+
+def eye_read_page(url, page_text, criteria):
+    qs = "\n".join(f"- id \"{c['id']}\": {c['ask_jp']}" for c in criteria)
+    prompt = (
+        "Você é o OLHO do Karutaro. Leia o texto da página abaixo e "
+        "responda às perguntas SOMENTE com o que a página diz. Nunca "
+        "invente: se a página não disser, verdict = \"nao_diz\" e "
+        "quote = \"\".\n"
+        f"Perguntas:\n{qs}\n"
+        "Responda SOMENTE um JSON: {\"place_name\": \"nome do lugar "
+        "dono desta página\", \"answers\": [{\"id\": \"...\", "
+        "\"verdict\": \"sim|nao|nao_diz\", \"quote\": \"trecho EXATO "
+        "copiado da página que justifica a resposta (vazio se nao_diz)\"}]}\n"
+        f"TEXTO DA PÁGINA:\n{page_text[:12000]}"
+    )
+    got = gemini_json(prompt)
+    answers = {}
+    for a in got.get("answers", []):
+        v = a.get("verdict")
+        if v not in ("sim", "nao", "nao_diz"):
+            v = "nao_diz"
+        answers[a.get("id")] = {"verdict": v, "quote": (a.get("quote") or "").strip()}
+    # THE LEASH: no verbatim quote in the page, no verdict.
+    squashed = _squash(page_text)
+    out = []
+    for c in criteria:
+        a = answers.get(c["id"], {"verdict": "nao_diz", "quote": ""})
+        if a["verdict"] != "nao_diz":
+            if not a["quote"] or _squash(a["quote"]) not in squashed:
+                a = {"verdict": "nao_diz", "quote": ""}
+        out.append({"criterion": c["id"], "label": c["label"],
+                    "verdict": a["verdict"], "quote": a["quote"]})
+    return (got.get("place_name") or "").strip(), out
+
+
+def hunt_fact(want):
+    """Fact/place hunt: search official pages, read them with the eye,
+    verify every quote, deliver per-place verdicts + the library."""
+    now = datetime.now(JST).isoformat(timespec="seconds")
+    base = {
+        "kind": "fato", "want_number": want.get("number"),
+        "want_what": want.get("what"), "swept_at": now,
+        "fits": [], "fits_total": 0, "near": [], "near_total": 0,
+        "unconfirmed": [], "unconfirmed_total": 0, "examples": [],
+        "swept": 0, "rejected": 0, "notes": [], "sources": [],
+    }
+    if not GEMINI_KEY:
+        base["eye"] = "off"
+        base["verdict"] = ["O olho ainda não foi ligado — falta a chave "
+                           "do Gemini no cofre do GitHub."]
+        base["criteria"], base["places"] = [], []
+        base["answered"] = 0
+        log("fact hunt skipped: eye off (no GEMINI_API_KEY)")
+        return base
+    base["eye"] = "on"
+    try:
+        queries, criteria = eye_plan(want)
+    except Exception as e:
+        log(f"eye plan failed: {type(e).__name__}: {e}")
+        base["verdict"] = ["O olho piscou na hora de planejar a busca — "
+                           "tenta de novo na próxima varredura."]
+        base["criteria"], base["places"] = [], []
+        base["answered"] = 0
+        return base
+    base["criteria"] = [{"id": c["id"], "label": c["label"]} for c in criteria]
+    log(f"eye plan: {len(queries)} queries, {len(criteria)} criteria")
+
+    candidates, seen_hosts, skipped = [], set(), 0
+    for q in queries:
+        for r in ddg_search(q):
+            host = urllib.parse.urlparse(r["url"]).netloc.lower()
+            if any(a in host for a in AGGREGATOR_HOSTS):
+                skipped += 1
+                continue
+            if host in seen_hosts:
+                continue
+            seen_hosts.add(host)
+            candidates.append(r)
+        time.sleep(SLEEP_BETWEEN)
+    candidates = candidates[:6]
+    log(f"fact candidates: {len(candidates)} official pages "
+        f"({skipped} aggregator results skipped)")
+
+    places = []
+    for cand in candidates:
+        try:
+            text = html_to_text(fetch(cand["url"]))
+            if len(text) < 200:
+                log(f"fact page too short ({len(text)} chars): {cand['url']}")
+                continue
+            name, answers = eye_read_page(cand["url"], text, criteria)
+            places.append({
+                "name": name or cand["title"], "url": cand["url"],
+                "domain": urllib.parse.urlparse(cand["url"]).netloc,
+                "answers": answers, "read_at": now,
+            })
+            log(f"eye read: {name or cand['url']} "
+                f"({sum(1 for a in answers if a['verdict'] != 'nao_diz')} answered)")
+        except Exception as e:
+            log(f"eye read failed {cand['url']}: {type(e).__name__}: {e}")
+        time.sleep(SLEEP_BETWEEN)
+
+    answered_places = [p for p in places
+                       if any(a["verdict"] != "nao_diz" for a in p["answers"])]
+    full = [p for p in places
+            if all(a["verdict"] == "sim" for a in p["answers"])]
+    base["places"] = places
+    base["answered"] = len(answered_places)
+    base["fits_total"] = len(answered_places)
+    base["swept"] = len(places)
+    base["sources"] = [{"name": "Páginas oficiais (olho)",
+                        "status": "ok", "found": len(places)}]
+    if skipped:
+        base["notes"].append(
+            f"{skipped} resultado(s) de agregadores (reservas/guias) foram "
+            "ignorados — o olho lê a página oficial do lugar.")
+    base["notes"].append(
+        "Cada veredito só vale com o trecho da página ao lado — sem "
+        "trecho, o Karutaro marca NÃO DIZ. Leitura de " +
+        datetime.now(JST).strftime("%d/%m/%Y") + ".")
+    vlabel = {"sim": "PODE", "nao": "NÃO PODE", "nao_diz": "NÃO DIZ"}
+    verdict = []
+    if full:
+        verdict.append(f"Achei: 【{full[0]['name']}】 responde SIM pra tudo "
+                       "que você perguntou.")
+    elif answered_places:
+        n, m = len(places), len(answered_places)
+        verdict.append(f"Li {n} página{'s' if n != 1 else ''} "
+                       f"oficia{'is' if n != 1 else 'l'} — {m} "
+                       f"respondeu às suas perguntas." if m == 1 else
+                       f"Li {n} páginas oficiais — {m} responderam às "
+                       "suas perguntas.")
+    else:
+        verdict.append(f"Li {len(places)} páginas oficiais e nenhuma "
+                       "respondeu às suas perguntas — sigo vigiando.")
+    for p in answered_places[:3]:
+        parts = " · ".join(f"{a['label'].replace('?', '')}: {vlabel[a['verdict']]}"
+                           for a in p["answers"])
+        verdict.append(f"【{p['name']}】 {parts}")
+    base["verdict"] = verdict
+
+    # the library: every place read stays on record, date-stamped
+    try:
+        facts = []
+        if FACTS_FILE.exists():
+            facts = json.loads(FACTS_FILE.read_text(encoding="utf-8"))
+        by_url = {x["url"]: x for x in facts}
+        for p in places:
+            by_url[p["url"]] = {"name": p["name"], "url": p["url"],
+                                "answers": p["answers"],
+                                "read_at": p["read_at"],
+                                "want_number": want.get("number")}
+        FACTS_FILE.write_text(json.dumps(list(by_url.values()),
+                                         ensure_ascii=False, indent=1),
+                              encoding="utf-8")
+    except Exception as e:
+        log(f"facts library write failed: {type(e).__name__}")
+    log(f"fact delivery ready: {len(places)} places read, "
+        f"{len(answered_places)} answered, {len(full)} full matches")
+    return base
+
+
 def main():
     wants = []
     if WANTS_FILE.exists():
@@ -912,7 +1182,7 @@ def main():
     board_want, board_results = None, None
     for want in active:
         log(f"=== QUERO Nº {want.get('number')}: {want.get('what')} ===")
-        results = hunt(want)
+        results = hunt_fact(want) if want.get("kind") == "fato" else hunt(want)
         out = BASE / f"results-{want.get('number')}.json"
         out.write_text(json.dumps(results, ensure_ascii=False, indent=1),
                        encoding="utf-8")
