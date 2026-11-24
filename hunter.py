@@ -336,17 +336,6 @@ def sweep_rakuten(queries):
     return items
 
 
-SOURCES = [
-    ("Yahoo! Auctions", sweep_yahoo),
-    ("Yahoo!フリマ", sweep_yahoo_furima),
-    ("Jimoty", sweep_jimoty),
-    ("Up Garage", sweep_upgarage),
-    ("Mercari", sweep_mercari),
-    ("Rakuten", sweep_rakuten),
-]
-
-
-
 def sweep_mercari(queries):
     """Mercari — the search page is a JS app fed by api.mercari.jp JSON
     (prices in JPY). A real Chromium (Playwright) loads the page and we
@@ -447,6 +436,17 @@ def sweep_mercari(queries):
         raise RuntimeError("no Mercari items captured "
                            "(API shape changed or bot wall)")
     return items
+
+
+SOURCES = [
+    ("Yahoo! Auctions", sweep_yahoo),
+    ("Yahoo!フリマ", sweep_yahoo_furima),
+    ("Jimoty", sweep_jimoty),
+    ("Up Garage", sweep_upgarage),
+    ("Mercari", sweep_mercari),
+    ("Rakuten", sweep_rakuten),
+]
+
 
 
 # ---------------- fitment profiles (instructor-taught) ----------------
