@@ -32,6 +32,8 @@ ceiling_raw = field("Teto (¥)").replace(",", "").replace("¥", "").strip()
 ceiling = int(ceiling_raw) if ceiling_raw.isdigit() else None
 details = field("Detalhes")
 deadline = field("Prazo") or None
+tipo = field("Tipo").lower()
+kind = "fato" if ("fato" in tipo or "lugar" in tipo) else "produto"
 
 wants = []
 if WANTS_FILE.exists():
@@ -43,6 +45,7 @@ want = {
     "ceiling": ceiling,
     "details": details,
     "deadline": deadline,
+    "kind": kind,
     "posted_at": datetime.now(JST).isoformat(timespec="seconds"),
     "active": True,
     "via_issue": int(issue_no) if issue_no.isdigit() else None,
