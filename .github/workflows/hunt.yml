@@ -35,11 +35,14 @@ jobs:
         run: |
           git config user.name "karutaro"
           git config user.email "karutaro@wrongandugly.local"
-          git add wants.json board.json results-*.json hunter.log
+          git add wants.json board.json hunter.log || true
+          for f in results-*.json; do [ -e "$f" ] && git add "$f"; done
           git commit -m "caca: entrega atualizada" || echo "sem mudancas"
           git push
       - name: Avisa quem pediu (comentario na issue)
         if: github.event_name == 'issues'
         env:
           GH_TOKEN: ${{ github.token }}
-        run: gh issue comment ${{ github.event.issue.number }} --body "🐾 O Karutaro voltou da caça. A entrega está na página: https://wrongandugly.github.io/karutaro/ — atualiza a página pra ver."
+          ISSUE_NO: ${{ github.event.issue.number }}
+        run: |
+          gh issue comment "$ISSUE_NO" --body "Karutaro voltou da caca. A entrega esta na pagina: https://wrongandugly.github.io/karutaro/ - atualiza a pagina pra ver."
