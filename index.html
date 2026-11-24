@@ -46,6 +46,21 @@
   .field input{border:none; outline:none; width:100%; font-size:16px; font-weight:700;
     margin-top:3px; font-family:inherit; background:transparent; color:var(--ink)}
   .field input::placeholder{color:#a9a9a4; font-weight:400}
+  .field select{border:none; outline:none; width:100%; font-size:16px; font-weight:700;
+    margin-top:3px; font-family:inherit; background:transparent; color:var(--ink)}
+  /* ---------- fact delivery ---------- */
+  .fact{border-bottom:1px solid #d8d8d4; padding:14px 0}
+  .fact .fname{font-size:16px; font-weight:900; line-height:1.3}
+  .fact .fname a{color:var(--ink); text-decoration:none; border-bottom:2px solid var(--red)}
+  .fact .ans{display:flex; justify-content:space-between; align-items:center; gap:10px; margin-top:9px}
+  .fact .flab{font-size:13.5px; font-weight:700}
+  .fchip{font-size:10.5px; font-weight:900; letter-spacing:1.2px; text-transform:uppercase;
+    padding:5px 9px; border:2px solid var(--ink); white-space:nowrap}
+  .fchip.sim{background:var(--red); border-color:var(--red); color:#fff}
+  .fchip.nao{background:var(--ink); color:#fff}
+  .fchip.diz{color:var(--grey); border-color:#c9c9c4}
+  .fact .fquote{font-size:12.5px; color:#444; line-height:1.55; margin-top:5px; font-style:italic}
+  .fact .fm{font-size:11px; font-weight:700; letter-spacing:.6px; text-transform:uppercase; color:var(--grey); margin-top:8px}
   .postbtn{display:block; width:100%; text-align:center; background:var(--red); color:#fff;
     border:none; cursor:pointer; font-size:15px; font-weight:900; letter-spacing:2px;
     text-transform:uppercase; padding:15px 0; margin-top:4px; font-family:inherit}
@@ -128,10 +143,15 @@
   <!-- ============ TALK TO THE ROBOT ============ -->
   <section class="talk">
     <h2>Falar com o Karutaro</h2>
-    <p>Diga uma vez o que você quer comprar. O KARUTARO varre os classificados e leilões do Japão a cada 6 horas e traz a entrega aqui — você não precisa ficar procurando.</p>
+    <p>Diga uma vez o que você quer — comprar um produto ou descobrir um fato. O KARUTARO varre os classificados e leilões do Japão a cada 6 horas e, nas procuras de fato, lê as páginas oficiais dos lugares. A entrega cai aqui — você não precisa ficar procurando.</p>
     <form id="want-form">
       <div class="field"><div class="lab">O que você quer</div>
         <input id="f-what" type="text" placeholder="ex.: Nintendo Switch, rodas 225/65R17…" required></div>
+      <div class="field"><div class="lab">Tipo de procura</div>
+        <select id="f-kind">
+          <option value="produto" selected>Produto — comprar algo</option>
+          <option value="fato">Fato ou lugar — descobrir algo</option>
+        </select></div>
       <div class="field"><div class="lab">Teto (opcional)</div>
         <input id="f-ceiling" type="number" min="0" inputmode="numeric" placeholder="¥ — máximo que você paga"></div>
       <div class="field"><div class="lab">Detalhes / especificações (opcional)</div>
@@ -236,7 +256,7 @@ function render(st){
     ? "● última varredura " + fmtDate(res.swept_at)
     : "● procura registrada — primeira varredura em breve";
   if(!res || !res.swept_at) setPose("cacando");
-  else if(res.fits && res.fits.length) setPose("achou");
+  else if((res.fits && res.fits.length) || (res.kind === "fato" && res.answered > 0)) setPose("achou");
   else setPose("vigiando");
   $("poster-kicker").textContent = "Quero Nº " + pad(want.number || 1) + " — sua procura";
   $("poster-what").textContent = want.what;
@@ -265,6 +285,11 @@ function render(st){
     h += '<div class="verdict"><div class="v-head">Resumo do Karutaro</div>' +
       res.verdict.map((line, i) => '<p class="' + (i === 0 ? 'v-first' : '') + '">' + escapeHtml(line) + '</p>').join("") +
       '</div>';
+  }
+  if(res.kind === "fato"){
+    h += factHtml(res);
+    body.innerHTML = h;
+    return;
   }
   h += '<p class="counts">O Karutaro olhou <b>' + res.swept + ' anúncios</b>, descartou <b>' +
     res.rejected + '</b> (acima do teto, fora da procura ou repetidos) e guardou <b>' +
@@ -331,6 +356,38 @@ function render(st){
   }
   body.innerHTML = h;
 }
+function factHtml(res){
+  let h = "";
+  if(res.eye === "off"){
+    h += '<div class="empty"><div class="big">O olho ainda não foi ligado.</div>' +
+      '<div class="small">Esta procura é de fato/lugar e precisa do olho (Gemini). Assim que a chave entrar no cofre do GitHub, ele passa a ler as páginas oficiais dos lugares.</div></div>';
+    return h;
+  }
+  const places = res.places || [];
+  h += '<p class="counts">O Karutaro leu <b>' + places.length + ' páginas oficiais</b> — ' +
+    '<b>' + (res.answered || 0) + '</b> responderam às suas perguntas, cada veredito com o trecho da página.</p>';
+  if(!places.length){
+    h += '<div class="empty"><div class="big">Nenhuma página oficial encontrada nesta varredura.</div>' +
+      '<div class="small">A busca não trouxe as páginas dos lugares — sigo vigiando.</div></div>';
+  }
+  places.forEach(p => {
+    h += '<div class="fact"><div class="fname"><a href="' + p.url + '" target="_blank" rel="noopener">' +
+      escapeHtml(p.name) + '</a></div>';
+    (p.answers || []).forEach(a => {
+      const chip = a.verdict === "sim" ? '<span class="fchip sim">Pode</span>'
+        : a.verdict === "nao" ? '<span class="fchip nao">Não pode</span>'
+        : '<span class="fchip diz">Não diz</span>';
+      h += '<div class="ans"><span class="flab">' + escapeHtml(a.label) + '</span>' + chip + '</div>';
+      if(a.quote) h += '<div class="fquote">“' + escapeHtml(a.quote) + '”</div>';
+    });
+    h += '<div class="fm">Fonte: ' + escapeHtml(p.domain) + ' · lido em ' + fmtDate(p.read_at) + '</div></div>';
+  });
+  if(res.notes && res.notes.length){
+    h += '<div class="trap"><div class="num">⚠ Notas do Karutaro</div>' +
+      res.notes.map(n => "<p>" + escapeHtml(n) + "</p>").join("") + '</div>';
+  }
+  return h;
+}
 function escapeHtml(s){
   return String(s||"").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 }
@@ -339,6 +396,7 @@ $("want-form").addEventListener("submit", ev => {
   const what = $("f-what").value.trim();
   if(!what) return;
   const body = "O quê: " + what + "\n" +
+    "Tipo: " + $("f-kind").value + "\n" +
     "Teto (¥): " + ($("f-ceiling").value || "") + "\n" +
     "Detalhes: " + ($("f-details").value.trim() || "") + "\n" +
     "Prazo: " + ($("f-deadline").value || "") + "\n\n<!-- karutaro:quero -->";
