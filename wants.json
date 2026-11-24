@@ -7,5 +7,15 @@
   "deadline": null,
   "posted_at": "2026-11-22T15:36:41+09:00",
   "active": true
+ },
+ {
+  "number": 2,
+  "what": "Onsen em Nagano",
+  "ceiling": null,
+  "details": "Pode crianças e tatuagem",
+  "deadline": "<!-- karutaro:quero -->",
+  "posted_at": "2026-11-24T23:32:38+09:00",
+  "active": true,
+  "via_issue": 1
  }
 ]

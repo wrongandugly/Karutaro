@@ -8,3 +8,21 @@
 [2026-11-24T23:20:04+09:00] Rakuten: FAILED RuntimeError: no item links in response (bot wall or empty shell)
 [2026-11-24T23:20:17+09:00] delivery ready: 0 fits / 53 near / 24 unconfirmed / 2 examples / 107 swept / 107 rejected (sources ok: Yahoo! Auctions, Up Garage)
 [2026-11-24T23:20:17+09:00] board updated for QUERO Nº 1
+[2026-11-24T23:32:38+09:00] === QUERO Nº 1: CX-5 キャリア ===
+[2026-11-24T23:32:38+09:00] fitment profile active: CX-5 (KE) (sweep queries: 5)
+[2026-11-24T23:32:48+09:00] Yahoo! Auctions: 58 listings swept
+[2026-11-24T23:32:56+09:00] Yahoo!フリマ: FAILED HTTPError: HTTP Error 404: Not Found
+[2026-11-24T23:32:58+09:00] Jimoty: FAILED RuntimeError: no keyword page reachable: CX-5: HTTP 403; キャリア: HTTP 403; スキー: HTTP 403
+[2026-11-24T23:33:04+09:00] Up Garage: 50 listings swept
+[2026-11-24T23:33:24+09:00] Mercari: FAILED RuntimeError: no Mercari items captured (API shape changed or bot wall)
+[2026-11-24T23:33:36+09:00] Rakuten: FAILED RuntimeError: no item links in response (bot wall or empty shell)
+[2026-11-24T23:33:47+09:00] delivery ready: 0 fits / 53 near / 24 unconfirmed / 2 examples / 108 swept / 108 rejected (sources ok: Yahoo! Auctions, Up Garage)
+[2026-11-24T23:33:47+09:00] === QUERO Nº 2: Onsen em Nagano ===
+[2026-11-24T23:33:53+09:00] Yahoo! Auctions: 100 listings swept
+[2026-11-24T23:33:57+09:00] Yahoo!フリマ: FAILED HTTPError: HTTP Error 404: Not Found
+[2026-11-24T23:33:58+09:00] Jimoty: FAILED RuntimeError: no keyword page reachable: Onsen: HTTP 403; em: HTTP 403; Nagano: HTTP 403
+[2026-11-24T23:34:02+09:00] Up Garage: 0 listings swept
+[2026-11-24T23:34:21+09:00] Mercari: FAILED RuntimeError: no Mercari items captured (API shape changed or bot wall)
+[2026-11-24T23:34:32+09:00] Rakuten: FAILED RuntimeError: no item links in response (bot wall or empty shell)
+[2026-11-24T23:34:33+09:00] delivery ready: 0 fits / 0 near / 0 unconfirmed / 2 examples / 100 swept / 100 rejected (sources ok: Yahoo! Auctions, Up Garage)
+[2026-11-24T23:34:33+09:00] board updated for QUERO Nº 2
