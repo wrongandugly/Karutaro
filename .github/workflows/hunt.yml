@@ -1,0 +1,45 @@
+name: karutaro-hunt
+on:
+  issues:
+    types: [opened]
+  push:
+    paths:
+      - 'wants.json'
+  workflow_dispatch:
+  schedule:
+    - cron: '15 */6 * * *'
+permissions:
+  contents: write
+  issues: write
+concurrency: karutaro-hunt
+jobs:
+  hunt:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install playwright
+      - run: playwright install --with-deps chromium
+      - name: Intake (issue da pagina -> wants.json)
+        if: github.event_name == 'issues'
+        env:
+          ISSUE_BODY: ${{ github.event.issue.body }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+        run: python3 intake.py
+      - name: A cacada
+        run: python3 hunter.py
+      - name: Grava o caderno
+        run: |
+          git config user.name "karutaro"
+          git config user.email "karutaro@wrongandugly.local"
+          git add wants.json board.json results-*.json hunter.log
+          git commit -m "caca: entrega atualizada" || echo "sem mudancas"
+          git push
+      - name: Avisa quem pediu (comentario na issue)
+        if: github.event_name == 'issues'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh issue comment ${{ github.event.issue.number }} --body "🐾 O Karutaro voltou da caça. A entrega está na página: https://wrongandugly.github.io/karutaro/ — atualiza a página pra ver."
