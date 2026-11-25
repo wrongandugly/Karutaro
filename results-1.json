@@ -1,7 +1,7 @@
 {
  "want_number": 1,
  "want_what": "CX-5 キャリア",
- "swept_at": "2026-11-25T10:21:21+09:00",
+ "swept_at": "2026-11-25T16:28:17+09:00",
  "fits": [],
  "fits_total": 0,
  "near": [
@@ -41,16 +41,6 @@
    "over": 400
   },
   {
-   "title": "未使用品 未開封 カーメイト ルーフキャリア inno ベーシック取付フック TR135 CX-5",
-   "price": 4400,
-   "url": "https://auctions.yahoo.co.jp/jp/auction/m1118194552",
-   "image": "https://auc-pctr.c.yimg.jp/i/auctions.c.yimg.jp/images.auctions.yahoo.co.jp/image/dr000/auc0412/users/d8a115bc326cfe8e0ddbc4db08be4ae23ea884cb/i-img1200x1200-1702954148zvtwxk119713.jpg?pri=l&w=300&h=300&up=0&nf_src=sy&nf_path=images/auc/pc/top/image/1.0.3/na_170x170.png&nf_st=200",
-   "source": "Yahoo! Auctions",
-   "kind": "auction",
-   "reason": "passou do teto em ¥400",
-   "over": 400
-  },
-  {
    "title": "マツダ純正 CX-5/KE系 ベースキャリア",
    "price": 4400,
    "url": "https://www.upgarage.com/ec/item/25227294",
@@ -64,9 +54,26 @@
    "unit_only": false,
    "has_keys": true,
    "has_bolts": true
+  },
+  {
+   "title": "マツダ純正 KE系CX-5純正 THULE製キャリア",
+   "price": 5830,
+   "url": "https://www.upgarage.com/ec/item/23890363",
+   "image": "https://static.upgcf.com/image/00000/2603/2603042/2603042003206/2603042003206s0.jpg",
+   "source": "Up Garage",
+   "kind": "auction",
+   "item_id": "23890363",
+   "shop": "アップガレージ いわき店",
+   "buyout": 5830,
+   "end_time": "2026-11-27T22:00:00+09:00",
+   "reason": "passou do teto em ¥1,830",
+   "over": 1830,
+   "unit_only": false,
+   "has_keys": true,
+   "has_bolts": false
   }
  ],
- "near_total": 51,
+ "near_total": 52,
  "unconfirmed": [
   {
    "title": "ワケアリ!【メーカー不明】キャリアステー",
@@ -142,13 +149,13 @@
    "has_bolts": false
   }
  ],
- "swept": 109,
- "rejected": 109,
+ "swept": 108,
+ "rejected": 108,
  "sources": [
   {
    "name": "Yahoo! Auctions",
    "status": "ok",
-   "found": 59
+   "found": 58
   },
   {
    "name": "Yahoo!フリマ",
@@ -179,6 +186,7 @@
  "notes": [
   "Fontes que não responderam nesta varredura: Yahoo!フリマ, Jimoty, Mercari, Rakuten. O robô tenta de novo na próxima.",
   "Itens do Yahoo! Auctions mostram o lance atual — o preço pode subir até o fim do leilão.",
+  "No Up Garage, item marcado como leilão tem a data de término no anúncio — e o preço exibido é o da compra imediata, quando ela existe.",
   "O mais perto: 【THULE】 ベースキャリア CX-5/KE系 por ¥4,389 — ¥389 acima do teto.",
   "3 anúncio(s) do tipo certo, mas o título não confirma o encaixe na CX-5 (KE) — estão no QUASE pra você conferir."
  ],
