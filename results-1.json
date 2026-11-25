@@ -1,7 +1,7 @@
 {
  "want_number": 1,
  "want_what": "CX-5 キャリア",
- "swept_at": "2026-11-25T04:05:13+09:00",
+ "swept_at": "2026-11-25T10:21:21+09:00",
  "fits": [],
  "fits_total": 0,
  "near": [
@@ -66,7 +66,7 @@
    "has_bolts": true
   }
  ],
- "near_total": 52,
+ "near_total": 51,
  "unconfirmed": [
   {
    "title": "ワケアリ!【メーカー不明】キャリアステー",
@@ -142,13 +142,13 @@
    "has_bolts": false
   }
  ],
- "swept": 108,
- "rejected": 108,
+ "swept": 109,
+ "rejected": 109,
  "sources": [
   {
    "name": "Yahoo! Auctions",
    "status": "ok",
-   "found": 58
+   "found": 59
   },
   {
    "name": "Yahoo!フリマ",
