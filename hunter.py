@@ -340,14 +340,18 @@ def sweep_rakuten(queries):
 
 
 def sweep_mercari(queries):
-    """Mercari — the search page is a JS app fed by api.mercari.jp JSON
-    (prices in JPY). A real Chromium (Playwright) loads the page and we
-    harvest the API responses. DOM fallback keeps only yen-priced cards:
-    a price shown in another currency is never converted or guessed.
-    Raises when Playwright/Chromium is unavailable — the run tolerates
-    a failed source by design."""
+    """Mercari — the search page is a JS app. Three harvest paths, in
+    order of trust: (1) JSON responses intercepted in flight,
+    (2) the page's embedded __NEXT_DATA__ JSON (prices in JPY),
+    (3) the rendered DOM cards. A DOM price rendered in a foreign
+    currency by the datacenter's locale is NEVER converted or
+    guessed — the card is kept with price=None (title + URL still
+    useful; the fit engine already tolerates None, as with Rakuten).
+    Raises with diagnostics when nothing is captured — the run
+    tolerates a failed source by design."""
     from playwright.sync_api import sync_playwright
     items, seen = [], set()
+    diag = {"responses": 0, "next_data": 0, "anchors": 0}
 
     def harvest(o):
         if isinstance(o, dict):
@@ -389,9 +393,14 @@ def sweep_mercari(queries):
 
         def on_response(resp):
             try:
-                if ("mercari" in resp.url and resp.status == 200
-                        and ("api" in resp.url or "search" in resp.url)):
-                    captured.append(resp.json())
+                if "mercari" not in resp.url or resp.status != 200:
+                    return
+                ct = (resp.headers or {}).get("content-type", "")
+                if ("json" not in ct and "api" not in resp.url
+                        and "_next/data" not in resp.url):
+                    return
+                captured.append(resp.json())
+                diag["responses"] += 1
             except Exception:
                 pass
 
@@ -401,15 +410,27 @@ def sweep_mercari(queries):
                    + urllib.parse.quote(q))
             pg.goto(url, wait_until="domcontentloaded", timeout=60000)
             try:
-                pg.wait_for_selector('a[href*="/item/"]', timeout=20000)
+                pg.wait_for_selector('a[href*="/item/"]', timeout=25000)
             except Exception:
                 pass
-            pg.wait_for_timeout(2500)
+            pg.wait_for_timeout(3000)
             for data in captured:
                 harvest(data)
             captured.clear()
             if not items:
+                try:
+                    nd = pg.evaluate(
+                        "() => { const el = document.getElementById("
+                        "'__NEXT_DATA__'); "
+                        "return el ? el.textContent : null; }")
+                    if nd:
+                        diag["next_data"] += 1
+                        harvest(json.loads(nd))
+                except Exception:
+                    pass
+            if not items:
                 anchors = pg.query_selector_all('a[href*="/item/"]')
+                diag["anchors"] += len(anchors)
                 for a in anchors:
                     href = a.get_attribute("href") or ""
                     m = re.search(r"/item/(m\w+)", href)
@@ -418,16 +439,21 @@ def sweep_mercari(queries):
                     txt = re.sub(r"\s+", " ",
                                  (a.inner_text() or "")).strip()
                     pm = re.search(r"¥\s*([\d,]+)", txt)
-                    if not pm:
+                    if pm:
+                        title = (txt[pm.end():].strip(" 　")
+                                 or txt[:pm.start()].strip())
+                        price = int(pm.group(1).replace(",", ""))
+                    elif re.search(r"\$\s*[\d,]+", txt):
+                        title = re.sub(r"\$\s*[\d,]+\s*", "", txt).strip()
+                        price = None
+                    else:
                         continue
-                    title = (txt[pm.end():].strip(" 　")
-                             or txt[:pm.start()].strip())
                     if not title:
                         continue
                     seen.add(m.group(1))
                     items.append({
                         "title": title,
-                        "price": int(pm.group(1).replace(",", "")),
+                        "price": price,
                         "url": "https://jp.mercari.com/item/" + m.group(1),
                         "image": None,
                         "source": "Mercari",
@@ -436,8 +462,10 @@ def sweep_mercari(queries):
             time.sleep(SLEEP_BETWEEN)
         b.close()
     if not items:
-        raise RuntimeError("no Mercari items captured "
-                           "(API shape changed or bot wall)")
+        raise RuntimeError(
+            "no Mercari items captured "
+            f"(responses={diag['responses']}, "
+            f"next_data={diag['next_data']}, anchors={diag['anchors']})")
     return items
 
 
