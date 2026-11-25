@@ -1,7 +1,7 @@
 {
  "want_number": 2,
  "want_what": "Onsen em Nagano",
- "swept_at": "2026-11-25T16:29:17+09:00",
+ "swept_at": "2026-11-25T22:30:18+09:00",
  "fits": [],
  "fits_total": 0,
  "near": [],
@@ -28,13 +28,13 @@
    "reason": "o título não menciona 'onsen'"
   }
  ],
- "swept": 102,
- "rejected": 102,
+ "swept": 107,
+ "rejected": 107,
  "sources": [
   {
    "name": "Yahoo! Auctions",
    "status": "ok",
-   "found": 102
+   "found": 101
   },
   {
    "name": "Yahoo!フリマ",
@@ -43,7 +43,7 @@
   },
   {
    "name": "Jimoty",
-   "status": "error: RuntimeError",
+   "status": "ok",
    "found": 0
   },
   {
@@ -53,8 +53,8 @@
   },
   {
    "name": "Mercari",
-   "status": "error: RuntimeError",
-   "found": 0
+   "status": "ok",
+   "found": 6
   },
   {
    "name": "Rakuten",
@@ -63,7 +63,7 @@
   }
  ],
  "notes": [
-  "Fontes que não responderam nesta varredura: Yahoo!フリマ, Jimoty, Mercari, Rakuten. O robô tenta de novo na próxima.",
+  "Fontes que não responderam nesta varredura: Yahoo!フリマ, Rakuten. O robô tenta de novo na próxima.",
   "Nada dentro do teto e das especificações por enquanto — a procura continua viva e o robô segue vigiando."
  ],
  "verdict": [
