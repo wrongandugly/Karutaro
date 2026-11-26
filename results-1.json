@@ -1,7 +1,7 @@
 {
  "want_number": 1,
  "want_what": "CX-5 キャリア",
- "swept_at": "2026-11-26T22:27:51+09:00",
+ "swept_at": "2026-11-27T04:05:19+09:00",
  "fits": [
   {
    "title": "US.67 INNOエアロベース キャリアセット マツダ KE2fw CX-5",
@@ -91,7 +91,7 @@
    "has_bolts": true
   }
  ],
- "near_total": 51,
+ "near_total": 50,
  "unconfirmed": [
   {
    "title": "ワケアリ!【メーカー不明】キャリアステー",
@@ -136,7 +136,7 @@
    "has_bolts": false
   }
  ],
- "unconfirmed_total": 27,
+ "unconfirmed_total": 28,
  "examples": [
   {
    "title": "【THULE】727 スノーキャリア",
@@ -167,13 +167,13 @@
    "has_bolts": false
   }
  ],
- "swept": 116,
- "rejected": 113,
+ "swept": 113,
+ "rejected": 110,
  "sources": [
   {
    "name": "Yahoo! Auctions",
    "status": "ok",
-   "found": 57
+   "found": 54
   },
   {
    "name": "Yahoo!フリマ",
