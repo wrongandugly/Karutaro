@@ -1,7 +1,7 @@
 {
  "want_number": 2,
  "want_what": "Onsen em Nagano",
- "swept_at": "2026-11-26T10:23:09+09:00",
+ "swept_at": "2026-11-26T16:27:33+09:00",
  "fits": [],
  "fits_total": 0,
  "near": [],
@@ -19,22 +19,22 @@
    "reason": "o título não menciona 'onsen'"
   },
   {
-   "title": "[CD] Coco's Temaeva / Royal Folkloric Troupe of Tahiti",
-   "price": 832,
-   "url": "https://auctions.yahoo.co.jp/jp/auction/e1192381572",
-   "image": "https://auc-pctr.c.yimg.jp/i/auctions.c.yimg.jp/images.auctions.yahoo.co.jp/image/dr000/auc0107/user/9b2895708eb1fb9ce7b14539032c017cec0605f02328b88b1cd8c0b45f7d164a/i-img1200x900-175231339934810niynd250412.jpg?pri=l&w=300&h=300&up=0&nf_src=sy&nf_path=images/auc/pc/top/image/1.0.3/na_170x170.png&nf_st=200",
+   "title": "トゥンバトゥ・クンバ●輸入盤「TUMBATU CUMBA」●パーカッション集団,アルゼンチン音楽手帖,Nico Falcoff●JOAO DONATO EMORIOカバー他",
+   "price": 1000,
+   "url": "https://auctions.yahoo.co.jp/jp/auction/c912710767",
+   "image": "https://auc-pctr.c.yimg.jp/i/auctions.c.yimg.jp/images.auctions.yahoo.co.jp/image/dr000/auc0206/users/5b846b76666a93973bf19dfc7a59b39f8dee92b4/i-img1200x900-1623760011qvc9by1001341.jpg?pri=l&w=300&h=300&up=0&nf_src=sy&nf_path=images/auc/pc/top/image/1.0.3/na_170x170.png&nf_st=200",
    "source": "Yahoo! Auctions",
    "kind": "auction",
    "reason": "o título não menciona 'onsen'"
   }
  ],
- "swept": 106,
- "rejected": 106,
+ "swept": 109,
+ "rejected": 109,
  "sources": [
   {
    "name": "Yahoo! Auctions",
    "status": "ok",
-   "found": 100
+   "found": 101
   },
   {
    "name": "Yahoo!フリマ",
@@ -54,7 +54,7 @@
   {
    "name": "Mercari",
    "status": "ok",
-   "found": 6
+   "found": 8
   },
   {
    "name": "Rakuten",

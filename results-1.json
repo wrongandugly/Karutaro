@@ -1,20 +1,28 @@
 {
  "want_number": 1,
  "want_what": "CX-5 キャリア",
- "swept_at": "2026-11-26T10:22:06+09:00",
+ "swept_at": "2026-11-26T16:26:29+09:00",
  "fits": [
   {
-   "title": "US.17 THULE ルーフキャリア バーのみ CX-8 CX-5 MAZDA",
+   "title": "CX-5 システムキャリアベース用の保護フィルムセットのみ ※G・L用 ※本体別売り マツダ純正部品 KMYSDP 自動車部品 カー用品",
+   "price": 1408,
+   "url": "https://auctions.yahoo.co.jp/jp/auction/o1253813742",
+   "image": "https://auc-pctr.c.yimg.jp/i/auctions.c.yimg.jp/images.auctions.yahoo.co.jp/image/dr000/auc0211/user/1264707b24658381049c9710eb9f897fe62fd58746ca91f745556df7de1c9979/i-img1000x1000-17956671062058v6c1bt34.jpg?pri=l&w=300&h=300&up=0&nf_src=sy&nf_path=images/auc/pc/top/image/1.0.3/na_170x170.png&nf_st=200",
+   "source": "Yahoo! Auctions",
+   "kind": "auction"
+  },
+  {
+   "title": "US.67 INNOエアロベース キャリアセット マツダ KE2fw CX-5",
    "price": null,
-   "url": "https://jp.mercari.com/item/m65614899476",
+   "url": "https://jp.mercari.com/item/m28673233035",
    "image": null,
    "source": "Mercari",
    "kind": "classified"
   },
   {
-   "title": "US.85 INNOエアロベース キャリアセット マツダ KE2fw CX-5",
+   "title": "US.17 THULE ルーフキャリア バーのみ CX-8 CX-5 MAZDA",
    "price": null,
-   "url": "https://jp.mercari.com/item/m28673233035",
+   "url": "https://jp.mercari.com/item/m65614899476",
    "image": null,
    "source": "Mercari",
    "kind": "classified"
@@ -28,7 +36,7 @@
    "kind": "classified"
   }
  ],
- "fits_total": 3,
+ "fits_total": 4,
  "near": [
   {
    "title": "【THULE】 ベースキャリア CX-5/KE系",
@@ -66,6 +74,16 @@
    "over": 400
   },
   {
+   "title": "未使用品 未開封 カーメイト ルーフキャリア inno ベーシック取付フック TR135 CX-5",
+   "price": 4400,
+   "url": "https://auctions.yahoo.co.jp/jp/auction/m1118194552",
+   "image": "https://auc-pctr.c.yimg.jp/i/auctions.c.yimg.jp/images.auctions.yahoo.co.jp/image/dr000/auc0412/users/d8a115bc326cfe8e0ddbc4db08be4ae23ea884cb/i-img1200x1200-1702954148zvtwxk119713.jpg?pri=l&w=300&h=300&up=0&nf_src=sy&nf_path=images/auc/pc/top/image/1.0.3/na_170x170.png&nf_st=200",
+   "source": "Yahoo! Auctions",
+   "kind": "auction",
+   "reason": "passou do teto em ¥400",
+   "over": 400
+  },
+  {
    "title": "マツダ純正 CX-5/KE系 ベースキャリア",
    "price": 4400,
    "url": "https://www.upgarage.com/ec/item/25227294",
@@ -79,26 +97,9 @@
    "unit_only": false,
    "has_keys": true,
    "has_bolts": true
-  },
-  {
-   "title": "マツダ純正 KE系CX-5純正 THULE製キャリア",
-   "price": 5830,
-   "url": "https://www.upgarage.com/ec/item/23890363",
-   "image": "https://static.upgcf.com/image/00000/2603/2603042/2603042003206/2603042003206s0.jpg",
-   "source": "Up Garage",
-   "kind": "auction",
-   "item_id": "23890363",
-   "shop": "アップガレージ いわき店",
-   "buyout": 5830,
-   "end_time": "2026-11-27T22:00:00+09:00",
-   "reason": "passou do teto em ¥1,830",
-   "over": 1830,
-   "unit_only": false,
-   "has_keys": true,
-   "has_bolts": false
   }
  ],
- "near_total": 51,
+ "near_total": 50,
  "unconfirmed": [
   {
    "title": "ワケアリ!【メーカー不明】キャリアステー",
@@ -138,17 +139,8 @@
    "has_bolts": false
   }
  ],
- "unconfirmed_total": 26,
+ "unconfirmed_total": 28,
  "examples": [
-  {
-   "title": "【INNO RV-INNO】スキーキャリア 2本セット 鍵付き シルバー 中古品",
-   "price": 3000,
-   "url": "https://auctions.yahoo.co.jp/jp/auction/v1252335715",
-   "image": "https://auc-pctr.c.yimg.jp/i/auctions.c.yimg.jp/images.auctions.yahoo.co.jp/image/dr000/auc0211/user/f2f07dc9c812e48abf293df40bec637b0db40615387941153f2091fdea47e5e0/i-img1200x900-17946511759070aly9my30590.jpg?pri=l&w=300&h=300&up=0&nf_src=sy&nf_path=images/auc/pc/top/image/1.0.3/na_170x170.png&nf_st=200",
-   "source": "Yahoo! Auctions",
-   "kind": "auction",
-   "reason": "parece ser só o acessório de prancha, sem a base — e você ainda não tem a base"
-  },
   {
    "title": "【THULE】727 スノーキャリア",
    "price": 3850,
@@ -162,9 +154,23 @@
    "unit_only": false,
    "has_keys": false,
    "has_bolts": false
+  },
+  {
+   "title": "TERZO  スキーキャリア",
+   "price": 15290,
+   "url": "https://www.upgarage.com/ec/item/25090456",
+   "image": "https://static.upgcf.com/image/00000/2610/2610103/2610103011865/2610103011865s0.jpg",
+   "source": "Up Garage",
+   "kind": "shop",
+   "item_id": "25090456",
+   "shop": "アップガレージ 美原北インター店",
+   "reason": "parece ser só o acessório de prancha, sem a base — e você ainda não tem a base",
+   "unit_only": false,
+   "has_keys": false,
+   "has_bolts": false
   }
  ],
- "swept": 117,
+ "swept": 118,
  "rejected": 114,
  "sources": [
   {
@@ -185,7 +191,7 @@
   {
    "name": "Up Garage",
    "status": "ok",
-   "found": 49
+   "found": 50
   },
   {
    "name": "Mercari",
@@ -201,13 +207,13 @@
  "notes": [
   "Fontes que não responderam nesta varredura: Yahoo!フリマ, Jimoty, Rakuten. O robô tenta de novo na próxima.",
   "Itens do Yahoo! Auctions mostram o lance atual — o preço pode subir até o fim do leilão.",
-  "No Up Garage, item marcado como leilão tem a data de término no anúncio — e o preço exibido é o da compra imediata, quando ela existe.",
+  "1 achado(s) muito abaixo do teto (≤40%): confira estado, fotos e vendedor antes de fechar — preço baixo demais também é sinal.",
   "3 anúncio(s) do tipo certo, mas o título não confirma o encaixe na CX-5 (KE) — estão no QUASE pra você conferir."
  ],
  "verdict": [
-  "O achado: US.17 THULE ルーフキャリア バーのみ CX-8 CX-5 MAZDA por preço no anúncio — encaixe confirmado.",
+  "O achado: CX-5 システムキャリアベース用の保護フィルムセットのみ ※G・L用 ※本体別売り… por ¥1,408 — encaixe confirmado, ¥2,592 abaixo do teto. Mas é leilão — o preço mostrado é o lance atual.",
   "Cuidado: 【THULE】 ベースキャリア CX-5/KE系 por ¥4,389 — loja longe, em Kagoshima — some o frete antes de comparar; o anúncio lista corpo e chaves, mas não os parafusos de fixação.",
   "Conjunto completo de verdade começa em ¥4,400 (Up Garage) — com chaves e parafusos listados no anúncio; mas a loja é em Sapporo, longe — some o frete antes de comparar.",
-  "Falta o acessório de prancha — ele aparece por ~¥3,000 (Yahoo! Auctions); monta em cima dessa base."
+  "Falta o acessório de prancha — ele aparece por ~¥3,850 (Up Garage); monta em cima dessa base."
  ]
 }
