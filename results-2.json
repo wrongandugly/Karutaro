@@ -1,7 +1,7 @@
 {
  "want_number": 2,
  "want_what": "Onsen em Nagano",
- "swept_at": "2026-11-26T16:27:33+09:00",
+ "swept_at": "2026-11-26T22:28:57+09:00",
  "fits": [],
  "fits_total": 0,
  "near": [],
@@ -34,7 +34,7 @@
   {
    "name": "Yahoo! Auctions",
    "status": "ok",
-   "found": 101
+   "found": 102
   },
   {
    "name": "Yahoo!フリマ",
@@ -54,7 +54,7 @@
   {
    "name": "Mercari",
    "status": "ok",
-   "found": 8
+   "found": 7
   },
   {
    "name": "Rakuten",
