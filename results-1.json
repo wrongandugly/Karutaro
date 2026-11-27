@@ -1,16 +1,8 @@
 {
  "want_number": 1,
  "want_what": "CX-5 キャリア",
- "swept_at": "2026-11-27T10:26:39+09:00",
+ "swept_at": "2026-11-27T16:27:01+09:00",
  "fits": [
-  {
-   "title": "CX-5 システムキャリアベース用の保護フィルムセットのみ ※G・L用 ※本体別売り マツダ純正部品 KMYSDP 自動車部品 カー用品",
-   "price": 1408,
-   "url": "https://auctions.yahoo.co.jp/jp/auction/o1253813742",
-   "image": "https://auc-pctr.c.yimg.jp/i/auctions.c.yimg.jp/images.auctions.yahoo.co.jp/image/dr000/auc0211/user/1264707b24658381049c9710eb9f897fe62fd58746ca91f745556df7de1c9979/i-img1000x1000-17956671062058v6c1bt34.jpg?pri=l&w=300&h=300&up=0&nf_src=sy&nf_path=images/auc/pc/top/image/1.0.3/na_170x170.png&nf_st=200",
-   "source": "Yahoo! Auctions",
-   "kind": "auction"
-  },
   {
    "title": "US.67 INNOエアロベース キャリアセット マツダ KE2fw CX-5",
    "price": null,
@@ -36,7 +28,7 @@
    "kind": "classified"
   }
  ],
- "fits_total": 4,
+ "fits_total": 3,
  "near": [
   {
    "title": "【THULE】 ベースキャリア CX-5/KE系",
@@ -102,50 +94,44 @@
  "near_total": 51,
  "unconfirmed": [
   {
-   "title": "ワケアリ!【メーカー不明】キャリアステー",
-   "price": 550,
-   "url": "https://www.upgarage.com/ec/item/24478375",
-   "image": "https://static.upgcf.com/image/00000/2607/2607269/2607269005647/2607269005647s0.jpg",
-   "source": "Up Garage",
-   "kind": "shop",
-   "item_id": "24478375",
-   "shop": "アップガレージ 長野佐久店",
-   "reason": "o título não confirma se serve na CX-5 (KE) — precisa conferir o encaixe",
-   "unit_only": false,
-   "has_keys": false,
-   "has_bolts": false
+   "title": "軽量ベビーキャリア",
+   "price": 0,
+   "url": "https://jmty.jp/tokyo/sale-kid/article-1ti5mj",
+   "image": "https://cdn.jmty.jp/articles/images/6b09262e70b25b9633b005b2/thumb_m_file.jpg",
+   "source": "Jimoty",
+   "kind": "classified",
+   "reason": "o título não confirma se serve na CX-5 (KE) — precisa conferir o encaixe"
   },
   {
-   "title": "【マツダ純正】THULE製OPシステムキャリア+ウインターキャリア KD45-V4-701",
-   "price": 4400,
-   "url": "https://www.upgarage.com/ec/item/23355532",
-   "image": "https://static.upgcf.com/image/00000/2602/2602259/2602259001883/2602259001883s0.jpg",
-   "source": "Up Garage",
-   "kind": "shop",
-   "item_id": "23355532",
-   "shop": "アップガレージ 山口店",
-   "reason": "o título diz Mazda, mas não diz o modelo — precisa conferir se é da CX-5 (KE); também passou do teto em ¥400",
-   "unit_only": false,
-   "has_keys": false,
-   "has_bolts": false
+   "title": "アウディQ5 純正 8R　オプション ルーフキャリア Audi",
+   "price": 100,
+   "url": "https://jmty.jp/hokkaido/sale-auto/article-1ss6ev",
+   "image": "https://cdn.jmty.jp/articles/images/6adeac51f5710e97761c2aab/thumb_m_file.jpg",
+   "source": "Jimoty",
+   "kind": "classified",
+   "reason": "o título não confirma se serve na CX-5 (KE) — precisa conferir o encaixe"
   },
   {
-   "title": "RV-INNO ベースキャリア",
-   "price": 5500,
-   "url": "https://www.upgarage.com/ec/item/24972996",
-   "image": "https://static.upgcf.com/image/00000/2610/2610252/2610252002608/2610252002608s0.jpg",
-   "source": "Up Garage",
-   "kind": "shop",
-   "item_id": "24972996",
-   "shop": "アップガレージ 札幌平岡店",
-   "reason": "o título não confirma se serve na CX-5 (KE) — precisa conferir o encaixe; também passou do teto em ¥1,500",
-   "unit_only": false,
-   "has_keys": true,
-   "has_bolts": false
+   "title": "バービーキャリアヘッドレスト　２９日まで",
+   "price": 500,
+   "url": "https://jmty.jp/hiroshima/sale-kid/article-1ti5gs",
+   "image": "https://cdn.jmty.jp/articles/images/6b0926a931ee91b7b314e34a/thumb_m_file.jpg",
+   "source": "Jimoty",
+   "kind": "classified",
+   "reason": "o título não confirma se serve na CX-5 (KE) — precisa conferir o encaixe"
   }
  ],
- "unconfirmed_total": 29,
+ "unconfirmed_total": 48,
  "examples": [
+  {
+   "title": "トップケース.パニアケース　オフセットアタッチメント新品",
+   "price": 2000,
+   "url": "https://jmty.jp/aomori/sale-bik/article-1ti2u1",
+   "image": "https://cdn.jmty.jp/articles/images/6b0914ee65ef6dd3df3e2722/thumb_m_file.jpg",
+   "source": "Jimoty",
+   "kind": "classified",
+   "reason": "parece ser só o acessório de prancha, sem a base — e você ainda não tem a base"
+  },
   {
    "title": "【THULE】727 スノーキャリア",
    "price": 3850,
@@ -159,29 +145,15 @@
    "unit_only": false,
    "has_keys": false,
    "has_bolts": false
-  },
-  {
-   "title": "TERZO  スキーキャリア",
-   "price": 15290,
-   "url": "https://www.upgarage.com/ec/item/25090456",
-   "image": "https://static.upgcf.com/image/00000/2610/2610103/2610103011865/2610103011865s0.jpg",
-   "source": "Up Garage",
-   "kind": "shop",
-   "item_id": "25090456",
-   "shop": "アップガレージ 美原北インター店",
-   "reason": "parece ser só o acessório de prancha, sem a base — e você ainda não tem a base",
-   "unit_only": false,
-   "has_keys": false,
-   "has_bolts": false
   }
  ],
- "swept": 118,
- "rejected": 114,
+ "swept": 165,
+ "rejected": 162,
  "sources": [
   {
    "name": "Yahoo! Auctions",
    "status": "ok",
-   "found": 58
+   "found": 56
   },
   {
    "name": "Yahoo!フリマ",
@@ -190,13 +162,13 @@
   },
   {
    "name": "Jimoty",
-   "status": "error: RuntimeError",
-   "found": 0
+   "status": "ok",
+   "found": 50
   },
   {
    "name": "Up Garage",
    "status": "ok",
-   "found": 50
+   "found": 49
   },
   {
    "name": "Mercari",
@@ -210,15 +182,13 @@
   }
  ],
  "notes": [
-  "Fontes que não responderam nesta varredura: Yahoo!フリマ, Jimoty, Rakuten. O robô tenta de novo na próxima.",
+  "Fontes que não responderam nesta varredura: Yahoo!フリマ, Rakuten. O robô tenta de novo na próxima.",
   "Itens do Yahoo! Auctions mostram o lance atual — o preço pode subir até o fim do leilão.",
-  "1 achado(s) muito abaixo do teto (≤40%): confira estado, fotos e vendedor antes de fechar — preço baixo demais também é sinal.",
   "3 anúncio(s) do tipo certo, mas o título não confirma o encaixe na CX-5 (KE) — estão no QUASE pra você conferir."
  ],
  "verdict": [
-  "O achado: CX-5 システムキャリアベース用の保護フィルムセットのみ ※G・L用 ※本体別売り… por ¥1,408 — encaixe confirmado, ¥2,592 abaixo do teto. Mas é leilão — o preço mostrado é o lance atual.",
+  "O achado: US.67 INNOエアロベース キャリアセット マツダ KE2fw CX-5 por preço no anúncio — encaixe confirmado.",
   "Cuidado: 【THULE】 ベースキャリア CX-5/KE系 por ¥4,389 — loja longe, em Kagoshima — some o frete antes de comparar; o anúncio lista corpo e chaves, mas não os parafusos de fixação.",
-  "Conjunto completo de verdade começa em ¥4,400 (Up Garage) — com chaves e parafusos listados no anúncio; mas a loja é em Sapporo, longe — some o frete antes de comparar.",
-  "Falta o acessório de prancha — ele aparece por ~¥3,850 (Up Garage); monta em cima dessa base."
+  "Conjunto completo de verdade começa em ¥4,400 (Up Garage) — com chaves e parafusos listados no anúncio; mas a loja é em Sapporo, longe — some o frete antes de comparar."
  ]
 }

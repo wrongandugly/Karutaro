@@ -1,7 +1,7 @@
 {
  "want_number": 2,
  "want_what": "Onsen em Nagano",
- "swept_at": "2026-11-27T10:27:24+09:00",
+ "swept_at": "2026-11-27T16:27:44+09:00",
  "fits": [],
  "fits_total": 0,
  "near": [],
@@ -43,7 +43,7 @@
   },
   {
    "name": "Jimoty",
-   "status": "error: RuntimeError",
+   "status": "ok",
    "found": 0
   },
   {
@@ -63,7 +63,7 @@
   }
  ],
  "notes": [
-  "Fontes que não responderam nesta varredura: Yahoo!フリマ, Jimoty, Rakuten. O robô tenta de novo na próxima.",
+  "Fontes que não responderam nesta varredura: Yahoo!フリマ, Rakuten. O robô tenta de novo na próxima.",
   "Nada dentro do teto e das especificações por enquanto — a procura continua viva e o robô segue vigiando."
  ],
  "verdict": [
