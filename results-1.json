@@ -1,8 +1,16 @@
 {
  "want_number": 1,
  "want_what": "CX-5 キャリア",
- "swept_at": "2026-11-27T16:27:01+09:00",
+ "swept_at": "2026-11-27T22:22:54+09:00",
  "fits": [
+  {
+   "title": "マツダ 3 6 CX-3 CX-5 CX-7 CX-9 CX3 CX5 CX7 CX9 オートケア トランク キャリア 収納 貨物オーガナイザーナイロン 弾性メッシュ CHH221",
+   "price": 1380,
+   "url": "https://auctions.yahoo.co.jp/jp/auction/u1242951471",
+   "image": "https://auc-pctr.c.yimg.jp/i/auctions.c.yimg.jp/images.auctions.yahoo.co.jp/image/dr000/auc0209/user/b03570746f815f1b005dd6968cd21bb4825de4d251a39f633185c45e1c03ab81/i-img800x800-17883121421509sgtjmx35.jpg?pri=l&w=300&h=300&up=0&nf_src=sy&nf_path=images/auc/pc/top/image/1.0.3/na_170x170.png&nf_st=200",
+   "source": "Yahoo! Auctions",
+   "kind": "auction"
+  },
   {
    "title": "US.67 INNOエアロベース キャリアセット マツダ KE2fw CX-5",
    "price": null,
@@ -28,7 +36,7 @@
    "kind": "classified"
   }
  ],
- "fits_total": 3,
+ "fits_total": 4,
  "near": [
   {
    "title": "【THULE】 ベースキャリア CX-5/KE系",
@@ -44,16 +52,6 @@
    "unit_only": false,
    "has_keys": true,
    "has_bolts": false
-  },
-  {
-   "title": "【未使用未開封・在庫品】カーメイト INNO TR151 システムキャリア ウィンターキャリア 取付フック マツダ CX-5 XS300",
-   "price": 4400,
-   "url": "https://auctions.yahoo.co.jp/jp/auction/1201873010",
-   "image": "https://auc-pctr.c.yimg.jp/i/auctions.c.yimg.jp/images.auctions.yahoo.co.jp/image/dr000/auc0109/user/3cdef80869895a768cc89a52e78062ebc989931533fe204e779a5b78f19218db/i-img1200x900-17590622033085zrhd4x355485.jpg?pri=l&w=300&h=300&up=0&nf_src=sy&nf_path=images/auc/pc/top/image/1.0.3/na_170x170.png&nf_st=200",
-   "source": "Yahoo! Auctions",
-   "kind": "auction",
-   "reason": "passou do teto em ¥400",
-   "over": 400
   },
   {
    "title": "【未使用未開封・在庫品】カーメイト INNO TR151 TR取付フック CX-5 XS300用 システムキャリア ウィンターキャリア",
@@ -89,49 +87,65 @@
    "unit_only": false,
    "has_keys": true,
    "has_bolts": true
+  },
+  {
+   "title": "★☆ THULE 753 + KIT3069　マツダノーマルルーフ車用フット　CX-5など ★☆",
+   "price": 6000,
+   "url": "https://auctions.yahoo.co.jp/jp/auction/s1251513833",
+   "image": "https://auc-pctr.c.yimg.jp/i/auctions.c.yimg.jp/images.auctions.yahoo.co.jp/image/dr000/auc0211/user/74b4eccc0022b28e41232bd9465ff05e5915d368a9ff89774bd7ab584e922a82/i-img1200x900-1794112330996856dori0b8.jpg?pri=l&w=300&h=300&up=0&nf_src=sy&nf_path=images/auc/pc/top/image/1.0.3/na_170x170.png&nf_st=200",
+   "source": "Yahoo! Auctions",
+   "kind": "auction",
+   "reason": "passou do teto em ¥2,000",
+   "over": 2000
   }
  ],
- "near_total": 51,
+ "near_total": 58,
  "unconfirmed": [
   {
-   "title": "軽量ベビーキャリア",
-   "price": 0,
-   "url": "https://jmty.jp/tokyo/sale-kid/article-1ti5mj",
-   "image": "https://cdn.jmty.jp/articles/images/6b09262e70b25b9633b005b2/thumb_m_file.jpg",
-   "source": "Jimoty",
-   "kind": "classified",
-   "reason": "o título não confirma se serve na CX-5 (KE) — precisa conferir o encaixe"
+   "title": "ワケアリ!【メーカー不明】キャリアステー",
+   "price": 550,
+   "url": "https://www.upgarage.com/ec/item/24478375",
+   "image": "https://static.upgcf.com/image/00000/2607/2607269/2607269005647/2607269005647s0.jpg",
+   "source": "Up Garage",
+   "kind": "shop",
+   "item_id": "24478375",
+   "shop": "アップガレージ 長野佐久店",
+   "reason": "o título não confirma se serve na CX-5 (KE) — precisa conferir o encaixe",
+   "unit_only": false,
+   "has_keys": false,
+   "has_bolts": false
   },
   {
-   "title": "アウディQ5 純正 8R　オプション ルーフキャリア Audi",
-   "price": 100,
-   "url": "https://jmty.jp/hokkaido/sale-auto/article-1ss6ev",
-   "image": "https://cdn.jmty.jp/articles/images/6adeac51f5710e97761c2aab/thumb_m_file.jpg",
-   "source": "Jimoty",
-   "kind": "classified",
-   "reason": "o título não confirma se serve na CX-5 (KE) — precisa conferir o encaixe"
+   "title": "【マツダ純正】THULE製OPシステムキャリア+ウインターキャリア KD45-V4-701",
+   "price": 4400,
+   "url": "https://www.upgarage.com/ec/item/23355532",
+   "image": "https://static.upgcf.com/image/00000/2602/2602259/2602259001883/2602259001883s0.jpg",
+   "source": "Up Garage",
+   "kind": "shop",
+   "item_id": "23355532",
+   "shop": "アップガレージ 山口店",
+   "reason": "o título diz Mazda, mas não diz o modelo — precisa conferir se é da CX-5 (KE); também passou do teto em ¥400",
+   "unit_only": false,
+   "has_keys": false,
+   "has_bolts": false
   },
   {
-   "title": "バービーキャリアヘッドレスト　２９日まで",
-   "price": 500,
-   "url": "https://jmty.jp/hiroshima/sale-kid/article-1ti5gs",
-   "image": "https://cdn.jmty.jp/articles/images/6b0926a931ee91b7b314e34a/thumb_m_file.jpg",
-   "source": "Jimoty",
-   "kind": "classified",
-   "reason": "o título não confirma se serve na CX-5 (KE) — precisa conferir o encaixe"
+   "title": "RV-INNO ベースキャリア",
+   "price": 5500,
+   "url": "https://www.upgarage.com/ec/item/24972996",
+   "image": "https://static.upgcf.com/image/00000/2610/2610252/2610252002608/2610252002608s0.jpg",
+   "source": "Up Garage",
+   "kind": "shop",
+   "item_id": "24972996",
+   "shop": "アップガレージ 札幌平岡店",
+   "reason": "o título não confirma se serve na CX-5 (KE) — precisa conferir o encaixe; também passou do teto em ¥1,500",
+   "unit_only": false,
+   "has_keys": true,
+   "has_bolts": false
   }
  ],
- "unconfirmed_total": 48,
+ "unconfirmed_total": 28,
  "examples": [
-  {
-   "title": "トップケース.パニアケース　オフセットアタッチメント新品",
-   "price": 2000,
-   "url": "https://jmty.jp/aomori/sale-bik/article-1ti2u1",
-   "image": "https://cdn.jmty.jp/articles/images/6b0914ee65ef6dd3df3e2722/thumb_m_file.jpg",
-   "source": "Jimoty",
-   "kind": "classified",
-   "reason": "parece ser só o acessório de prancha, sem a base — e você ainda não tem a base"
-  },
   {
    "title": "【THULE】727 スノーキャリア",
    "price": 3850,
@@ -145,15 +159,24 @@
    "unit_only": false,
    "has_keys": false,
    "has_bolts": false
+  },
+  {
+   "title": "THULE スーリー スキー スノーボードキャリア　一式セット",
+   "price": 15000,
+   "url": "https://auctions.yahoo.co.jp/jp/auction/k1253962296",
+   "image": "https://auc-pctr.c.yimg.jp/i/auctions.c.yimg.jp/images.auctions.yahoo.co.jp/image/dr000/auc0211/user/7c432c22920a585f1049e3b019eac9d18ed91b1a3a43eaa6dd8d69f685ded0a0/i-img1200x900-17957602081258sgteyj200.jpg?pri=l&w=300&h=300&up=0&nf_src=sy&nf_path=images/auc/pc/top/image/1.0.3/na_170x170.png&nf_st=200",
+   "source": "Yahoo! Auctions",
+   "kind": "auction",
+   "reason": "parece ser só o acessório de prancha, sem a base — e você ainda não tem a base"
   }
  ],
- "swept": 165,
- "rejected": 162,
+ "swept": 121,
+ "rejected": 117,
  "sources": [
   {
    "name": "Yahoo! Auctions",
    "status": "ok",
-   "found": 56
+   "found": 62
   },
   {
    "name": "Yahoo!フリマ",
@@ -162,8 +185,8 @@
   },
   {
    "name": "Jimoty",
-   "status": "ok",
-   "found": 50
+   "status": "error: RuntimeError",
+   "found": 0
   },
   {
    "name": "Up Garage",
@@ -182,12 +205,13 @@
   }
  ],
  "notes": [
-  "Fontes que não responderam nesta varredura: Yahoo!フリマ, Rakuten. O robô tenta de novo na próxima.",
+  "Fontes que não responderam nesta varredura: Yahoo!フリマ, Jimoty, Rakuten. O robô tenta de novo na próxima.",
   "Itens do Yahoo! Auctions mostram o lance atual — o preço pode subir até o fim do leilão.",
+  "1 achado(s) muito abaixo do teto (≤40%): confira estado, fotos e vendedor antes de fechar — preço baixo demais também é sinal.",
   "3 anúncio(s) do tipo certo, mas o título não confirma o encaixe na CX-5 (KE) — estão no QUASE pra você conferir."
  ],
  "verdict": [
-  "O achado: US.67 INNOエアロベース キャリアセット マツダ KE2fw CX-5 por preço no anúncio — encaixe confirmado.",
+  "O achado: マツダ 3 6 CX-3 CX-5 CX-7 CX-9 CX3 CX5 CX7 CX… por ¥1,380 — encaixe confirmado, ¥2,620 abaixo do teto. Mas é leilão — o preço mostrado é o lance atual.",
   "Cuidado: 【THULE】 ベースキャリア CX-5/KE系 por ¥4,389 — loja longe, em Kagoshima — some o frete antes de comparar; o anúncio lista corpo e chaves, mas não os parafusos de fixação.",
   "Conjunto completo de verdade começa em ¥4,400 (Up Garage) — com chaves e parafusos listados no anúncio; mas a loja é em Sapporo, longe — some o frete antes de comparar."
  ]
