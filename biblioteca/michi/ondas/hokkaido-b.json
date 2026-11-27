@@ -1,0 +1,1263 @@
+{
+ "gerado_em": "2026-11-27",
+ "wave": "michi-wave-hokkaido-b",
+ "nota_geral": "Leitura das páginas oficiais das estações 65–128 de Hokkaido (segunda metade, ordem do registro MLIT), via portal oficial de Hokkaido (hokkaido-michinoeki.jp) — mesma fonte e mesmo rigor da onda hokkaido-a. Nenhuma página morta: as 64 abriram. banho: só conta o da própria estação/complexo; onsen citado apenas na guia de arredores NÃO conta (casos de fronteira documentados nas notas: ライスランドふかがわ, なかがわ, てしお, コスモール大樹, ぐるっとパノラマ美幌峠, 名水の郷きょうごく — este último adjacente, mas apresentado como instalação separada —, 絵本の里けんぶち, 真狩フラワーセンター, 北前船 松前, あかいがわ, かみしほろ, entre outros). Ícone de onsen sem banho na enumeração não prova nada. Com banho (12): むかわ四季の館 (onsen), 鐘のなるまち・ちっぷべつ (onsen adjacente do complexo), 風Ｗとままえ (onsen), しほろ温泉 (onsen moor), パパスランドさっつる (onsen, com preço publicado no portal: adulto ¥480 — o outro preço da metade é o de ２７５つきがた, adulto ¥650), ロマン街道しょさんべつ (onsen), しんしのつ (onsen たっぷの湯), しかべ間歇泉公園 (ashiyu do gêiser), 遠軽 森のオホーツク (ashiyu carbonatado), びえい「白金ビルケ」 (chuveiro), ガーデンスパ十勝川温泉 (spa de onsen moor) e ２７５つきがた (onsen ゆりかご, adulto ¥650). rv_park: só 花ロードえにわ cita RVパーク (no complexo はなふる ao lado) — null (NÃO DIZ) nas demais; o RVパーク citado em 美幌峠 pertence à instalação de onsen dos arredores e não foi contado. shachuhaku_proibido: só 流氷街道網走 publica proibição (estacionamento prolongado com fins de hospedagem é recusado; cochilo/descanso é permitido) — false nas outras 63. Alertas: しんしのつ — o portal anuncia fechamento prolongado para reforma desde 01/10/2026; しかべ間歇泉公園 tem horário de inverno reduzido e variável.",
+ "stations": [
+  {
+   "name": "にしおこっぺ花夢",
+   "muni": "紋別郡西興部村",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "A página oficial descreve as instalações (parque de flores de 6 ha, park golf, órgão mecânico, loja de produtos) e a lista de ícones não inclui banho nem onsen."
+   },
+   "cenario": null,
+   "especialidade": "Soft cream de leite de vacas criadas a pasto (grass-fed) e conservas de carne de veado e de urso (鹿夢缶・ひぐま缶)",
+   "hours": "9:00–17:00 (mar–out); 9:00–16:00 (nov–fev)",
+   "quotes": {
+    "especialidade": "村内で捕獲・収穫された鹿肉の缶詰、鹿革クラフト、山菜、乳製品など西興部村の特産品を購入できます"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "http://www.hokkaido-michinoeki.jp/michinoeki/2325/"
+  },
+  {
+   "name": "オーロラタウン９３りくべつ",
+   "muni": "足寄郡陸別町",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "A página enumera as instalações (centro de produtos turísticos, museu Kan Kansai, praça, hospedagem Aurora House no 2º andar) e não há banho; o ícone é de hospedagem, não de onsen."
+   },
+   "cenario": null,
+   "especialidade": "Jingisukan de carne de veado de Rikubetsu (りくべつ鹿肉ジンギスカン)",
+   "hours": "観光物産館 8:00–18:00 (abr–out); 9:00–17:00 (nov–mar)",
+   "quotes": {
+    "especialidade": "陸別町内でとれた鹿肉製品や山菜などの特産品をはじめ、旧ふるさと銀河線沿線1市6町の特産品をとりそろえています"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "http://www.hokkaido-michinoeki.jp/michinoeki/2355/"
+  },
+  {
+   "name": "はなやか（葉菜野花）小清水",
+   "muni": "斜里郡小清水町",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "A página enumera as instalações (sala de processamento de produtos agrícolas, terraço panorâmico, restaurante, loja) e não há banho nem ícone de onsen; as atrações citadas (原生花園, リリーパーク) são dos arredores."
+   },
+   "cenario": "mar",
+   "especialidade": "Espetinho “なんだこりゃスティック” (batata de Koshimizu, kamaboko de Abashiri e polvo de Shiretoko) e sweet potato de batata local",
+   "hours": "9:00–18:00 (abr–out); 9:00–17:30 (nov–mar)",
+   "quotes": {
+    "especialidade": "オホーツクの味覚！《小清水のあげいも・網走のかまぼこ・知床のタコ》を一串で！",
+    "cenario": "目の前に広がるオホーツク海、涛沸湖、原生花園と、自然いっぱい、家族揃ってゆっくりくつろげる「道の駅」です"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "http://www.hokkaido-michinoeki.jp/michinoeki/2375/"
+  },
+  {
+   "name": "ライスランドふかがわ",
+   "muni": "深川市",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "Caso de fronteira: o onsen citado （温泉・サウナ do アグリ工房まあぶ) fica numa instalação dos arredores, com endereço e telefone próprios — não é da estação. A enumeração da própria estação (restaurantes, loja de produtos, venda direta) não tem banho e não há ícone de onsen."
+   },
+   "cenario": null,
+   "especialidade": "Kamameshi do restaurante 味しるべ駅逓 (arroz de Fukagawa cozido na hora) e こめッち焼き de farinha de arroz",
+   "hours": "9:00–18:00 (abr–out); 9:00–17:00 (nov–mar)",
+   "quotes": {
+    "especialidade": "道の駅オープン以来、季節の素材を活かした炊きたての釜飯が評判のお店です"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "http://www.hokkaido-michinoeki.jp/michinoeki/2390/"
+  },
+  {
+   "name": "なかがわ",
+   "muni": "中川郡中川町",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "Caso de fronteira: o onsen citado (ポンピラ アクア リズイング, com hospedagem) é uma instalação das proximidades （付近には）, não da estação. A página descreve as instalações da estação (salão com lareira, restaurante, loja de produtos) sem banho e sem ícone de onsen."
+   },
+   "cenario": null,
+   "especialidade": "Soft cream de haskap e salsichas de Nakagawa (ナカガワウインナー)",
+   "hours": "9:00–17:00",
+   "quotes": {
+    "especialidade": "地元産の甘酸っぱいハスカップを使用したハスカップソフトと、辛さと甘さが絶妙な山わさびソフトは中川のオリジナル商品"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "http://www.hokkaido-michinoeki.jp/michinoeki/2424/"
+  },
+  {
+   "name": "２３０ルスツ",
+   "muni": "虻田郡留寿都村",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "Reinaugurada em 18/04/2025. A página descreve venda de verduras e produtos processados e área de alimentação; a lista de ícones não inclui banho nem onsen."
+   },
+   "cenario": "montanha",
+   "especialidade": "Verduras de Rusutsu (ルスツ野菜) e temperos orgânicos selecionados",
+   "hours": "9:00–18:00 (abr–out); 9:00–17:00 (nov–mar)",
+   "quotes": {
+    "especialidade": "ルスツの豊かな野菜の他にも素材を引き出すオーガニックなどの健康志向の調味料なども幅広くセレクト",
+    "cenario": "留寿都村の秀峰である尻別岳の麓に位置する道の駅"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "http://www.hokkaido-michinoeki.jp/michinoeki/2442/"
+  },
+  {
+   "name": "てしお",
+   "muni": "天塩郡天塩町",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "Caso de fronteira: o onsen citado （てしお温泉夕映， hotel com banho de dia) fica a 5 minutos de carro e aparece na guia de arredores — não é da estação. As instalações da estação (restaurante, antenna shop, informações) não incluem banho."
+   },
+   "cenario": "mar",
+   "especialidade": "Shijimi ramen (しじみラーメン) com as amêijoas típicas de Teshio e hokki curry",
+   "hours": "9:00–19:00 (abr–out); 9:00–17:00 (nov–mar)",
+   "quotes": {
+    "especialidade": "天塩町特産品であるしじみを使用したラーメンです",
+    "cenario": "利尻富士をかなたに、天塩川と日本海を眺望する天塩観光と味覚の中継スポット"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "http://www.hokkaido-michinoeki.jp/michinoeki/2467/"
+  },
+  {
+   "name": "コスモール大樹",
+   "muni": "広尾郡大樹町",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "Caso de fronteira: o 晩成温泉 citado fica a 30 minutos de carro, na guia de arredores — não é da estação. A estação é um centro comercial (supermercado Coop, lojas, esquina de produtos) sem banho e sem ícone de onsen."
+   },
+   "cenario": null,
+   "especialidade": "Queijo camembert 大樹物語 (venda exclusiva da estação) e ロケットラングドシャ, o souvenir da “cidade do espaço”",
+   "hours": "特産品コーナー 9:00–17:30",
+   "quotes": {
+    "especialidade": "大樹物語は道の駅『コスモール大樹』でだけ販売している雪印大樹工場オリジナルのカマンベールチーズ"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "http://www.hokkaido-michinoeki.jp/michinoeki/2483/"
+  },
+  {
+   "name": "ぐるっとパノラマ美幌峠",
+   "muni": "網走郡美幌町",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "Caso de fronteira: a 美幌温泉「峠の湯びほろ」 fica a cerca de 20 minutos de carro (guia de arredores) — o RVパーク citado é dessa instalação de onsen, não da estação, por isso rv_park fica null. A estação (lojas, restaurante, mirante no 2º andar) não tem banho."
+   },
+   "cenario": "lago",
+   "especialidade": "Curry de carne de Bihoro com cebola （美幌牛と玉ねぎのカレー) e 美幌峠の揚げいも",
+   "hours": "9:00–18:00 (abr–out); 10:00–16:00 (nov–mar)",
+   "quotes": {
+    "especialidade": "一番人気の8種のスパイスが効いた『美幌牛と玉ねぎのカレー』をはじめ、『えぞ鹿肉ロースト丼』や『美幌産野菜の天ぷら定食』などを提供します",
+    "cenario": "眼下には日本屈指のカルデラ湖「屈斜路湖(くっしゃろこ)」を一望できる美幌峠の頂上に位置する道の駅「ぐるっとパノラマ美幌峠」"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "http://www.hokkaido-michinoeki.jp/michinoeki/2502/"
+  },
+  {
+   "name": "らんこし・ふるさとの丘",
+   "muni": "磯谷郡蘭越町",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "A página descreve a venda direta, o restaurante de soba e o camping com bangalôs atrás da estação; não há banho nem ícone de onsen."
+   },
+   "cenario": "montanha",
+   "especialidade": "Sorvete artesanal de leite recém-ordenhado e soba de farinha de Rankoshi (ふるさとの丘のそば)",
+   "hours": "9:00–17:00 (abr–out); 9:00–16:00 (nov–mar)",
+   "quotes": {
+    "especialidade": "中でもここで作られたアイスクリームは、絞りたての牛乳を原料に製法にもこだわったもので、ここで直接販売しているほか町内の各店でも販売されています",
+    "cenario": "雄大なニセコ連峰と羊蹄山を眺め、清流尻別川の恵みを受け作られた新鮮な農作物をはじめ数々の加工品が揃っています"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "http://www.hokkaido-michinoeki.jp/michinoeki/2519/"
+  },
+  {
+   "name": "とようら",
+   "muni": "虻田郡豊浦町",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "Caso de fronteira: o 天然豊浦温泉しおさい citado é uma instalação separada da guia de arredores (com telefone próprio) — não é da estação. A estação (venda direta, take-out, canto Naito Daisuke) não tem banho."
+   },
+   "cenario": "mar",
+   "especialidade": "Soft cream de morango de Toyoura e ホタテちまき (chimaki de vieira)",
+   "hours": "9:00–17:00",
+   "quotes": {
+    "especialidade": "豊浦町名産の帆立をちまきに入れた、他にはない商品です。一度、お試しください",
+    "cenario": "南は噴火湾に面した巨石や断崖が並ぶダイナミックな海岸線、北は蝦夷富士羊蹄山を眺望する風光明媚な場所にあります"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "http://www.hokkaido-michinoeki.jp/michinoeki/2533/"
+  },
+  {
+   "name": "メルヘンの丘めまんべつ",
+   "muni": "網走郡大空町",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "O onsen citado （東藻琴芝桜公園， com温泉・オートキャンプ場) é um parque dos arredores, não da estação. A estação (centro cultural, antenna shop ほのか, gramado) não tem banho e não há ícone de onsen."
+   },
+   "cenario": "lago",
+   "especialidade": "しじ美ごはんの素 (tempero de arroz com shijimi do lago Abashiri) e サクラ豚丼",
+   "hours": "9:00–18:00",
+   "quotes": {
+    "especialidade": "大空町の特産品である旨みたっぷりの網走湖産の天然大粒しじみをふんだんに使用",
+    "cenario": "網走湖を望めるほか、周辺には地平線が身近に感じられる丘陵地があり"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "http://www.hokkaido-michinoeki.jp/michinoeki/2548/"
+  },
+  {
+   "name": "むかわ四季の館",
+   "muni": "勇払郡むかわ町",
+   "banho": {
+    "tem": true,
+    "tipo": "onsen",
+    "preco": null,
+    "nota": "Onsen da própria estação: 鵡川温泉「四季の湯」, instalação termal completa (banho das 10:00 às 22:00); a taxa do banho dá acesso também à piscina aquecida e à sala de treino. Sauna e rotenburo. O portal não publica o preço."
+   },
+   "cenario": null,
+   "especialidade": "Pratos de shishamo, o peixe típico de Mukawa (no restaurante たんぽぽ)",
+   "hours": "8:00–22:00 (温泉 10:00–22:00)",
+   "quotes": {
+    "banho": "強食塩泉の泉質から身体の心から暖まることが出来ます。サウナ、露天風呂も完備しています",
+    "especialidade": "季節限定メニューでは、鵡川町の特産「ししゃも」料理が堪能できます"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "http://www.hokkaido-michinoeki.jp/michinoeki/2569/"
+  },
+  {
+   "name": "あいおい",
+   "muni": "網走郡津別町",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "O onsen citado (hotel ランプの宿 森つべつ, com rotenburo) é uma instalação dos arredores. A estação (物産館， antiga estação ferroviária, café, vagão-hospedagem de exposição) não tem banho e não há ícone de onsen."
+   },
+   "cenario": null,
+   "especialidade": "Soba artesanal de farinha de trigo sarraceno de Hokkaido e tofu artesanal de soja local",
+   "hours": "9:00–17:00",
+   "quotes": {
+    "especialidade": "道産そば粉を使った手打ちソバや、地元産大豆を使った手造り豆腐をはじめ地元農産物、木工クラフト製品等を販売する物産館"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "http://www.hokkaido-michinoeki.jp/michinoeki/2585/"
+  },
+  {
+   "name": "しかおい",
+   "muni": "河東郡鹿追町",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "O banho citado (rotenburo natural 鹿の湯) fica no camping 然別峡野営場， nos arredores — não é da estação. A estação (venda direta, museu Kanda Nissho ao lado, parque) não tem banho."
+   },
+   "cenario": null,
+   "especialidade": "Soba famoso da venda direta de Shikaoi, verduras e queijos locais",
+   "hours": "9:00–17:00 (abr–out); 10:00–16:00 (nov–mar)",
+   "quotes": {
+    "especialidade": "名物のそばをはじめ、野菜、チーズなど各種特産品を販売しています"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "http://www.hokkaido-michinoeki.jp/michinoeki/2605/"
+  },
+  {
+   "name": "しらたき",
+   "muni": "紋別郡遠軽町",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "O 五右衛門風呂 citado fica no camping de altitude （高原キャンプ場） dos arredores, não na estação. A estação (loja, restaurante, espaço de descanso 24 h junto à área de estacionamento de Shirataki) não tem banho e não há ícone de onsen."
+   },
+   "cenario": "rio",
+   "especialidade": "Presuntos e salsichas, conservas de sansai e artesanato de obsidiana (黒曜石加工品)",
+   "hours": "物産館 9:00–17:00",
+   "quotes": {
+    "especialidade": "ハム・ソーセージ、山菜缶詰、ドライフラワー、黒曜石加工品などがあります",
+    "cenario": "湧別川の上流　緑のてっぺん　しらたき"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "http://www.hokkaido-michinoeki.jp/michinoeki/2623/"
+  },
+  {
+   "name": "あしょろ銀河ホール２１",
+   "muni": "足寄郡足寄町",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "A página enumera as instalações (loja e padaria, galeria Matsuyama Chiharu, restaurante, instalações turísticas) e não há banho nem menção a onsen."
+   },
+   "cenario": null,
+   "especialidade": "Produtos de ラワンぶき (o ruibarbo gigante de Ashoro), queijos e ラワンぶきソフト",
+   "hours": "8:00–18:00 (mai–set); 8:00–17:00 (out–abr)",
+   "quotes": {
+    "especialidade": "足寄町特産のらわんぶき製品やチーズ・乳製品を中心とした特産品ショップや焼き立てのパンを販売するベーカリーがあります"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "http://www.hokkaido-michinoeki.jp/michinoeki/2639/"
+  },
+  {
+   "name": "サーモンパーク千歳",
+   "muni": "千歳市",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "A página descreve o aquário de salmões, lojas e restaurantes do complexo; não há banho nem ícone de onsen."
+   },
+   "cenario": "rio",
+   "especialidade": "O salmão do rio Chitose — o complexo abriga o aquário サケのふるさと 千歳水族館, com observação subaquática do rio",
+   "hours": "9:00–17:00",
+   "quotes": {
+    "especialidade": "淡水では国内最大級の巨大水槽や四季折々に遷り変る千歳川の中を観察できる水中観察室等でサケを始めとする様々な淡水魚の生態を観察することができます",
+    "cenario": "サケの還る清流に隣接した道の駅"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "http://www.hokkaido-michinoeki.jp/michinoeki/2654/"
+  },
+  {
+   "name": "ひがしかわ「道草館」",
+   "muni": "上川郡東川町",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "As menções a onsen （旭岳・天人峡温泉） são destinos para os quais a estação é parada de caminho, não instalações dela. A página enumera informações, venda de produtos e banheiros; sem banho e sem ícone de onsen."
+   },
+   "cenario": null,
+   "especialidade": "Pães de farinha de arroz de Higashikawa e artesanato local (cerâmica e madeira)",
+   "hours": "9:00–18:00 (abr–set); 9:00–17:00 (out–mar)",
+   "quotes": {
+    "especialidade": "東川産の米粉で作ったパンをはじめ、町内創作工芸家の陶器及び木工クラフト等の特産品を販売しています"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "http://www.hokkaido-michinoeki.jp/michinoeki/2668/"
+  },
+  {
+   "name": "花ロードえにわ",
+   "muni": "恵庭市",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "Não há banho na estação (lojas, restaurantes, padaria, jardins). É a segunda estação da onda a citar RVパーク: a instalação de 車中泊「RVパーク花ロードえにわ」 faz parte do complexo はなふる ao lado da estação."
+   },
+   "cenario": "rio",
+   "especialidade": "スキレットカレーこな雪とんとん, curry com o porco criado a pasto de Eniwa, e os pães da padaria えにパン",
+   "hours": "9:00–18:00 (abr–out); 9:00–17:00 (nov–mar)",
+   "quotes": {
+    "especialidade": "貴重な恵庭産放牧豚「こな雪とんとん」の旨味をたっぷり味わえる特製カレー",
+    "cenario": "国道36号とサケの遡上する漁川の交差点に位置する道の駅",
+    "rv_park": "ガーデンや恵庭農産物直売所かのな・車中泊施設「RVパーク花ロードえにわ」・フェアフィールドバイマリオット北海道えにわなど周辺施設が充実しています"
+   },
+   "rv_park": true,
+   "shachuhaku_proibido": false,
+   "source": "http://www.hokkaido-michinoeki.jp/michinoeki/2684/"
+  },
+  {
+   "name": "シェルプラザ・港",
+   "muni": "磯谷郡蘭越町",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "A página descreve a loja de conchas e o museu 貝の館 ao lado; não há banho nem ícone de onsen."
+   },
+   "cenario": "mar",
+   "especialidade": "Conchas raras do mundo inteiro, artesanato e acessórios de concha (na シェルプラザ e no 貝の館）",
+   "hours": "9:00–17:00 (abr–out); 9:00–16:00 (nov–mar)",
+   "quotes": {
+    "especialidade": "シェルプラザでは、世界の珍しい貝や、貝細工、貝のアクセサリーなど多数販売しております",
+    "cenario": "美しい日本海沿いを走る国道229号線沿いに位置し"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "http://www.hokkaido-michinoeki.jp/michinoeki/2702/"
+  },
+  {
+   "name": "真狩フラワーセンター",
+   "muni": "虻田郡真狩村",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "O まっかり温泉 citado é uma instalação termal separada, na guia de arredores (com contato da prefeitura) — não é da estação. A estação (estufa de flores, lojas, restaurante) não tem banho."
+   },
+   "cenario": "montanha",
+   "especialidade": "Doces de ゆり根 (bulbo de lírio), como o ゆり根最中 de venda exclusiva da estação, e ゆり根かき揚げ丼",
+   "hours": "9:00–17:30 (abr–out); 9:30–16:30 (nov–mai)",
+   "quotes": {
+    "especialidade": "ゆり根スイーツNo.1人気 　道の駅真狩限定販売",
+    "cenario": "北に羊蹄山を望み、約４万㎡の敷地内に、センターハウス、ガラスハウス、トイレ棟の施設と、花に囲まれた癒しの空間を提供します"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "http://www.hokkaido-michinoeki.jp/michinoeki/2715/"
+  },
+  {
+   "name": "鐘のなるまち・ちっぷべつ",
+   "muni": "雨竜郡秩父別町",
+   "banho": {
+    "tem": true,
+    "tipo": "onsen",
+    "preco": null,
+    "nota": "Onsen do complexo da estação: a 秩父別温泉ちっぷゆう＆ゆ fica adjacente ao centro da estação, tem seção própria entre as instalações da página oficial (banho de dia e hospedagem, vários banhos e sauna) e o ícone de温泉 consta da lista da estação. O portal não publica o preço."
+   },
+   "cenario": null,
+   "especialidade": "ちっぷべつ緑のナポリタン (napolitan verde de brócolis) e グリーンソフト",
+   "hours": "9:00–17:00 (abr–out); 9:00–16:00 (nov–mar)",
+   "quotes": {
+    "banho": "隣接する秩父別温泉ちっぷゆう＆ゆでは、日帰り入浴や宿泊もでき",
+    "especialidade": "秩父別産のブロッコリーを使用した人気ご当地グルメ"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "http://www.hokkaido-michinoeki.jp/michinoeki/2732/"
+  },
+  {
+   "name": "あぷた",
+   "muni": "虻田郡洞爺湖町",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "O onsen citado （洞爺湖温泉） é a cidade termal do outro lado do lago, na guia de arredores — não é da estação. A estação (venda de produtos, sorvete artesanal, canto do uni-don) não tem banho."
+   },
+   "cenario": "mar",
+   "especialidade": "うに丼 (don de uni servido o ano todo) e ほたてっ子カレー de vieiras da baía de Funka",
+   "hours": "9:00–18:00 (abr–set); 9:00–17:00 (out–mar)",
+   "quotes": {
+    "especialidade": "季節を問わず新鮮なウニを安価で提供している【道の駅あぷた】自慢の逸品は、全国各地からご支持をいただいており",
+    "cenario": "眼下に虻田漁港と内浦湾が眺望できる立地となっており"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "http://www.hokkaido-michinoeki.jp/michinoeki/2751/"
+  },
+  {
+   "name": "うりまく",
+   "muni": "河東郡鹿追町",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "Não há banho na estação (parque de equitação, park golf, venda direta). As menções a onsen são do lago Shikaribetsu, a 20 minutos (guia de arredores), incluindo o rotenburo de gelo de inverno."
+   },
+   "cenario": null,
+   "especialidade": "Soba e udon de farinha de Shikaoi na venda direta e 肉じゃがまん para viagem",
+   "hours": "9:00–17:00 (fim de abr–início de nov); 9:00–16:00 (meados de nov–meados de abr)",
+   "quotes": {
+    "especialidade": "人気メニューは鹿追産そば粉とダシを使用したそばやうどんです"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "http://www.hokkaido-michinoeki.jp/michinoeki/2766/"
+  },
+  {
+   "name": "絵本の里けんぶち",
+   "muni": "上川郡剣淵町",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "Caso de fronteira: o 剣淵温泉レークサイド桜岡 (adulto ¥500) é um hotel termal separado, no parque Sakuraoka, citado na guia de arredores com telefone próprio — não é da estação, por isso o preço não entra na ficha. A estação (restaurante, padaria, venda direta, canto de livros infantis) não tem banho."
+   },
+   "cenario": null,
+   "especialidade": "Soft cream de shiso, sanduíches de frango local e ばあばのキヌアみそ",
+   "hours": "9:00–17:00 (mai–set); 9:00–16:00 (out–abr)",
+   "quotes": {
+    "especialidade": "珍しいシソ味ソフトクリームや地場産加工の鶏肉を使用したサンドイッチ、剣淵野菜のコロッケなどの軽食でおくつろぎいただけます"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "http://www.hokkaido-michinoeki.jp/michinoeki/2782/"
+  },
+  {
+   "name": "風Ｗとままえ",
+   "muni": "苫前郡苫前町",
+   "banho": {
+    "tem": true,
+    "tipo": "onsen",
+    "preco": null,
+    "nota": "A instalação principal da estação é o とままえ温泉ふわっと: onsen de cloreto forte (46 °C), rotenburo com vista para as ilhas Teuri e Yagishiri e banho de dia das 10:30 às 22:00. A página do portal noticia a revisão da tarifa de banho de dia, mas não publica o valor."
+   },
+   "cenario": "mar",
+   "especialidade": "Camarão doce （甘エビ） e polvo cozido de Tomamae; エビバーガー no restaurante",
+   "hours": "7:00–22:00 (banho de dia 10:30–22:00)",
+   "quotes": {
+    "banho": "メイン施設である「とままえ温泉ふわっと」はコンクリートの素材を活かした壁とドーム球場を思わせる白い屋根が特徴で、温泉、露天風呂、レストラン、ラウンジ、特産品売店やＢ＆Ｇ温水プールなどさまざまな施設があります",
+    "especialidade": "名物の甘エビや煮蛸などの海産物、町内の各サークル等が作ったコーヒーカップ、花瓶、木工作品なども展示販売されています",
+    "cenario": "ラウンジや露天風呂（男女日替わり）からは日本海に浮かぶ天売島・焼尻島も一望することができ"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "http://www.hokkaido-michinoeki.jp/michinoeki/2805/"
+  },
+  {
+   "name": "しほろ温泉",
+   "muni": "河東郡士幌町",
+   "banho": {
+    "tem": true,
+    "tipo": "onsen",
+    "preco": null,
+    "nota": "Onsen da própria estação (reinaugurada em 18/04/2025): しほろ温泉プラザ緑風， de fonte “moor” vegetal rara; banho de dia das 12:00 às 22:00, com banhos temáticos （健康の湯・美容の湯）, rotenburo e terraço de ashiyu gratuito (11:00–20:00). O portal só publica o preço do pacote banho+refeição (¥2.400), não o do banho avulso."
+   },
+   "cenario": null,
+   "especialidade": "しほろ牛, a carne de marca de Shihoro (“maior rebanho de gado de corte do Japão”), servida no restaurante e nos pacotes com banho",
+   "hours": "10:00–21:00 (温泉の日帰り入浴 12:00–22:00)",
+   "quotes": {
+    "banho": "日帰り入浴が可能な温泉大浴場は、健康の湯、美容の湯とテーマ別に分かれ日替わりでご利用頂けます",
+    "especialidade": "「肉牛頭数日本一」「士幌町のブランド牛」となっている「しほろ牛」をメインとした焼き肉コースをお愉しみ頂けます"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "http://www.hokkaido-michinoeki.jp/michinoeki/2824/"
+  },
+  {
+   "name": "名水の郷きょうごく",
+   "muni": "虻田郡京極町",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "Caso de fronteira: a 京極温泉 fica adjacente ao parque da estação e o ícone de温泉 consta da lista, mas na página oficial ela é apresentada na guia de arredores como instalação separada (“logo perto da estação”) — pela regra da onda, não conta como banho da estação. A estação em si (名水プラザ, restaurante, loja) não tem banho."
+   },
+   "cenario": null,
+   "especialidade": "Produtos da água famosa de Kyogoku: 京極の名水 (água mineral do ふきだし湧水）, 名水珈琲 e 名水珈琲ゼリー",
+   "hours": "9:00–17:00",
+   "quotes": {
+    "especialidade": "日本名水百選である北海道羊蹄山山麓のふきだし湧水を衛生的に処理したナチュラルミネラルウォーターです"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "http://www.hokkaido-michinoeki.jp/michinoeki/2841/"
+  },
+  {
+   "name": "びえい「丘のくら」",
+   "muni": "上川郡美瑛町",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "A página descreve a loja, o restaurante 香麦食堂 e o hotel no 2º andar do prédio (instalação anexa); não há banho nem menção a onsen."
+   },
+   "cenario": null,
+   "especialidade": "美瑛コーンバターラーメン (mais de um milho inteiro de Biei por tigela) e croquetes de batata de Biei",
+   "hours": "9:00–17:00 (mar–mai, set–nov); 9:00–18:00 (jun–ago); 10:00–17:00 (dez–fev)",
+   "quotes": {
+    "especialidade": "プリップリで甘い！美瑛産コーンを丸ごと１本超で入れました"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "http://www.hokkaido-michinoeki.jp/michinoeki/2854/"
+  },
+  {
+   "name": "ロマン街道しょさんべつ",
+   "muni": "苫前郡初山別村",
+   "banho": {
+    "tem": true,
+    "tipo": "onsen",
+    "preco": null,
+    "nota": "Onsen dentro da instalação da própria estação: o 岬センター（コズミックイン）, no parque Misaki-dai que é a estação, abriga o しょさんべつ温泉「岬の湯」. O portal não publica o preço do banho."
+   },
+   "cenario": "mar",
+   "especialidade": "フグだしラーメン (ramen de caldo de baiacu) e ふぐたこ弁当, com baiacu e polvo do mar de Shosanbetsu",
+   "hours": "売店・喫茶 10:00–21:00 (abr–out); 10:00–20:00 (nov–mar)",
+   "quotes": {
+    "banho": "施設内にはしょさんべつ温泉「岬の湯」があり、天然真ふぐ照り焼き丼やふぐ鍋、たこしゃぶなど日本海の幸も味わえます",
+    "especialidade": "日本海初山別沖産の新鮮なフグを天丼風に、タコをやわらか煮に仕立て、お米は留萌管内産米を使用するなど地元産食材にこだわった逸品です",
+    "cenario": "国道232号線から海側に位置する初山別村最大の観光スポット「岬台公園」が道の駅となりました"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "http://www.hokkaido-michinoeki.jp/michinoeki/2870/"
+  },
+  {
+   "name": "うとろ・シリエトク",
+   "muni": "斜里郡斜里町",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "A página enumera as instalações (informações turísticas, duas lojas, restaurante, painéis da natureza) e não há banho nem ícone de onsen; a menção a ウトロ温泉 é só como referência ao terminal de ônibus vizinho."
+   },
+   "cenario": null,
+   "especialidade": "鮭と鮭イクラの親子丼 com salmão de Shiretoko e o 鹿肉バーガー, hambúrguer de veado exclusivo de Utoro",
+   "hours": "9:00–17:00",
+   "quotes": {
+    "especialidade": "自社工場で手作りされたエゾ鹿肉のパテに、特製ソースをかけ、斜里町産小麦「春よ恋」を使用したバンズでサンドした知床（ウトロ）限定のご当地バーガーです"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "http://www.hokkaido-michinoeki.jp/michinoeki/2884/"
+  },
+  {
+   "name": "しゃり",
+   "muni": "斜里郡斜里町",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "A página descreve informações, a loja COBAKO Shari e a sala comunitária; não há banho nem menção a onsen nas instalações."
+   },
+   "cenario": null,
+   "especialidade": "Produtos do personagem 知床トコさん e artesanato de Shiretoko na loja COBAKO Shari (aberta em 2024)",
+   "hours": "9:00–19:00",
+   "quotes": {
+    "especialidade": "斜里町のシンボルキャラクター「知床トコさん」グッズの企画開発をおこなう団体が運営する直営ショップ"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "http://www.hokkaido-michinoeki.jp/michinoeki/2905/"
+  },
+  {
+   "name": "パパスランドさっつる",
+   "muni": "斜里郡清里町",
+   "banho": {
+    "tem": true,
+    "tipo": "onsen",
+    "preco": "大人 ¥480 / 小学生 ¥150",
+    "nota": "Onsen da própria estação, renovado em 2013: banho das 11:00 às 21:00 (horário no bloco da própria estação), com rotenburo e ashiyu gratuito. É a única estação desta metade com preço de banho publicado no portal."
+   },
+   "cenario": "montanha",
+   "especialidade": "Verduras frescas de Kiyosato na venda direta, colhidas na manhã, e o restaurante パパス (tonkatsu e cozinha chinesa)",
+   "hours": "9:00–21:00 (温泉 11:00–21:00)",
+   "quotes": {
+    "banho": "リニューアルされた温泉施設には、露天風呂や無料の足湯もあります。入浴料は大人480円（中高生含む）、小学生150円です",
+    "cenario": "施設の正面には日本百名山の秀峰斜里岳",
+    "especialidade": "レストラン「パパス」ではとんかつ専門の味、本格中華と種類豊富なメニューからお選びいただけます"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "http://www.hokkaido-michinoeki.jp/michinoeki/2920/"
+  },
+  {
+   "name": "もち米の里☆なよろ",
+   "muni": "名寄市",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "O onsen citado （なよろ温泉サンピラー) fica junto à estação de esqui Piyashiri, na guia de arredores — não é da estação. A estação (restaurante, venda de produtos de arroz glutinoso, estúdio da FM local) não tem banho."
+   },
+   "cenario": null,
+   "especialidade": "Produtos do arroz glutinoso （もち米） de Nayoro: ソフト大福， クリーム大福 e もち米コロッケ",
+   "hours": "9:00–18:00 (abr–out); 9:00–17:00 (nov–mar)",
+   "quotes": {
+    "especialidade": "人気のクリーム大福・ソフト大福もち、いちご羊羹、そば、など名寄の名産・特産を販売しているほか"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "http://www.hokkaido-michinoeki.jp/michinoeki/2939/"
+  },
+  {
+   "name": "みなとま～れ寿都",
+   "muni": "寿都郡寿都町",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "O onsen citado （寿都温泉ゆべつのゆ) é uma instalação separada da guia de arredores, com contato da prefeitura — não é da estação. A estação (loja de produtos do mar, informações, balcão com vista para o porto) não tem banho."
+   },
+   "cenario": "mar",
+   "especialidade": "生炊きしらす佃煮, o tsukudani de shirasu com mais de 80 anos de história, e o doce わかさ屋いも",
+   "hours": "9:00–17:00",
+   "quotes": {
+    "especialidade": "80年以上の歴史を誇る、寿都町の名産品「生炊きしらす佃煮」各種、新鮮なホッケを加工した糠ほっけや切込み",
+    "cenario": "寿都漁港に隣接しており、漁港を一望できる優位性を生かした「海と一体感」あるエリアへの配置となっています"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "http://www.hokkaido-michinoeki.jp/michinoeki/2959/"
+  },
+  {
+   "name": "とうや湖",
+   "muni": "虻田郡洞爺湖町",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "A página enumera as instalações (venda direta, canto de refeições e descanso, mirante) e não há banho nem menção a onsen."
+   },
+   "cenario": "lago",
+   "especialidade": "Pratos com verduras da estação de Toya no canto de refeições e produtos agrícolas locais com nome do produtor",
+   "hours": "8:30–17:00 (abr–out); 9:00–16:00 (nov–mar)",
+   "quotes": {
+    "especialidade": "食事コーナーでは地場産の野菜をふんだんに使った数多くのメニューが揃い、食欲をそそります",
+    "cenario": "施設の南側に隣接した展望台からは洞爺湖、施設北側には羊蹄山が田園風景の中にそびえ、雄大な景色を体感できます"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "http://www.hokkaido-michinoeki.jp/michinoeki/2974/"
+  },
+  {
+   "name": "流氷街道網走",
+   "muni": "網走市",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "A página enumera as instalações (informações turísticas, venda de produtos, take-out, praça de alimentação no 2º andar) e não há banho nem ícone de onsen."
+   },
+   "cenario": "mar",
+   "especialidade": "網走バーガー (com nagaimo, wasabi e salmão masu de Abashiri) e 網走ザンギ丼",
+   "hours": "9:00–18:00",
+   "quotes": {
+    "especialidade": "ここでは網走産の長芋・金印わさび・カラフトマスを使った網走オリジナル、人気の「網走バーガー」",
+    "cenario": "カモメが飛びかい、漁船が行きかう網走川河口に位置し、オホーツク海や知床半島を一望できる道の駅「流氷街道網走」",
+    "shachuhaku": "※当道の駅駐車場において、休憩仮眠以外の”宿泊を目的とした”長時間駐車はお断りしております"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": true,
+   "source": "http://www.hokkaido-michinoeki.jp/michinoeki/2986/"
+  },
+  {
+   "name": "北前船 松前",
+   "muni": "松前郡松前町",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "O onsen citado （松前温泉休養センター) fica a 10 minutos de carro do parque de Matsumae, na guia de arredores — não é da estação. A estação (loja de produtos, restaurante 北前食堂） não tem banho."
+   },
+   "cenario": "mar",
+   "especialidade": "松前本まぐろ丼 (don de atum de Matsumae) e 松前漬， o picles tradicional da cidade",
+   "hours": "9:00–17:00",
+   "quotes": {
+    "especialidade": "「松前本まぐろ」・「アワビ」等の新鮮な魚介類、本場松前の各名店が丁寧に作り上げた「松前漬」・「するめ」等の特産品を堪能できます",
+    "cenario": "「北前船」が往来していた津軽海峡の絶景を望み"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "http://www.hokkaido-michinoeki.jp/michinoeki/3007/"
+  },
+  {
+   "name": "ステラ★ほんべつ",
+   "muni": "中川郡本別町",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "A página enumera as instalações da antiga estação ferroviária (informações, venda de produtos, padaria, restaurante, correio simplificado) e não há banho nem menção a onsen."
+   },
+   "cenario": null,
+   "especialidade": "Produtos de feijão preto de Honbetsu da marca キレイマメ e o ほんべつ豆食パン da padaria da estação",
+   "hours": "9:00–18:00 (fim de abr–12 de out); 9:00–17:00 (13 de out–fim de abr)",
+   "quotes": {
+    "especialidade": "本別特産の黒豆「光黒大豆」を地元で加工し、安心・安全美味しさにこだわった本別ブランド「キレイマメ」など豆加工品"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "http://www.hokkaido-michinoeki.jp/michinoeki/3021/"
+  },
+  {
+   "name": "ウトナイ湖",
+   "muni": "苫小牧市",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "A página descreve o canto de descanso com vista para o lago, o mirante, a venda direta e os restaurantes; não há banho. (A única menção a chuveiro é no texto sobre a estação espacial Mir, atração de outro museu da cidade.)"
+   },
+   "cenario": "lago",
+   "especialidade": "ほっきカレー, curry com o marisco hokki inteiro de Tomakomai, e B1とんちゃんの豚まん",
+   "hours": "9:00–18:00 (mar–out); 9:00–17:00 (nov–fev)",
+   "quotes": {
+    "especialidade": "苫小牧名産のほっき貝の身、貝柱、ヒモが入っており、ほっき貝まるごと味わえます",
+    "cenario": "湖側は全面ガラス張りとなっており、窓からはウトナイ湖を一望することができます"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "http://www.hokkaido-michinoeki.jp/michinoeki/3038/"
+  },
+  {
+   "name": "うらほろ",
+   "muni": "十勝郡浦幌町",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "A página enumera as instalações (venda de produtos, lanches, informações, restaurante vizinho うらほろ亭） e não há banho nem menção a onsen; o camping citado é do parque florestal vizinho."
+   },
+   "cenario": null,
+   "especialidade": "Cachorro-quente com salsicha de ギョウジャニンニク e o スパカツ (espaguete com katsu) do うらほろ亭",
+   "hours": "9:00–17:00",
+   "quotes": {
+    "especialidade": "ギョウジャニンニク入りソーセージを使ったホットドックや生キャラメルソフトクリームなどが味わえます"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "http://www.hokkaido-michinoeki.jp/michinoeki/3057/"
+  },
+  {
+   "name": "しんしのつ",
+   "muni": "石狩郡新篠津村",
+   "banho": {
+    "tem": true,
+    "tipo": "onsen",
+    "preco": null,
+    "nota": "A própria estação é uma instalação combinada com o onsen たっぷの湯 (banho das 6:00 às 22:00, com rotenburo com vista para o lago Shinotsu). ATENÇÃO: o portal anuncia fechamento prolongado para reforma a partir de 01/10/2026. O portal não publica o preço do banho."
+   },
+   "cenario": "lago",
+   "especialidade": "Arroz 新しのつ米 (ゆめぴりか) e o saquê puro de arroz 純米酒大法螺",
+   "hours": "6:00–22:00 (温泉 6:00–22:00)",
+   "quotes": {
+    "banho": "当駅は、道道江別奈井江線沿いにあり、新篠津村にすでにある温泉たっぷの湯施設を利用しています",
+    "especialidade": "地酒である「大法螺」や「どぶろく」、お米や地元食材を使った特産品等をたくさん取り揃えています",
+    "cenario": "露天風呂からはしのつ湖面をみることもでき、心も体もリフレッシュ間違いなし"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "http://www.hokkaido-michinoeki.jp/michinoeki/3070/"
+  },
+  {
+   "name": "夕張メロード",
+   "muni": "夕張市",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "A página descreve a venda direta, o take-out e a loja; não há banho nem menção a onsen."
+   },
+   "cenario": null,
+   "especialidade": "Melão de Yubari no verão e o 夕張メロンバウムクーヘン, exclusivo da estação",
+   "hours": "Variável por mês: 9:00–18:30 (mai–ago); 10:00–17:30 (jan–fev); abertura entre 9:00–10:00 e fecho entre 18:00–18:30 nos demais meses",
+   "quotes": {
+    "especialidade": "夕張メロード限定の夕張メロンバウムクーヘン（1,780円）を毎日数量限定で販売中"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "http://www.hokkaido-michinoeki.jp/michinoeki/3083/"
+  },
+  {
+   "name": "おだいとう",
+   "muni": "野付郡別海町",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "A página descreve a torre de observação, o restaurante e a loja; não há banho nem menção a onsen."
+   },
+   "cenario": "mar",
+   "especialidade": "別海ジャンボホタテバーガー com o ジャンボ牛乳 (conjunto) e o 三角牛乳, o único leite em embalagem triangular do Japão",
+   "hours": "9:00–17:00 (mai–out); 9:00–16:00 (nov–abr)",
+   "quotes": {
+    "especialidade": "別海町野付産のジャンボホタテ（２Ｌサイズ）を旨味を逃がさない春巻きに包み、道産小麦と別海牛乳を使った四角いバンズで挟み込んだバーガー",
+    "cenario": "展望塔からは、野付半島の豊かな自然や国後島を一望できます"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "http://www.hokkaido-michinoeki.jp/michinoeki/3099/"
+  },
+  {
+   "name": "縄文ロマン 南かやべ",
+   "muni": "函館市",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "O onsen citado （函館市南かやべ保養センター, com rotenburo de enxofre) é uma instalação separada da guia de arredores — não é da estação. A estação é o centro cultural Jomon; sem banho."
+   },
+   "cenario": "mar",
+   "especialidade": "縄文クルミソフトクリーム; a instalação principal expõe o tesouro nacional 中空土偶",
+   "hours": "9:00–17:00 (abr–out); 9:00–16:30 (nov–mar)",
+   "quotes": {
+    "especialidade": "国宝「中空土偶」をはじめ地域の貴重な縄文文化遺産を展示公開する「函館市縄文文化交流センター」をメイン施設とし、国内唯一の国宝のある「道の駅」として地域の魅力を発信していきます",
+    "cenario": "太平洋を望む、縄文文化かおる地に国内唯一の国宝のある「道の駅」が誕生！"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "http://www.hokkaido-michinoeki.jp/michinoeki/3114/"
+  },
+  {
+   "name": "わっかない",
+   "muni": "稚内市",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "O onsen citado （ヤムワッカナイ温泉 港のゆ) fica dentro do complexo comercial 副港市場， na guia de arredores — não é da estação. A estação (informações, café e loja ワッカナイセレクト) não tem banho. É a estação de michi-no-eki mais ao norte do Japão."
+   },
+   "cenario": null,
+   "especialidade": "Pratos de 宗谷黒牛 no café (hayashi rice e hambúrguer) e o 四大かに弁当",
+   "hours": "案内所 9:00–18:00 (exposição aberta 24 h)",
+   "quotes": {
+    "especialidade": "カフェでは宗谷黒牛を使った「ハヤシライス」と「宗谷黒牛ハンバーグサンド」が楽しめます"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "http://www.hokkaido-michinoeki.jp/michinoeki/3126/"
+  },
+  {
+   "name": "あかいがわ",
+   "muni": "余市郡赤井川村",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "O onsen citado （赤井川カルデラ温泉， de fluxo livre) é uma instalação separada da guia de arredores — não é da estação. A estação (restaurante, gelateria, venda direta) não tem banho."
+   },
+   "cenario": "montanha",
+   "especialidade": "Gelato de melão vermelho de Akaigawa e pizzas e hambúrgueres com verduras e carnes da aldeia",
+   "hours": "本館 8:30–18:00 (até 31 de out); 9:00–17:00 (de 1º de nov)",
+   "quotes": {
+    "especialidade": "ピザやハンバーグなど、赤井川村産の野菜やお肉をふんだんに使ったお食事をご提供しています",
+    "cenario": "周囲を山々に囲まれたカルデラ盆地特有の寒暖差に育まれた農産物の直売所もあり"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "http://www.hokkaido-michinoeki.jp/michinoeki/3143/"
+  },
+  {
+   "name": "みそぎの郷 きこない",
+   "muni": "上磯郡木古内町",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "A página descreve a área de compras dos 9 municípios do sudoeste de Donan, o restaurante italiano supervisionado pelo chef Okuda e o canto de informações; não há banho nem menção a onsen."
+   },
+   "cenario": null,
+   "especialidade": "みそぎの塩ソフトクリーム e はこだて和牛コロッケ, em frente à estação do Shinkansen",
+   "hours": "9:00–18:00",
+   "quotes": {
+    "especialidade": "テイクアウトも充実しています。挽きたてのコーヒーはもちろん、木古内オリジナルのソフトクリームや「はこだて和牛」コロッケなどをご用意しています"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "http://www.hokkaido-michinoeki.jp/michinoeki/3158/"
+  },
+  {
+   "name": "しかべ間歇泉公園",
+   "muni": "茅部郡鹿部町",
+   "banho": {
+    "tem": true,
+    "tipo": "ashiyu",
+    "preco": null,
+    "nota": "Banho só de pés: dentro do parque da própria estação há um ashiyu com a água termal do gêiser (que jorra há cerca de 100 anos) — descrito como o único lugar do país onde se vê um gêiser de dentro de um ashiyu. Não há banho de corpo inteiro; há ainda a panela a vapor termal （温泉蒸し釜） para cozinhar ingredientes. O portal não publica preço do ashiyu."
+   },
+   "cenario": null,
+   "especialidade": "鹿部たらこ e 白口浜真昆布, os produtos do mar de Shikabe, e o すけそバーガー",
+   "hours": "9:00–17:00 (20 de mar–30 de nov); horário reduzido no inverno (10:00–15:00/17:00 conforme o dia)",
+   "quotes": {
+    "banho": "しかべ間歇泉公園の一番の魅力は、その名のとおり間歇泉。100年近く絶えることなく噴き上げ続けている間歇泉を、足湯に浸かりながら楽しめるのは全国でもここだけ",
+    "especialidade": "鹿部町の特産品「鹿部たらこ」「白口浜真昆布」をはじめとしたここでしかお買い上げいただけない水産加工品や近隣地域の特産品をお買い場に展開"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "http://www.hokkaido-michinoeki.jp/michinoeki/3174/"
+  },
+  {
+   "name": "ノンキーランド ひがしもこと",
+   "muni": "網走郡大空町",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "A estação é um complexo com hotel, restaurante e loja, mas a página não descreve banho no hotel. O onsen e o ashiyu citados ficam no 東藻琴芝桜公園， a cerca de 8 km (guia de arredores) — não contam."
+   },
+   "cenario": null,
+   "especialidade": "長いも de Higashimokoto （春掘り長いも） e os produtos de Ozora na loja あえ～る",
+   "hours": "9:00–18:00",
+   "quotes": {
+    "especialidade": "東藻琴名産「春掘り長いも」ついに大量入荷！!"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "http://www.hokkaido-michinoeki.jp/michinoeki/13538/"
+  },
+  {
+   "name": "北欧の風 道の駅とうべつ",
+   "muni": "石狩郡当別町",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "A página descreve os restaurantes, a venda direta はなポッケ e a loja SWEETS; não há banho nem menção a onsen."
+   },
+   "cenario": null,
+   "especialidade": "Mochi recém-batido e カップ団子 da 一久大福堂 (com arroz de Tobetsu) e as flores cortadas de Tobetsu",
+   "hours": "9:00–17:00 (mar–nov); 10:00–16:00 (dez–fev)",
+   "quotes": {
+    "especialidade": "一久大福堂が当別町産のお米を使用し、施設内の工房でつくったつきたてのお餅や、オリジナル商品 「カップ団子」も販売しています"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "https://hokkaido-michinoeki.jp/michinoeki/13542/"
+  },
+  {
+   "name": "石狩「あいろーど厚田」",
+   "muni": "石狩市",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "A página descreve os restaurantes, a venda de produtos e os mirantes do prédio de 3 andares; não há banho nem menção a onsen."
+   },
+   "cenario": "mar",
+   "especialidade": "にしんそば e o 二三一バッテラ (sushi prensado de arenque com kazunoko), os sabores de arenque de Ishikari",
+   "hours": "9:30–18:00 (abr–mai, set–out); 9:30–19:00 (jun–ago); 10:00–16:00 (nov–mar)",
+   "quotes": {
+    "especialidade": "道の駅2階にある石狩名産ニシンを使用したバッテラ「ニシンと数の子の親子押し寿司」のお店",
+    "cenario": "最上階の展望テラスやデッキからは、日本海や厚田の街を見渡すことができ、海に沈む夕日は絶景です"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "http://www.hokkaido-michinoeki.jp/michinoeki/14938/"
+  },
+  {
+   "name": "なないろ・ななえ",
+   "muni": "亀田郡七飯町",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "A página descreve a venda direta, o terraço de comidas e os espaços comunitários; não há banho nem menção a onsen."
+   },
+   "cenario": null,
+   "especialidade": "ガラナソフト (soft cream do refrigerante de guaraná Co-up, só aqui) e produtos da maçã de Nanae, o símbolo da cidade",
+   "hours": "9:00–18:00",
+   "quotes": {
+    "especialidade": "ここでしか味わえない「小原のガラナソフト」は北海道民のソウルドリンク「コアップガラナ」をソフトクリームとして味わえます！"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "http://www.hokkaido-michinoeki.jp/michinoeki/14941/"
+  },
+  {
+   "name": "びえい「白金ビルケ」",
+   "muni": "上川郡美瑛町",
+   "banho": {
+    "tem": true,
+    "tipo": "chuveiro",
+    "preco": null,
+    "nota": "Tem sala de chuveiro （シャワールーム） instalada na própria estação — não é banho de imersão nem onsen. A estação fica na entrada da área termal de Shirogane e da Lagoa Azul (青い池）. O portal não publica o preço do chuveiro."
+   },
+   "cenario": "montanha",
+   "especialidade": "Produtos da 青い池 (Lagoa Azul) vendidos só aqui e hambúrgueres com ingredientes de Biei no BETWEEN THE BREAD",
+   "hours": "9:00–17:00 (mar–mai, set–nov); 9:00–18:00 (jun–ago); 10:00–17:00 (dez–fev)",
+   "quotes": {
+    "banho": "白金エリアをはじめとした美瑛町全体の情報発信を行うほか、シャワールームの設置、アウトドアブランドの販売、美瑛町の食材をふんだんに使用したハンバーガーショップなど",
+    "especialidade": "“白樺”に囲まれた「白金ビルケ」売店には、ここでしか購入できない、青い池グッズがいっぱい",
+    "cenario": "「BETWEEN THE BREAD」は雄大な大雪山連峰に囲まれた自然の中にあるハンバーガーショップです"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "http://www.hokkaido-michinoeki.jp/michinoeki/16028/"
+  },
+  {
+   "name": "北オホーツクはまとんべつ",
+   "muni": "枝幸郡浜頓別町",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "A única menção a onsen é o hotel はまとんべつ温泉ウイング, citado apenas como outro ponto de venda dos produtos do personagem — instalação separada, não da estação. A estação (loja de intercâmbio, padaria こんがり堂） não tem banho."
+   },
+   "cenario": null,
+   "especialidade": "ブリオッシュメロンパン da padaria こんがり堂 e o 浜頓別そば da Yokoyama Farm",
+   "hours": "9:00–19:00 (abr–out); 9:00–18:00 (nov–mar)",
+   "quotes": {
+    "especialidade": "浜風に耐えて育った力強い蕎麦の香りとのど越しが自慢の蕎麦です"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "http://www.hokkaido-michinoeki.jp/michinoeki/19522/"
+  },
+  {
+   "name": "あびら D51ステーション",
+   "muni": "勇払郡安平町",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "O perfil do portal é enxuto (sem texto de apresentação) e a lista de instalações/ícones não inclui banho nem onsen."
+   },
+   "cenario": null,
+   "especialidade": "Estação temática ferroviária em torno da locomotiva a vapor D51 preservada; o perfil do portal não detalha produtos (seções de comida e souvenirs constam como “em preparação”)",
+   "hours": "9:00–18:00 (abr–set); 9:00–17:00 (out–mar)",
+   "quotes": {},
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "http://www.hokkaido-michinoeki.jp/michinoeki/19505/"
+  },
+  {
+   "name": "遠軽 森のオホーツク",
+   "muni": "紋別郡遠軽町",
+   "banho": {
+    "tem": true,
+    "tipo": "ashiyu",
+    "preco": null,
+    "nota": "Ashiyu de água carbonatada de alta concentração （高濃度炭酸泉足湯） dentro da própria estação, no bloco de horários dela (9:00–18:00), junto à estação de esqui anexa Engaru Rock Valley. Não há banho de corpo inteiro e o portal não publica preço."
+   },
+   "cenario": null,
+   "especialidade": "Praça de alimentação ENGARU TERRACE (soft cream e refeições); o perfil do portal não detalha um produto local específico",
+   "hours": "9:00–18:00 (足湯 9:00–18:00)",
+   "quotes": {
+    "banho": "高濃度炭酸泉足湯"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "http://www.hokkaido-michinoeki.jp/michinoeki/22139/"
+  },
+  {
+   "name": "るもい",
+   "muni": "留萌市",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "A sala de chuveiro citada fica na praia ゴールデンビーチるもい (guia de arredores, paga) — não é da estação. A estação (antenna shop, parque, espaço infantil ちゃいるも) não tem banho."
+   },
+   "cenario": "mar",
+   "especialidade": "Produtos de かずの子 (ovas de arenque), o símbolo de Rumoi — incluindo o かずの子ジェラート com uma peça inteira por cima",
+   "hours": "9:00–17:00",
+   "quotes": {
+    "especialidade": "留萌市の特産品「かずの子」を丸ごと一本のせたジェラート。かずの子の塩味とジェラートの甘味が絶妙にマッチ",
+    "cenario": "留萌港や市街地に隣接しており"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "http://www.hokkaido-michinoeki.jp/michinoeki/23225/"
+  },
+  {
+   "name": "かみしほろ",
+   "muni": "河東郡上士幌町",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "O onsen citado （ぬかびら源泉郷， cidade termal de águas correntes) fica a cerca de 22 km, na guia de arredores — não é da estação. A estação (restaurante, take-out, gramado para balões) não tem banho."
+   },
+   "cenario": null,
+   "especialidade": "トカトカ ナイタイ和牛カレーパン (pão de curry com wagyu Naitai) e hambúrgueres com ingredientes de Tokachi",
+   "hours": "9:00–18:00 (fim de abr–início de out); 9:00–17:00 (meados de out–meados de abr)",
+   "quotes": {
+    "especialidade": "トカトカ　ナイタイ和牛カレーパン"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "http://www.hokkaido-michinoeki.jp/michinoeki/23227/"
+  },
+  {
+   "name": "ガーデンスパ十勝川温泉",
+   "muni": "河東郡音更町",
+   "banho": {
+    "tem": true,
+    "tipo": "onsen",
+    "preco": null,
+    "nota": "Spa da própria estação no centro da cidade termal de Tokachigawa: SPA KOHAKU, um onsen “moor” para entrar de roupa de banho, em família ou casal, mais ashiyu gratuito de onsen moor com cobertura. O portal não publica o preço do spa."
+   },
+   "cenario": null,
+   "especialidade": "Produtos do porco “moor” （モール豚） e cosméticos de onsen moor na loja; モール豚ビッグフランクドック",
+   "hours": "9:00–19:00; 9:00–21:00 (sex–dom e feriados, mai–out)",
+   "quotes": {
+    "banho": "ご家族でもカップルでも、一緒に楽しめる水着で入るモール温泉です",
+    "especialidade": "モール温泉化粧品、モール豚の加工食品、十勝の特産品、農産物、豆類など、季節に合わせて販売しています"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "http://www.hokkaido-michinoeki.jp/michinoeki/26870/"
+  },
+  {
+   "name": "羊のまち 侍・しべつ",
+   "muni": "士別市",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "A página descreve o restaurante 武士， a antenna shop e os espaços de intercâmbio; não há banho nem menção a onsen."
+   },
+   "cenario": null,
+   "especialidade": "Cordeiro da marca local 士別サフォークラム (raríssimo em Hokkaido), no restaurante e no 羊と雲のライスバーガー",
+   "hours": "9:00–18:00 (mai–out); 10:00–17:00 (nov–abr)",
+   "quotes": {
+    "especialidade": "地域ブランド羊肉「士別サフォークラム」などの市内特産品や名産品をはじめ、友好都市や近隣市町村の特産品などを販売するほか"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "https://hokkaido-michinoeki.jp/michinoeki/33477/"
+  },
+  {
+   "name": "２７５つきがた",
+   "muni": "樺戸郡月形町",
+   "banho": {
+    "tem": true,
+    "tipo": "onsen",
+    "preco": "大人 ¥650 (町民 ¥600) / 小学生 ¥300 (町民 ¥250)",
+    "nota": "Onsen anexo à estação: 月形温泉ゆりかご (reinaugurado em set/2024), com banho de dia das 11:00 às 21:00, rotenburo e sauna com auto-löyly. Preços do perfil oficial; crianças pré-escolares grátis."
+   },
+   "cenario": null,
+   "especialidade": "Suco de tomate 月形まんまるトマト (100% tomate Momotaro de Tsukigata) e o 鐵丸カレー",
+   "hours": "9:00–21:00 (日帰り温泉 11:00–21:00)",
+   "quotes": {
+    "banho": "【月形温泉ゆりかご】温泉施設が併設された道の駅。令和6年9月にリニューアルオープン！《利用料》大人　　町民600円　町外650円",
+    "especialidade": "月形町産完熟トマト「桃太郎」のみを原料として使用"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "https://hokkaido-michinoeki.jp/michinoeki/53300/"
+  },
+  {
+   "name": "ふるびらたらこミュージアム",
+   "muni": "古平郡古平町",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "Estação temática inaugurada em abr/2025, toda dedicada ao tarako; a página descreve loja, restaurante e exposições — não há banho nem menção a onsen."
+   },
+   "cenario": "mar",
+   "especialidade": "たらこ定食, com uma peça inteira de tarako de Furubira sobre o arroz, e a linha de produtos de tarako do museu",
+   "hours": "9:00–18:00 (abr–out); 9:00–17:00 (nov–mar)",
+   "quotes": {
+    "especialidade": "インパクト大のたらこがまるごと一本ご飯にのった定食。古平町で加工・製造したたらこをまるごと一本使用",
+    "cenario": "日本海沿岸の積丹半島の海岸線を通る一般国道229号に位置し"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "https://hokkaido-michinoeki.jp/michinoeki/55776/"
+  }
+ ]
+}
