@@ -1,0 +1,866 @@
+{
+ "gerado_em": "2026-11-27",
+ "nota_geral": "COMPLETA — 42/42 estações de Niigata lidas em fontes oficiais (registro MLIT 2026: a província tem 42 estações, não 56; 56 era o número da prateleira de esqui). 34 via páginas por estação do Escritório Regional de Hokuriku do MLIT (info1+info4, enumeração completa de instalações); as 8 restantes via sites/documentos oficiais próprios (cidade de Sado, MLIT, província de Niigata, cidade de Tagami, sites oficiais das estações). Com banho: 9 (8 banhos completos + ashiyu em みつまた; 国上 tem também ashiyu). Nenhuma proibição de 車中泊 publicada e nenhum RVパーク citado nas 42. 風の丘米山: a página do escritório (2015) dizia 'fechada para renovação', mas o registro de 2026 a lista como ativa — registrado como está, hours null.",
+ "stations": [
+  {
+   "name": "豊栄",
+   "muni": "新潟市",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "A página oficial da Secretaria Regional de Hokuriku (MLIT) enumera as instalações —軽食堂・豊栄PA売店・情報ターミナル・自然公園・休憩所— sem banho. É a estação nº 1 do Japão (registro da 1ª leva, 1993)."
+   },
+   "especialidade": "Onigiri de arroz de Niigata e Koshihikari local na loja; na época, melão Toyosaka e frutas da estação",
+   "cenario": null,
+   "hours": "7:00–19:00 (loja e lanchonete), todos os dias",
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "quotes": {
+    "banho": "店舗・売店 豊栄PA売店 【おみやげ】コシヒカリ、地場産野菜、果実（梨・メロン・ブドウ等）",
+    "especialidade": "軽食堂では新潟米のおにぎりをはじめ40品以上のメニューを用意。新潟産のコシヒカリを販売する売店もあり"
+   },
+   "source": "https://www.hrr.mlit.go.jp/i/road/michieki/niigata/toyosaka/info4.html"
+  },
+  {
+   "name": "加治川",
+   "muni": "新発田市",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "A enumeração oficial (MLIT Hokuriku) lista 特産館・ふれあいセンター桜館 (refeições)・情報コーナー・公園・休憩所 — sem banho. Apelido: さくらの里."
+   },
+   "especialidade": "Arroz Kajikawa (加治川米), porco Kajikawa (加治川豚), ovos naturais e soba Ōmine (大峰そば)",
+   "cenario": null,
+   "hours": "9:00–18:00; fecha na 3ª quinta do mês",
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "quotes": {
+    "banho": "店舗・売店 特産館 食事 ふれあいセンター桜館 情報コーナー 道路情報施設 観光案内所 公園 休憩所",
+    "especialidade": "駅では加治川の自然が生み出した加治川米、自然卵、加治川豚、乾麺、生切り餅などの特産品を販売しています"
+   },
+   "source": "https://www.hrr.mlit.go.jp/i/road/michieki/niigata/kajikawa/info4.html"
+  },
+  {
+   "name": "神林",
+   "muni": "村上市",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "Enumeração oficial (MLIT Hokuriku): restaurante 穂菜味亭・物産館・芝生広場・情報ターミナル — sem banho. Apelido: 穂波の里."
+   },
+   "especialidade": "Saquê junmai, missô e mochi kine-tsuki feitos do arroz Iwafune (岩船米), o arroz de qualidade da região",
+   "cenario": null,
+   "hours": "物産館 8:15–17:15; restaurante 10:00–20:30",
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "quotes": {
+    "banho": "食事 和風レストラン「穂菜味亭」 店舗・売店 穂波の里物産館 公園 芝生広場 情報コーナー 道路情報施設ターミナル",
+    "especialidade": "岩船米と呼ばれる良質の米を原料にした純米酒、みそ、きねつき餅などが村の特産品です"
+   },
+   "source": "https://www.hrr.mlit.go.jp/i/road/michieki/niigata/kamihaya/info4.html"
+  },
+  {
+   "name": "朝日",
+   "muni": "村上市",
+   "banho": {
+    "tem": true,
+    "tipo": "onsen",
+    "preco": "ふれあいセンター: adulto ¥500 / criança ¥250; きれい館スパ (só banho): adulto ¥500 / criança ¥250; zona balneário (バーデ) adulto ¥1,000",
+    "nota": "Dois banhos no complexo Asahi Midori no Sato: o onsen 朝日まほろばふれあいセンター (9:00–21:00, fecha na última terça) e o 朝日きれい館 (10:00–21:00, fecha na última segunda), com spa e zona de balneoterapia. Há ainda 温泉スタンド (60 litros por ¥100) para levar água termal para casa."
+   },
+   "especialidade": "Arroz Koshihikari de Murakami 「鈴滝の華」 e flores de seda (シルクフラワー) na 物産会館",
+   "cenario": null,
+   "hours": "Onsen ふれあいセンター 9:00–21:00; restaurante 11:00–21:00; informações 9:00–21:30",
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "quotes": {
+    "banho": "温泉 朝日まほろば ふれあいセンター 【開】9:00〜21:00 【休】最終火曜、年末年始 【料】大人500円、小人250円（温泉スタンド有）",
+    "preco": "温泉 朝日きれい館 【料】スパ（浴室のみ）利用：大人500円、子供250円 バーデゾーン利用：大人1000円",
+    "especialidade": "【おみやげ】シルクフラワー、鈴滝の華（村上産コシヒカリ）"
+   },
+   "source": "https://www.hrr.mlit.go.jp/i/road/michieki/niigata/asahi/info4.html"
+  },
+  {
+   "name": "新潟ふるさと村",
+   "muni": "新潟市",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "Complexo oficial do governo de Niigata: バザール館 (lojas/restaurante)・アピール館・地ビール館・グリーンハウス・コーナー de neve artificial — a enumeração oficial (MLIT Hokuriku) não inclui banho."
+   },
+   "especialidade": "O produtos de toda Niigata reunidos: saquê das 103 cervejarias da província, Koshihikari, frutos do Mar do Japão e sasadango",
+   "cenario": null,
+   "hours": "バザール館 9:30–17:30, todos os dias",
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "quotes": {
+    "banho": "店舗・売店 物産館「バザール館」 情報コーナー 情報ターミナル 公園 グリーンハウス 体験施設 降雪体験コーナー",
+    "especialidade": "【おみやげ】エビ・カニなど日本海の幸、コシヒカリ、103蔵元の地酒、笹団子、米菓、工芸品"
+   },
+   "source": "https://www.hrr.mlit.go.jp/i/road/michieki/niigata/furusato/info4.html"
+  },
+  {
+   "name": "能生",
+   "muni": "糸魚川市",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "A enumeração oficial (MLIT Hokuriku) do Marine Dream Nō lista restaurantes, 鮮魚センター, かにや横丁, camping, museus e Marine Hall — sem banho (o banho fica nos onsens da região, não na estação)."
+   },
+   "especialidade": "Caranguejo beni-zuwaigani — a rua かにや横丁 tem 9 lojas de venda direta do caranguejo, ao lado do porto de pesca de Nō",
+   "cenario": "mar",
+   "hours": "物産館・鮮魚センター 9:00–18:00; restaurantes 10:00–18:00",
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "quotes": {
+    "banho": "食事 番屋、リーフキッチー、ミルキーウェイ 店舗・売店 かにや横丁、鮮魚センター、物産センター 体験施設 荒崎キャンプ場",
+    "cenario": "「道の駅・能生」は、日本海夕日ラインの愛称で親しまれている、海岸線を走る国道８号沿いにあります。能生漁港に隣接しているため、鮮魚センターにはとれたての海の幸がいっぱい",
+    "especialidade": "かにや横丁には特産ベニズワイガニの直売所が９軒並ぶ"
+   },
+   "source": "https://www.hrr.mlit.go.jp/i/road/michieki/niigata/nou/info4.html"
+  },
+  {
+   "name": "みかわ",
+   "muni": "東蒲原郡阿賀町",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "Enumeração oficial (MLIT Hokuriku): restaurante 将軍亭・特産品コーナー・農産物加工場・情報 — sem banho na estação. (A cidade tem o Mikawa Onsen, mas ele não faz parte da estação.) Apelido: 巨木の里."
+   },
+   "especialidade": "Tofu Mikawa (みかわとうふ), feito com soja local na fábrica da própria estação; sansai e iwana do restaurante",
+   "cenario": "montanha",
+   "hours": "11:00–17:00; fecha às quartas",
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "quotes": {
+    "banho": "食事 将軍亭 店舗・売店 特産品特売コーナー 農産物加工場 情報コーナー 道路情報施設",
+    "cenario": "国道49号沿いの「道の駅・みかわ」は、天然記念物に指定され、日本一を誇る伝説の名杉「将軍杉」の麓にあります",
+    "especialidade": "農産物加工場兼直売所には採れたての地元の野菜や地元産大豆で作った「みかわとうふ」などの特産物が揃っています"
+   },
+   "source": "https://www.hrr.mlit.go.jp/i/road/michieki/niigata/mikawa/info4.html"
+  },
+  {
+   "name": "関川",
+   "muni": "岩船郡関川村",
+   "banho": {
+    "tem": true,
+    "tipo": "onsen",
+    "preco": "Adulto ¥500; criança ¥300 (menores de 4 anos grátis)",
+    "nota": "Onsen natural えちごせきかわ桂の関温泉「ゆ〜む」, centro de saúde termal dentro do complexo da estação: 9:00–22:00 (nov–mar até 21:30), fecha na 3ª quarta. Com sala de teatro e sala de relaxamento."
+   },
+   "especialidade": "Produtos da vila de Sekikawa na loja ちぐら e no mercado あいさい市 (verduras dos agricultores locais)",
+   "cenario": null,
+   "hours": "ゆ〜む 9:00–22:00 (nov–mar 21:30); 歴史とみちの館 9:00–16:30",
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "quotes": {
+    "banho": "温泉 えちごせきかわ桂の関温泉「ゆ〜む」 天然温泉の健康保養センター 【開】9:00〜22:00（11月〜3月は21:30まで） 【休】第３水曜",
+    "preco": "【料】大人500円、小人300円（4歳未満無料）",
+    "especialidade": "村内の農家の皆さんが丹精込めて育てた新鮮な野菜など村の特産品が販売されています"
+   },
+   "source": "https://www.hrr.mlit.go.jp/i/road/michieki/niigata/sekikawa/info4.html"
+  },
+  {
+   "name": "ちぢみの里おぢや",
+   "muni": "小千谷市",
+   "banho": {
+    "tem": true,
+    "tipo": "onsen",
+    "preco": "Adulto ¥900; primário ¥500",
+    "nota": "Onsen natural 天然温泉ちぢみの里 dentro da estação: rotenburo, banho de pedra (岩風呂) e banho estilo ocidental, 10:00–22:00, fecha às quartas. A estação inteira é construída em torno da água termal."
+   },
+   "especialidade": "Soba de Ojiya (小千谷そば) no restaurante; na loja: nishikigoi, tecido Ojiya-chijimi, Koshihikari de Uonuma e hegisoba",
+   "cenario": null,
+   "hours": "10:00–22:00 (loja e onsen); fecha às quartas",
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "quotes": {
+    "banho": "温泉 天然温泉・ちぢみの里 【開】10:00〜22:00 【休】水曜、12/31、1/1 【料】大人900円、小学生500円",
+    "especialidade": "【おみやげ】錦鯉、小千谷縮・細、魚沼産コシヒカリ、へぎそば"
+   },
+   "source": "https://www.hrr.mlit.go.jp/i/road/michieki/niigata/ojiya/info4.html"
+  },
+  {
+   "name": "阿賀の里",
+   "muni": "東蒲原郡阿賀町",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "Enumeração oficial (MLIT Hokuriku): restaurantes 河畔 e マルコポーロ・魚市場・物産館夢蔵・資料館・河川公園 — sem banho."
+   },
+   "especialidade": "O mercado de peixes 阿賀の魚市場・魚匠 (frutos do mar frescos) e lembranças que só existem em Mikawa, na loja 夢蔵",
+   "cenario": "rio",
+   "hours": "9:00–17:00; mercado de peixes/loja 9:00–18:00",
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "quotes": {
+    "banho": "食事 レストラン「河畔」 店舗・売店 魚市場・物産館 体験施設 阿賀野川文化資料館 公園・子供広場",
+    "cenario": "駅は阿賀野川ライン舟下りの下船場にあり、舟下りのあとのひと休みにはもってこいのスペースです",
+    "especialidade": "物産館「夢蔵」には、新潟の特産品や工芸品、三川でしか手に入らないおみやげ品を盛りだくさんに取り揃えて"
+   },
+   "source": "https://www.hrr.mlit.go.jp/i/road/michieki/niigata/agasato/info4.html"
+  },
+  {
+   "name": "笹川流れ",
+   "muni": "村上市",
+   "banho": {
+    "tem": true,
+    "tipo": "chuveiro",
+    "preco": "¥300 por 2 minutos",
+    "nota": "Sala de chuveiro (シャワールーム) sazonal: funciona só de 20 de julho a 20 de agosto, 9:00–18:00 — chuveiro de água quente para depois do banho de mar. Não é banho/onsen; é chuveiro pago por tempo."
+   },
+   "especialidade": "Picles de nabo vermelho (赤カブ漬け), sal natural e artesanato de tecido shina-fu (しな布) na 物産館",
+   "cenario": "mar",
+   "hours": "物産館 8:30–17:30; restaurante 11:00–19:00; fecha às quartas",
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "quotes": {
+    "banho": "シャワー シャワールーム 【開】9:00〜18:00 (7/20〜8/20) 【料】300円/2分 ７・８月は温水シャワーが利用できる。海水浴のあともさっぱり",
+    "cenario": "展望台やサンセットブリッジ「なぎさの道」など駅の至るところから粟島を浮かべた日本海が眺められ、特に夕日の美しさは格別",
+    "especialidade": "【おみやげ】赤カブ漬け、アク笹巻き、天然塩、しな布民芸品"
+   },
+   "source": "https://www.hrr.mlit.go.jp/i/road/michieki/niigata/sasagawa/info4.html"
+  },
+  {
+   "name": "越後出雲崎天領の里",
+   "muni": "三島郡出雲崎町",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "Enumeração oficial (MLIT Hokuriku): restaurante 陣や・物産館・日本海夕日公園・時代館・石油記念館・ponte 夕凪の橋 — sem banho."
+   },
+   "especialidade": "Shiokara de lula (イカの塩辛), tai-denbu e leite Ryōkan (良寛牛乳) — lembranças da cidade natal de Ryōkan",
+   "cenario": "mar",
+   "hours": "物産館・時代館 9:00–17:00; restaurante 10:00–18:00",
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "quotes": {
+    "banho": "食事 レストラン「陣や」 店舗・売店 物産館 公園 日本海夕日公園 体験施設 天領出雲崎時代館 博物館 出雲崎石油記念館",
+    "cenario": "向かいに佐渡を見晴らす海辺の駅。天領として栄えた時代をリアルに再現",
+    "especialidade": "【おみやげ】イカの塩辛、鯛でんぶ、紙風船、良寛牛乳、良寛せんべい、魚の浜焼、北前漬、海塩"
+   },
+   "source": "https://www.hrr.mlit.go.jp/i/road/michieki/niigata/izumozk/info4.html"
+  },
+  {
+   "name": "胎内",
+   "muni": "胎内市",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "A estação tem centro de informações, o parque 樽ヶ橋遊園 e o museu 郷土文化伝習館 — sem banho. O banho de excursão citado na página oficial fica no Royal Tainai Park Hotel, a 15 min de carro (entorno, não é da estação)."
+   },
+   "especialidade": null,
+   "cenario": null,
+   "hours": "9:00–18:00",
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "quotes": {
+    "banho": "ひと足のばせば ロイヤル胎内パークホテル（日帰り入浴） （「道の駅」より車で15分）"
+   },
+   "source": "https://www.hrr.mlit.go.jp/i/road/michieki/niigata/tainai/info4.html"
+  },
+  {
+   "name": "ゆのたに",
+   "muni": "魚沼市",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "Apesar do nome, a estação NÃO tem banho: a enumeração oficial lista a loja/restaurante 深雪の里 e o centro de informações de Okutadami. A vila termal Yunotani Onsen-gō fica no entorno (佐梨川), não na estação."
+   },
+   "especialidade": "Arroz Koshihikari de Uonuma, inhame natural (自然薯, dez–fev) e produtos de sansai, na loja 深雪の里",
+   "cenario": "montanha",
+   "hours": "8:30–18:00 (loja); restaurante 11:00–14:00",
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "quotes": {
+    "banho": "食事 レストラン「深雪の里」 店舗・売店 特産品販売所「深雪の里」 情報コーナー 奥只見郷インフォメー ションセンター",
+    "cenario": "魚沼市は、新潟県の東南端、福島県と群馬県に接する山あいの市です",
+    "especialidade": "駅の特産品販売所「深雪の里」では、魚沼コシヒカリ、自然薯(12〜2月)、山菜加工品などの特産品をはじめ、地域の産品を数多く揃えています"
+   },
+   "source": "https://www.hrr.mlit.go.jp/i/road/michieki/niigata/yunotani/info1.html"
+  },
+  {
+   "name": "良寛の里わしま",
+   "muni": "長岡市",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "Enumeração oficial: dois museus de arte (良寛の里美術館・菊盛記念美術館), casa de chá, centro もてなし家 e restaurante — sem banho."
+   },
+   "especialidade": "Saquê local de Washima (inclui a cervejaria modelo do drama 「夏子の酒」) e o soft cream Ganji (ガンジーソフトクリーム)",
+   "cenario": null,
+   "hours": "もてなし家 9:00–17:00; museus 9:00–17:00; terminal de informações 24h",
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "quotes": {
+    "banho": "博物館・美術館 良寛の里美術館 菊盛記念美術館 店舗・売店 地域交流センター｢もてなし家｣ 体験施設 茶室「指月亭」",
+    "especialidade": "何といっても人気ドラマ「夏子の酒」のモデルとなった造り酒屋などで造られる地酒が自慢です"
+   },
+   "source": "https://www.hrr.mlit.go.jp/i/road/michieki/niigata/washima/info4.html"
+  },
+  {
+   "name": "まつだいふるさと会館",
+   "muni": "十日町市",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "Estação junto à estação de trem Matsudai (linha Hokuhoku): shopping 常春, restaurante, salão multiuso e informações — sem banho. O 芝峠温泉 fica a 10 min de carro (entorno)."
+   },
+   "especialidade": "Soba, anbo (bolinho de arroz), sansai e Koshihikari de Matsudai — terra dos terraços de arroz (棚田)",
+   "cenario": null,
+   "hours": "Shopping 常春 8:30–19:00; restaurante 11:00–14:00 e 17:00–22:00",
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "quotes": {
+    "banho": "食事 食事処「常春」 店舗・売店 ショッピングセンター「常春」、特産品売店 体験施設 常春ホール",
+    "especialidade": "【おみやげ】そば、あんぼ、山菜、コシヒカリ"
+   },
+   "source": "https://www.hrr.mlit.go.jp/i/road/michieki/niigata/matsudai/info4.html"
+  },
+  {
+   "name": "越後市振の関",
+   "muni": "糸魚川市",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "Enumeração oficial: restaurante/área de serviço 市振の関, loja e terminal de informações com sala de exposição panorâmica — sem banho."
+   },
+   "especialidade": "Saquê junmai ginjō 「福来口」, sasadango e masu-zushi de Toyama na loja",
+   "cenario": "mar",
+   "hours": "8:00–21:00, todos os dias",
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "quotes": {
+    "banho": "食事 市振の関 店舗・売店 市振の関「売店」 情報コーナー 玉の木情報ターミナル",
+    "cenario": "市振の関前面は観音菱の絶景、背面は日本海サンセットなどの景観に恵まれており",
+    "especialidade": "【おみやげ】純米吟醸「福来口」、笹ダンゴ、富山のます寿し"
+   },
+   "source": "https://www.hrr.mlit.go.jp/i/road/michieki/niigata/ichiburi/info4.html"
+  },
+  {
+   "name": "クロス10十日町",
+   "muni": "十日町市",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "Enumeração oficial: 物産ホール, restaurantes, café, salões e sala de descanso — sem banho. É o centro de produtos das 10 municipalidades da região de Tsumari."
+   },
+   "especialidade": "Quimonos de seda de Tōkamachi (十日町きもの) e produtos têxteis; Koshihikari de Uonuma e hegisoba",
+   "cenario": null,
+   "hours": "9:00–17:00 (abr–set até 18:00)",
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "quotes": {
+    "banho": "店舗・売店 物産ホール 情報コーナー 観光案内所 体験施設 建物きもの広場 休憩所 休憩所・自販機室",
+    "especialidade": "【おみやげ】十日町きもの、生地工芸品、魚沼コシヒカリ、そば、地酒"
+   },
+   "source": "https://www.hrr.mlit.go.jp/i/road/michieki/niigata/tokamati/info4.html"
+  },
+  {
+   "name": "漢学の里しただ",
+   "muni": "三条市",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "A estação é o memorial de Morohashi Tetsuji (autor do Grande Dicionário Chinês-Japonês): museu, casa natal, jardins e o restaurante 庭月庵悟空 — sem banho. O onsen 八木ヶ鼻温泉「いい湯らてい」 fica no entorno."
+   },
+   "especialidade": "Hikozaen (doce de batata-doce), sorvete de batata-doce e Koshihikari de Shitada",
+   "cenario": "rio",
+   "hours": "記念館 9:00–16:00; restaurante 10:00–16:00",
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "quotes": {
+    "banho": "食事 庭月庵悟空 体験施設 諸橋轍次記念館 生家、記念館、漢庭園、和庭園",
+    "cenario": "眼前にそそり立つ八木ケ鼻、清流五十嵐川、遠くは粟ケ岳が望める絶景の地でもあります",
+    "especialidade": "【おみやげ】さつまいもアイス、ひこざえん、手造りみそ、下田産コシヒカリ、ユリ切花"
+   },
+   "source": "https://www.hrr.mlit.go.jp/i/road/michieki/niigata/shitada/info4.html"
+  },
+  {
+   "name": "風の丘米山",
+   "muni": "柏崎市",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "ATENÇÃO: a página oficial da Secretaria Regional (edição de 2015) anuncia a estação SUSPENSA para reforma (「リニューアルのため、休止しております」), com apenas os museus do Kashiwazaki Collection Village abertos. O registro MLIT de 2026 mantém a estação listada — a situação atual de funcionamento é NÃO DIZ. Na enumeração antiga: loja いっぷく茶屋, restaurante e pousada 米山山荘 — sem banho."
+   },
+   "especialidade": "Koshihikari de Kashiwazaki, caqui Okesa (おけさ柿), salmão defumado e vinho de Kashiwazaki",
+   "cenario": "mar",
+   "hours": null,
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "quotes": {
+    "banho": "「道の駅」風の丘米山については、リニューアルのため、休止しております",
+    "cenario": "新鮮な日本海の幸が美味しい、丘の上の駅。福浦・青海川海岸、米山大橋を眼下に、佐渡米山を眺望でき、道の駅舎や駐車場からの眺めは最高です",
+    "especialidade": "【おみやげ】地酒、柏崎産コシヒカリ、おけさ柿、鮭くんせい、柏崎ワイン"
+   },
+   "source": "https://www.hrr.mlit.go.jp/i/road/michieki/niigata/yoneyama/info1.html"
+  },
+  {
+   "name": "いりひろせ",
+   "muni": "魚沼市",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "A estação tem lanchonete, loja de produtos e informações — sem banho. O Suwa Onsen (寿和温泉) do apelido fica a 5 min de carro (entorno, com piscina aquecida)."
+   },
+   "especialidade": "Ramen de sansai (山菜ラーメン) e o doburoku 「き八」; tofu e konnyaku locais",
+   "cenario": "montanha",
+   "hours": "9:00–17:00",
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "quotes": {
+    "banho": "食事 軽食 店舗・売店 物産売店 情報コーナー 道路情報施設、観光案内所 ひと足のばせば 寿和温泉",
+    "cenario": "のんびり休める山里の中継点",
+    "especialidade": "【おすすめメニュー】山菜ラーメン 【おみやげ】どぶろく｢き八｣、コンニャク、とうふ、わら細工"
+   },
+   "source": "https://www.hrr.mlit.go.jp/i/road/michieki/niigata/irihiros/info4.html"
+  },
+  {
+   "name": "西山ふるさと公苑",
+   "muni": "柏崎市",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "Parque memorial (amizade com Huai'an, China, e memorial de Tanaka Kakuei): ふるさと館・西遊館・記念館・jardim chinês 西遊園 — sem banho. O banho de excursão 雪割草の湯 fica no entorno."
+   },
+   "especialidade": null,
+   "cenario": "mar",
+   "hours": "9:00–17:00; fecha às segundas",
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "quotes": {
+    "banho": "体験施設 西山ふるさと館 西遊館 (財)田中角榮記念館 公園 西遊園",
+    "cenario": "美しい海と豊かな緑に囲まれて"
+   },
+   "source": "https://www.hrr.mlit.go.jp/i/road/michieki/niigata/nisiyama/info4.html"
+  },
+  {
+   "name": "あらい",
+   "muni": "妙高市",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "Estação acessível também pela via expressa (smart IC): centro de informações くびき野情報館, 四季彩館ひだなん (soba/sasazushi/loja), 物産館 e gramado — sem banho."
+   },
+   "especialidade": "Soba batido à mão e sasazushi do 四季彩館ひだなん; verduras e arroz locais",
+   "cenario": null,
+   "hours": "情報館 9:00–21:00; 四季彩館 9:00–18:00",
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "quotes": {
+    "banho": "食事 四季彩館ひだなん 情報コーナー くびきの情報館 店舗・売店 物産館 公園 芝生広場",
+    "especialidade": "地場野菜、米、農産加工品の販売や、手打ちそばや、笹ずしなどを提供する「四季彩館ひだなん」が整備されています"
+   },
+   "source": "https://www.hrr.mlit.go.jp/i/road/michieki/niigata/arai/info4.html"
+  },
+  {
+   "name": "R290とちお",
+   "muni": "長岡市",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "A própria página oficial enumera os componentes —estacionamento, banheiros, canto de vendas, canto de lanches, canto do aburaage, informações, praças e o centro おりなす— sem banho."
+   },
+   "especialidade": "Tochio aburaage (栃尾あぶらげ) gigante, frito na hora no canto próprio; temari de Tochio e Koshihikari local",
+   "cenario": "rio",
+   "hours": "10:00–18:00",
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "quotes": {
+    "banho": "・販売コーナー…栃尾のいいもの美味しいものを中心に ・軽食コーナー…栃尾の味を紹介 ・あぶらげコーナー…揚げたての栃尾油揚げを提供",
+    "cenario": "東側には刈谷田川が流れ周囲を緑豊かな山々につつまれた当道の駅はゆったりした憩いの空間",
+    "especialidade": "ジャンボサイズの伝統の味、とちおあぶらげ"
+   },
+   "source": "https://www.hrr.mlit.go.jp/i/road/michieki/niigata/tochio/info1.html"
+  },
+  {
+   "name": "親不知ピアパーク",
+   "muni": "糸魚川市",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "Sob o viaduto da via expressa, à beira-mar: restaurante 漁火・お魚センター・レストピア・翡翠ふるさと館 — sem banho na estação. O banho de excursão まるたん坊 fica a 2 min de carro (entorno)."
+   },
+   "especialidade": "Frutos do mar frescos no お魚センター e a maior pedra bruta de jade do mundo (120 t) no 翡翠ふるさと館",
+   "cenario": "mar",
+   "hours": "Varia por instalação e estação: restaurante 9:30–19:00 (verão 8:00–21:00)",
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "quotes": {
+    "banho": "食事 レストラン「漁火」 店舗・売店 お魚センター 体験施設 翡翠ふるさと館 ひと足のばせば 親不知交流センター まるたん坊 （車で2分） 日帰り入浴及び宿泊施設",
+    "cenario": "北アルプスから飛騨山脈の北端が日本海に没する断崖絶壁と海浜が織りなす雄大な自然景観を望むことが出来ます",
+    "especialidade": "世界最大120トンのヒスイ原石を展示"
+   },
+   "source": "https://www.hrr.mlit.go.jp/i/road/michieki/niigata/oyasiraz/info4.html"
+  },
+  {
+   "name": "瀬替えの郷せんだ",
+   "muni": "十日町市",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "Enumeração oficial: 体験交流館キラリ (oficinas de palha e soba), mercado 仙田楽楽市場,食堂 e parques à beira do rio — sem banho."
+   },
+   "especialidade": "Sansai das montanhas nevadas (深雪山菜), verduras locais, picles e arroz no mercado 楽楽市場",
+   "cenario": "rio",
+   "hours": "9:00–17:00; mercado 8:00–16:00; fecha às quartas",
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "quotes": {
+    "banho": "店舗・売店 ｢仙田楽楽市場｣ 休憩所 公園 せせらぎ広場、芝生広場 体験施設 ｢仙田体験交流館キラリ｣",
+    "cenario": "施設の周囲には、せせらぎ広場、芝生広場など公園が整備され、「瀬替えの郷」の母なる渋海川の水辺に親しむことができる",
+    "especialidade": "【おすすめ】深雪山菜、地場産の野菜、漬物、木工品、民芸品、米"
+   },
+   "source": "https://www.hrr.mlit.go.jp/i/road/michieki/niigata/senda/info4.html"
+  },
+  {
+   "name": "雪のふるさとやすづか",
+   "muni": "上越市",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "A estação é a 雪だるま物産館 (loja, informações, mini sala de neve que funciona até no verão, refrigeração a neve) — sem banho. O ゆきだるま温泉 fica a 10 min de carro (entorno)."
+   },
+   "especialidade": "Arroz de terraço (棚田米) e arroz hasakake, saquê envelhecido na neve (雪中熟成酒) e sasadango",
+   "cenario": null,
+   "hours": "9:00–18:00; fecha às segundas",
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "quotes": {
+    "banho": "店舗・売店 物産販売所「雪だるま物産館」 食事 雪むろそば家 小さな空 休憩所 休憩コーナー（無料） ひと足のばせば ゆきだるま温泉",
+    "especialidade": "【おみやげ】笹だんご、餅丸長者、雪中熟成酒、はさかけ米、棚田米、かきもち"
+   },
+   "source": "https://www.hrr.mlit.go.jp/i/road/michieki/niigata/yasuzuka/info4.html"
+  },
+  {
+   "name": "じょんのびの里高柳",
+   "muni": "柏崎市",
+   "banho": {
+    "tem": true,
+    "tipo": "onsen",
+    "preco": "Adulto ¥500; criança ¥300",
+    "nota": "Onsen 楽寿の湯 dentro do complexo Jonnobi no Sato (que também tem pousada 萬歳楽 e chalés): 10:00–21:00, rotenburo masculino e feminino. O ingresso do banho inclui o uso da sala de descanso 萬歳楽."
+   },
+   "especialidade": "Tofu artesanal feito na hora (com degustação) e sansai da estação, nas lojas 百菜館 e 季菜市",
+   "cenario": null,
+   "hours": "楽寿の湯 10:00–21:00; lojas 8:30–17:00",
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "quotes": {
+    "banho": "温泉 楽寿の湯 【開】10:00〜21:00 【休】不定休 【料】大人500円、こども300円 男女各露天風呂あり",
+    "especialidade": "食事・喫茶・出来たての手作り豆腐試食など短時間の休憩から"
+   },
+   "source": "https://www.hrr.mlit.go.jp/i/road/michieki/niigata/takayana/info4.html"
+  },
+  {
+   "name": "国上",
+   "muni": "燕市",
+   "banho": {
+    "tem": true,
+    "tipo": "onsen",
+    "preco": "Adulto ¥500; primário/ginasial ¥300",
+    "nota": "Banho de excursão てまりの湯 dentro do parque da estação (道の駅国上ふれあいパーク): dois tipos de água (塩化物泉 e 単純温泉), sauna, banho ao ar livre e restaurante; há também um ashiyu gratuito no parque."
+   },
+   "especialidade": "Koshihikari de Bunsui, yōkan de figo (無花果ようかん) e bonecas de papel washi (姉様人形)",
+   "cenario": null,
+   "hours": "Estação 9:00–21:00; てまりの湯 10:00–21:00 (fecha às segundas)",
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "quotes": {
+    "banho": "温泉 ふれあいパーク てまりの湯 【開】10:00〜21:00 【休】毎週月曜日 【料】大人500円、小中学生300円 硫黄泉とナトリウム泉の2種類の温泉が楽しめる",
+    "especialidade": "分水産コシヒカリ、無花果ようかん、姉様人形（和紙人形）"
+   },
+   "source": "https://www.hrr.mlit.go.jp/i/road/michieki/niigata/kugami/info4.html"
+  },
+  {
+   "name": "越後川口",
+   "muni": "長岡市",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "A estação é a loja de produtos あぐりの里 + canto de informações 24h — sem banho. O えちご川口温泉 fica a 10 min a pé (entorno)."
+   },
+   "especialidade": "Koshihikari de Uonuma criado na névoa dos terraços fluviais, melões, melancias e verduras colhidas de manhã",
+   "cenario": "rio",
+   "hours": "あぐりの里 9:00–18:00 (inverno até 17:00); informações 24h",
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "quotes": {
+    "banho": "店舗・売店 あぐりの里 情報コーナー 【開】24時間 休憩所 無料休憩施設(情報コーナー兼用) ひと足のばせば えちご川口温泉 （徒歩10分）",
+    "cenario": "道の駅「越後川口」は、信濃川と魚野川の織りなす代表的な河岸段丘に拓かれた長岡市川口地域の中央に位置します",
+    "especialidade": "河岸段丘特有の川霧に育つ魚沼コシヒカリを代表にスイカ・メロンはもちろんのこと山菜までも甘さがひと味違う農産物"
+   },
+   "source": "https://www.hrr.mlit.go.jp/i/road/michieki/niigata/kawaguchi/info1.html"
+  },
+  {
+   "name": "よしかわ杜氏の郷",
+   "muni": "上越市",
+   "banho": {
+    "tem": true,
+    "tipo": "onsen",
+    "preco": "Adulto ¥500; até primário ¥300",
+    "nota": "Onsen na casa de intercâmbio ゆったりの郷: banho grande, rotenburo e banho de enzimas (酵素風呂), 10:00–21:00, fecha às segundas. O restaurante 味彩 fica dentro do mesmo prédio."
+   },
+   "especialidade": "O saquê 「よしかわ杜氏」, da terra dos mestres cervejeiros (tōji); e o 隠れうどん do restaurante",
+   "cenario": "lago",
+   "hours": "ゆったりの郷 10:00–21:00; fecha às segundas",
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "quotes": {
+    "banho": "温泉・休憩所 交流施設「ゆったりの郷」 【開】10:00〜21:00 【休】月曜 【料】大人500円、小学生以下300円 【施設】大浴場・露天風呂・酵素風呂・マッサージ・リラックスルーム",
+    "cenario": "道の駅に隣接する「観光酒蔵」を満喫した後、新潟景勝100選の第16位に選ばれた総面積22haの美しい池をご覧下さい",
+    "especialidade": "地酒「よしかわ杜氏」・農産物、花直売所"
+   },
+   "source": "https://www.hrr.mlit.go.jp/i/road/michieki/niigata/yoshikawa/info4.html"
+  },
+  {
+   "name": "うみてらす名立",
+   "muni": "上越市",
+   "banho": {
+    "tem": true,
+    "tipo": "banho termal (温浴)",
+    "preco": "Adulto ¥700 (verão ¥1,000); criança ¥500 (verão ¥700); bebê ¥350 (verão ¥500) — ingresso combinado banho+piscina",
+    "nota": "Casa de banho termal ゆらら (健康交流館): banho mineral, rotenburo panorâmico de sal-gema (展望岩塩露天風呂) e piscinas (interna e de água do mar, com toboágua). O banho funciona 9:00–18:00 (a piscina fecha no inverno, out–mar). Fecha na 2ª quarta do mês (exceto agosto)."
+   },
+   "especialidade": "Peixe fresco do porto de Nadachi no mercado 鮮魚市場 e no restaurante de frutos do mar; festivais do camarão amaebi",
+   "cenario": "mar",
+   "hours": "Estação 10:00–22:00; ゆらら (banho) 9:00–18:00",
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "quotes": {
+    "banho": "入浴施設 健康交流館（ゆらら） ・温浴施設 【開】9:00〜18:00 【料】大人700円（夏季1000円） 小人500円（夏季700円）",
+    "cenario": "北陸、鳥が首岬に位置し、眼前には日本海を望み、夕刻には空と海が茜色に染まる幻想的な夕景に出会える",
+    "especialidade": "施設内にある鮮魚市場から、夕食に並ぶ焼き魚を自分で選ぶことができ、名立港の新鮮な海の幸を満足するまで堪能できる"
+   },
+   "source": "https://www.hrr.mlit.go.jp/i/road/michieki/niigata/umiterasu/info4.html"
+  },
+  {
+   "name": "花夢里にいつ",
+   "muni": "新潟市",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "Estação-mercado de flores da JA Niitsu Satsuki: estufa de vidro e área externa com cerca de 40 mil vasos de flores da estação, loja de produtos agrícolas e restaurante — sem banho."
+   },
+   "especialidade": "Flores e plantas vendidas direto pelos produtores (mercado 花き花木展示即売場) — a estação é um mercado de flores permanente",
+   "cenario": null,
+   "hours": "9:00–18:00 (abr–ago); 9:00–17:00 (set–mar)",
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "quotes": {
+    "banho": "店舗・売店 花き花木展示即売場『花夢里にいつ』 農産物直売所『新鮮組』 食事 食事処『たぬき小屋』 休憩所 無料休憩コーナー",
+    "especialidade": "広々としたガラス温室の他に屋外売場には季節の花が約４万鉢並んでいます"
+   },
+   "source": "https://www.hrr.mlit.go.jp/i/road/michieki/niigata/niitsu/info1.html"
+  },
+  {
+   "name": "あいぽーと佐渡",
+   "muni": "佐渡市",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "É um centro de informações (佐渡インフォメーションセンター) junto ao porto de Ryōtsu: salão multiuso (~290 pessoas), espaço de eventos, salas de reunião e de culinária, exposição permanente de fotos de Takashi Amano e praça verde de ~5.000 m². Não tem loja permanente, restaurante nem banho — a própria descrição oficial da cidade de Sado o apresenta só como centro de informações e eventos."
+   },
+   "especialidade": null,
+   "cenario": "mar",
+   "hours": "8:30–17:30 (centro de informações); fecha de 29/dez a 3/jan",
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "quotes": {
+    "banho": "多目的ホール（約290人 収容可）を中心とするインフォメーションセンターです",
+    "cenario": "佐渡島の表玄関、両津港から徒歩5分"
+   },
+   "source": "https://www.city.sado.niigata.jp/site/i-port/"
+  },
+  {
+   "name": "南魚沼",
+   "muni": "南魚沼市",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "O complexo 「雪あかり」 tem exatamente quatro componentes na lista oficial de instalações —四季味わい館 (loja), たっぽ家 (restaurante), 今泉記念館 (museu/ informações) e 憩いの広場 (parque)— sem banho. (O site próprio da estação devolve 403 a leitores externos; o veredito se apoia na enumeração oficial do MLIT e na lista de instalações publicada pela estação.)"
+   },
+   "especialidade": "Arroz Koshihikari de Minamiuonuma — vendido na 四季味わい館 e servido cozido na panela kamado no restaurante たっぽ家",
+   "cenario": null,
+   "hours": "今泉記念館 9:00–17:00; 四季味わい館 9:00–18:00 (inverno 10:00–17:00); たっぽ家 10:00–18:00",
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "quotes": {
+    "banho": "「今泉記念館」は、２Ｆが「棟方志功」をはじめとする美術作品を展示する美術館、１Ｆが観光案内スペースとなっています",
+    "especialidade": "ちゃわんめし「たっぽ家」は、名産の南魚沼産コシヒカリをその場で食べられるコンセプトのお店です"
+   },
+   "source": "https://www.hrr.mlit.go.jp/road/Michi-no-Eki/index_hkr.html"
+  },
+  {
+   "name": "パティオにいがた",
+   "muni": "見附市",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "O site oficial (renovado em abril de 2026) enumera todas as instalações —直売所 健幸めっけ・精肉/惣菜 きらく横丁・焼肉 きらく・甘味処 六・交流センター・防災アーカイブ・デイキャンプ— sem banho. A estação fica dentro do parque de prevenção de desastres do rio Kariyata e funciona também como base防灾."
+   },
+   "especialidade": "Produtos dos agricultores locais na loja 健幸めっけ (verduras frescas, processados, doces e produtos típicos de Mitsuke)",
+   "cenario": "rio",
+   "hours": "健幸めっけ 9:00–19:00; 交流センター 9:00–22:00",
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "quotes": {
+    "banho": "農産物直売所 健幸めっけ 精肉・総菜販売「きらく横丁」 大衆焼肉きらく パティオ店 甘味処 六(ロク) 交流センター 防災アーカイブ デイキャンプ",
+    "cenario": "刈谷田川防災公園内のデイキャンプ場は、家族や友人と気軽に自然を楽しめる人気エリアです",
+    "especialidade": "地元農家の新鮮で安心な農産物や加工品、菓子・特産品、軽食コーナーをそろえた直売所です"
+   },
+   "source": "https://patio-niigata.jp/"
+  },
+  {
+   "name": "みつまた",
+   "muni": "南魚沼郡湯沢町",
+   "banho": {
+    "tem": true,
+    "tipo": "ashiyu",
+    "preco": "Grátis",
+    "nota": "A estação tem DOIS ashiyu (banho de pés) de água termal com fluxo contínuo (源泉掛け流し), gratuitos — um dentro do prédio e um no deque externo (no inverno, só o interno). Não há banho completo na estação; o banho de excursão 街道の湯 fica ao lado, a pé."
+   },
+   "especialidade": "Motsu-ni artesanal de porco mochi-buta (和豚もちぶたの手作りモツ煮) no restaurante e o soft cream de mel de Mitsumata no café",
+   "cenario": null,
+   "hours": "9:00–17:00 (mai–nov); 10:00–18:00 (dez–abr)",
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "quotes": {
+    "banho": "疲れた体は道の駅内外２か所の温泉足湯、又は隣接の街道の湯をご利用下さい",
+    "especialidade": "お食事コーナーでは「和豚もちぶたの手作りモツ煮」をぜひご賞味ください"
+   },
+   "source": "https://www.hokuriku-michinoeki.jp/contents/cycle/pdf/sta.000037.pdf"
+  },
+  {
+   "name": "燕三条地場産センター",
+   "muni": "三条市",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "O comunicado oficial do MLIT lista as instalações —estacionamento, banheiros 24h, canto de informações/descanso, 物産館 e restaurante (hoje o 燕三条イタリアンBit)— sem banho. É o centro de promoção das indústrias de Tsubame-Sanjō (prédio メッセピア), a 5 min a pé da estação de trem."
+   },
+   "especialidade": "Os produtos da indústria metalúrgica de Tsubame-Sanjō (talheres, utensílios de cozinha e ferramentas) na 物産館 — a cidade é famosa no mundo todo pelo trabalho em metal",
+   "cenario": null,
+   "hours": null,
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "quotes": {
+    "banho": "•休憩施設 駐車場 １２７台 トイレ ６２器 情報・休憩コーナー •地域振興施設 物産館、レストラン",
+    "especialidade": "「道の駅」燕三条地場産センター は、国内外で有名なものづくりのまちの核として、地域イメージの定着と魅力の情報発信拠点"
+   },
+   "source": "https://www.hrr.mlit.go.jp/niikoku/kisha/pdf/151120mitinoekidentathushiki.pdf"
+  },
+  {
+   "name": "庭園の郷保内",
+   "muni": "三条市",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "É uma estação-jardim: a lista oficial de instalações (província de Niigata) traz 庭園生活館・物産/特産エリア・カフェ こもれび・庭園/園芸植物見本園・和風庭園・restaurante base・庭園体験館 — sem banho. O tema é a indústria de árvores de jardim (植木・庭木) do distrito de Honai."
+   },
+   "especialidade": "Árvores e plantas de jardim (植木・庭木) de Honai — exposição e venda no jardim-modelo — além dos produtos da estação: shiitake, dálias e a pera Le Lectier",
+   "cenario": "jardim",
+   "hours": "9:00–18:00; fecha de 31/dez a 2/jan",
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "quotes": {
+    "banho": "庭園生活館、物産・特産エリア、交流・イベントスペース、こもれびカフェ、庭園・園芸植物見本園、和風庭園、パスタとピザの店base（バーゼ）、庭園体験館",
+    "especialidade": "保内地区の主力産業である植木、庭木の展示販売を通じて庭園の魅力を発信する場として整備",
+    "cenario": "広い庭園内には植木や花がいっぱい。新鮮な地物野菜を販売する直売所のほか、緑を眺められるカフェやレストランも併設しています"
+   },
+   "source": "https://www.pref.niigata.lg.jp/sec/syokuhin/1356913185183.html"
+  },
+  {
+   "name": "たがみ",
+   "muni": "南蒲原郡田上町",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "O documento oficial da cidade de Tagami (especificação de gestão da estação) enumera todo o conteúdo: prédio de informações (informações/banheiros/descanso), prédio regional (loja de produtos agrícolas, canto de refeições, loja de conveniência), praça, estacionamento e banheiros públicos — sem banho. Aberta em out/2020, é uma das estações 'foco' do MLIT."
+   },
+   "especialidade": "Os produtos da terra de Tagami na loja — morangos (fev–mai), brotos de bambu, pêssegos, peras e a pera ocidental (洋ナシ) conforme a estação",
+   "cenario": null,
+   "hours": "Loja 9:30–17:00 (abr–nov) e 10:00–16:00 (dez–mar); prédio de informações 24h",
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "quotes": {
+    "banho": "情報発信施設（情報発信・トイレ・休憩コーナー） •地域連携施設（農産物直売所・飲食コーナー・コンビニエンスストア） •憩いの広場（702㎡） •駐車場（4,835.69㎡） •公衆トイレ",
+    "especialidade": "田上町で作られている「いいもの」を集めた直売所機能と田上の人がワクワクするようなセレクトショップ的な役割をテーマに"
+   },
+   "source": "https://www.town.tagami.niigata.jp/fs/5/8/0/1/4/_/%EF%BC%A3%E3%80%80%E6%A5%AD%E5%8B%99%E4%BB%95%E6%A7%98%E6%9B%B8.pdf"
+  },
+  {
+   "name": "ながおか花火館",
+   "muni": "長岡市",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "O site oficial enumera as instalações —長岡花火ミュージアム (com teatro em cúpula), loja 越後長岡御貢屋, mercado de peixes 丸三水産, praça de alimentação ながおかKitchen, loja direta de produtos frescos e espaços de aluguel— sem banho. É a estação dos fogos de Nagaoka, um dos três grandes festivais pirotécnicos do Japão."
+   },
+   "especialidade": "Os fogos de artifício de Nagaoka — o museu exibe bombas em tamanho real (inclusive a 三尺玉) e o teatro em cúpula projeta o festival de 2–3 de agosto o ano todo (adulto ¥600)",
+   "cenario": null,
+   "hours": "Museu e lojas 10:00–17:30; praça de alimentação 10:00–19:00; museu fecha às quartas",
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "quotes": {
+    "banho": "Souvenir 地場産品等販売スペース 越後長岡御貢屋 Fish Market 海産物等販売 日本海おさかな市場 丸三水産 Food Court フードコート ながおかKitchen Farmer's Market 新鮮な野菜がいっぱい とれたて・できたて直売所",
+    "especialidade": "花火の町「ながおか」の魅力を体験できる道の駅"
+   },
+   "source": "https://nagaoka-hanabikan.niigata.jp/"
+  },
+  {
+   "name": "あがの",
+   "muni": "阿賀野市",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "O documento oficial de registro (MLIT, 2022) enumera todas as instalações —estacionamento, banheiros, informações/descanso, balcão de informações turísticas, espaço infantil, loja あがの市場, café de laticínios, praça de alimentação 食の広場, praças multiuso— sem banho. É a estação mais nova da província (42ª, aberta em 2022), com telhado em forma do monte Gozu."
+   },
+   "especialidade": "Laticínios de Agano — o soft cream de leite fresco e o de iogurte Yasuda no あがの酪農カフェ, e os produtos locais no mercado あがの市場",
+   "cenario": null,
+   "hours": "9:00–18:00 (varia por loja)",
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "quotes": {
+    "banho": "施設：駐車場１６０台、トイレ４４器、情報提供・休憩施設、観光案内所、ベビーコーナー、非常用電源、備蓄倉庫、貯水槽、公衆電話、公衆無線ＬＡＮ、物販施設、飲食施設、キッズスペース、多目的広場、屋根付広場、ＥＶ充電施設",
+    "especialidade": "既に稼働中の「あがの市場」「あがの酪農カフェ」「あがのおいしい調理室」では、新商品や新メニューの提供を開始します"
+   },
+   "source": "https://www.hrr.mlit.go.jp/niikoku/kisha/pdf/220225michinoekiaganotourokusyou.pdf"
+  }
+ ],
+ "wave": "michi-wave-niigata"
+}
