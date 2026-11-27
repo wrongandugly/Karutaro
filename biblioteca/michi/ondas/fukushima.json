@@ -1,0 +1,791 @@
+{
+ "gerado_em": "2026-11-27",
+ "nota_geral": "Leitura das páginas oficiais das 37 estações de Fukushima (registro MLIT). Com banho: 4 (喜多の郷・ならは・きらら289 — onsen; 尾瀬檜枝岐 — onsen no complexo Alza Oze no Sato). RVパーク: 2 (きらら289 ¥3.500/noite; 猪苗代 ¥2.700/vaga, temporada abr–nov). Nenhuma página oficial publica proibição de 車中泊. Banho NÃO DIZ (null) em 4: たまかわ, しもごう, ふるどの, さくらの郷 (sites oficiais sem enumeração completa de instalações).",
+ "stations": [
+  {
+   "name": "つちゆ",
+   "muni": "福島市",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "A página oficial do MLIT (Tohoku) enumera as instalações da estação —売店コーナー, 軽食コーナー, 道路情報施設・観光案内所・情報ターミナル— sem banho. Os onsen citados (土湯温泉 e outros da região) são atração dos arredores (湯めぐりのターミナル), não banho da estação."
+   },
+   "especialidade": "Kokeshi de Tsuchiyu (土湯こけし), ovo de onsen (温泉たまご), frutas da estação e sasadango — vendidos na loja da estação",
+   "cenario": "rio",
+   "hours": "9:00–18:00 (dez–mar até 17:30); sem folga",
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "quotes": {
+    "banho": "売店コーナー 開設時間／9:00〜18:00（12月〜3月は17:30まで） 休館日／無休",
+    "especialidade": "おみやげ 季節品、土湯こけし、漬物、温泉たまご、笹だんご、手作りこんにゃく",
+    "cenario": "土湯は、吾妻山と安達太良山から流れる荒川沿いの渓谷にたっぷりと湯が湧く、千数百年の歴史をもつ温泉町です",
+    "hours": "開館:9:00〜18:00（12月〜3月は17:30まで） 休館:無休"
+   },
+   "source": "http://keitai.thr.mlit.go.jp/road/i/michieki/fukushima/106.html"
+  },
+  {
+   "name": "川俣",
+   "muni": "伊達郡川俣町",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "A página oficial da prefeitura de Kawamata descreve o complexo Silkpia como 4 instalações —おりもの展示館 (museu do tecido), からりこ館 (experiência de tecelagem/tintura), かわまた銘品館シルクピア (loja) e 愛菜館ここら (venda direta de verduras), mais praça de eventos— sem banho."
+   },
+   "especialidade": "Frango Kawamata-shamo (川俣シャモ) e produtos de seda (絹製品: lenços, gravatas) — a cidade é a 'vila da seda' (絹の里)",
+   "cenario": null,
+   "hours": "Loja Silkpia 9:00–18:00; fecha na 3ª segunda-feira do mês e 30/dez–1/jan",
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "quotes": {
+    "banho": "この施設は、全体を「シルクピア」と称し、織物の歴史、伝統技術、生活文化等を紹介する「おりもの展示館」、機織、染色に関する研修や体験学習ができる「からりこ館」、絹製品や川俣シャモなどの町特産品を販売する「かわまた銘品館シルクピア」、農産物の直売所の「愛菜館ここら」の4つの施設で構成されています",
+    "especialidade": "おすすめメニュー スカーフ･ネクタイなどの絹製品、川俣シャモ、乳製品、草木染、にがり豆腐、桑の葉茶",
+    "hours": "物産売店「かわまた銘品館シルクピア」 開設時間／9:00〜18:00 休館日／毎月第3月曜日、12/30〜1/1"
+   },
+   "source": "https://www.town.kawamata.lg.jp/site/kanko-event/silkpia-shisetsuannai.html"
+  },
+  {
+   "name": "たじま",
+   "muni": "南会津郡南会津町",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "O site oficial enumera todas as instalações —物産館, テント販売, 軽食販売 e その他の施設 (informações turísticas, canto de descanso, praça de eventos, banheiros 24h, food trucks)— sem banho."
+   },
+   "especialidade": "Soba tachi-soba / nihachi-soba de Minami-Aizu (南会津といえば裁ちそば) e saquês das 4 cervejarias da cidade vendidos na loja",
+   "cenario": "rio",
+   "hours": "物産館 8:30–17:00 (sáb, dom e feriados até 18:00); venda em tenda e lanches só de abr a nov",
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "quotes": {
+    "banho": "館内には観光案内所や休憩コーナーの他、南会津の地元食材を活用した食品や飲料、地酒をはじめ伝統工芸品など、郷土色豊かな商品を多数取り揃えております",
+    "especialidade": "南会津といえば裁ちそばです。テレビでも紹介された二八そば。地元産そば粉も販売しております",
+    "cenario": "夏には川遊びも出来ます。川を見ながらほっと一息してみませんか",
+    "hours": "物産館 8:30～17:00（土日祝日は18:00まで）"
+   },
+   "source": "https://michinoeki-tajima.jp/facilities"
+  },
+  {
+   "name": "安達",
+   "muni": "二本松市",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "Ficha única das duas instalações (上り sentido Tóquio e 下り sentido Fukushima, uma em cada margem da Rota 4). O site oficial enumera as lojas dos dois lados —上り: venda de verduras 駅菜都, produtos regionais, 和紙伝承館 (museu/oficina de washi), restaurantes e konbini 24h; 下り: produtos agrícolas,銘産コーナー, 道ナカ食堂, 二本松ベーカリー e konbini 24h— sem banho em nenhum dos lados."
+   },
+   "especialidade": "Papel washi de Nihonmatsu (和紙伝承館, com experiência de fazer papel) e o awa-manjū original da Iwaidō (元祖・あわまんじゅう), vendido só aqui no Nakadōri",
+   "cenario": null,
+   "hours": "Lojas principais 8:30/9:00–18:00 conforme o lado; restaurantes desde 7:00; konbini 24h",
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "quotes": {
+    "banho": "和紙伝承館 和紙工芸品・和雑貨がたくさん！また和紙づくりの工程の見学や和紙漉き体験ができます",
+    "especialidade": "岩井屋の先祖が創製し、以後四代にわたり受け継がれている「元祖・あわまんじゅう」をご賞味ください。福島の中通りで購入できるのはココだけ！",
+    "hours": "のぼり食堂 営業時間：7:00～18:00 （ラストオーダー17:30）"
+   },
+   "source": "http://www.michinoeki-adachi.jp/shop_nobori/index.html"
+  },
+  {
+   "name": "喜多の郷",
+   "muni": "喜多方市",
+   "banho": {
+    "tem": true,
+    "tipo": "onsen",
+    "preco": "Adulto (a partir do ensino fundamental II) ¥500 das 9:00–17:00 / ¥300 das 17:00–21:00; criança (primário) ¥300 / ¥150",
+    "nota": "Onsen de excursão Kura no Yu (蔵の湯) dentro do parque da estação (ふれあいパーク喜多の郷): fonte simples (単純温泉, 42,1 °C) rica em ácido metassilícico, 'água da pele bonita', com banho grande, rotenburo e sauna."
+   },
+   "especialidade": "Hambúrguer de ramen de Kitakata (喜多方ラーメンバーガー) do restaurante Furusato-tei e os produtos da loja do onsen (温泉まんじゅう, pudim pós-banho)",
+   "cenario": null,
+   "hours": "蔵の湯: 9:00–21:00 (tarifa muda às 17:00)",
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "quotes": {
+    "banho": "「蔵の湯」は、美肌美人の湯と言われ、肌がすべすべになる「メタケイ酸」を含む炭酸カルシウム・単純温泉です。ゆったりとして大きな大浴場と、自然の中にある露天風呂が魅力です",
+    "preco": "午前9時〜午後5時 午後5時〜午後9時 大人(中学生以上) 500円 300円 小人(小学生) 300円 150円"
+   },
+   "source": "http://www.furusatosinkou.co.jp/spring/"
+  },
+  {
+   "name": "裏磐梯",
+   "muni": "耶麻郡北塩原村",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "A página oficial de instalações enumera restaurante, loja de dango/gelato, venda direta de produtos agrícolas, loja de produtos (物産館), artesanato de laca de Aizu, banheiros 24h, Wi-Fi, carregador EV e mirante — sem banho. O onsen citado no site (ラビスパ裏磐梯, em Sakura-tōge) é atração dos arredores, não da estação."
+   },
+   "especialidade": "Sal de montanha de Aizu (会津山塩), produto-símbolo de Kitashiobara, e soba fresco artesanal do restaurante (地元のそば粉を使い地元職人が打つ生そば)",
+   "cenario": "lago",
+   "hours": "9:00–17:00 (no inverno fecha às quartas)",
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "quotes": {
+    "banho": "《トイレ》 24時間ご利用可能なトイレには、安心のベビーベッド、身障者用トイレも設置しております",
+    "especialidade": "北塩原村特産の会津山塩はもちろん、会津の地酒やお土産もございます",
+    "cenario": "三角屋根の2階フロアは、見晴しの良い展望台となっております。檜原湖と裏磐梯の素晴らしい景観を、同時に楽しむことが出来ます",
+    "hours": "営業時間 (4月中旬～11月中旬) 9:00～17:00"
+   },
+   "source": "https://michinoeki-urabandai.com/facility"
+  },
+  {
+   "name": "ならは",
+   "muni": "双葉郡楢葉町",
+   "banho": {
+    "tem": true,
+    "tipo": "onsen",
+    "preco": "Adulto (a partir do ensino fundamental II) ¥900 (impostos incluídos); criança (primário) ¥500; pré-escolar grátis",
+    "nota": "A estação É uma instalação de onsen: o 2º andar do prédio principal é banho termal de excursão (fonte de cloreto de sódio forte, 40,8 °C, 563 L/min), com vários tipos de banheira, sauna e área de massagem/relaxamento. Reaberta após o fechamento pelo desastre de 2011."
+   },
+   "especialidade": "Mami-suiton (マミーすいとん), o prato famoso da casa no food court; também o Naraha kaisen tanmen (ramen de frutos do mar)",
+   "cenario": null,
+   "hours": "Onsen 10:00–21:00 (última entrada 20:30); aberto o ano todo",
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "quotes": {
+    "banho": "温泉（浴槽・サウナ） ・塩化物泉、ナトリウム強塩化物泉 ・源泉温度40.8度 ・湧出量 563リットル/分",
+    "preco": "【入浴料金】 ・大人 900円（中学生以上、入湯税、消費税込） ・小人 500円（小学生、消費税込） ※小学生未満は無料です",
+    "especialidade": "名物・マミーすいとんをはじめとした多様なメニューが自慢の「フードコート」",
+    "hours": "●本館2F 温泉 10:00～21:00（最終受付20:30）"
+   },
+   "source": "https://www.michinoeki-naraha.jp/detail/2067/company.html"
+  },
+  {
+   "name": "そうま",
+   "muni": "相馬市",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "A página oficial do MLIT enumera as instalações —物産販売施設, 軽食コーナー, 情報交流施設 e 体験実習館 (inaugurada em 2004)— sem banho."
+   },
+   "especialidade": "Produtos agrícolas e marinhos locais na loja de produtos; destaque da prefeitura: o soft cream de aonori (alga verde) de Matsukawaura",
+   "cenario": null,
+   "hours": "Lanches 9:00–20:00; loja 9:00–19:00 (página do MLIT); sem folga",
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "quotes": {
+    "banho": "◎物産販売施設 地元の農産物･海産物などを展示･販売します。 ◎軽食コーナー ◎情報交流施設 ◎体験実習館 （平成16年度オープン）",
+    "especialidade": "地元の農産物･海産物などを展示･販売します",
+    "hours": "開館:軽食コーナー（9:00〜20:00）物販コーナー（9:00〜19:00） 休館:年中無休（予定）"
+   },
+   "source": "http://keitai.thr.mlit.go.jp/road/i/michieki/fukushima/113.html"
+  },
+  {
+   "name": "はなわ",
+   "muni": "東白川郡塙町",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "O site oficial enumera as instalações —農産物直売所, レストラン天領, 軽食コーナー, 観光案内所, コンビニエンスストア— sem banho."
+   },
+   "especialidade": "Soft cream de dália (ダリアのソフトクリーム) e sashimi-konnyaku, as especialidades famosas de Hanawa; no restaurante, o tenzaru jūnen-udon",
+   "cenario": "rio",
+   "hours": "9:00–18:00; fecha 1 e 2/jan",
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "quotes": {
+    "banho": "農産物直売所、レストラン、軽食コーナー、観光案内所、コンビニエンスストアなどが揃っています",
+    "especialidade": "はなわ名物の「ダリアのソフトクリーム」や「さしみこんにゃく」も大人気です",
+    "cenario": "道の駅の裏手には美しい桜並木で有名な久慈川がゆったりと流れており、川沿いを散策するのもおすすめです",
+    "hours": "道の駅はなわ 営業時間 9:00 ～ 18:00 休館日 1月1日、1月2日"
+   },
+   "source": "https://www.michinoeki-hanawa.com/"
+  },
+  {
+   "name": "会津柳津",
+   "muni": "河沼郡柳津町",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "A página oficial do MLIT enumera as instalações —奥会津土産コーナー, 地域P.R.コーナー, サービスコーナー e 飲食室— sem banho. O Nishiyama Onsen citado é atração dos arredores (20 min de carro), não da estação. Observação: o antigo site oficial (yanaizu-kousya.info) hoje redireciona para o Centro de Visitantes de Oku-Aizu, instalado no local."
+   },
+   "especialidade": "Hakase-soba (博士そば), o soba artesanal famoso servido na sala de refeições da estação",
+   "cenario": null,
+   "hours": "9:00–18:00; fecha às segundas (se feriado, no dia seguinte)",
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "quotes": {
+    "banho": "◎奥会津土産コーナー ◎地域P.R.コーナー ◎サービスコーナー ◎飲食室 地元名物「博士そば」が食べられる",
+    "especialidade": "地元名物「博士そば」が食べられる。こしのあるそばをどうぞ",
+    "hours": "開館:9:00〜18:00 休館:毎週月曜日（月曜日が祝日の場合はその翌日が休館日となる）"
+   },
+   "source": "http://keitai.thr.mlit.go.jp/road/i/michieki/fukushima/115.html"
+  },
+  {
+   "name": "ふくしま東和",
+   "muni": "二本松市",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "O site oficial enumera as instalações de comida e compras —直売所・売店, 中華大栄餃子房, みちくさ亭 e ジェラートNATURE— sem banho."
+   },
+   "especialidade": "Produtos agrícolas seguros e artesanais da agricultura orgânica de Tōwa (conceito 'saúde das pessoas, do solo e da Terra') e o gelato artesanal NATURE",
+   "cenario": null,
+   "hours": "9:00–17:00; fecha 31/dez e 1–2/jan",
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "quotes": {
+    "banho": "直売所・売店 9:00～17:00 中華大栄餃子房 11:00～15:00 みちくさ亭 11:00～14:00 ジェラートNATURE (ナチュレ) 10:00～16:00",
+    "especialidade": "「人の健康・土の健康・地球の健康」をコンセプトに安全安心な農産物・手作りの特産品を提供し",
+    "hours": "営業時間：9:00～17:00"
+   },
+   "source": "https://touwanosato.net/"
+  },
+  {
+   "name": "にしあいづ",
+   "muni": "耶麻郡西会津町",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "O site oficial e a página do MLIT enumeram as instalações da estação —交流物産館よりっせ (venda direta, restaurante Ichizen, food court, padaria) e banheiros— sem banho na estação. O centro de onsen Lotos Inn (ロータスイン, com banho de excursão) fica nas proximidades (junto ao parque Sayuri), citado pelo MLIT como atração dos arredores — não conta como banho da estação."
+   },
+   "especialidade": "Verduras minerais (ミネラル野菜) de Nishiaizu vendidas na venda direta e usadas na cozinha medicinal (薬膳) do restaurante",
+   "cenario": null,
+   "hours": "交流物産館 9:00–18:00; restaurante e food court 11:00–15:30 (último pedido)",
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "quotes": {
+    "banho": "近くには、スポーツを楽しめるさゆり公園、日帰り入浴もできる温泉健康保養センター「ロータスイン」、家族連れで楽しめるオートキャンプ場があり",
+    "especialidade": "中核となる「交流物産館よりっせ」では、ミネラルをバランスよく含んだ地元野菜を直売しており、その素材を使った薬膳料理や軽食も提供しています",
+    "hours": "＜営業時間＞ 交流物産館 9:00～18:00 ミネラル野菜の家 9:00～18:00 レストラン いち膳 11:00～15:30（ラストオーダー）"
+   },
+   "source": "http://www.w-aizu.jp/yorisse/"
+  },
+  {
+   "name": "尾瀬街道みしま宿",
+   "muni": "大沼郡三島町",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "A página oficial do MLIT enumera as instalações da estação —特産物販売, 軽食コーナー e ビューポイント (mirante)— sem banho."
+   },
+   "especialidade": "Soba feito com farinha do planalto de Misaka (650 m) com tempura de vegetais da montanha da estação, no canto de lanches",
+   "cenario": "rio",
+   "hours": "9:00–19:00 (inverno até 18:00); folgas irregulares",
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "quotes": {
+    "banho": "■特産物販売 山菜・きのこなどの山の幸や工芸品を販売しています。 ■軽食コーナー ■ビューポイント",
+    "especialidade": "標高６５０ｍにある美坂高原で採れたそば粉を使ったそばと、四季の山菜などを使った天ぷらが好評です",
+    "cenario": "只見川を見下ろす展望台。１５分程歩くと、只見川とＪＲ只見線の鉄橋を一望できる場所もあり、絶景を見渡すことができます",
+    "hours": "開館:9:00〜19:00（冬季は〜18:00） 休館:不定休"
+   },
+   "source": "http://keitai.thr.mlit.go.jp/road/i/michieki/fukushima/118.html"
+  },
+  {
+   "name": "たまかわ",
+   "muni": "石川郡玉川村",
+   "banho": {
+    "tem": null,
+    "tipo": null,
+    "preco": null,
+    "nota": "A página oficial (こぶしの里) consultada não enumera as instalações da estação nem cita banho — NÃO DIZ."
+   },
+   "especialidade": "Sarunashi (fruta tipo kiwi), kūshinsai e tomate — os produtos de orgulho da aldeia de Tamakawa destacados na página oficial",
+   "cenario": null,
+   "hours": null,
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "quotes": {
+    "especialidade": "要チェック！！玉川村自慢の空芯菜・さるなし・トマトのご購入はこちらから。"
+   },
+   "source": "https://www.kobushinosato.com/"
+  },
+  {
+   "name": "羽鳥湖高原",
+   "muni": "岩瀬郡天栄村",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "O documento oficial do MLIT enumera as instalações da estação — estacionamento, banheiros, loja de venda direta e restaurante — sem banho. O onsen (クアハウス) citado no site da área de Hatoriko é instalação dos arredores do planalto, não da estação."
+   },
+   "especialidade": "Yacon de Tenei (天栄ヤーコン): chá de yacon, yacon-udon e conservas; o restaurante serve yacon-udon",
+   "cenario": "lago",
+   "hours": "8:00–18:00, sem folga (página do MLIT)",
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "quotes": {
+    "banho": "道の駅施設：天栄村 駐車場４２台、トイレ、直売所、食堂",
+    "especialidade": "食堂（ヤーコンうどん）",
+    "cenario": "天栄村のシンボルである羽鳥湖の近くに位置し",
+    "hours": "開館:8:00～18:00"
+   },
+   "source": "https://www.thr.mlit.go.jp/bumon/kisya/kisyah/images/13318_3_s4.pdf"
+  },
+  {
+   "name": "南相馬",
+   "muni": "南相馬市",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "A página oficial do MLIT (Tohoku) enumera as instalações — prédio de intercâmbio turístico, prédio de venda de produtos, restaurante, venda direta de produtos agrícolas — sem banho."
+   },
+   "especialidade": null,
+   "cenario": null,
+   "hours": "Prédio de intercâmbio turístico e prédio de produtos 9:00–21:00; informações rodoviárias e banheiros 24h",
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "quotes": {
+    "banho": "観光交流棟・物産販売棟 営業時間/9:00～21:00",
+    "hours": "道路情報案内・トイレ24時間 観光交流棟・物産販売棟 営業時間/9:00～21:00"
+   },
+   "source": "http://keitai.thr.mlit.go.jp/road/i/michieki/fukushima/121.html"
+  },
+  {
+   "name": "しもごう",
+   "muni": "南会津郡下郷町",
+   "banho": {
+    "tem": null,
+    "tipo": null,
+    "preco": null,
+    "nota": "A estação não tem site próprio listado no portal do MLIT; a página oficial da província de Fukushima consultada descreve a estação mas não enumera as instalações nem cita banho — NÃO DIZ."
+   },
+   "especialidade": null,
+   "cenario": "montanha",
+   "hours": "8:00–18:00 (dez–mar 8:00–17:00); fechado 31/dez e 1/jan",
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "quotes": {
+    "cenario": "「道の駅しもごう」は、南会津野雄大な山並みを眺望でき、標高861ｍ、東北で一番高い場所に設置され、豊かな自然と四季折々の景色が満喫できる道の駅です。",
+    "hours": "営業時間 8時00分～18時00分（12～3月8時00分～17時00分）"
+   },
+   "source": "https://www.pref.fukushima.lg.jp/sec/21045a/kuuki-kirei-minamiaidu-syakaibunka.html"
+  },
+  {
+   "name": "ひらた",
+   "muni": "石川郡平田村",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "O site oficial enumera as instalações — loja de venda direta, soba-dokoro Takeyama, fast-food Juppy e o 'banheiro nº 1 do Japão' (sanitário, não banho) — sem instalação de banho."
+   },
+   "especialidade": "Sorvete de habanero (ハバネロソフト), exclusivo desta estação — a aldeia mira ser a 'mais picante do Japão'; também soba de farinha de Hirata no Takeyama",
+   "cenario": "montanha",
+   "hours": "Venda direta: dias úteis 9:30–18:00, sáb/dom/feriados 9:00–18:00; fast-food 10:00–17:00; restaurante Takeyama 11:00–17:00; fechado 1/jan",
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "quotes": {
+    "banho": "直売所 ファストフード たけやま(食堂)",
+    "especialidade": "「あの」ハバネロソフトはこちら。当駅限定です。",
+    "cenario": "しばざくらの里「道の駅ひらた」は、阿武隈山系の蓬田岳の麓にあります。",
+    "hours": "直売所 9:30 ～ 18:00 9:00 ～ 18:00"
+   },
+   "source": "https://www.michinoeki-hirata.com/"
+  },
+  {
+   "name": "よつくら港",
+   "muni": "いわき市",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "O site oficial enumera as instalações — venda direta (1F), praça de alimentação (2F), prédio de informações e a casa infantil Fukumaru — sem banho. Onsen aparece apenas no guia dos arredores (周辺案内), como atração externa, não da estação."
+   },
+   "especialidade": "Produtos frescos de Yotsukura: verduras colhidas de manhã, frutas maduras, bentō de ingredientes frescos e produtos processados do mar",
+   "cenario": "mar",
+   "hours": "Venda direta 9:00–17:00; praça de alimentação 10:00–17:00 (último pedido 16:30); fechado às terças e 1/jan",
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "quotes": {
+    "banho": "道の駅よつくら港の周りには、おいしいものや温泉、宿泊施設がいっぱい！",
+    "especialidade": "朝採り野菜や完熟果物、新鮮食材のおいしいお弁当、お菓子、こだわりの水産加工品、手作りの工芸品など、地元の名品を多数販売しています。",
+    "cenario": "海を見ながら 食事ができる道の駅",
+    "hours": "直売所1F 9:00〜17:00 フードコート2F 10:00〜17:00 （オーダーストップ 16:30）"
+   },
+   "source": "https://www.michinoeki-yotsukurakou.jp/"
+  },
+  {
+   "name": "ばんだい",
+   "muni": "耶麻郡磐梯町",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "O site oficial apresenta as instalações — loja de produtos, restaurante Aizu-ne, loja de pães Gerapan e corner Montbell — sem banho. As águas termais citadas (Higashiyama Onsen, Ashinomaki Onsen) são destinos dos arredores, a 20–35 min de carro."
+   },
+   "especialidade": "Mel de Bandai (磐梯はちみつ, 100% nacional, prêmio máximo do Ministro da Agricultura em 2022) e o ramen de Kitakata do restaurante Aizu-ne",
+   "cenario": "montanha",
+   "hours": "Loja de produtos 9:00–18:00; restaurante Aizu-ne 11:00–17:00 (inverno até 16:00)",
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "quotes": {
+    "banho": "【温泉街】 東山温泉温泉まで 車で約20分 芦ノ牧温泉まで車で約35分",
+    "especialidade": "地元でとれた国産100％のはちみつです。 第35回福島県はちみつ品評会（2022年8月）にて農林水産大臣賞（最高賞）受賞",
+    "cenario": "磐梯山麓の道の駅へ、ようこそ！",
+    "hours": "物産館 9:00～18:00"
+   },
+   "source": "https://www.michinoekibandai.com/"
+  },
+  {
+   "name": "ふるどの",
+   "muni": "石川郡古殿町",
+   "banho": {
+    "tem": null,
+    "tipo": null,
+    "preco": null,
+    "nota": "O site oficial (おふくろの駅) consultado não enumera por completo as instalações nem cita banho — NÃO DIZ."
+   },
+   "especialidade": "Verduras frescas locais e conjuntos de presente (ギフトセット) da loja Ofukuro no Eki",
+   "cenario": null,
+   "hours": "Todos os dias 9:00–17:30",
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "quotes": {
+    "especialidade": "おふくろの駅は毎日営業中。新鮮野菜のほか、ギフトセットなど多数の商品を取り揃えています。",
+    "hours": "おふくろの駅は毎日営業中！（９：００～１７：３０)"
+   },
+   "source": "https://ofukuro-eki.com/"
+  },
+  {
+   "name": "番屋",
+   "muni": "南会津郡南会津町",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "A página oficial do MLIT (Tohoku) enumera as instalações — loja/venda, restaurante, sala de descanso gratuita e corner de informações — sem banho."
+   },
+   "especialidade": null,
+   "cenario": null,
+   "hours": "8:00–17:00 (estacionamento e banheiros externos 24h)",
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "quotes": {
+    "banho": "店舗・売店, 開設時間／8:00～17:00, 食堂, 開設時間／8:00～17:00, 無料休憩所, 情報提供コーナー",
+    "hours": "開館 8:00～17:00 （駐車場・屋外トイレ 24時間利用可能）"
+   },
+   "source": "http://keitai.thr.mlit.go.jp/road/ez/michieki/fukushima/07022.html"
+  },
+  {
+   "name": "季の里天栄",
+   "muni": "岩瀬郡天栄村",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "O site oficial organiza a estação em mapa de piso, compras, refeições e inquilinos (施設案内・お買い物・お食事・テナント情報) — sem instalação de banho."
+   },
+   "especialidade": "Arroz Tenei (天栄米) e produtos agrícolas locais de Tenei — verduras e frutas frescas da estação,加工品 e lembranças",
+   "cenario": null,
+   "hours": "9:00–17:30; fechado na 1ª quarta-feira do mês (restaurante fecha às quartas)",
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "quotes": {
+    "banho": "施設案内 お買い物 お食事 テナント情報 アクセス",
+    "hours": "9：00〜17：30 毎月第１水曜日は休業"
+   },
+   "source": "https://kinosato.fukushima.jp/"
+  },
+  {
+   "name": "きらら289",
+   "muni": "南会津郡南会津町",
+   "banho": {
+    "tem": true,
+    "tipo": "onsen",
+    "preco": "Adulto ¥700; aluno do primário ¥300; pré-escolar grátis; alunos do ginásio em diante pagam ainda o imposto de banho de ¥150 (página oficial do RVパーク)",
+    "nota": "Onsen de excursão Yamaguchi Onsen dentro da estação: dois banhos (Yamazakura no Yu e Rindō no Yu, alternados por sexo/dia) com rotenburo, sauna seca e sauna löyly; fonte de cloreto de sódio (ナトリウム-塩化物泉). Estação renovada/reaberta em 2026 segundo a imprensa, com saunas ampliadas."
+   },
+   "especialidade": null,
+   "cenario": "montanha",
+   "hours": "Onsen: seg 10:30–13:30; ter 12:00–19:00; qua–sex e dom 10:30–19:00; sáb 10:30–20:00 (última entrada 30 min antes)",
+   "rv_park": "RVパーク oficial da estação (reserva online): ¥3.500 por veículo/noite, check-in a partir das 15:00, check-out 10:00, com energia 100V/15A, Wi-Fi, banheiro 24h e coleta de lixo; o onsen da estação fica a 1 min a pé",
+   "shachuhaku_proibido": false,
+   "quotes": {
+    "banho": "リンドウの湯・山桜の湯・露天風呂・サウナ",
+    "preco": "入浴料金：大人700円、小学生300円 ※中学生以上の利用は別途入湯税（150円）が課せられます。",
+    "cenario": "眼前に雄大な山々と麓を流れる素朴な渓流を望み、風情溢れる一時をどうぞ。",
+    "hours": "月曜日：10：30～13：30, 火曜日：12：00～19：00, 水曜日：10：30～19：00",
+    "rv": "利用料金 1泊 3,500円/1台 ※日帰り区別は無し"
+   },
+   "source": "https://www.kirara289.jp/"
+  },
+  {
+   "name": "奥会津かねやま",
+   "muni": "大沼郡金山町",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "A página oficial de instalações lista estacionamento, sala de descanso, corner de informações, banheiros 24h, restaurante Kobushi-kan e loja — sem banho na estação. Os onsen citados no site são instalações dos arredores (num raio de 3 km há 1 onsen de excursão; a página '温泉施設のご案内' lista os banhos da cidade de Kaneyama, externos)."
+   },
+   "especialidade": "Água gaseificada natural de Oku-Aizu Kaneyama (天然炭酸の水) e a abóbora vermelha de Kaneyama (金山赤カボチャ)",
+   "cenario": null,
+   "hours": "Estação 9:00–17:30, sem folga (fecha 30/dez–2/jan); restaurante Kobushi-kan 11:00–15:00",
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "quotes": {
+    "banho": "【近隣（３キロ内）の施設】, 日帰り温泉：１軒",
+    "especialidade": "奥会津金山「天然炭酸の水」 爆売れ中！！",
+    "hours": "営業時間:9時～17時30分 年中無休（12/30～1/2は休業します）"
+   },
+   "source": "http://okuaizukaneyama.blog.jp/archives/2112926.html"
+  },
+  {
+   "name": "さくらの郷",
+   "muni": "二本松市",
+   "banho": {
+    "tem": null,
+    "tipo": null,
+    "preco": null,
+    "nota": "NÃO DIZ. O site próprio da estação (sakura-no-sato.com) é renderizado em JavaScript (Nuxt/Studio.Design) e não pôde ser lido em texto. A página oficial da prefeitura de Nihonmatsu descreve a oferta — verduras frescas, alimentos processados (doces de arroz e croquetes), artesanato popular, soba e udon, sorvete e pizza de forno de pedra — sem citar banho, mas não é uma enumeração completa de instalações."
+   },
+   "especialidade": "Croquetes (incl. o de bardana local) e alimentos processados feitos à mão, soba/udon artesanais e pizza de forno de pedra com molho de missô especial, só aos sábados, domingos e feriados (página oficial da prefeitura de Nihonmatsu)",
+   "cenario": null,
+   "hours": "Vendas 9:00–17:00; restaurante 11:00–15:00; aberto todos os dias (página oficial da prefeitura de Nihonmatsu)",
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "quotes": {
+    "especialidade": "二本松の小さな里山の小さな道の駅。いわしろ（旧岩代町）と呼ばれるこの場所には、先人たちが残してくれた、たからものがたくさんあります。美味しい食べ物、食の知恵を活かした商品の開発と販売を行っています。"
+   },
+   "source": "https://www.city.nihonmatsu.lg.jp/travel_guide/tourist_attractions/page002762.html"
+  },
+  {
+   "name": "あいづ湯川・会津坂下",
+   "muni": "河沼郡湯川村",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "O site oficial apresenta as instalações — mercado de produtos agrícolas (農産物マーケット), loja Aizu Bussankan (あいづ物産館) e restaurante de agricultores (農家レストラン) — sem banho."
+   },
+   "especialidade": "Verduras frescas de venda direta dos produtores da região — o próprio site se apresenta como a estação famosa pelas verduras frescas de Fukushima (産直野菜)",
+   "cenario": null,
+   "hours": "9:00–19:00 (pode variar por instalação e estação do ano)",
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "quotes": {
+    "banho": "道の駅あいづ 湯川・会津坂下 とは 施設情報 農産物マーケット あいづ物産館 農家レストラン 周辺観光情報",
+    "especialidade": "福島の産直野菜が人気の道の駅「道の駅あいづ 湯川・会津坂下」",
+    "hours": "営業時間 9:00～19:00 各施設ともに季節によって変動あるため、お問い合わせください。"
+   },
+   "source": "https://heso-aizu.jp/facility"
+  },
+  {
+   "name": "からむし織の里しょうわ",
+   "muni": "大沼郡昭和村",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "A página oficial da estação (operadora: Corporação de Promoção da Vila de Shōwa) enumera as instalações — salão de intercâmbio Orihime (織姫交流館), restaurante Choma-an (苧麻庵), Museu de Artesanato Karamushi e loja — sem banho. A pousada Shirakaba-sō citada no mesmo site é instalação separada da operadora, não banho da estação."
+   },
+   "especialidade": "Tecelagem karamushi (fibra de rami): produtos de karamushi são o item nº 1 da loja — tecidos, faixas, xales, chapéus e até o 'karamushi comestível'; nº 2 é a flor kassumigusa (gypsophila), da qual a vila é a maior produtora de verão/outono do Japão",
+   "cenario": null,
+   "hours": "Restaurante Choma-an: abr–nov 11:00–15:00 (último pedido 14:30); dez–mar fechado no inverno",
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "quotes": {
+    "banho": "織姫交流館 食事処 苧麻庵 ちょまあん からむし工芸博物館",
+    "especialidade": "Ｎo.1 からむし製品 からむしの特性を生かした涼しく肌に心地よい着尺・帯・ショール・帽子・他小物や、新商品の食べる「からむし」など多種多様な商品を取り揃えております",
+    "hours": "営業時間 【4月～11月】11：00～15：00（ラストオーダー 14：30） 【12月～3月】冬季休業"
+   },
+   "source": "https://www.karamushi.co.jp/michinoeki.html"
+  },
+  {
+   "name": "猪苗代",
+   "muni": "耶麻郡猪苗代町",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "A página oficial de instalações enumera restaurantes, food court, lojas de souvenirs e artesanato, dog run, carregador EV e o RVパーク — sem banho. Os onsen citados pelo site ficam nos arredores (周辺には温泉), não na estação."
+   },
+   "especialidade": "Soba artesanal batido à mão com farinha de soba e arroz de Inawashiro/Aizu, e o source-katsudon, prato típico de Aizu (também pizza de forno de pedra)",
+   "cenario": "lago",
+   "hours": "9:00–18:00, aberto o ano todo (restaurante principal 10:30–16:00)",
+   "rv_park": "RVパーク dentro do estacionamento de clientes da estação, a 1 min do IC Inawashiro-Bandai Kōgen da via expressa Ban'etsu; 5 vagas; tarifa ¥2.700 por vaga; temporada 2026: 18/abr–30/nov; reserva online a partir de 1 mês antes",
+   "shachuhaku_proibido": false,
+   "quotes": {
+    "banho": "周辺には温泉、観光スポットがあり、長期滞在も楽しむことができます",
+    "especialidade": "猪苗代町産の米やそば粉を使った本格的な手打ちそばや、会津名物ソースかつ丼、石窯で焼く本格ピザなど豊富なメニューをご用意しています",
+    "cenario": "磐梯山と猪苗代湖に囲まれた「道の駅猪苗代」",
+    "hours": "営業時間 9:00 ~ 18:00 (年中無休)",
+    "rv": "道の駅猪苗代のお客様駐車場内にあるRVパークです。利用可能台数は５台です。利用料金 2,700円（1区画）"
+   },
+   "source": "https://michinoeki-inawashiro.co.jp/about"
+  },
+  {
+   "name": "国見あつかしの郷",
+   "muni": "伊達郡国見町",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "A lista oficial de instalações/equipamentos (mercado, restaurantes, espaço infantil de madeira, dog run, salões multiuso, banheiros 24h) não inclui banho público. A estação tem hospedagem própria — 国見STAY 風道, 4 quartos, pernoite sem refeição a partir de ¥6.500/pessoa — com banheiro privativo no quarto; não é banho de excursão (day-use)."
+   },
+   "especialidade": "Frutas e verduras frescas entregues diariamente pelos agricultores locais no mercado Kunimi, com destaque para o pêssego de Kunimi (restaurante Tōkatei e café Momotan)",
+   "cenario": "montanha",
+   "hours": "9:00–18:00 (varia por instalação/loja)",
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "quotes": {
+    "banho": "設備一覧 駐車場 授乳室 AED トイレ 24時間利用可能有 キャッシュレス決済 ドッグラン 多目的トイレ EV車充電 Free Wi-Fi",
+    "especialidade": "毎日、地元の農家さんから届く 新鮮な野菜・果物がずらり くにみ市場",
+    "cenario": "阿津賀志山に抱かれた、 小さな町の、交流拠点。",
+    "hours": "開館時間 9：00〜18：00"
+   },
+   "source": "https://www.michinoeki923.com/"
+  },
+  {
+   "name": "いいたて村の道の駅までい館",
+   "muni": "相馬郡飯舘村",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "O guia oficial de serviços/instalações da estação lista banheiros, sala de amamentação, AED, telefone público e ATM (dentro da Seven-Eleven) — sem banho. A página '泊まる' do site remete à instalação irmã separada 宿泊体験館きこり (outro endereço, com banho e ganbanyoku), que não é banho da estação."
+   },
+   "especialidade": "Produtos agrícolas e processados da vila de Iitate na loja Madeikan e pratos locais no restaurante; a vila promove o soba novo do planalto de Iitate (festival anual do soba)",
+   "cenario": null,
+   "hours": "Loja (直売所): mar–out 9:30–18:00; nov–fev 9:30–17:00; fecha às quartas e no Ano-Novo (31/dez–2/jan)",
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "quotes": {
+    "banho": "サービス・施設案内 男女トイレ 多目的トイレ 授乳室 １室 A E D １台 公衆電話 １台 A T M １台（セブンイレブン店内）",
+    "hours": "営業時間 までい館 （直売所） 3月～10月 9:30〜18:00 11月〜2月 9:30〜17:00 定休日 毎週水曜、年末年始(12/31〜1/2 )"
+   },
+   "source": "http://madeikan.com/"
+  },
+  {
+   "name": "尾瀬檜枝岐",
+   "muni": "南会津郡檜枝岐村",
+   "banho": {
+    "tem": true,
+    "tipo": "onsen",
+    "preco": "Só banho: adulto ¥800, criança (4 anos–primário) ¥400; piscina + banho: adulto ¥1.400, criança ¥700",
+    "nota": "ALERTA: o link de homepage da estação no portal oficial do MLIT (oze-info.jp/mitinoeki/) retorna 404. O banho é o do complexo da estação: a instalação esportiva termal Alza Oze no Sato (アルザ尾瀬の郷, piscina aquecida de 25 m + onsen), descrita na página oficial da Associação de Turismo de Hinoemata (operadora local, mesmo complexo do centro de intercâmbio Oze no Sato, onde fica o restaurante da estação). Temporada 2026: 25/abr–8/nov (fechado no inverno); banho 12:00–18:00 (no pico de verão até 20:00)."
+   },
+   "especialidade": "Culinária yamabito (山人料理, cozinha tradicional dos caçadores de Hinoemata) e o soba cortado à faca (裁ちそば), servidos no restaurante Mizubashō, no centro de intercâmbio Oze no Sato do complexo da estação",
+   "cenario": null,
+   "hours": "Banho do Alza Oze no Sato: 12:00–18:00 (última entrada 17:30); temporada 25/abr–8/nov, fechado no inverno",
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "quotes": {
+    "banho": "総合温泉スポーツ施設「アルザ尾瀬の郷」はプールと温泉が楽しめる総合的な健康増進施設です",
+    "preco": "風呂のみ 大人 800円 子供 400円",
+    "hours": "お風呂・・・12:00～18:00（最終受付17：30）",
+    "especialidade": "尾瀬の郷 交流センター・食事処「水芭蕉」"
+   },
+   "source": "https://www.oze-info.jp/ozh_spa/aruzaoze/"
+  },
+  {
+   "name": "伊達の郷りょうぜん",
+   "muni": "伊達市",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "O site oficial enumera as lojas da estação — mercado de produtos agrícolas, padaria Ryōzen 115, restaurantes (Date Shokuan), loja de mochi recém-batido Fukunotsuki, cafés — e a página de instalações lista estacionamento, banheiros, AED e sala de amamentação, sem banho."
+   },
+   "especialidade": "Produtos agrícolas de Date, com destaque para o pêssego de Date (feira do pêssego no verão) e o mochi recém-batido (つきたて餅) da loja Fukunotsuki",
+   "cenario": "montanha",
+   "hours": null,
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "quotes": {
+    "banho": "農産物直売所 物販コーナー まきばのジャージー りょうぜんパン工房115 だて食庵 つきたて餅 福乃月 りょうぜん焼き本舗 からあげ工房 みそから屋 Café de Repos",
+    "cenario": "道の駅「伊達の郷 りょうぜん」は、東北中央自動車道霊山ICを降りてすぐ、国道115号沿いの、のどかな山間にあります"
+   },
+   "source": "http://michinoeki-datenosato-ryozen.jp/"
+  },
+  {
+   "name": "なみえ",
+   "muni": "双葉郡浪江町",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "O site oficial lista as lojas da estação — restaurantes (Kanade, Hirota Seifunsho), SakeKura Yui, padaria Honoka, loja de produtos Irodori Sanchoku Inaho e uma loja Muji — sem banho."
+   },
+   "especialidade": "Amazake e doces da SakeKura Yui, loja da cervejaria local dentro da estação (bebidas, soft cream e crepes de amazake), e o hambúrguer de arroz de Namie (なみえライスバーガー), vendido em dias de evento",
+   "cenario": "mar",
+   "hours": "Lojas em geral 10:00–18:00 (varia por loja; ex.: padaria até 16:00, café até 15:00)",
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "quotes": {
+    "banho": "レストラン かなで 麺処 ひろ田製粉所 SakeKuraゆい 茶房ゆい いろどり産直 いなほ まちのパン屋さん ほのか 無印良品",
+    "especialidade": "酒蔵が造る本気の甘酒を使用したドリンクやソフト、酒蔵クレープなど、フードメニューも充実",
+    "cenario": "浪江町は、福島県沿岸部、「浜通り」と 呼ばれるエリアにある小さな町",
+    "hours": "いろどり産直 いなほ 新鮮な野菜や海産物、オリジナル商品なども取り扱う直売所 営業時間／10：00〜18：00"
+   },
+   "source": "https://michinoeki-namie.jp/"
+  },
+  {
+   "name": "ふくしま",
+   "muni": "福島市",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "O site oficial descreve as instalações — venda de produtos agrícolas e souvenirs, restaurante, food court e parque infantil interno (ももRabiキッズパーク) em madeira — sem banho."
+   },
+   "especialidade": "Frutas de cada estação e gourmet local de Fukushima — a estação se apresenta como emissora dos atrativos da região, das frutas das quatro estações à cultura local",
+   "cenario": "montanha",
+   "hours": "9:00–18:00, aberto o ano todo (estacionamento, banheiros e informações de estrada 24h)",
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "quotes": {
+    "banho": "農産物・物販の販売施設やレストラン、フードコートなどの飲食施設、屋内こども遊び場など福島県産の木材を多用した、ぬくもりのある空間で、ごゆっくりとお過ごしください",
+    "especialidade": "豊かな自然や四季折々の果物、観光や文化など、人を惹きつける様々な魅力を「道の駅ふくしま」から発信いたします",
+    "cenario": "吾妻連峰を見渡す最高のロケーションに位置し、ここでしか味わえない地元のグルメや、木の温もりを感じる開放感のある遊び場などで、皆さまをお迎えいたします",
+    "hours": "開館時間 9:00～18:00 (年中無休)"
+   },
+   "source": "https://m-fukushima.com/"
+  },
+  {
+   "name": "いわき・ら・ら・ミュウ",
+   "muni": "いわき市",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "O guia oficial de instalações lista a rua do mercado de frutos do mar, a zona de churrasco, as ruas de souvenirs e de restaurantes de frutos do mar e a área de brincar — sem banho. É um centro turístico-gastronômico do porto de Onahama reaberto como道の駅 em set/2025."
+   },
+   "especialidade": "Frutos do mar frescos do porto de Onahama: mercado de peixes e restaurantes de frutos do mar (sushi, kaisendon, peixe cozido) nas ruas temáticas da casa",
+   "cenario": "mar",
+   "hours": "9:00–18:00 (varia por instalação/loja; dias de fechamento irregulares publicados no site)",
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "quotes": {
+    "banho": "施設のご案内 海鮮市場通り 海鮮ふるさとお土産通り 海鮮グルメ通り1F 海鮮グルメ通り2F バーベキューゾーン 遊び場",
+    "especialidade": "海鮮市場通り 鮮度・品揃え・価格の三拍子が揃った充実のマーケット",
+    "cenario": "海鮮グルメ通り2F 塩騒を聞きながら新鮮な海の幸に舌つづみ",
+    "hours": "開館時間 9:00〜18:00"
+   },
+   "source": "https://www.lalamew.jp/"
+  },
+  {
+   "name": "石川",
+   "muni": "石川町",
+   "banho": {
+    "tem": false,
+    "tipo": null,
+    "preco": null,
+    "nota": "CASO ESPECIAL: registrada em dez/2025 (R7.12, a mais nova de Fukushima, 37ª do estado) SEM homepage no registro MLIT. A estação ABRIU em 18/9/2026 e hoje tem site oficial próprio (michinoeki-isikawa.com), cuja enumeração de instalações — loja de produtos, restaurante Sakura no Mori Shokudō, doceria Fukumori Sweets, padaria de maçã, crepe & gelato, dog run, gramado — não inclui banho. ALERTA: o site oficial ainda traz trechos provisórios (texto '説明文' repetido e '定休日 年中無休 仮')."
+   },
+   "especialidade": "Maçã de Ishikawa/Fukushima como protagonista: padaria de maçã, doceria e dezenas de produtos de maçã na loja oficial (bûche de maçã de Fukushima, baumkuchen de maçã e chá preto, geléia e manteiga de maçã)",
+   "cenario": null,
+   "hours": "9:00–17:00 (vendas/informações/dog run); restaurante Sakura no Mori 10:00–16:00 (último pedido 15:00); aberto o ano todo (provisório no site)",
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "quotes": {
+    "banho": "お食事 さくらの森食堂 おいしかわい クレープ＆ジェラート 福実りsweets おいしかわい りんごベーカリー お買い物",
+    "especialidade": "福島のりんごのふわふわブッセ キャラメルソースとシナモンで風味付けしたバタークリームに福島県産の角切りりんごをたっぷり加えたブッセです",
+    "hours": "営業時間 9:00〜17:00 物販施設/情報発信施設/ドッグラン"
+   },
+   "source": "https://www.michinoeki-isikawa.com/"
+  }
+ ],
+ "wave": "michi-wave-fukushima"
+}
