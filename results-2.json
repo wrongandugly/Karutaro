@@ -1,7 +1,7 @@
 {
  "want_number": 2,
  "want_what": "Onsen em Nagano",
- "swept_at": "2026-11-27T22:23:58+09:00",
+ "swept_at": "2026-11-28T04:04:55+09:00",
  "fits": [],
  "fits_total": 0,
  "near": [],
@@ -10,26 +10,26 @@
  "unconfirmed_total": 0,
  "examples": [
   {
-   "title": "ROYAL FOLKLORIC TROUPE OF TAHITI(タヒチ王立民俗劇団)/COCO'S TEMAEVA ※タヒチ(ポリネシア)",
-   "price": 800,
-   "url": "https://auctions.yahoo.co.jp/jp/auction/p1113988220",
-   "image": "https://auc-pctr.c.yimg.jp/i/auctions.c.yimg.jp/images.auctions.yahoo.co.jp/image/dr000/auc0411/users/4fb7087981b3576f274761b876cebd4e9d2abaef/i-img640x480-1700050566vdknyq2433268.jpg?pri=l&w=300&h=300&up=0&nf_src=sy&nf_path=images/auc/pc/top/image/1.0.3/na_170x170.png&nf_st=200",
+   "title": "トゥンバトゥ・クンバ●輸入盤「TUMBATU CUMBA」●パーカッション集団,アルゼンチン音楽手帖,Nico Falcoff●JOAO DONATO EMORIOカバー他",
+   "price": 1000,
+   "url": "https://auctions.yahoo.co.jp/jp/auction/c912710767",
+   "image": "https://auc-pctr.c.yimg.jp/i/auctions.c.yimg.jp/images.auctions.yahoo.co.jp/image/dr000/auc0206/users/5b846b76666a93973bf19dfc7a59b39f8dee92b4/i-img1200x900-1623760011qvc9by1001341.jpg?pri=l&w=300&h=300&up=0&nf_src=sy&nf_path=images/auc/pc/top/image/1.0.3/na_170x170.png&nf_st=200",
    "source": "Yahoo! Auctions",
    "kind": "auction",
    "reason": "o título não menciona 'onsen'"
   },
   {
-   "title": "[CD] Coco's Temaeva / Royal Folkloric Troupe of Tahiti",
-   "price": 832,
-   "url": "https://auctions.yahoo.co.jp/jp/auction/e1192381572",
-   "image": "https://auc-pctr.c.yimg.jp/i/auctions.c.yimg.jp/images.auctions.yahoo.co.jp/image/dr000/auc0107/user/9b2895708eb1fb9ce7b14539032c017cec0605f02328b88b1cd8c0b45f7d164a/i-img1200x900-175231339934810niynd250412.jpg?pri=l&w=300&h=300&up=0&nf_src=sy&nf_path=images/auc/pc/top/image/1.0.3/na_170x170.png&nf_st=200",
+   "title": "レア盤CD 典礼音楽　カンタール　Cantors and Cantorials Chazanim & Chazanut CD 1988 Pearl SKU: 5015903931325 品番：GEMM CD 9313",
+   "price": 1023,
+   "url": "https://auctions.yahoo.co.jp/jp/auction/r1245637557",
+   "image": "https://auc-pctr.c.yimg.jp/i/auctions.c.yimg.jp/images.auctions.yahoo.co.jp/image/dr000/auc0209/user/46b323abcf1718b97349363d3c7913d7229472f96d359fd566dc8fc947bca2af/i-img900x1200-17901378822498bgfy3t4415.jpg?pri=l&w=300&h=300&up=0&nf_src=sy&nf_path=images/auc/pc/top/image/1.0.3/na_170x170.png&nf_st=200",
    "source": "Yahoo! Auctions",
    "kind": "auction",
    "reason": "o título não menciona 'onsen'"
   }
  ],
- "swept": 107,
- "rejected": 107,
+ "swept": 108,
+ "rejected": 108,
  "sources": [
   {
    "name": "Yahoo! Auctions",
@@ -54,7 +54,7 @@
   {
    "name": "Mercari",
    "status": "ok",
-   "found": 7
+   "found": 8
   },
   {
    "name": "Rakuten",

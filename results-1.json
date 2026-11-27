@@ -1,16 +1,8 @@
 {
  "want_number": 1,
  "want_what": "CX-5 キャリア",
- "swept_at": "2026-11-27T22:22:54+09:00",
+ "swept_at": "2026-11-28T04:03:50+09:00",
  "fits": [
-  {
-   "title": "マツダ 3 6 CX-3 CX-5 CX-7 CX-9 CX3 CX5 CX7 CX9 オートケア トランク キャリア 収納 貨物オーガナイザーナイロン 弾性メッシュ CHH221",
-   "price": 1380,
-   "url": "https://auctions.yahoo.co.jp/jp/auction/u1242951471",
-   "image": "https://auc-pctr.c.yimg.jp/i/auctions.c.yimg.jp/images.auctions.yahoo.co.jp/image/dr000/auc0209/user/b03570746f815f1b005dd6968cd21bb4825de4d251a39f633185c45e1c03ab81/i-img800x800-17883121421509sgtjmx35.jpg?pri=l&w=300&h=300&up=0&nf_src=sy&nf_path=images/auc/pc/top/image/1.0.3/na_170x170.png&nf_st=200",
-   "source": "Yahoo! Auctions",
-   "kind": "auction"
-  },
   {
    "title": "US.67 INNOエアロベース キャリアセット マツダ KE2fw CX-5",
    "price": null,
@@ -36,7 +28,7 @@
    "kind": "classified"
   }
  ],
- "fits_total": 4,
+ "fits_total": 3,
  "near": [
   {
    "title": "【THULE】 ベースキャリア CX-5/KE系",
@@ -58,16 +50,6 @@
    "price": 4400,
    "url": "https://auctions.yahoo.co.jp/jp/auction/w1195816775",
    "image": "https://auc-pctr.c.yimg.jp/i/auctions.c.yimg.jp/images.auctions.yahoo.co.jp/image/dr000/auc0108/user/3cdef80869895a768cc89a52e78062ebc989931533fe204e779a5b78f19218db/i-img1200x900-17547517982076m2td4e33.jpg?pri=l&w=300&h=300&up=0&nf_src=sy&nf_path=images/auc/pc/top/image/1.0.3/na_170x170.png&nf_st=200",
-   "source": "Yahoo! Auctions",
-   "kind": "auction",
-   "reason": "passou do teto em ¥400",
-   "over": 400
-  },
-  {
-   "title": "未使用品 未開封 カーメイト ルーフキャリア inno ベーシック取付フック TR135 CX-5",
-   "price": 4400,
-   "url": "https://auctions.yahoo.co.jp/jp/auction/m1118194552",
-   "image": "https://auc-pctr.c.yimg.jp/i/auctions.c.yimg.jp/images.auctions.yahoo.co.jp/image/dr000/auc0412/users/d8a115bc326cfe8e0ddbc4db08be4ae23ea884cb/i-img1200x1200-1702954148zvtwxk119713.jpg?pri=l&w=300&h=300&up=0&nf_src=sy&nf_path=images/auc/pc/top/image/1.0.3/na_170x170.png&nf_st=200",
    "source": "Yahoo! Auctions",
    "kind": "auction",
    "reason": "passou do teto em ¥400",
@@ -97,9 +79,19 @@
    "kind": "auction",
    "reason": "passou do teto em ¥2,000",
    "over": 2000
+  },
+  {
+   "title": "カーメイト(CARMATE) ルーフキャリア inno ベーシック取付フック マツダ CX5(H.24-)他 TR151",
+   "price": 6926,
+   "url": "https://auctions.yahoo.co.jp/jp/auction/q1199102903",
+   "image": "https://auc-pctr.c.yimg.jp/i/auctions.c.yimg.jp/images.auctions.yahoo.co.jp/image/dr000/auc0109/user/8a115c057c8d98e5ea8a6e3b060fe5e16c35aad79730deed108c03f7d763be70/i-img500x500-17570906451008cudqjp122401.jpg?pri=l&w=300&h=300&up=0&nf_src=sy&nf_path=images/auc/pc/top/image/1.0.3/na_170x170.png&nf_st=200",
+   "source": "Yahoo! Auctions",
+   "kind": "auction",
+   "reason": "passou do teto em ¥2,926",
+   "over": 2926
   }
  ],
- "near_total": 58,
+ "near_total": 59,
  "unconfirmed": [
   {
    "title": "ワケアリ!【メーカー不明】キャリアステー",
@@ -161,17 +153,22 @@
    "has_bolts": false
   },
   {
-   "title": "THULE スーリー スキー スノーボードキャリア　一式セット",
-   "price": 15000,
-   "url": "https://auctions.yahoo.co.jp/jp/auction/k1253962296",
-   "image": "https://auc-pctr.c.yimg.jp/i/auctions.c.yimg.jp/images.auctions.yahoo.co.jp/image/dr000/auc0211/user/7c432c22920a585f1049e3b019eac9d18ed91b1a3a43eaa6dd8d69f685ded0a0/i-img1200x900-17957602081258sgteyj200.jpg?pri=l&w=300&h=300&up=0&nf_src=sy&nf_path=images/auc/pc/top/image/1.0.3/na_170x170.png&nf_st=200",
-   "source": "Yahoo! Auctions",
-   "kind": "auction",
-   "reason": "parece ser só o acessório de prancha, sem a base — e você ainda não tem a base"
+   "title": "TERZO  スキーキャリア",
+   "price": 15290,
+   "url": "https://www.upgarage.com/ec/item/25090456",
+   "image": "https://static.upgcf.com/image/00000/2610/2610103/2610103011865/2610103011865s0.jpg",
+   "source": "Up Garage",
+   "kind": "shop",
+   "item_id": "25090456",
+   "shop": "アップガレージ 美原北インター店",
+   "reason": "parece ser só o acessório de prancha, sem a base — e você ainda não tem a base",
+   "unit_only": false,
+   "has_keys": false,
+   "has_bolts": false
   }
  ],
  "swept": 121,
- "rejected": 117,
+ "rejected": 118,
  "sources": [
   {
    "name": "Yahoo! Auctions",
@@ -207,11 +204,10 @@
  "notes": [
   "Fontes que não responderam nesta varredura: Yahoo!フリマ, Jimoty, Rakuten. O robô tenta de novo na próxima.",
   "Itens do Yahoo! Auctions mostram o lance atual — o preço pode subir até o fim do leilão.",
-  "1 achado(s) muito abaixo do teto (≤40%): confira estado, fotos e vendedor antes de fechar — preço baixo demais também é sinal.",
   "3 anúncio(s) do tipo certo, mas o título não confirma o encaixe na CX-5 (KE) — estão no QUASE pra você conferir."
  ],
  "verdict": [
-  "O achado: マツダ 3 6 CX-3 CX-5 CX-7 CX-9 CX3 CX5 CX7 CX… por ¥1,380 — encaixe confirmado, ¥2,620 abaixo do teto. Mas é leilão — o preço mostrado é o lance atual.",
+  "O achado: US.67 INNOエアロベース キャリアセット マツダ KE2fw CX-5 por preço no anúncio — encaixe confirmado.",
   "Cuidado: 【THULE】 ベースキャリア CX-5/KE系 por ¥4,389 — loja longe, em Kagoshima — some o frete antes de comparar; o anúncio lista corpo e chaves, mas não os parafusos de fixação.",
   "Conjunto completo de verdade começa em ¥4,400 (Up Garage) — com chaves e parafusos listados no anúncio; mas a loja é em Sapporo, longe — some o frete antes de comparar."
  ]
