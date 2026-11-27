@@ -1,0 +1,491 @@
+{
+ "gerado_em": "2026-11-27",
+ "nota_geral": "Leitura das páginas oficiais das 24 estações de Yamagata do registro MLIT (a missão pedia 15; o registro atual tem 24 — todas lidas). Fontes: site oficial próprio da estação, páginas oficiais do MLIT/MLIT Tohoku/Sakata, prefeituras e portal regional oficial michinoeki-tohoku. Limite 429 do serviço de leitura atingido em trechos da rodada: 米沢 e やまがた蔵王 ficaram com fonte oficial do MLIT em vez do site próprio. rv_park: só 寒河江 (CLAAPIN SAGAE) cita RVパーク; やまがた蔵王 tem 車中泊施設 pago municipal (não nomeado RVパーク, registrado na nota). shachuhaku_proibido: nenhuma das 24 publica proibição.",
+ "stations": [
+  {
+   "banho": {
+    "nota": "Sem banho: a enumeração oficial de instalações (MLIT/página oficial da estação 月山あさひ博物村) lista 山ぶどう研究所, 文化創造館, アマゾン自然館, トンネルピット, 物産館 e そば処「大梵字」 — nenhum onsen, ashiyu ou sento. O portal regional Tohoku ainda anota fechamento de inverno (início de dez a início de abr, previsto) para a estação.",
+    "preco": null,
+    "tem": false,
+    "tipo": null
+   },
+   "cenario": "rio",
+   "especialidade": "Uva silvestre da montanha (山ぶどう): no 山ぶどう研究所 dá para ver a produção e provar o vinho de Gassan (月山ワイン), suco e sorbet de 山ぶどう; também o soba artesanal do そば処「大梵字」.",
+   "hours": "9:00–17:00; fechado na 4ª segunda-feira de dezembro a março e no fim de ano; terminal de informações da rodovia 月山 aberto 24h, o ano todo",
+   "muni": "鶴岡市",
+   "name": "月山",
+   "quotes": {
+    "cenario": "「道の駅・月山」としてオープンした「月山あさひ博物村」は、山形と鶴岡を結ぶ国道112号と梵字川渓谷の間にあります。",
+    "especialidade": "地域特産の山ぶどうを原料にした月山ワインやジュース、シャーベットなどを、製造工程を見学しながら試飲・試食できる「山ぶどう研究所」",
+    "preco": "[開] 9:00～17:00 [休] 12～3月の第4月曜・年末年始"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "https://gassanasahi-hakubutsumura.co.jp/"
+  },
+  {
+   "banho": {
+    "nota": "Sem banho: a enumeração oficial de instalações (página do MLIT Tohoku para a estação ぶらっとぴあ) lista apenas loja (売店), café (喫茶コーナー), restaurante 豆福, sala de observação (展望室) e praça de eventos — nenhum banho. A estação não tem site próprio ativo localizado; o link de HP no portal regional Tohoku leva ao site da associação de turismo do município (benibananosato.com), que não traz página de instalações da estação.",
+    "preco": null,
+    "tem": false,
+    "tipo": null
+   },
+   "cenario": null,
+   "especialidade": "Tofu secreto (秘伝豆腐), feito com o feijão-soja local 'hiden' e nigari natural, de sabor concentrado; a loja também destaca os chinelos (スリッパ), cuja produção do município é a maior do Japão.",
+   "hours": "Loja e café 9:00–18:00; restaurante 豆福 11:00–18:00 (último pedido 17:00); banheiros externos e estacionamento 24h",
+   "muni": "西村山郡河北町",
+   "name": "河北",
+   "quotes": {
+    "especialidade": "地場産の秘伝大豆と天然にがりを使用した「秘伝豆腐」は濃厚な味わい。",
+    "preco": "売店(1F), 開設時間/9:00～18:00"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "http://keitai.thr.mlit.go.jp/road/i/michieki/yamagata/81.html"
+  },
+  {
+   "banho": {
+    "nota": "Sem banho (onsen/ashiyu/sento): a página oficial de instalações do Cherry Land Sagae enumera CLAAPIN SAGAE, さくらんぼ会館, restaurantes/café, pavilhão turco, casa de chá 凛心亭, parque ribeirinho e o RVパーク — nenhum banho. Há apenas chuveiro de moedas (コインシャワー) no espaço de encontro (Gathering Spot), que não é banho.",
+    "preco": null,
+    "tem": false,
+    "tipo": null
+   },
+   "cenario": "rio",
+   "especialidade": "Cereja (さくらんぼ): a loja kokocherry reúne mais de 600 produtos relacionados à cereja, além de doces e artesanato de Yamagata; o さくらんぼ会館 é o museu da cereja e tem o gelato artesanal da JA.",
+   "hours": "Varia por instalação: kokocherry 9:00–17:30 (jun–set até 18:00); さくらんぼ会館 9:00–18:00 (nov–mar até 17:00); CLAAPIN SAGAE 9:00–18:00; aberto o ano todo (sem folga, segundo o portal regional)",
+   "muni": "寒河江市",
+   "name": "寒河江",
+   "quotes": {
+    "especialidade": "600品目を超えるサクランボ関連商品をはじめ、山形の銘菓、デザート。"
+   },
+   "rv_park": "Tem RVパーク oficial junto ao CLAAPIN SAGAE: 1 lote ¥2.750 (pernoite no veículo); no mesmo espaço há autocamping (¥1.650 uso diurno / ¥2.200 pernoite por lote) e glamping (¥16.500 por lote), segundo a página oficial de instalações do Cherry Land.",
+   "shachuhaku_proibido": false,
+   "source": "https://cherryland.co.jp/about01.html"
+  },
+  {
+   "banho": {
+    "nota": "Sem banho (onsen/ashiyu/sento): o site oficial próprio enumera 物産館, restaurante, lanchonetes/bazar externo e 情報館; na 情報館 há sala de chuveiro (シャワー室, com aviso oficial de conserto do chuveiro de moedas em 2026-09), que não é banho. O famoso あつみ温泉 é da região/município (arredores), não uma instalação da estação — a lista de instalações do MLIT (東屋・散策路,物産館,レストラン) também não inclui banho.",
+    "preco": null,
+    "tem": false,
+    "tipo": null
+   },
+   "cenario": "mar",
+   "especialidade": "Sabores do mar e da montanha de Atsumi: o produto recomendado oficial é o 紅えびむぎきり (macarrão com camarão vermelho desembarcado no porto de 鼠ヶ関, ¥650/3 porções com molho), além dos picles (漬物) populares e do artesanato tradicional vendidos na 物産館.",
+   "hours": "物産館: mai–ago 8:00–18:00, set–abr 8:30–17:30; restaurante「早磯」a partir das 7:00 (último pedido 17:00); fechado na última quarta-feira de cada mês (jul–ago sem folga) e em 31/dez–1/jan",
+   "muni": "鶴岡市",
+   "name": "あつみ",
+   "quotes": {
+    "banho": "展望室のほか、ファミリーに嬉しい授乳室やシャワー室も完備。",
+    "cenario": "日本海に沈む夕陽を望み、磯遊びも楽しめる散策道。",
+    "especialidade": "鼠ヶ関港に水揚げされた紅えびを「独自製法」で麺に練り上げた「天然素材だけ」の美味しさです。"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "http://www.at-syarin.com/"
+  },
+  {
+   "banho": {
+    "nota": "Tem onsen próprio/anexo: a operadora oficial (西川町総合開発株式会社, gassan.co.jp) mantém página própria do 水沢温泉館 como instalação da 道の駅にしかわ (月山銘水館), e a enumeração oficial de instalações do MLIT inclui ●水沢温泉館. Fonte termal de cloreto de sódio (ナトリウム-塩化物泉), com dois banhos (月山 e 薬師) que alternam entre homens e mulheres semanalmente.",
+    "preco": "Banho de um dia no 水沢温泉館: adulto ¥350 (pacote de 12 bilhetes ¥3.500), criança ¥100 (12 bilhetes ¥1.000); sauna + banho ¥850 (12 bilhetes ¥8.500; moradores de Nishikawa ¥6.000 o pacote)",
+    "tem": true,
+    "tipo": "onsen"
+   },
+   "cenario": null,
+   "especialidade": "Cerveja artesanal local 地ビール月山 (月山ビール), feita com a água natural de Gassan (月山自然水), e os produtos da montanha vendidos na loja: 月山自然水, vinho local, verduras, 山菜 (plantas da montanha) e saquê local.",
+   "hours": "Estação/月山銘水館: abr–nov 9:00–17:00, dez–mar 10:00–17:00 (fechado 31/dez–1/jan); 水沢温泉館: 7:00–21:00 (sex–sáb até 22:00; dez–mar abre às 8:00), fechado na 2ª terça-feira do mês",
+   "muni": "西村山郡西川町",
+   "name": "にしかわ",
+   "quotes": {
+    "banho": "●情報コーナー, ●名水公園, ●水沢温泉館, ●休憩所",
+    "especialidade": "月山自然水、地ビール月山、地ワイン、野菜、山菜、地酒、地元特産品",
+    "preco": "大人：350円 ／ 3,500円(12回券) / 小人：100円 ／ 1,000円(12回券)"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "https://www.gassan.co.jp/facility/02_mizusawa"
+  },
+  {
+   "banho": {
+    "nota": "Sem banho: a apresentação oficial do MLIT Tohoku enumera as instalações da estação — 物産館 (めざみの里観光物産館), restaurante,館 temática (テーマ館 das 'três árvores') e 道路情報館 — sem nenhum onsen, ashiyu ou sento. Não foi localizado site próprio ativo da estação nas buscas; a fonte usada é a página oficial do MLIT (governo).",
+    "preco": null,
+    "tem": false,
+    "tipo": null
+   },
+   "cenario": null,
+   "especialidade": "Carne de Iide (飯豊牛) — a região é a origem do gado que deu base ao famoso 米沢牛 — servida no restaurante junto com os sabores da montanha (山菜 e cogumelos) e outros ingredientes locais.",
+   "hours": "Lojas de lembranças/produtos/fast-food: abr–out 9:00–18:00, nov 9:00–17:00, dez–mar 10:00–17:00; restaurante: abr–out 11:00–18:00, nov–mar 10:00–17:00; 道路情報館 24h; fechado em 31/dez–1/jan (e há folgas extras de inverno)",
+   "muni": "西置賜郡飯豊町",
+   "name": "いいで",
+   "quotes": {
+    "especialidade": "飯豊町は農業を中心とした町で、おいしいお米と、全国的にも有名な「米沢牛」の基にもなった「飯豊牛」の産地です。 レストランでは飯豊牛や、山菜やきのこなどの山の恵みをはじめとする地元の素材を活かした料理を楽しめます。"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "http://keitai.thr.mlit.go.jp/road/i/michieki/yamagata/85_1.html"
+  },
+  {
+   "banho": {
+    "nota": "Enumeração completa de instalações na página oficial do MLIT Tohoku (売店, レストラン, 情報コーナー, 交流広場, 連絡通路) sem nenhum banho/onsen/ashiyu.",
+    "preco": null,
+    "tem": false,
+    "tipo": null
+   },
+   "cenario": null,
+   "especialidade": "Buffet de um prato (一皿バイキング) com ingredientes locais no restaurante, e produtos locais de Murayama e especialidades de Yamagata na loja.",
+   "hours": "Loja 9:00–20:00 no verão / 9:00–19:00 no inverno; restaurante 6:30–20:00 no verão / até 19:00 no inverno (página MLIT); sem fechamento semanal.",
+   "muni": "村山市",
+   "name": "むらやま",
+   "quotes": {
+    "banho": "売店（地域特産品コーナー）では、地場特産品や山形県内の主なお土産を展示販売。レストランは、珍しい一皿バイキングのビュッフェスタイルとなっており、地元の素材を活かした料理が楽しめます。",
+    "especialidade": "レストランは、珍しい一皿バイキングのビュッフェスタイルとなっており、地元の素材を活かした料理が楽しめます。"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "http://keitai.thr.mlit.go.jp/road/i/michieki/yamagata/86_1.html"
+  },
+  {
+   "banho": {
+    "nota": "Enumeração completa na página oficial do MLIT Tohoku (物産館「高麗」, レストラン「食文化館」, 情報コーナー, 韓国中庭, 民俗文化館・地すべり資料館) sem nenhum banho/onsen.",
+    "preco": null,
+    "tem": false,
+    "tipo": null
+   },
+   "cenario": "rio",
+   "especialidade": "Cultura e gastronomia coreana do Kouraikan: kimchi Tozawa (高麗キムチ), ingredientes coreanos e restaurante de comida coreana adaptada ao gosto japonês.",
+   "hours": "Abertura 9:00–20:00; loja 9:00–20:00; restaurante 10:00–20:00 (no inverno até 18:00); fechado na 2ª e 4ª quarta-feira de novembro a abril (página MLIT).",
+   "muni": "最上郡戸沢村",
+   "name": "とざわ",
+   "quotes": {
+    "banho": "物産館「高麗」、レストラン「食文化館」、情報コーナー、韓国中庭、民俗文化館･地すべり資料館",
+    "cenario": "俳人芭蕉、正岡子規らを魅了した四季の風情を川面に映す最上川を見下ろす「モモカミの里」で、皆さんをお待ちしています。",
+    "especialidade": "高麗キムチ、高麗館特選キムチ（白菜･大根）、韓国のり、コチュジャン、他韓国食材、高麗館まんじゅう"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "http://keitai.thr.mlit.go.jp/road/V/michieki/yamagata/87_1.html"
+  },
+  {
+   "banho": {
+    "nota": "A página oficial do MLIT (escritório de Sakata) divide a estação em '森のエリア' e '海のエリア' e afirma que no centro da área do mar, o Yurari, '温泉も楽しめます'; a página de instalações do MLIT lista 鳥海温泉「遊楽里」 e 鳥海温泉保養センター「あぽん西浜」 como instalações da área do mar da própria estação, não como guia de arredores.",
+    "preco": "Apon Nishihama (área do mar): adulto ¥350, criança ¥170, segundo a página oficial de instalações do MLIT Tohoku (valor da página MLIT, pode estar desatualizado).",
+    "tem": true,
+    "tipo": "onsen"
+   },
+   "cenario": "mar",
+   "especialidade": "Ostras-da-rocha naturais de Fukiura (só no verão), frutos do mar do Mar do Japão, melão das dunas de Shonai, sansai do sopé do Mt. Chokai e salmão do rio Gekko.",
+   "hours": "Loja de produtos 9:00–18:00; restaurante 10:00–18:00; fechado em 1º de janeiro (MLIT Sakata). Apon Nishihama: 6:00–22:00, fechado na 2ª e 4ª segunda-feira (MLIT).",
+   "muni": "飽海郡遊佐町",
+   "name": "鳥海",
+   "quotes": {
+    "banho": "多目的ホールや展示ギャラリー、レストラン、大小会議室、宿泊施設を備えた鳥海自然文化館「遊楽里(ゆらり)」では、温泉も楽しめます。",
+    "cenario": "西には雄大に広がる日本海、日本三大砂丘のひとつ庄内砂丘やＮＨＫでも紹介された清流「牛渡川」を有し",
+    "especialidade": "吹浦磯で採れる天然岩ガキは夏場だけの限定品",
+    "preco": "入浴料金／大人350円、子ども170円"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "https://www.thr.mlit.go.jp/sakata/road/roadstation/chokai.html"
+  },
+  {
+   "banho": {
+    "nota": "Site oficial próprio mostra apenas estacionamento, loja e restaurante na visão geral; a enumeração do MLIT Tohoku (物産コーナー, 食堂コーナー, 道路情報施設･観光案内所) também não inclui banho/onsen.",
+    "preco": null,
+    "tem": false,
+    "tipo": null
+   },
+   "cenario": null,
+   "especialidade": "Soba artesanal (手打ちそば) famoso, servido na casa curvada (曲がり家), além de vegetais, frutas e sansai locais e artesanato na loja.",
+   "hours": "9:00–18:00 (dezembro a fevereiro até 17:00); restaurante 11:00–14:00 no site oficial próprio; fechado em 1º de janeiro.",
+   "muni": "米沢市",
+   "name": "田沢",
+   "quotes": {
+    "banho": "物産コーナー、食堂コーナー、道路情報施設･観光案内所",
+    "especialidade": "名物手打ちそば・山形土産・ソフトクリーム",
+    "preco": "営業時間, 9:00〜18:00, （12月〜2月：17:00まで）, 食堂, 11:00～14:00, 売店, 9:00〜18:00, （12月〜2月：17:00まで）, 定休日, 1月1日"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "http://michinoeki-tazawa.jp/"
+  },
+  {
+   "banho": {
+    "nota": "Enumeração na página oficial do MLIT Tohoku (物産コーナー, レストラン, 軽食そば･うどんコーナー, 情報コーナー) sem nenhum banho/onsen/ashiyu.",
+    "preco": null,
+    "tem": false,
+    "tipo": null
+   },
+   "cenario": null,
+   "especialidade": "Sansai abundantes da floresta (warabi, zenmai, gyoja-ninniku etc.) e cozinha de sansai no restaurante — tempura de sansai e sukiyaki entre os pratos recomendados.",
+   "hours": "Loja de produtos 9:00–18:00; restaurante 11:00–19:00 segundo a página MLIT; sem fechamento semanal (1/1 e poucos dias temporários por ano segundo o portal Tohoku).",
+   "muni": "西置賜郡小国町",
+   "name": "白い森おぐに",
+   "quotes": {
+    "banho": "物産コーナー、レストラン、情報コーナー",
+    "especialidade": "豊富な森林自然から供給される、各種山菜（わらび、ぜんまい、行者にんにく等）"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "http://keitai.thr.mlit.go.jp/road/ez/michieki/yamagata/90.html"
+  },
+  {
+   "banho": {
+    "nota": "O onsen Terume Hakuryo (テルメ柏陵健康温泉館) aparece na página oficial do MLIT apenas como instalação dos ARREDORES (周辺) da estação — '「道の駅」周辺にはテルメ柏陵健康温泉館があり' — portanto NÃO conta como banho da estação; a estação renovada (コラマガセ, reaberta em 5/10/2024) é loja/restaurante, sem banho próprio na enumeração oficial.",
+    "preco": null,
+    "tem": false,
+    "tipo": null
+   },
+   "cenario": "rio",
+   "especialidade": "Frutas frescas de Oe (destaque para sumomo e La France), vinho La France, saquê local Oe Nishiki e soft cream de La France.",
+   "hours": "9:00–18:00 (novembro a março até 17:30, conforme dados da estação); site do operador oficial anuncia営業時間 9:00〜18:00.",
+   "muni": "西村山郡大江町",
+   "name": "おおえ",
+   "quotes": {
+    "banho": "「道の駅」周辺にはテルメ柏陵健康温泉館があり、桧風呂や石風呂さらには県内初のトロンサウナを整備し連日多くの利用客で賑わっています。",
+    "cenario": "「道の駅」からは、朝日連峰、月山が一望でき、さらには最上川があり風光明媚な場所となっております。",
+    "especialidade": "「道の駅」では、大江町の特産品である鮮度満点の果物をはじめとする農産物やラ･フランスワイン、地酒である大江錦を販売のほか、ラ･フランスソフトクリーム等の軽食を提供しております。"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "https://oe-terume.co.jp/category/rs-station/"
+  },
+  {
+   "banho": {
+    "nota": "A estação fica dentro do complexo oficial Iroribi no Sato; a página oficial do MLIT (escritório de Sakata) lista entre as instalações a casa de banho termal Nanohana Onsen Denden (温泉入浴施設), com banho de pedra, banho de rocha e sauna, além de hospedagem anexa (田田の宿). O preço de banho não constava no texto da página oficial consultada, por isso preco=null (agregadores citam ¥500/adulto, mas isso não foi usado como fonte).",
+    "preco": null,
+    "tem": true,
+    "tipo": "onsen"
+   },
+   "cenario": null,
+   "especialidade": "Venda direta de verduras locais na loja de produtos Maideru (物産館マイデル), com produtos identificados pelo nome do produtor; o MLIT destaca que a産直 de verduras é o ponto forte da loja.",
+   "hours": "Loja de produtos Maideru: 9:00–17:30 (dados oficiais do MLIT); a página própria da loja indica産直 9:00–17:00 (1/4–2/28 até 16:30) e食堂 em horário de almoço",
+   "muni": "東田川郡三川町",
+   "name": "庄内みかわ",
+   "quotes": {
+    "banho": "温泉入浴施設「なの花温泉田田」や併設する宿泊施設「田田の宿」",
+    "especialidade": "物産館「マイデル」は野菜の産直が充実"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "https://www.thr.mlit.go.jp/sakata/road/roadstation/mikawa.html"
+  },
+  {
+   "banho": {
+    "nota": "O site oficial próprio lista restaurante Jomon, loja Jomon, venda direta de produtos agrícolas e o Walking Center. O Walking Center tem vestiário e sala de chuveiro (シャワールーム, fechada no inverno), mas chuveiro de centro de caminhada não é banho/onsen/ashiyu; nenhuma instalação de banho consta nas páginas oficiais.",
+    "preco": null,
+    "tem": false,
+    "tipo": null
+   },
+   "cenario": null,
+   "especialidade": "O site oficial destaca o Walking Center como ponto de partida das trilhas 'Takahata Furusato Shizen no Michi', integrado ao parque histórico Mahoroba no Sato; a loja/restaurante Jomon vende produtos locais de Takahata.",
+   "hours": "9:00–17:30 (abril–novembro) e 9:00–17:00 (dezembro–março), aberto o ano todo (site oficial próprio)",
+   "muni": "東置賜郡高畠町",
+   "name": "たかはた",
+   "quotes": {
+    "banho": "更衣室、シャワールームを完備しています。",
+    "especialidade": "“たかはたふるさと自然のみち”の拠点です。"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "https://www.rstakahata.com/walking/index.html"
+  },
+  {
+   "banho": {
+    "nota": "ATENÇÃO: apesar de '温泉' no nome, NÃO há banho de imersão/day-use onsen na estação. A página oficial da cidade de Tendo descreve o prédio Mori-na Tendo (informação turística, demonstração e exposição de peças de shogi, venda de produtos de La France) sem nenhum banho. O único equipamento termal da estação é o ashiyu (banho de pés) Koma no Yu, em formato de peça de shogi e gratuito, confirmado pelo site oficial de turismo de Tohoku (TRAVEL TO TOHOKU). Os banhos de corpo inteiro ficam nos ryokan da cidade termal de Tendo Onsen, fora da estação.",
+    "preco": "Grátis (足湯「駒の湯」 gratuito, segundo o site oficial de turismo de Tohoku)",
+    "tem": true,
+    "tipo": "ashiyu"
+   },
+   "cenario": null,
+   "especialidade": "Peças de shogi de Tendo (demonstração de fabricação e exposição) e a pera La France, ambos apresentados pela página oficial da cidade como produção nº 1 do Japão e eixo de divulgação da estação.",
+   "hours": "Mori-na Tendo (prédio da estação): 9:00–18:00, fechado em 1º de janeiro (página oficial da cidade)",
+   "muni": "天童市",
+   "name": "天童温泉",
+   "quotes": {
+    "especialidade": "日本一の生産量を誇る本市の「ラ・フランス」の魅力を発信するため"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "https://www.city.tendo.yamagata.jp/busiindust/nourin/mori-na_tendo.html"
+  },
+  {
+   "banho": {
+    "nota": "A página oficial do MLIT (versão keitai do escritório regional de Tohoku) enumera as instalações da estação 'Hanegasa no Sato Nemaru': loja de produtos locais, corredor (コリドール) e instalação de informação viária/turística 24h — nenhum banho, onsen ou ashiyu na enumeração.",
+    "preco": null,
+    "tem": false,
+    "tipo": null
+   },
+   "cenario": null,
+   "especialidade": null,
+   "hours": "Abertura 9:30–19:00; loja de produtos 9:00–19:00, sem folga; informação 24h (página oficial do MLIT)",
+   "muni": "尾花沢市",
+   "name": "尾花沢",
+   "quotes": {
+    "banho": "●物販施設, 地場産品販売コーナー, 開設時間/9:00～19:00, 休館日/無休, ●コリドール, ●情報提供施設"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "http://keitai.thr.mlit.go.jp/road/v/michieki/yamagata/95.html"
+  },
+  {
+   "banho": {
+    "nota": "A página oficial do MLIT lista as instalações: loja de produtos, restaurante Ayu Chaya, fast-food, descanso/informação, parque e instalação de experiência de pesca com yana — nenhum banho. O onsen com banho ao ar livre que aparece na página é o Pales Shofu, citado apenas na guia de ARREDORES (周辺観光情報, a 5 min de carro), portanto não conta como banho da estação.",
+    "preco": null,
+    "tem": false,
+    "tipo": null
+   },
+   "cenario": "rio",
+   "especialidade": "Ayu (peixe-doce) do rio Mogami e a yana (armadilha tradicional de pesca): a página oficial afirma que a yana permanente instalada no Mogami é a maior do Japão; o restaurante Ayu Chaya serve pratos de ayu (ayu teishoku, sashimi de ayu) e há experiência de pesca na yana de abril a novembro.",
+   "hours": "10:00–18:00 (dezembro–março até 17:00); fechado às quartas apenas em janeiro e fevereiro (página oficial do MLIT)",
+   "muni": "西置賜郡白鷹町",
+   "name": "白鷹ヤナ公園",
+   "quotes": {
+    "banho": "ふるさと森林公園・パレス松風（道の駅から車で5分） 松林の露天風呂は山の頂上で湯遊びをしているよう。宿泊施設、温泉、パークゴルフ場、キャンプ場等があります。",
+    "cenario": "ぜひ、川へ下りて、直に日本三大急流を体感してください。",
+    "especialidade": "最上川に設置された常設では日本一の規模を誇るヤナ"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "http://www.thr.mlit.go.jp/road/koutsu/roadstation/yamagata/ya17.html"
+  },
+  {
+   "banho": {
+    "nota": "O site oficial próprio (Ringo no Mori) apresenta a estação apenas como venda de produtos locais, alimentação leve e galeria, sem nenhuma instalação de banho. O 'Ringo Onsen' divulgado em material turístico do município é uma instalação dos arredores da cidade, não da estação — por isso não conta.",
+    "preco": null,
+    "tem": false,
+    "tipo": null
+   },
+   "cenario": null,
+   "especialidade": "Maçã de Asahi: o site oficial abre com 'a especialidade de Asahi é a maçã', destacando a variedade local Mutsubukuro Fuji (無袋ふじ), além de suco de maçã, cidra artesanal de maçã e o vinho de Asahi.",
+   "hours": "9:00–17:00 a partir de 1º de novembro (aviso de mudança de horário no site oficial próprio)",
+   "muni": "西村山郡朝日町",
+   "name": "あさひまち",
+   "quotes": {
+    "especialidade": "朝日町の特産といえばやっぱりりんご！！",
+    "preco": "朝日町特産「無袋ふじ」取り扱い始まりました"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "http://ringo-no-mori.jp/"
+  },
+  {
+   "banho": {
+    "nota": "Página oficial do município (mercado Fūsha Ichiba) apresenta a estação como venda direta de produtos e restaurante, com EV e banheiros 24h, sem citar nenhum banho/onsen/ashiyu/sento na apresentação das instalações.",
+    "preco": null,
+    "tem": false,
+    "tipo": null
+   },
+   "cenario": null,
+   "especialidade": "Produtos da venda direta: verduras da montanha (sansai), legumes, arroz e flores; restaurante Irodori com ingredientes locais e dezenas de pratos por estação.",
+   "hours": null,
+   "muni": "東田川郡庄内町",
+   "name": "しょうない",
+   "quotes": {
+    "especialidade": "山菜、野菜、お米と花が自慢の産直と地元の食材を活かしたレストランを併設。レストランいろどりでは季節ごとに数十種類のメニューが楽しめます。"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "http://www.town.shonai.lg.jp/fusyaichiba/index.html"
+  },
+  {
+   "banho": {
+    "nota": "Site oficial enumera as instalações: 1) informações turísticas, 2) canto de produtos regionais (venda direta/lembranças), 3) canto de comida (Nagai Cafe Shokudō), EV, aluguel de bicicletas e estacionamento — nenhum banho/onsen/ashiyu/sento.",
+    "preco": null,
+    "tem": false,
+    "tipo": null
+   },
+   "cenario": "rio",
+   "especialidade": "Produtos regionais de Nagai na venda direta/lembranças e, no restaurante, pratos com ingredientes locais como o '日本一のけん玉カレー'; ranking de populares traz pão em rolo, kurumi yubeshi e dango.",
+   "hours": "9:00–18:00 (no inverno 9:30–17:00); restaurante 10:30–16:00 LO (inverno 11:00–15:30 LO)",
+   "muni": "長井市",
+   "name": "川のみなと長井",
+   "quotes": {
+    "cenario": "最上川舟運の始発港として栄えた港町の歴史を受け継ぐ場所です。",
+    "especialidade": "長井の「おいしい・うれしい」が勢ぞろい。定番のお土産から人気商品まで、幅広くそろえています。"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "http://kawanominato.jp/"
+  },
+  {
+   "banho": {
+    "nota": "Enumeração oficial (documento MLIT de implantação da estação) das instalações internas — restaurante de carne Yonezawa, food court, venda direta de produtos agrícolas, loja de produtos típicos, loja de conveniência, descanso gratuito, informações rodoviárias/turísticas e banheiros — sem nenhum banho/onsen/ashiyu/sento. O site oficial próprio (michinoekiyonezawa.jp) não pôde ser lido nesta rodada (falha/limite do serviço de leitura), por isso a prova usada é o documento oficial do MLIT.",
+    "preco": null,
+    "tem": false,
+    "tipo": null
+   },
+   "cenario": "montanha",
+   "especialidade": "Carne Yonezawa (Yonezawa-gyū): restaurante de steak Gyūbitei onde se saboreia a marca representativa de Yonezawa, além de ramen de Yonezawa e soba no food court.",
+   "hours": null,
+   "muni": "米沢市",
+   "name": "米沢",
+   "quotes": {
+    "cenario": "山並みや田園風景を眺めながら、米沢を代表するラーメン、そば、牛丼などの専門店の味を召し上がれ♪",
+    "especialidade": "米沢ブランドの代表格である米沢牛をゆっくり味わえるレストラン。米沢・山形の「食」の豊かさを全国にＰＲします。"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "https://www.thr.mlit.go.jp/yamagata/road/tochu_kassei/pdf/h29_1_doc3.pdf"
+  },
+  {
+   "banho": {
+    "nota": "Enumeração oficial completa (comunicado MLIT/Cidade de Yamagata) das instalações — estacionamento, banheiros, informação/descanso, turismo, bebê, vendas, alimentação, salão multiuso, vestiário, praça de imoni, praça de eventos, instalação de pernoite no carro, share cycle e EV — sem nenhum banho/onsen/ashiyu/sento. O site oficial próprio (m-yzao.com) não pôde ser lido nesta rodada por limite (429) do serviço de leitura.",
+    "preco": null,
+    "tem": false,
+    "tipo": null
+   },
+   "cenario": null,
+   "especialidade": "Praça do imoni (Imoni Hiroba) — a estação tem espaço próprio dedicado ao imoni, prato típico de Yamagata, além de vendas e alimentação com produtos locais no sopé de Zao.",
+   "hours": "Abertura 9:00–17:30 (regra municipal publicada no site oficial); fechado em 1º de janeiro; banheiros do lado sul/descanso 24h conforme regra",
+   "muni": "山形市",
+   "name": "やまがた蔵王",
+   "quotes": {
+    "especialidade": "芋煮広場",
+    "shachuhaku": "トイレ８３器、情報提供・休憩施設、観光案内所、ベビーコーナー、備蓄倉庫、非常用電源、貯水槽、マンホールトイレ、公衆電話、公衆無線ＬＡＮ、物販施設、飲食施設、多目的ホール、更衣室、バス停留所、バス待合、芋煮広場、イベント広場、車中泊施設、シェアサイクル、サイクルラック、ＥＶ充電施設"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "https://www.thr.mlit.go.jp/bumon/kisya/kisyah/images/97272_1.pdf"
+  },
+  {
+   "banho": {
+    "nota": "Site oficial enumera as instalações/equipamentos: canto de informações rodoviárias, espaço de descanso 24h, informações turísticas, espaço de convivência, canto de refeições leves e mapa do piso — nenhum banho/onsen/ashiyu/sento.",
+    "preco": null,
+    "tem": false,
+    "tipo": null
+   },
+   "cenario": "rio",
+   "especialidade": "Croquetes com produtos de Mogami: croquete de aspargos (especialidade local, usado em abundância) e croquete de imoni, além de pães de legumes feitos à mão e doces exclusivos.",
+   "hours": "9:00–17:00 (espaço de descanso utilizável 24h)",
+   "muni": "最上町",
+   "name": "もがみ",
+   "quotes": {
+    "cenario": "最上小国川に面した交流スペースでは、テーブルとイスを利用してゆったりと休憩いただけます。季節ごとに表情の変わる清流「小国川」をお楽しみください。",
+    "especialidade": "最上町名産のアスパラガスをふんだんに使ったアスパラコロッケ、山形名物の芋煮の味わいを楽しめる芋煮コロッケ"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "https://michinoeki-mogami.jp/"
+  },
+  {
+   "banho": {
+    "nota": "Guia de instalações do site oficial lista venda direta Mayu no Sato, café-restaurante, salas para aluguel, galeria, história/patrimônio e guesthouse para hospedagem — nenhum onsen/ashiyu/sento público. A guesthouse cita apenas chuveiro (sala de banho com chuveiro para hóspedes), o que não é banho público/onsen.",
+    "preco": null,
+    "tem": false,
+    "tipo": null
+   },
+   "cenario": null,
+   "especialidade": "Venda direta '産直 まゆの郷' com produtos agrícolas da estação e processados de produtores locais, e café-restaurante 'おやさいcafe AOMUSHI' com legumes locais, num conjunto de prédios patrimônio cultural registrado (antiga estação experimental de sericicultura).",
+   "hours": null,
+   "muni": "新庄市",
+   "name": "新庄エコロジーガーデン原蚕の杜",
+   "quotes": {
+    "banho": "自炊用のキッチンやシャワールームなどがあり、最大7名様まで宿泊が可能なゲストハウスがあります。",
+    "especialidade": "地元の生産者が作った旬の農産物や加工品を取り扱っている「産直 まゆの郷」や地元野菜を使ったカフェレストラン「おやさいcafe AOMUSHI」などがあります。"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "https://michinoeki-eg.jp/"
+  }
+ ],
+ "wave": "michi-wave-yamagata"
+}
