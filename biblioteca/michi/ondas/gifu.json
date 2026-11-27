@@ -1,0 +1,1084 @@
+{
+ "wave": "michi-wave-gifu",
+ "gerado_em": "2026-11-27",
+ "nota_geral": "Leitura das páginas oficiais das 55 estações de Gifu (registro MLIT). Banho conta só instalação NA estação (onsen/sento/ashiyu); banhos de instalações vizinhas ficam registrados na nota e não contam. rv_park: nenhuma página oficial menciona RVパーク — null (NÃO DIZ) em todas. shachuhaku_proibido: false em todas = nenhuma página oficial publica proibição de 車中泊. tem=null (NÃO DIZ) onde a página oficial não enumera as instalações por completo. Incidentes de leitura: página de instalações da 可児ッテ retornou 403 e algumas aberturas bateram 429 no serviço de leitura — nesses casos foram usados trechos das mesmas páginas oficiais retornados pela busca, sem repetir as aberturas bloqueadas.",
+ "stations": [
+  {
+   "banho": {
+    "nota": "O site oficial da estação (JM Minami) apresenta as instalações —物産館・レストラン・旬採市場（朝市）・観光案内所・休憩室— sem banho,温泉 ou chuveiro.",
+    "preco": null,
+    "tem": false,
+    "tipo": null
+   },
+   "cenario": "rio",
+   "especialidade": "Produtos típicos de Gujō no restaurante e na loja (ayu 郡上鮎, keichan 鶏ちゃん) e verduras locais na朝市『旬採市場』",
+   "hours": "物産館 8:00–18:00 (11月–2月 17:00まで); レストラン 8:00–17:30 (L.O. 17:00; 11月–2月 16:30); 休憩室 24時間利用可能",
+   "muni": "郡上市",
+   "name": "美並",
+   "quotes": {
+    "banho": "郡上の特産物を扱った売店や飲食コーナーのほか、地元の農家で作られた農産物を持ち寄った朝市『旬採市場』があり、旅の行き・帰りどちらでもお楽しみいただけます",
+    "cenario": "国道156号線沿いにある道の駅「美並」は清流・長良川を臨む絶好の立地で、長距離ドライブの合間の休憩に最適です",
+    "especialidade": "郡上の特産物を扱った売店や飲食コーナーのほか、地元の農家で作られた農産物を持ち寄った朝市『旬採市場』"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "https://jm-minami.com/"
+  },
+  {
+   "banho": {
+    "nota": "Página oficial apresenta restaurante, loja, parque e o rio, mas não enumera todas as instalações de forma exaustiva nem cita banho — NÃO DIZ.",
+    "preco": null,
+    "tem": null,
+    "tipo": null
+   },
+   "cenario": "rio",
+   "especialidade": "パスカルドレッシング (nº1 da loja) e 飛騨牛朴葉味噌定食 do restaurante",
+   "hours": "通常 9:00～17:00 / 冬季 10:00～16:00",
+   "muni": "高山市",
+   "name": "パスカル清見",
+   "quotes": {
+    "cenario": "目の前を流れる馬瀬川では夏は川遊びができ、秋はきれいな紅葉で見る人を楽しませてくれます。",
+    "especialidade": "売店では人気No.1のパスカルドレッシングをはじめパスカルブランド商品を多数取り揃えております。"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "https://furusatokiyomi.jp/pascalkiyomi/"
+  },
+  {
+   "banho": {
+    "nota": "Página oficial enumera extensamente lojas, restaurantes, parque, descanso e associação de turismo, sem nenhuma instalação de banho.",
+    "preco": null,
+    "tem": false,
+    "tipo": null
+   },
+   "cenario": "rio",
+   "especialidade": "明宝ハム (presunto Meiho), especialidade famosa, além de 明宝トマトケチャップ e めいほう鶏ちゃん",
+   "hours": "物産館 平日9:00～17:30・土日祝8:00～17:30（店舗により異なる）",
+   "muni": "郡上市",
+   "name": "明宝",
+   "quotes": {
+    "cenario": "清流・吉田川を望むことのできる磨墨の里公園が隣接しており、せせらぎ街道随一のビュースポットになっています。",
+    "especialidade": "物産館では名物の明宝ハムをはじめたくさんのお土産・地元野菜・パン・スイーツなどの取り扱いがあります。"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "https://www.meiho-masters.co.jp/"
+  },
+  {
+   "banho": {
+    "nota": "Página oficial de instalações (施設案内) enumera loja, restaurante, soft cream, museu da madeira, informação turística, venda direta, parque, banheiros, estacionamento e EV — nenhum banho na estação. Onsen citado no site é instalação relacionada vizinha (付知峡倉屋温泉 おんぽいの湯), não conta.",
+    "preco": null,
+    "tem": false,
+    "tipo": null
+   },
+   "cenario": null,
+   "especialidade": "Soft de mirtilo local (ブルーベリーソフト, com mirtilo de 付知) e pratos de 飛騨牛・けいちゃん no restaurante",
+   "hours": "売店 9:00～18:00 / 食堂 9:00～16:00（オーダーストップ15:30）",
+   "muni": "中津川市",
+   "name": "花街道付知",
+   "quotes": {
+    "especialidade": "地元、付知で採れたブルーベリーを使ったブルーベリーソフト、北海道バニラソフト、ブルーベリーと北海道バニラの両方が味わえるミックスソフト"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "https://www.michinoeki-hanakaido.jp/facility/"
+  },
+  {
+   "banho": {
+    "nota": "Houve onsen de uso diurno, mas a página oficial atual declara o fechamento: '温泉施設は閉館いたしました' — hoje não há banho em funcionamento na estação.",
+    "preco": null,
+    "tem": false,
+    "tipo": null
+   },
+   "cenario": null,
+   "especialidade": "白川茶 (chá de Shirakawa, incl. 白川茶ソフトクリーム) e 白川ハム",
+   "hours": "お土産コーナー 9:00～17:00 / レストラン 9:00～15:00",
+   "muni": "加茂郡白川町",
+   "name": "美濃白川",
+   "quotes": {
+    "banho": "休憩・温泉（温泉施設は閉館いたしました）",
+    "especialidade": "美濃白川に来たら白川茶を是非。さらには、白川ハム・飛騨牛・朴葉寿司など。"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "https://roadside-minoshirakawa.co.jp/enjoy/rest/"
+  },
+  {
+   "banho": {
+    "nota": "Portal oficial de turismo de Seki descreve loja de produtos e horários, sem enumerar todas as instalações e sem citar banho na estação — NÃO DIZ. 板取川温泉 citado é atração dos arredores, não da estação.",
+    "preco": null,
+    "tem": null,
+    "tipo": null
+   },
+   "cenario": null,
+   "especialidade": "Produtos de kiwi de 洞戸 (キウイせんべい, キウイワイン) e o popular キウイシャーベット",
+   "hours": "物産館 8:00～16:00 / 情報館 4月～11月 9:00～17:00・12月～3月 9:00～16:00",
+   "muni": "関市",
+   "name": "ラステンほらど",
+   "quotes": {
+    "especialidade": "物産販売所には、「キウイせんべい」や「キウイワイン」など、洞戸の名産であるキウイの商品がたくさん！"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "https://sekikanko.jp/spot/detail_1012.html"
+  },
+  {
+   "banho": {
+    "nota": "Página oficial apresenta todas as lojas/instalações (朝市, venda de especialidades, informação, restaurante 里川, museu, あゆパーク, take-out) sem nenhuma instalação de banho.",
+    "preco": null,
+    "tem": false,
+    "tipo": null
+   },
+   "cenario": "rio",
+   "especialidade": "Pratos de ayu fresco do 清流長良川 no restaurante 里川 (鮎料理)",
+   "hours": "8:30～17:00 / レストラン里川 9:00～17:00（オーダーストップ16:30）",
+   "muni": "郡上市",
+   "name": "白山文化の里長滝",
+   "quotes": {
+    "cenario": "清流長良川と豊かな自然に囲まれた「白山文化の里 長滝」",
+    "especialidade": "清流長良川の新鮮な鮎を様々なメニューでお楽しみいただけます。"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "https://okumino-shirotori.com/pg728.html"
+  },
+  {
+   "banho": {
+    "nota": "Página oficial enumera informação, banheiros, loja de produtos e restaurantes, sem banho de uso geral na estação — NÃO DIZ para banho público. O autocamp anexo tem露天風呂天然 gratuito exclusivo para campistas, que não é banho aberto da estação.",
+    "preco": null,
+    "tem": null,
+    "tipo": null
+   },
+   "cenario": "montanha",
+   "especialidade": "本わさび (wasabi verdadeiro) e 奥飛騨山椒 (sansho de Okuhida) como lembranças",
+   "hours": "物産館 4月～10月 9:00～17:00 / 11月～3月 9:00～16:30",
+   "muni": "高山市",
+   "name": "奥飛騨温泉郷上宝",
+   "quotes": {
+    "banho": "場内にはキャンパー専用の無料天然露天風呂（男女別・無料）や個別シャワー完備（有料）。",
+    "cenario": "道の駅は標高750mの北アルプスの麓。駐車場から焼岳が見えます。",
+    "especialidade": "清流に育まれた「本わさび」や「奥飛騨山椒」をお土産にどうぞ。"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "https://okuhida-camp.com/michinoeki/"
+  },
+  {
+   "banho": {
+    "nota": "Site oficial organiza-se em refeições, lembranças e turismo, sem enumerar exaustivamente as instalações e sem citar banho — NÃO DIZ.",
+    "preco": null,
+    "tem": null,
+    "tipo": null
+   },
+   "cenario": null,
+   "especialidade": "ごへーもち (gohei-mochi), o item nº1 da estação, e a comida tradicional いもやこもち",
+   "hours": "8:30～18:00",
+   "muni": "中津川市",
+   "name": "賤母",
+   "quotes": {
+    "especialidade": "賤母一番人気のごへーもちをはじめ、郷土食「いもやこもち」、木曽路の田舎蕎麦やソースかつ丼など各種取り揃えています。"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "https://sizumo.jp/"
+  },
+  {
+   "banho": {
+    "nota": "Site oficial (ロックタウンプラザ) apresenta as seções da instalação — alimentação, lembranças, produtos especiais, mirante, praça, passeio e venda direta 野彩ひろば — sem nenhuma instalação de banho.",
+    "preco": null,
+    "tem": false,
+    "tipo": null
+   },
+   "cenario": "rio",
+   "especialidade": null,
+   "hours": "9:00～17:00（野彩ひろばは14:00まで）",
+   "muni": "加茂郡七宗町",
+   "name": "ロック・ガーデンひちそう",
+   "quotes": {
+    "cenario": "展望台では、飛水峡の絶景を眺めることができます。"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "https://rocktownplaza.jimdofree.com/"
+  },
+  {
+   "banho": {
+    "nota": "Onsen de uso diurno dentro da estação: いび川温泉 藤橋の湯, com露天, sauna e banho familiar privativo.",
+    "preco": "大人 700円 / 小人（3歳以上12歳未満）400円",
+    "tem": true,
+    "tipo": "onsen"
+   },
+   "cenario": "rio",
+   "especialidade": "しいたけ (shiitake) de Fujihashi — 'a especialidade da região é o shiitake' — e しいたけコロッケ定食",
+   "hours": "物産・土産 平日9:30～17:00・土日祝9:00～17:00 / 温泉 4月～11月 10:00～21:00・12月～3月 10:00～20:00",
+   "muni": "揖斐郡揖斐川町",
+   "name": "星のふる里ふじはし",
+   "quotes": {
+    "banho": "道の駅には、地域の物産・お土産、オリジナルメニューがあるお食事処、日帰り温泉に民俗資料館があります。",
+    "cenario": "緑豊かな清流のほとりにコンコンと湧き出る温泉「いび川温泉 藤橋の湯」",
+    "especialidade": "地域の名産といえばズバリ「しいたけ」。椎茸を使ったお土産は一番人気です。"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "https://m-fujihashi.com/spa/"
+  },
+  {
+   "banho": {
+    "nota": "Página oficial apresenta as instalações básicas — loja de lembranças, restaurante 水屋, 合掌ミュージアム gratuito, banheiros, centro de informações e EV — sem nenhuma instalação de banho.",
+    "preco": null,
+    "tem": false,
+    "tipo": null
+   },
+   "cenario": null,
+   "especialidade": "Doces originais locais, alimentos processados produzidos em 白川郷 e saquês da região de 飛騨 na loja de lembranças",
+   "hours": "お土産店 8:30～17:00 / 食事処 9:30～16:00",
+   "muni": "大野郡白川村",
+   "name": "白川郷",
+   "quotes": {
+    "especialidade": "地元オリジナルのお菓子や白川郷で生産された加工食品、飛騨地方の地酒など、バリエーション豊かなお土産店です。"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "https://rs-shirakawago.jp/"
+  },
+  {
+   "banho": {
+    "nota": "Página oficial da cidade de Seki lista um canto de ashiyu (banho de pés) entre as instalações da estação; preço não publicado na página.",
+    "preco": null,
+    "tem": true,
+    "tipo": "ashiyu"
+   },
+   "cenario": null,
+   "especialidade": "Shiitake local carnudo (原木しいたけ) e o snack 平成椎茸すなっく, destacados na página da cidade",
+   "hours": "9:00～17:00",
+   "muni": "関市",
+   "name": "平成",
+   "quotes": {
+    "banho": "ほっと一息できる足湯コーナー",
+    "especialidade": "地元特産の肉厚しいたけやしいたけスナック、しいたけ天むす"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "https://www.city.seki.lg.jp/kanko/0000001094.html"
+  },
+  {
+   "banho": {
+    "nota": "NÃO DIZ: o portal oficial de turismo de Hida descreve as lojas e o restaurante do recinto (産直市そやな, SHOP, 食堂) sem mencionar banho, mas a enumeração usa 'をはじめ' e não é uma lista fechada de instalações, por isso não dá para afirmar ausência.",
+    "preco": null,
+    "tem": null,
+    "tipo": null
+   },
+   "cenario": "montanha",
+   "especialidade": "飛騨牛, 飛騨地鶏, saquê local e legumes frescos vendidos na 飛騨産直市そやな; no restaurante, とんちゃん e けいちゃん",
+   "hours": "9:00～17:00",
+   "muni": "飛騨市",
+   "name": "アルプ飛騨古川",
+   "quotes": {
+    "cenario": "北アルプス乗鞍岳を一望できる道の駅",
+    "especialidade": "農家さん直送の新鮮な野菜から地酒、飛騨牛、飛騨地鶏、工芸品まで豊富に販売している飛騨産直市そやな"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "https://www.hida-kankou.jp/spot/275"
+  },
+  {
+   "banho": {
+    "nota": "Onsen natural na própria estação (天然温泉), com 内風呂 e 露天風呂, água アルカリ性単純温泉; página oficial de温泉 informa o preço e o horário de banho 11:00-20:00.",
+    "preco": "大人500円 子供300円(乳児無料)",
+    "tem": true,
+    "tipo": "onsen"
+   },
+   "cenario": "rio",
+   "especialidade": null,
+   "hours": "温泉 11:00～20:00 (入浴時間)",
+   "muni": "下呂市",
+   "name": "飛騨金山ぬく森の里温泉",
+   "quotes": {
+    "banho": "飛騨金山ぬく森の里温泉は、天然温泉です。",
+    "cenario": "馬瀬川のせせらぎを聞きながら"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "https://nukumorinosato-onsen.com/hot-spring/"
+  },
+  {
+   "banho": {
+    "nota": "A seção da estação no site oficial lista só 売店、食堂、EV充電, sem banho de uso diário. O 大浴場 citado no site fica dentro do alojamento vizinho モンゴル村 (campismo de ゲル para hóspedes), não é banho da estação — por isso não conta.",
+    "preco": null,
+    "tem": false,
+    "tipo": null
+   },
+   "cenario": null,
+   "especialidade": null,
+   "hours": "9:00～17:00 (冬季 9:00～16:00)",
+   "muni": "恵那市",
+   "name": "上矢作ラ・フォーレ福寿の里",
+   "quotes": {
+    "banho": "上矢作の名産が揃った道の駅。売店、食堂、EV充電の充実の設備を取り揃えております。"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "https://fukujyunosato.com/"
+  },
+  {
+   "banho": {
+    "nota": "A página oficial da cidade de Takayama enumera todos os componentes do complexo (estação/centro de intercâmbio, pista de esqui, parque, campo desportivo, trilho) e não há nenhuma instalação de banho na lista.",
+    "preco": null,
+    "tem": false,
+    "tipo": null
+   },
+   "cenario": null,
+   "especialidade": null,
+   "hours": null,
+   "muni": "高山市",
+   "name": "モンデウス飛騨位山",
+   "quotes": {},
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "https://www.city.takayama.lg.jp/shisetsu/1004139/1000043/1018647.html"
+  },
+  {
+   "banho": {
+    "nota": "A página oficial (câmara de comércio de Osaka, ligada como site da estação) lista 屋台・喫茶・売店/産直市 e o ramo é dado como 観光施設・産直市場・売店・喫茶・屋台, sem banho. A 鉱泉粥 usa a fonte da onsen vizinha ひめしゃがの湯 — não há banho na estação.",
+    "preco": null,
+    "tem": false,
+    "tipo": null
+   },
+   "cenario": "rio",
+   "especialidade": "五平餅 com molho original de えごま feito na oficina da estação e 鉱泉粥 (mingau cozido na água carbonatada da fonte)",
+   "hours": "売店 8:00-16:00 (夏期) 8:00-15:30 (fora do verão); 喫茶 8:00-15:00 (夏期) 8:00-14:30 (fora do verão)",
+   "muni": "下呂市",
+   "name": "南飛騨小坂",
+   "quotes": {
+    "cenario": "清流小坂川沿いに建つ、木造のアットホームな道の駅",
+    "especialidade": "はなももの「五平餅」は、道の駅加工場で作ったオリジナルのえごまタレを使用しています"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "https://hida-osaka.jp/cominfo.html?kno=12"
+  },
+  {
+   "banho": {
+    "nota": "A página oficial da vila de Ibigawa lista as instalações anexas (情報交流館, 谷汲緑地公園, casa de barbecue do parque) além de venda e restaurante, sem nenhuma instalação de banho.",
+    "preco": null,
+    "tem": false,
+    "tipo": null
+   },
+   "cenario": null,
+   "especialidade": null,
+   "hours": "販売施設 9:00～16:30; レストラン 11:00～15:00 (horário de inverno pode mudar)",
+   "muni": "揖斐郡揖斐川町",
+   "name": "夢さんさん谷汲",
+   "quotes": {},
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "https://www.town.ibigawa.lg.jp/site/kankou/2408.html"
+  },
+  {
+   "banho": {
+    "nota": "O site oficial (どんぶり会館) descreve as instalações da estação — loja de 美濃焼, exposição, aulas de cerâmica, restaurante, WC e sala de descanso — sem nenhuma instalação de banho.",
+    "preco": null,
+    "tem": false,
+    "tipo": null
+   },
+   "cenario": "montanha",
+   "especialidade": "どんぶりソフトクリーム: soft cream servido numa tigela de 美濃焼 que o cliente leva para casa, apresentado como 名物 da casa",
+   "hours": "9:00～17:30 (冬季 12月～2月 9:00～17:00)",
+   "muni": "土岐市",
+   "name": "土岐美濃焼街道",
+   "quotes": {
+    "cenario": "双眼鏡も設置してある屋上の展望台からは、御岳や中央アルプスを見渡せます",
+    "especialidade": "どんぶり会館名物の、美濃焼のどんぶりに入ったおいしいソフトクリームです"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "https://www.donburi-kaikan.com/"
+  },
+  {
+   "banho": {
+    "nota": "NÃO DIZ: a página da associação de turismo de Motosu descreve a venda de 富有柿, os produtos de caqui, o jardim de exposição de caquis, a casa de barbecue e o trilho, mas não é uma enumeração completa de instalações e não menciona banho.",
+    "preco": null,
+    "tem": null,
+    "tipo": null
+   },
+   "cenario": null,
+   "especialidade": "富有柿, o produto famoso local, e derivados como 柿羊羹 e 柿ジャム",
+   "hours": "9:00～15:00 (época do caqui, fim de outubro a dezembro, até 16:00)",
+   "muni": "本巣市",
+   "name": "富有柿の里いとぬき",
+   "quotes": {
+    "especialidade": "秋は名産品「富有柿」の販売でにぎわう道の駅。柿を使った柿羊羹や柿ジャムなどの加工品も充実しています"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "https://motosukankou.gr.jp/03_buy/03_03.html"
+  },
+  {
+   "banho": {
+    "nota": "O site oficial apresenta restaurante, canto gourmet, canto de lembranças, venda direta de legumes, canto de informações, sala de amamentação e WC multifunções — nenhuma instalação de banho.",
+    "preco": null,
+    "tem": false,
+    "tipo": null
+   },
+   "cenario": null,
+   "especialidade": "飛騨牛朴葉みそ焼肉御膳 do restaurante, legumes matinais de 清見 e みたらし団子 assado na hora",
+   "hours": "4月～11月: レストラン 11:00-16:00, グルメ/お土産 9:00-17:00, 野菜直売所 8:00-16:00; 12月～3月: レストラン 11:00-15:00, グルメ/お土産 9:00-16:00, 野菜直売所 9:00-15:00",
+   "muni": "高山市",
+   "name": "ななもり清見",
+   "quotes": {
+    "especialidade": "レストランの飛騨牛朴葉みそ焼肉御膳、清見の畑で朝採れた野菜、焼き立てのみたらし団子"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "https://nanamori.co.jp/"
+  },
+  {
+   "banho": {
+    "nota": "O site oficial apresenta as seções comer/experiência/comprar e, em 設備, só WC e estacionamento — nenhuma instalação de banho.",
+    "preco": null,
+    "tem": false,
+    "tipo": null
+   },
+   "cenario": "rio",
+   "especialidade": "はなのこ蕎麦, soba de marca local de 椛の湖, com cultivo, moagem e fabrico próprios (自家栽培・自家製粉・自家製麺)",
+   "hours": "売店 9:00～17:00; 衣月 10:30～15:00 (L.O. 14:30); 蕎麦打ち道場 10:00～ / 12:00～; fecho às quartas",
+   "muni": "中津川市",
+   "name": "きりら坂下",
+   "quotes": {
+    "cenario": "きりら坂下は、岐阜県中津川市にある、恵那山と木曽川を望む道の駅です",
+    "especialidade": "はなのこ蕎麦とは、自家栽培・自家製粉・自家製麺とこだわり抜いた、地元「椛の湖」産のブランド蕎麦です"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "https://kirira-sakashita.jp/"
+  },
+  {
+   "banho": {
+    "nota": "Página oficial da cidade lista sala de descanso, restaurante e informações com 'など' (enumeração não exaustiva) e não cita banho — NÃO DIZ.",
+    "preco": null,
+    "tem": null,
+    "tipo": null
+   },
+   "cenario": "rio",
+   "especialidade": "Verduras frescas colhidas de manhã (朝採り新鮮野菜) na直売所, muito popular",
+   "hours": "8:00～17:00",
+   "muni": "海津市",
+   "name": "クレール平田",
+   "quotes": {
+    "cenario": "長良川右岸堤防道路沿いにある道の駅です",
+    "especialidade": "地元の農家が、採れたての新鮮な野菜を安価で販売する農作物直売所が大人気で"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "https://www.city.kaizu.lg.jp/kosodate/0000000564.html"
+  },
+  {
+   "banho": {
+    "nota": "Ashiyu 美輝の足湯 a cerca de 1 min a pé, dentro da área da estação (página oficial MLIT); o banho completo スパー美輝 fica em hotel vizinho e NÃO conta. Prefeitura registra o足湯 como suspenso (休業中) em atualização recente.",
+    "preco": null,
+    "tem": true,
+    "tipo": "ashiyu"
+   },
+   "cenario": "rio",
+   "especialidade": "鮎の塩焼き, pão artesanal caseiro e produtos de 馬瀬川温泉 (美輝の湯入浴剤)",
+   "hours": "9:00～16:00 (さんまぜ工房; 1月～3月 até 15:00)",
+   "muni": "下呂市",
+   "name": "馬瀬美輝の里",
+   "quotes": {
+    "banho": "美輝の足湯 (徒歩で約1分）",
+    "cenario": "清流馬瀬川沿いの道の駅です"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "https://www.cbr.mlit.go.jp/michinoeki/gifu/gifu25.html"
+  },
+  {
+   "banho": {
+    "nota": "Página oficial enumera todas as instalações (広場・直売市場・工場・レストラン・特産品・ジュース加工場・情報・会議室・トイレ) sem nenhum banho.",
+    "preco": null,
+    "tem": false,
+    "tipo": null
+   },
+   "cenario": "montanha",
+   "especialidade": "Pão artesanal assado na hora (焼きたてパン), frutas de 久々野 (りんご・桃) e gelato",
+   "hours": "8:30～17:00 (レストラン até 16:00)",
+   "muni": "高山市",
+   "name": "飛騨街道なぎさ",
+   "quotes": {
+    "banho": "・ふれあい広場, ・直売市場, ・こだわり工場, ・レストラン, ・特産品コーナー, ・ジュース加工場, ・情報コーナー, ・会議室, ・事務室, ・トイレ",
+    "cenario": "飛騨中央、北アルプスの裾野に広がる高原",
+    "especialidade": "いつでも焼きたて手作りパン"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "https://nagisa-kuguno.com/about/"
+  },
+  {
+   "banho": {
+    "nota": "Associação de turismo oficial enumera o interior da estação (トイレ・情報棟・特産品販売所・直売場・食事処・研修室) sem banho.",
+    "preco": null,
+    "tem": false,
+    "tipo": null
+   },
+   "cenario": "montanha",
+   "especialidade": "元祖飛騨よもぎうどん e série de produtos de よもぎ (artemísia) de 朝日",
+   "hours": "9:00～17:00 (売店; inverno até 16:30)",
+   "muni": "高山市",
+   "name": "ひだ朝日村",
+   "quotes": {
+    "banho": "道の駅の中には、公衆トイレ、観光案内情報棟、お土産特産品販売所、農産物直売場、お食事処「蓬庵」、さらに会議や研修ができる研修室があります",
+    "cenario": "乗鞍岳と御嶽の山懐に抱かれた豊かな大自然",
+    "especialidade": "元祖飛騨よもぎうどんは地元で採れたよもぎを使用し、道の駅で製造・販売しており人気の商品です"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "https://www.hidaasahi.jp/%E8%B2%B7%E3%81%86/%E9%81%93%E3%81%AE%E9%A7%85%E3%81%B2%E3%81%A0%E6%9C%9D%E6%97%A5%E6%9D%91/"
+  },
+  {
+   "banho": {
+    "nota": "Página oficial de acesso/guia da estação lista as instalações internas (体験道場・直売場・おみやげ広場・ファーストフード・そば処) sem banho.",
+    "preco": null,
+    "tem": false,
+    "tipo": null
+   },
+   "cenario": "montanha",
+   "especialidade": "Soba artesanal 二八そば (手打ちそば) e experiência de fazer soba (そば打ち体験)",
+   "hours": "9:00～17:00 (abr–nov); 9:00～16:00 (dez–mar)",
+   "muni": "恵那市",
+   "name": "そばの郷らっせぃみさと",
+   "quotes": {
+    "cenario": "雄大な山々が展望できる、「道の駅そばの郷らっせぃみさと」",
+    "especialidade": "当店の一番人気&おすすめメニューは手打ちそば"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "https://rasseimisato.com/access"
+  },
+  {
+   "banho": {
+    "nota": "Site oficial apresenta produtos, restaurante e galerias/exposições, mas sem enumeração completa das instalações e sem citar banho — NÃO DIZ.",
+    "preco": null,
+    "tem": null,
+    "tipo": null
+   },
+   "cenario": null,
+   "especialidade": "富有柿 (caqui, origem em 本巣) e 織部焼 (cerâmica Oribe)",
+   "hours": "8:30～17:00 (情報館・直売所)",
+   "muni": "本巣市",
+   "name": "織部の里・もとす",
+   "quotes": {
+    "especialidade": "旧本巣郡が発祥の地と言われている、富有柿をはじめ"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "https://www.oribenosato.jp/"
+  },
+  {
+   "banho": {
+    "nota": "Site oficial destaca特産品, artesanato e restaurante, sem enumeração completa das instalações e sem citar banho — NÃO DIZ.",
+    "preco": null,
+    "tem": null,
+    "tipo": null
+   },
+   "cenario": null,
+   "especialidade": "酸菜 (すな, picles sem sal) e タカネコーン (milho doce, açúcar médio 17 graus)",
+   "hours": "9:00～17:00",
+   "muni": "高山市",
+   "name": "飛騨たかね工房",
+   "quotes": {
+    "especialidade": "道の駅 飛騨たかね工房は、高根の特産品（酸菜(すな)、タカネコーンなど）、工芸品"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "https://hida-takane.com/takanekobo/"
+  },
+  {
+   "banho": {
+    "nota": "Portal oficial de turismo de Takasu descreve refeições e produtos, sem enumeração completa das instalações e sem citar banho — NÃO DIZ.",
+    "preco": null,
+    "tem": null,
+    "tipo": null
+   },
+   "cenario": "montanha",
+   "especialidade": "Soft cream de leite de ひるがの高原 (ひるがの高原牛乳ソフトクリーム)",
+   "hours": "9:00～17:00",
+   "muni": "郡上市",
+   "name": "大日岳",
+   "quotes": {
+    "cenario": "大日ヶ岳の麓に佇む小さな道の駅",
+    "especialidade": "ひるがの高原牛乳を使ったソフトクリームもオススメです"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "https://gujotakasu.com/eat/eat-969.html"
+  },
+  {
+   "banho": {
+    "nota": "Onsen de dia ひだ荘川温泉 桜香の湯 integrado/adjacente à estação, citado na página oficial da estação.",
+    "preco": "入浴料 大人／730円 子供／310円（4才～小学生）幼児無料 (site oficial da 桜香の湯; há relatos de reajuste, conferir no local)",
+    "tem": true,
+    "tipo": "onsen"
+   },
+   "cenario": null,
+   "especialidade": "荘川そば e名物 飛騨牛まん / みたらし団子 da loja",
+   "hours": "特産品販売施設「さくら」 4月〜11月 8:00–17:00／12月〜3月 9:00–16:00; 温泉 10:00–20:30",
+   "muni": "高山市",
+   "name": "桜の郷荘川",
+   "quotes": {
+    "banho": "地元の野菜や特産品が並ぶ特産品販売施設「さくら」のほか、日帰り温泉「桜香の湯」、レストラン「おうか」と、買い物、温泉、グルメがそろう道の駅",
+    "especialidade": "売店には小腹を満たす「飛騨牛まん」や香ばしい「みたらし団子」といった名物商品も"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "https://shokawa.site/aboutworks/%e9%81%93%e3%81%ae%e9%a7%85-%e6%a1%9c%e3%81%ae%e9%83%b7%e8%8d%98%e5%b7%9d/"
+  },
+  {
+   "banho": {
+    "nota": "Página oficial de みどころ/設備 enumera直売所・飲食・パン工房・広場・花畑・ビオトープ・駐車場・EV充電・トイレ, sem banho. 武芸川温泉 fica nas proximidades, fora da estação, e não conta.",
+    "preco": null,
+    "tem": false,
+    "tipo": null
+   },
+   "cenario": null,
+   "especialidade": "つるむらさきうどん, especialidade de 武芸川町, e pão assado na hora da パン工房 むげ川",
+   "hours": "9:00～16:00",
+   "muni": "関市",
+   "name": "むげ川",
+   "quotes": {
+    "especialidade": "武芸川町の特産品である「つるむらさきうどん」をはじめ"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "http://www.mugegawa.com/places_to_visit"
+  },
+  {
+   "banho": {
+    "nota": "Onsen やまと温泉やすらぎ館 dentro da estação, além de足湯 gratuito de fonte termal (源泉掛け流し).",
+    "preco": "大人（中学生以上）850円 ■小人（小学生）400円 ■幼児無料",
+    "tem": true,
+    "tipo": "onsen"
+   },
+   "cenario": null,
+   "especialidade": "鶏ちゃん original da estação e鮎の塩焼き (nº 1 de popularidade na かにはさくら)",
+   "hours": "くつろぎ広場 9:00～18:00; やまと温泉 10:00～21:30 (última entrada 21:00)",
+   "muni": "郡上市",
+   "name": "古今伝授の里やまと",
+   "quotes": {
+    "banho": "道の駅としての機能である観光案内や物産品販売に加え、足湯（無料）、朝市、郷土料理店、レストラン、アイスクリーム・ヨーグルト工房など、多彩な施設が集まっています",
+    "especialidade": "中でも当駅オリジナル「鶏ちゃん」は大人気"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "https://gujo-yamato.jp/facility/index.html"
+  },
+  {
+   "banho": {
+    "nota": "Banho público '里山の湯' dentro do parque/estação, com 7 tipos de banho, sauna e rotenburo; descrito como銭湯 (sento), sem afirmação de fonte termal (onsen) na página oficial. Há também足湯 no local.",
+    "preco": "大人（中学生以上）720円 / 小人（４歳～小学生）360円",
+    "tem": true,
+    "tipo": "sento"
+   },
+   "cenario": null,
+   "especialidade": "Especialidades de Gifu e produtos locais no 'おんさい館'; 名産品 oficiais: 堂上蜂屋柿 (caqui seco) e 山之上の梨・柿 (pera e caqui de Yamanoue)",
+   "hours": "3月～11月 9:00～16:00（平日）/9:00～17:00（土日祝）; 12月～2月 10:00～16:00（平日）/10:00～17:00（土日祝）; 里山の湯 10:00～22:00（最終受付21:30）",
+   "muni": "美濃加茂市",
+   "name": "みのかも",
+   "quotes": {
+    "banho": "広々とした洗い場と、7種のお風呂、サウナをご用意。開放感たっぷりの露天風呂で、里山の風景をゆっくりお楽しみください。",
+    "especialidade": "堂上蜂屋柿（干し柿）、山之上の梨・柿"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "https://satoyama-park.gifu.jp/spa/"
+  },
+  {
+   "banho": {
+    "nota": "NÃO DIZ: o site oficial lido (topo e seções de instalações: 売店・産直売場・カフェ) não menciona banho, mas a enumeração acessível não foi completa o bastante para afirmar ausência.",
+    "preco": null,
+    "tem": null,
+    "tipo": null
+   },
+   "cenario": "rio",
+   "especialidade": "Chá 美濃白川茶 / 茶蔵園: produtos de chá fabricados na fábrica de chá atrás da estação e vendidos direto na 茶の里会館",
+   "hours": "9:30～16:00 9:00～16:00",
+   "muni": "加茂郡東白川村",
+   "name": "茶の里東白川",
+   "quotes": {
+    "cenario": "道の駅茶の里の道を挟んだ向こう側に「清流白川」が流れていて",
+    "especialidade": "東白川村の特産であるお茶の「再生加工販売」、製造直売店である「道の駅茶の里東白川の管理運営」"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "https://chanosato.gifu.jp/"
+  },
+  {
+   "banho": {
+    "nota": "A operadora oficial enumera as instalações da estação (物産販売所ちんちろ屋, お休み処, レストラン, 和良運動公園併設) sem nenhum banho.",
+    "preco": null,
+    "tem": false,
+    "tipo": null
+   },
+   "cenario": null,
+   "especialidade": "名物 長寿だんご (dango da longevidade, à base de tofu) vendido no お休み処; também 和良鮎 é produto célebre da região (citado para o camping vizinho, não como instalação da estação)",
+   "hours": "9:00～17:00",
+   "muni": "郡上市",
+   "name": "和良",
+   "quotes": {
+    "especialidade": "名物″長寿だんご″のあるお休み処"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "https://www.waranosato.net/"
+  },
+  {
+   "banho": {
+    "nota": "A lista oficial de instalações (MLIT) traz apenas 店舗・売店, そば処, ファストフード, 情報コーナー e EV — sem banho na estação. A うすずみ温泉四季彩館 é instalação vizinha/adjacente (温泉が隣接), portanto NÃO conta como banho da estação.",
+    "preco": null,
+    "tem": false,
+    "tipo": null
+   },
+   "cenario": null,
+   "especialidade": "Produtos de Neo: 淡墨とうふ、淡墨ういろ、生そば、山あざみの佃煮、あまごの甘露煮、栃もち (lista oficial de 名産品 da prefeitura de Gifu)",
+   "hours": "9：00～16：00",
+   "muni": "本巣市",
+   "name": "うすずみ桜の里・ねお",
+   "quotes": {
+    "especialidade": "淡墨とうふ、淡墨ういろ、生そば、山あざみの佃煮、あまごの甘露煮、 栃もち、淡墨らっきょう、梅干、山ふきの佃煮"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "https://www.cbr.mlit.go.jp/michinoeki/gifu/gifu38.html"
+  },
+  {
+   "banho": {
+    "nota": "O site oficial apresenta lojas de 美濃焼, restaurantes/cafés e venda de特産品, sem nenhuma instalação de banho; a ficha oficial da cidade de Toki também não lista banho.",
+    "preco": null,
+    "tem": false,
+    "tipo": null
+   },
+   "cenario": null,
+   "especialidade": "美濃焼 (cerâmica Mino) — de peças de uso diário a peças únicas de窯元・作家; e o doce名物 de Toki 竹皮羊羹",
+   "hours": "9:00～18:00（レストラン 10:00～19:00）",
+   "muni": "土岐市",
+   "name": "志野・織部",
+   "quotes": {
+    "especialidade": "館内には日常使いのうつわから、窯元・作家の一点物まで、陶匠の里ならではの美濃焼食器を豊富に揃えています。"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "https://shino-oribe.co.jp/"
+  },
+  {
+   "banho": {
+    "nota": "A lista oficial de instalações (MLIT) traz 店舗・売店, レストラン・市場, 喫茶・軽食, 無料休憩所, 情報コーナー, 公園 — sem banho.",
+    "preco": null,
+    "tem": false,
+    "tipo": null
+   },
+   "cenario": "rio",
+   "especialidade": "名物 朴葉寿司 (hooba-zushi) e よもぎ大福; tomate local (夏秋トマト) também é名産品 oficial",
+   "hours": "売店 8:30~17:00; 食堂 8:30~14:00 (L.O.13:30)",
+   "muni": "中津川市",
+   "name": "加子母",
+   "quotes": {
+    "cenario": "中央道中津川Ｉ.Ｃ.から飛騨路への玄関口、木と緑、そして白川の清流にふれあう公園の中にある道の駅です。",
+    "especialidade": "名物の朴葉寿司やよもぎ大福、地元の新鮮野菜を販売しています。"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "https://www.kashimozanmai.com/"
+  },
+  {
+   "banho": {
+    "nota": "A página oficial da cidade de Ibigawa enumera as instalações anexas (情報館、レストラン、農林畜水産物販売所) sem banho; o site oficial da estação também não apresenta banho.",
+    "preco": null,
+    "tem": false,
+    "tipo": null
+   },
+   "cenario": "montanha",
+   "especialidade": "ジビエ de 坂内: produtos de carne de cervo local (鹿肉) — hambúrguer, curry, salsicha — e soft cream célebre da estação",
+   "hours": "9:00～17:00",
+   "muni": "揖斐郡揖斐川町",
+   "name": "夜叉ヶ池の里さかうち",
+   "quotes": {
+    "cenario": "美しい山や川、新鮮な空気に囲まれた道の駅",
+    "especialidade": "坂内産鹿肉を贅沢に使用したジビエ商品が豊富。"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "https://yashaikenosato.com/"
+  },
+  {
+   "banho": {
+    "nota": "A página oficial de instalações enumera みはらし茶屋, 産直品売り場, 巨大木製水車, 與運橋, 出店, 小里川ダム e 幸せの鐘 — sem nenhum banho.",
+    "preco": null,
+    "tem": false,
+    "tipo": null
+   },
+   "cenario": null,
+   "especialidade": "細寒天 (hoso-kanten) especialidade de Yamaoka, vendido na産直品売り場 junto a verduras frescas e produtos artesanais das 'obāchan'",
+   "hours": "3月～11月 9：00～17：00; 12月～2月 9：30～16：30",
+   "muni": "恵那市",
+   "name": "おばあちゃん市・山岡",
+   "quotes": {
+    "especialidade": "山岡町特産の細寒天を始め、新鮮やさい・お米・加工品・手芸品・木工品などを販売しています。"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "http://obachanichi.jp/publics/index/23/"
+  },
+  {
+   "banho": {
+    "nota": "足湯 gratuito dentro da estação, usando a mesma fonte da 南濃温泉「水晶の湯」 (a 水晶の湯 em si é instalação vizinha e não conta; o que conta é o足湯 da própria estação). Horário do足湯: 9：00～17:00.",
+    "preco": "無料",
+    "tem": true,
+    "tipo": "ashiyu"
+   },
+   "cenario": "montanha",
+   "especialidade": "南濃みかん (tangerina Nanno, especialidade de Kaizu) e frutas o ano todo — 柿, ぶどう, いちじく, いちご — na農産物直売所",
+   "hours": "8:00～18:00 (テナントは各テナントにより異なります); 足湯 9：00～17:00",
+   "muni": "海津市",
+   "name": "月見の里南濃",
+   "quotes": {
+    "banho": "源泉を利用した 無料の足湯",
+    "cenario": "国道258号線沿い養老山脈の麓に位置し、敷地面積約21,000平方メートルと県内最大級を誇る「道の駅」",
+    "especialidade": "年中果物が揃う道の駅として、特産のみかんや柿をはじめ、ぶどう、いちじく、いちごなどに加えブルーベリーにも力を入れています。"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "https://www.tsukimi-no-sato.com/spa"
+  },
+  {
+   "banho": {
+    "nota": "NÃO DIZ: o site oficial (Wix) e a página oficial da cidade de Gifu lidos não mencionam banho, mas não houve enumeração completa de instalações acessível para afirmar ausência (a abertura direta foi limitada por 429 do serviço).",
+    "preco": null,
+    "tem": null,
+    "tipo": null
+   },
+   "cenario": "rio",
+   "especialidade": "佐波いちご (morango Saba,特産品 de Yanaizu) — いちご大福 (sazonal) e いちご最中 são os produtos recomendados oficiais",
+   "hours": "平日・日曜・祝日 8：30〜17：00; 土曜 8：00〜17：00",
+   "muni": "岐阜市",
+   "name": "柳津",
+   "quotes": {
+    "cenario": "一級河川境川の左岸堤防上であり、下流にはパターゴルフ、テニス、ゲートボール等が楽しめるスポーツ広場やバードウォッチングができる遊歩道、芝生広場、水辺公園等を備えた緑道公園があります。",
+    "especialidade": "佐波いちご、いちご最中、いちご大福、高桑太鼓（焼き菓子）"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "https://michinoeki-yanaizu.wixsite.com/yanaizu/blog"
+  },
+  {
+   "banho": {
+    "nota": "A lista oficial de instalações (MLIT, página lida) traz 店舗・売店, 喫茶・軽食, 無料休憩所, 情報コーナー, 体験施設 — sem banho.",
+    "preco": null,
+    "tem": false,
+    "tipo": null
+   },
+   "cenario": "rio",
+   "especialidade": "五平餅 e produtos de 山まゆ (天蚕糸, a 'fibra de diamante') — tecelagem manual 夢久蔵織り/夕森紬 exibida e com体験 no local; 名産品 oficiais: 五平餅、山まゆ製品、手作り産品",
+   "hours": "9：00～17：00",
+   "muni": "中津川市",
+   "name": "五木のやかた・かわうえ",
+   "quotes": {
+    "cenario": "木曽五木（ひのき、あすなろ、ねずこ、さわら、こうやまき）の尺角柱が使われており、川上川が眼前に流れ山々に囲まれた自然いっぱいの道の駅です。",
+    "especialidade": "五平餅、山まゆ製品、手作り産品（皮革製しおり等）"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "https://www.cbr.mlit.go.jp/michinoeki/gifu/gifu46.html"
+  },
+  {
+   "banho": {
+    "nota": "Página oficial enumera instalações (restaurante, lanchonete, banheiros, loja de特産品) sem温泉/入浴/足湯 na estação.",
+    "preco": null,
+    "tem": false,
+    "tipo": null
+   },
+   "cenario": null,
+   "especialidade": "名物 de Kamioka: てんぷらまんじゅう (天ぷらまんじゅう) de Hida-Kamioka, além de こも豆腐 e 朴葉みそ.",
+   "hours": "軽食コーナー 9:00～17:00; レストラン 11:00～15:00 (LO); 特産品コーナー 9:00～17:00 (inverno até 16:00); fechado às quartas",
+   "muni": "飛騨市",
+   "name": "宙ドーム・神岡",
+   "quotes": {
+    "especialidade": "飛騨神岡名物 天ぷらまんじゅう"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "https://www.skydome.jp/"
+  },
+  {
+   "banho": {
+    "nota": "Página oficial enumera lojas/instalações (朝市, lembranças, loja artesanal, 喫茶チェリー, descanso/informações) sem banho.",
+    "preco": null,
+    "tem": false,
+    "tipo": null
+   },
+   "cenario": null,
+   "especialidade": "名物 ケイちゃん定食 (鶏ちゃん) servido com arroz de terraço 六ノ里棚田米 (コシヒカリ).",
+   "hours": "4月～10月 8:30～17:00; 11月～3月 horário diferente (consultar); 喫茶 7:30～16:00; fechado às terças",
+   "muni": "郡上市",
+   "name": "白尾ふれあいパーク",
+   "quotes": {
+    "especialidade": "地元六ノ里の棚田米（コシヒカリ）を使ったお食事をご提供。名物のケイちゃん定食を始め、うどん・そば・軽食を召し上がっていただけます。"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "https://okumino-shirotori.com/pg730.html"
+  },
+  {
+   "banho": {
+    "nota": "NÃO DIZ: página oficial não enumera todas as instalações quanto a banho; cita restaurante,特産品, verduras e cycle station, e háシャワー室 para ciclistas (chuveiro não é温泉/入浴/足湯), sem banho afirmado.",
+    "preco": null,
+    "tem": null,
+    "tipo": null
+   },
+   "cenario": "rio",
+   "especialidade": "Culinária de鮎 (ayu) do清流長良川 e do板取川, e特産品 como美濃和紙 e鮎の甘露煮.",
+   "hours": "8:30～18:00 (ano todo, conforme página oficial da empresa)",
+   "muni": "美濃市",
+   "name": "美濃にわか茶屋",
+   "quotes": {
+    "cenario": "鮎の遡上する清流長良川に隣接し、緑豊かな山々がもたらす四季折々の景観が美しい美濃にわか茶屋は、きっとあなたを満足させてくれます。",
+    "especialidade": "新鮮な地域野菜や鮎料理、地域特産物などの品揃えも豊富で"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "https://www.mino-niwakachaya.com/"
+  },
+  {
+   "banho": {
+    "nota": "Ashiyu da própria estação com água de大白川温泉, gratuito e 24h. O banho completo しらみずの湯 é instalação vizinha/ao lado, não contado aqui — o que conta é o足湯 da estação.",
+    "preco": "無料 (grátis, 24 horas; suspenso no inverno e, no momento da leitura, suspenso por falha elétrica)",
+    "tem": true,
+    "tipo": "ashiyu"
+   },
+   "cenario": "montanha",
+   "especialidade": "すったて汁 (sopa郷土 de soja moída) e飛騨牛コロッケ no canto de軽食.",
+   "hours": "売店 11:00～14:00; 軽食 11:00～14:00; インフォメーション 9:00～17:00; 足湯 24時間; fechado terças e quartas",
+   "muni": "大野郡白川村",
+   "name": "飛騨白山",
+   "quotes": {
+    "banho": "道の駅 飛騨白山では大白川温泉の足湯がご利用いただけます。",
+    "cenario": "白山の麓、大白川で発見された草食恐竜イグアノドンの足跡化石レプリカや霊峰白山の見所などを紹介・展示しています。",
+    "especialidade": "・すったて汁(茹でた大豆をすりつぶして味付けしたもの）"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "https://www.hidahakusan.jp/hidahakusan/"
+  },
+  {
+   "banho": {
+    "nota": "Página oficial enumera設備・施設 (estacionamento, banheiros, EV, informações, restaurante,物産) sem banho.",
+    "preco": null,
+    "tem": false,
+    "tipo": null
+   },
+   "cenario": null,
+   "especialidade": null,
+   "hours": "9:00–17:00; fechado às terças",
+   "muni": "加茂郡富加町",
+   "name": "半布里の郷とみか",
+   "quotes": {},
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "https://michinoeki-tomika.com/"
+  },
+  {
+   "banho": {
+    "nota": "NÃO DIZ: página oficial de instalações retornou 403 (acesso negado) na leitura; o conteúdo oficial acessível via busca (topo e施設案内) não afirma banho nem traz enumeração completa legível.",
+    "preco": null,
+    "tem": null,
+    "tipo": null
+   },
+   "cenario": null,
+   "especialidade": "鶏ちゃん餃子 — gyoza do名物県民食 鶏ちゃん (ケイちゃん).",
+   "hours": "9:00～18:00",
+   "muni": "可児市",
+   "name": "可児ッテ「CANITTE」",
+   "quotes": {
+    "especialidade": "岐阜県民、人気の県民食『鶏ちゃん』が餃子になりました！"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "https://www.canitte.jp/"
+  },
+  {
+   "banho": {
+    "nota": "Ashiyu dentro da estação usando天然温泉, destacado na página oficial da estação; preço do足湯 não publicado. O banho completo池田温泉 (本館/新館) é vizinho, não contado.",
+    "preco": null,
+    "tem": true,
+    "tipo": "ashiyu"
+   },
+   "cenario": null,
+   "especialidade": null,
+   "hours": "道の駅 10:00～17:00; fechado às quartas",
+   "muni": "揖斐郡池田町",
+   "name": "池田温泉",
+   "quotes": {
+    "banho": "天然温泉を使用した足湯で、気軽にリフレッシュしていただけます。"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "https://www.ikedaonsen.jp/michinoeki/"
+  },
+  {
+   "banho": {
+    "nota": "Tabela oficial de施設情報 enumera áreas, banheiros, informações, Wi-Fi, comida e lojas sem温泉/入浴/足湯 público; há camping/cottages de hospedagem, que não são banho público da estação.",
+    "preco": null,
+    "tem": false,
+    "tipo": null
+   },
+   "cenario": "rio",
+   "especialidade": "白川茶 (chá特産 de Shirakawa) — produtos arranjados com白川茶 são a lembrança recomendada; também鶏ちゃん de黒川.",
+   "hours": "ワクワク公園エリア AM9:00－PM5:00; アウトドアエリア AM8:30－PM5:00",
+   "muni": "加茂郡白川町",
+   "name": "清流白川クオーレの里",
+   "quotes": {
+    "cenario": "河川公園内にあるバーベキュー棟では、テーブル席でお手軽にバーベキューがお召し上がりいただけます。",
+    "especialidade": "町特産の白川茶をアレンジした商品がオススメのお土産です。"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "https://e-900.com/roadsidestation/"
+  },
+  {
+   "banho": {
+    "nota": "Página oficial enumera lojas/instalações (物産センター, 木遊館, produtos de madeira, loja artesanal, みのばんば, associação de turismo) sem banho.",
+    "preco": null,
+    "tem": false,
+    "tipo": null
+   },
+   "cenario": null,
+   "especialidade": "名産品 de Gujo: 郡上みそ, ケイちゃん e明宝ハム; tambémシュークリーム de farinha de arroz (米粉) daみのばんば.",
+   "hours": "特産品販売所 9:00～17:00; 木遊館 8:30～17:00; fechado às terças",
+   "muni": "郡上市",
+   "name": "清流の里しろとり",
+   "quotes": {
+    "especialidade": "郡上みそやケイちゃん、明宝ハムなどの郡上の名産品をはじめ、地酒やここでしか買えない地元ならではの特産品等を取り揃えています。"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "https://okumino-shirotori.com/seiryu.html"
+  },
+  {
+   "banho": {
+    "nota": "Página oficial apresenta as instalações principais (直売所みのもんや, bakeryみおぱ, café kakinoki, restaurante) sem温泉/入浴/足湯.",
+    "preco": null,
+    "tem": false,
+    "tipo": null
+   },
+   "cenario": null,
+   "especialidade": "Culinária地産地消 com verduras locais eジビエ (gibier) no restaurante, e pães assados na hora na bakery.",
+   "hours": "9:00～18:00",
+   "muni": "揖斐郡大野町",
+   "name": "パレットピアおおの",
+   "quotes": {
+    "especialidade": "地元野菜やジビエを使った料理と店内の隣接ベーカリー「みおぱ」のパンを楽しんでいただけるレストランです。"
+   },
+   "rv_park": null,
+   "shachuhaku_proibido": false,
+   "source": "https://pallettepia-ono.com/"
+  }
+ ]
+}
