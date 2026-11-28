@@ -66,7 +66,16 @@ def fogos(key):
             continue
         if JP_BOX[0] <= la <= JP_BOX[1] and JP_BOX[2] <= lo <= JP_BOX[3]:
             japao += 1
-    return {"mundo": mundo, "japao": japao, "fonte": "NASA FIRMS · VIIRS · ultimas 24h"}
+    pts = []
+    for r in rows:
+        try:
+            pts.append([round(float(r["latitude"]), 2), round(float(r["longitude"]), 2)])
+        except Exception:
+            continue
+        if len(pts) >= 4000:
+            break
+    return {"mundo": mundo, "japao": japao, "pontos": pts,
+            "fonte": "NASA FIRMS · VIIRS · ultimas 24h"}
 
 
 def avioes():
@@ -76,6 +85,8 @@ def avioes():
         d = json.loads(get("https://opensky-network.org/api/states/all", timeout=90).decode())
         st = d.get("states") or []
         out["mundo"] = sum(1 for s in st if s[8] is False)
+        out["pontos"] = [[round(s[6], 2), round(s[5], 2)] for s in st
+                         if s[8] is False and s[5] is not None and s[6] is not None][:6000]
     except Exception as e:
         out["nota_mundo"] = type(e).__name__
     try:
@@ -96,8 +107,11 @@ def sismo():
     if not fs:
         return {"n": 0, "maior_mag": None, "maior_local": None, "fonte": "USGS · M4.5+ · 24h"}
     m = max(fs, key=lambda f: f["properties"]["mag"])
+    pts = [{"lat": f["geometry"]["coordinates"][1], "lon": f["geometry"]["coordinates"][0],
+            "mag": f["properties"]["mag"], "local": f["properties"].get("place")} for f in fs]
     return {"n": len(fs), "maior_mag": m["properties"]["mag"],
-            "maior_local": m["properties"].get("place"), "fonte": "USGS · M4.5+ · 24h"}
+            "maior_local": m["properties"].get("place"), "pontos": pts,
+            "fonte": "USGS · M4.5+ · 24h"}
 
 
 def iss():
@@ -125,6 +139,13 @@ def main():
             data[nome] = fn()
         except Exception as e:
             data[nome] = {"nota": type(e).__name__}
+    pontos = {"gerado_em": data["gerado_em"],
+              "fogos": (data.get("fogos") or {}).pop("pontos", []),
+              "avioes": (data.get("avioes") or {}).pop("pontos", []),
+              "sismo": (data.get("sismo") or {}).pop("pontos", []),
+              "iss": data.get("iss")}
+    with open("ceu-pontos.json", "w", encoding="utf-8") as f:
+        json.dump(pontos, f, ensure_ascii=False, separators=(",", ":"))
     with open("ceu-agora.json", "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=1)
     linha = "[ceu %s] fogos=%s avioes=%s sismo=%s iss=%s" % (
