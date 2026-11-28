@@ -19,5 +19,14 @@
   "via_issue": 1,
   "kind": "fato",
   "note": "rodada 13 — onda 2 completa (a Tonbo tem que virar MUDOU)"
+ },
+ {
+  "number": 90,
+  "kind": "vigia",
+  "active": true,
+  "furtivo": true,
+  "url": "https://www.web-komachi.com/?p=311022",
+  "what": "Teste do furtivo: artigo da web-komachi sobre banho em Nagano",
+  "details": "Esta página devolveu 403 pro robô. Leia com o navegador furtivo e diga o que ela afirma sobre o banho citado (nome do lugar, preço, regras) — só o que estiver escrito nela."
  }
 ]
