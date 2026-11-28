@@ -1,14 +1,13 @@
 {
- "gerado_em": "2026-11-28 19:28 JST",
+ "gerado_em": "2026-11-28 19:31 JST",
  "fogos": {
-  "mundo": null,
-  "japao": null,
-  "nota": "NameError",
+  "mundo": 10324,
+  "japao": 10,
   "fonte": "NASA FIRMS · VIIRS · ultimas 24h"
  },
  "avioes": {
-  "mundo": 5660,
-  "japao": 255,
+  "mundo": 5688,
+  "japao": 254,
   "fonte": "OpenSky · ao vivo"
  },
  "sismo": {
@@ -18,10 +17,10 @@
   "fonte": "USGS · M4.5+ · 24h"
  },
  "iss": {
-  "lat": 37.9,
-  "lon": 20.6,
-  "alt_km": 416,
-  "vel_kmh": 27608,
+  "lat": 44.3,
+  "lon": 32.3,
+  "alt_km": 417,
+  "vel_kmh": 27609,
   "fonte": "wheretheiss.at · ISS agora"
  }
 }
