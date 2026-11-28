@@ -1,1 +1,42 @@
-{}
+{
+ "kind": "fato",
+ "want_number": 2,
+ "want_what": "Onsen em Nagano",
+ "swept_at": "2026-11-28T12:24:24+09:00",
+ "fits": [],
+ "fits_total": 0,
+ "near": [],
+ "near_total": 0,
+ "unconfirmed": [],
+ "unconfirmed_total": 0,
+ "examples": [],
+ "swept": 0,
+ "rejected": 0,
+ "notes": [
+  "Cada veredito só vale com o trecho da página ao lado — sem trecho, o Karutaro marca NÃO DIZ. Leitura de 28/11/2026."
+ ],
+ "sources": [
+  {
+   "name": "Páginas oficiais (olho)",
+   "status": "ok",
+   "found": 0
+  }
+ ],
+ "eye": "on",
+ "criteria": [
+  {
+   "id": "criança",
+   "label": "Permite crianças?"
+  },
+  {
+   "id": "tatuagem",
+   "label": "Permite tatuagem?"
+  }
+ ],
+ "places": [],
+ "answered": 0,
+ "verdict": [
+  "Li 0 páginas oficiais e nenhuma respondeu às suas perguntas — sigo vigiando."
+ ],
+ "eye_errors": {}
+}

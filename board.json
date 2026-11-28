@@ -9,13 +9,13 @@
   "active": true,
   "via_issue": 1,
   "kind": "fato",
-  "note": "teste do olho — gabarito das onsens"
+  "note": "teste do olho — rodada 4 (UA + retry 5xx)"
  },
  "results": {
   "kind": "fato",
   "want_number": 2,
   "want_what": "Onsen em Nagano",
-  "swept_at": "2026-11-28T12:22:00+09:00",
+  "swept_at": "2026-11-28T12:24:24+09:00",
   "fits": [],
   "fits_total": 0,
   "near": [],
@@ -25,20 +25,33 @@
   "examples": [],
   "swept": 0,
   "rejected": 0,
-  "notes": [],
-  "sources": [],
-  "eye": "on",
-  "eye_error": "HTTPError code=503: HTTP Error 503: Service Unavailable",
-  "verdict": [
-   "O olho piscou na hora de planejar a busca — tenta de novo na próxima varredura."
+  "notes": [
+   "Cada veredito só vale com o trecho da página ao lado — sem trecho, o Karutaro marca NÃO DIZ. Leitura de 28/11/2026."
   ],
-  "criteria": [],
+  "sources": [
+   {
+    "name": "Páginas oficiais (olho)",
+    "status": "ok",
+    "found": 0
+   }
+  ],
+  "eye": "on",
+  "criteria": [
+   {
+    "id": "criança",
+    "label": "Permite crianças?"
+   },
+   {
+    "id": "tatuagem",
+    "label": "Permite tatuagem?"
+   }
+  ],
   "places": [],
   "answered": 0,
-  "eye_errors": {
-   "groq": "HTTPError code=403: error code: 1010",
-   "gemini": "HTTPError code=503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\n    \"status\": \"UNAVAILABLE\"\n  }\n}"
-  }
+  "verdict": [
+   "Li 0 páginas oficiais e nenhuma respondeu às suas perguntas — sigo vigiando."
+  ],
+  "eye_errors": {}
  },
  "wants": [
   {
@@ -60,7 +73,7 @@
    "active": true,
    "via_issue": 1,
    "kind": "fato",
-   "note": "teste do olho — gabarito das onsens"
+   "note": "teste do olho — rodada 4 (UA + retry 5xx)"
   }
  ]
 }

@@ -34,3 +34,8 @@
 [2026-11-28T12:22:02+09:00] eye: gemini failed (HTTPError) — trying the other lens
 [2026-11-28T12:22:02+09:00] eye plan failed: HTTPError: HTTP Error 503: Service Unavailable
 [2026-11-28T12:22:02+09:00] board updated for QUERO Nº 2
+[2026-11-28T12:24:24+09:00] === QUERO Nº 2: Onsen em Nagano ===
+[2026-11-28T12:24:26+09:00] eye plan: 3 queries, 2 criteria
+[2026-11-28T12:24:30+09:00] fact candidates: 0 official pages (0 aggregator results skipped)
+[2026-11-28T12:24:33+09:00] fact delivery ready: 0 places read, 0 answered, 0 full matches
+[2026-11-28T12:24:33+09:00] board updated for QUERO Nº 2
