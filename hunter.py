@@ -1005,6 +1005,21 @@ def _is_limit_error(e):
     return "429" in s or "rate_limit" in s or "RESOURCE_EXHAUSTED" in s
 
 
+def _err_detail(e):
+    """Short, safe description of a provider error for the delivery:
+    type + HTTP code + a slice of the API's own message (never a key)."""
+    code = getattr(e, "code", None)
+    body = ""
+    if code is not None:
+        try:
+            body = e.read().decode("utf-8", "replace")[:220]
+        except Exception:
+            body = ""
+    if not body:
+        body = str(e)[:220]
+    return f"{type(e).__name__} code={code}: {body}".strip()
+
+
 def eye_json(prompt):
     """The eye, with two lenses (Fabricio's call, 2026-11-25): Groq
     reads first; when its free quota ends, Gemini takes over. A lens
@@ -1182,6 +1197,7 @@ def hunt_fact(want):
         queries, criteria = eye_plan(want)
     except Exception as e:
         log(f"eye plan failed: {type(e).__name__}: {e}")
+        base["eye_error"] = _err_detail(e)
         if getattr(e, "code", None) == 429:
             base["verdict"] = ["A cota grátis do olho acabou por hoje — "
                                "ele tenta de novo amanhã."]
@@ -1228,6 +1244,8 @@ def hunt_fact(want):
                 f"({sum(1 for a in answers if a['verdict'] != 'nao_diz')} answered)")
         except Exception as e:
             log(f"eye read failed {cand['url']}: {type(e).__name__}: {e}")
+            if "eye_error" not in base:
+                base["eye_error"] = _err_detail(e)
         eye_pace()  # free-tier pace between eye calls
 
     answered_places = [p for p in places
