@@ -178,5 +178,125 @@
   ],
   "read_at": "2026-11-28T12:59:00+09:00",
   "want_number": 2
+ },
+ {
+  "name": "長野県",
+  "url": "https://nagano-webtown.net/archives/5927",
+  "answers": [
+   {
+    "criterion": "child",
+    "label": "Pode crianças?",
+    "verdict": "sim",
+    "quote": "子連れのファミリーに嬉しい施設が多く、小さなお子さんから楽しめるプール付きの温泉や、キッズスペース完備の施設などが揃っています。"
+   },
+   {
+    "criterion": "tattoo",
+    "label": "Pode tatuagem?",
+    "verdict": "nao_diz",
+    "quote": ""
+   }
+  ],
+  "read_at": "2026-11-28T13:05:48+09:00",
+  "want_number": 2
+ },
+ {
+  "name": "白樺湖池の平リゾート 天然温泉 湖天の湯",
+  "url": "https://www.web-komachi.com/?p=311022",
+  "answers": [
+   {
+    "criterion": "child",
+    "label": "Pode crianças?",
+    "verdict": "nao_diz",
+    "quote": ""
+   },
+   {
+    "criterion": "tattoo",
+    "label": "Pode tatuagem?",
+    "verdict": "nao_diz",
+    "quote": ""
+   }
+  ],
+  "read_at": "2026-11-28T13:05:48+09:00",
+  "want_number": 2
+ },
+ {
+  "name": "【2026最新】子供連れにおすすめ!長野の人気温泉ランキングtop30 | くふうトリップ",
+  "url": "https://rtrp.jp/locations/236/categories/2112/scenes/26/",
+  "answers": [
+   {
+    "criterion": "child",
+    "label": "Pode crianças?",
+    "verdict": "nao_diz",
+    "quote": ""
+   },
+   {
+    "criterion": "tattoo",
+    "label": "Pode tatuagem?",
+    "verdict": "nao_diz",
+    "quote": ""
+   }
+  ],
+  "read_at": "2026-11-28T13:05:48+09:00",
+  "want_number": 2
+ },
+ {
+  "name": "いこーよ",
+  "url": "https://iko-yo.net/facilities?genre_ids%5B%5D=38&prefecture_ids%5B%5D=20",
+  "answers": [
+   {
+    "criterion": "child",
+    "label": "Pode crianças?",
+    "verdict": "sim",
+    "quote": "子供が喜ぶ、親子で楽しめる温泉・銭湯"
+   },
+   {
+    "criterion": "tattoo",
+    "label": "Pode tatuagem?",
+    "verdict": "nao_diz",
+    "quote": ""
+   }
+  ],
+  "read_at": "2026-11-28T13:05:48+09:00",
+  "want_number": 2
+ },
+ {
+  "name": "枇杷の湯",
+  "url": "https://oyakotabimap.com/nagano_onsen/",
+  "answers": [
+   {
+    "criterion": "child",
+    "label": "Pode crianças?",
+    "verdict": "sim",
+    "quote": "子連れ温泉レポ"
+   },
+   {
+    "criterion": "tattoo",
+    "label": "Pode tatuagem?",
+    "verdict": "nao_diz",
+    "quote": ""
+   }
+  ],
+  "read_at": "2026-11-28T13:05:48+09:00",
+  "want_number": 2
+ },
+ {
+  "name": "信州健康ランド",
+  "url": "https://mamnavi.com/%E9%95%B7%E9%87%8E%E3%81%AF%E6%B8%A9%E6%B3%89%E5%A4%A7%E5%9B%BD%EF%BC%9F%EF%BC%81%E5%AD%90%E3%81%A9%E3%82%82%E3%81%A8%E4%B8%80%E7%B7%92%E3%81%AB%E6%A5%BD%E3%81%97%E3%82%81%E3%82%8B%E6%B8%A9%E6%B3%89/",
+  "answers": [
+   {
+    "criterion": "child",
+    "label": "Pode crianças?",
+    "verdict": "sim",
+    "quote": "子どもも大人も飽きずに楽しめます。"
+   },
+   {
+    "criterion": "tattoo",
+    "label": "Pode tatuagem?",
+    "verdict": "nao_diz",
+    "quote": ""
+   }
+  ],
+  "read_at": "2026-11-28T13:05:48+09:00",
+  "want_number": 2
  }
 ]

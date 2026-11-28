@@ -150,3 +150,29 @@
 [2026-11-28T13:00:55+09:00] eye read: 白骨温泉 (0 answered)
 [2026-11-28T13:00:58+09:00] fact delivery ready: 6 places read, 0 answered, 0 full matches
 [2026-11-28T13:00:58+09:00] board updated for QUERO Nº 2
+[2026-11-28T13:05:48+09:00] === QUERO Nº 2: Onsen em Nagano ===
+[2026-11-28T13:05:50+09:00] eye plan: 3 queries, 2 criteria
+[2026-11-28T13:05:50+09:00] fact queries: ['長野県 温泉 公式 子供 可能', '長野 温泉 公式 タトゥー 可', '長野 温泉 利用案内 よくある質問 子供 タトゥー']
+[2026-11-28T13:05:50+09:00] web search (ddg): 0 results
+[2026-11-28T13:05:51+09:00] web search (ddg-lite): 10 results
+[2026-11-28T13:05:52+09:00] web search (ddg): 0 results
+[2026-11-28T13:05:52+09:00] web search (ddg-lite): 10 results
+[2026-11-28T13:05:54+09:00] web search (ddg): 0 results
+[2026-11-28T13:05:54+09:00] web search (ddg-lite): 0 results
+[2026-11-28T13:05:56+09:00] web search (yahoo): 9 results
+[2026-11-28T13:05:57+09:00] fact candidates: 6 official pages (4 aggregator results skipped)
+[2026-11-28T13:06:05+09:00] fact nav: https://nagano-webtown.net/archives/5927 -> ['https://nagano-webtown.net/archives/5821']
+[2026-11-28T13:06:07+09:00] eye read: 長野県 (1 answered)
+[2026-11-28T13:06:13+09:00] fact fetch failed https://www.web-komachi.com/?p=311022: HTTPError
+[2026-11-28T13:06:29+09:00] fact read via jina: https://www.web-komachi.com/?p=311022
+[2026-11-28T13:06:31+09:00] eye read: 白樺湖池の平リゾート 天然温泉 湖天の湯 (0 answered)
+[2026-11-28T13:06:35+09:00] fact read via jina: https://rtrp.jp/locations/236/categories/2112/scenes/26/
+[2026-11-28T13:06:36+09:00] eye read: https://rtrp.jp/locations/236/categories/2112/scenes/26/ (0 answered)
+[2026-11-28T13:06:39+09:00] fact fetch failed https://iko-yo.net/facilities?genre_ids%5B%5D=38&prefecture_ids%5B%5D=20: HTTPError
+[2026-11-28T13:06:47+09:00] fact read via jina: https://iko-yo.net/facilities?genre_ids%5B%5D=38&prefecture_ids%5B%5D=20
+[2026-11-28T13:06:48+09:00] eye read: いこーよ (1 answered)
+[2026-11-28T13:06:54+09:00] fact nav: https://oyakotabimap.com/nagano_onsen/ -> ['https://oyakotabimap.com/biwanoyu/']
+[2026-11-28T13:06:56+09:00] eye read: 枇杷の湯 (1 answered)
+[2026-11-28T13:07:01+09:00] eye read: 信州健康ランド (1 answered)
+[2026-11-28T13:07:04+09:00] fact delivery ready: 6 places read, 4 answered, 0 full matches
+[2026-11-28T13:07:04+09:00] board updated for QUERO Nº 2
