@@ -2038,6 +2038,124 @@ def _heartbeat():
         pass
 
 
+VISION_HINTS = ("料金", "案内", "利用", "施設", "営業", "時間",
+                "マップ", "price", "guide", "info", "menu", "map")
+
+
+def _page_images(html, base_url):
+    """Images of an official page that might carry the facts:
+    Japanese sites love fee tables and guides as IMAGES. Scored
+    by hint words in the tag (src/alt); at most 2, deduped."""
+    scored = []
+    for m in re.finditer(r"<img[^>]+>", html or "", re.I):
+        tag = m.group(0)
+        sm = re.search(r"src=[\"']([^\"']+)[\"']", tag, re.I)
+        if not sm:
+            continue
+        src = sm.group(1)
+        if src.startswith("data:") or src.lower().endswith(
+                (".svg", ".gif", ".ico")):
+            continue
+        score = sum(1 for h in VISION_HINTS if h in tag)
+        scored.append((score, urllib.parse.urljoin(base_url, src)))
+    scored.sort(key=lambda x: -x[0])
+    seen, urls = set(), []
+    for _, u in scored:
+        if u not in seen:
+            seen.add(u)
+            urls.append(u)
+    return urls[:2]
+
+
+def _fetch_bytes(url, cap=2500000):
+    req = urllib.request.Request(url, headers={"User-Agent": UA})
+    with urllib.request.urlopen(req, timeout=30) as r:
+        ctype = r.headers.get_content_type()
+        data = r.read(cap + 1)
+    if len(data) > cap or not ctype.startswith("image/"):
+        return None, ""
+    return data, ctype
+
+
+def gemini_vision_read(img_bytes, mime, criteria):
+    """The eye LOOKS (Gemini is multimodal; the Groq lens is
+    text-only). Same honesty contract, adapted to images: the
+    model first TRANSCRIBES the image, then quotes from its own
+    transcription - and the leash checks the quote against that
+    transcription. Weaker than a page quote, and flagged so."""
+    import base64 as _b64
+    crit = "\n".join(f"- id={c['id']}: {c['ask_jp']}"
+                      for c in criteria)
+    prompt = (
+        "You are the eye of a fact-checking robot. Look at this "
+        "image from an official Japanese page and answer ONLY "
+        "from text visible IN THE IMAGE.\n"
+        "First transcribe ALL readable Japanese text in the image "
+        "(field image_text). Then for each question answer "
+        "sim/nao/nao_diz with a quote copied EXACTLY from your "
+        "transcription (empty quote when nao_diz).\n"
+        f"Questions:\n{crit}\n"
+        "Return ONLY JSON: {\"image_text\": \"...\", \"answers\": "
+        "[{\"criterion\": \"<id>\", \"verdict\": "
+        "\"sim|nao|nao_diz\", \"quote\": \"...\"}]}")
+    payload = {
+        "contents": [{"parts": [
+            {"text": prompt},
+            {"inline_data": {"mime_type": mime,
+                             "data": _b64.b64encode(
+                                 img_bytes).decode()}}]}],
+        "generationConfig": {"temperature": 0.1,
+                             "responseMimeType": "application/json"},
+    }
+    url = ("https://generativelanguage.googleapis.com/v1beta/models/"
+           + GEMINI_MODEL + ":generateContent")
+    req = urllib.request.Request(
+        url, data=json.dumps(payload).encode("utf-8"), method="POST",
+        headers={"Content-Type": "application/json",
+                 "User-Agent": UA, "x-goog-api-key": GEMINI_KEY})
+    with urllib.request.urlopen(req, timeout=120) as r:
+        data = json.loads(r.read().decode("utf-8", "replace"))
+    text = data["candidates"][0]["content"]["parts"][0]["text"]
+    return json.loads(text)
+
+
+def eye_read_image(page_url, html, criteria):
+    """Vision pass over an official page's images. Returns extra
+    answers flagged via='imagem' (the caller only lets them
+    upgrade a nao_diz). No Gemini key = no vision, silently."""
+    if not GEMINI_KEY:
+        return []
+    labels = {c["id"]: c["label"] for c in criteria}
+    out = []
+    for img_url in _page_images(html, page_url):
+        try:
+            data, mime = _fetch_bytes(img_url)
+            if not data:
+                continue
+            got = gemini_vision_read(data, mime, criteria)
+            transcript = _squash(got.get("image_text", ""))
+            for a in got.get("answers", []):
+                v = a.get("verdict")
+                q = a.get("quote", "")
+                if v in ("sim", "nao") and q \
+                        and not _quote_ok(q, transcript):
+                    log(f"vision leash: {a.get('criterion')} "
+                        "downgraded - quote fora da transcricao")
+                    v, q = "nao_diz", ""
+                out.append({"criterion": a.get("criterion"),
+                            "label": labels.get(a.get("criterion"),
+                                                ""),
+                            "verdict": v, "quote": q,
+                            "via": "imagem"})
+            log(f"vision: li imagem {img_url} "
+                f"({len(got.get('image_text', ''))} chars "
+                "transcritos)")
+        except Exception as e:
+            log(f"vision failed {img_url}: {type(e).__name__}: "
+                f"{str(e)[:120]}")
+    return out
+
+
 def _plan_for(want):
     """The eye plans ONCE per want (same what+details = same plan,
     forever): stable criterion ids across runs - the facts library
@@ -2274,6 +2392,22 @@ def hunt_fact(want):
             full_text = (nav_text + "\n\n" + text) if nav_text else text
             read_text = _excerpts(full_text, criteria)
             name, answers = eye_read_page(cand["url"], read_text, criteria)
+            if page_html and layer == "oficial" and any(
+                    a["verdict"] == "nao_diz" for a in answers):
+                img_answers = eye_read_image(cand["url"], page_html,
+                                             criteria)
+                if img_answers:
+                    by_id = {a["criterion"]: a
+                             for a in img_answers}
+                    merged = []
+                    for a in answers:
+                        ia = by_id.get(a["criterion"])
+                        if a["verdict"] == "nao_diz" and ia \
+                                and ia["verdict"] in ("sim", "nao"):
+                            merged.append(ia)
+                        else:
+                            merged.append(a)
+                    answers = merged
             places.append({
                 "layer": candidate_layer(cand),
                 "name": name or cand["title"], "url": cand["url"],
@@ -2352,6 +2486,13 @@ def hunt_fact(want):
         base["notes"].append(
             f"{skipped} resultado(s) de agregadores (reservas/guias) foram "
             "ignorados — o olho lê a página oficial do lugar.")
+    if any(a.get("via") == "imagem" for p in places
+           for a in p["answers"]):
+        base["notes"].append(
+            "Parte das respostas foi VISTA EM IMAGENS da página "
+            "oficial (tabela fotografada): o olho transcreveu a "
+            "imagem e citou a transcrição — vale menos que citação "
+            "de texto, e fica marcado como (imagem) nas fichas.")
     base["notes"].append(
         "Cada veredito só vale com o trecho da página ao lado — sem "
         "trecho, o Karutaro marca NÃO DIZ. Leitura de " +
