@@ -1,42 +1,42 @@
 [
  {
-  "name": "Go! NAGANO 長野県公式観光サイト",
+  "name": "一般社団法人 長野県観光機構",
   "url": "https://www.go-nagano.net/hot-springs-and-relaxation/id19599",
   "answers": [
    {
-    "criterion": "criancas",
-    "label": "Pode crianças?",
+    "criterion": "tattoo",
+    "label": "Pode tatuagem?",
     "verdict": "nao_diz",
     "quote": ""
    },
    {
-    "criterion": "tatuagem",
-    "label": "Pode tatuagem?",
+    "criterion": "criança",
+    "label": "Pode crianças?",
     "verdict": "nao_diz",
     "quote": ""
    }
   ],
-  "read_at": "2026-11-28T12:30:34+09:00",
+  "read_at": "2026-11-28T12:50:45+09:00",
   "want_number": 2
  },
  {
-  "name": "物味湯産手形",
+  "name": "信州物味湯産手形",
   "url": "https://www.monomiyusan.jp/",
   "answers": [
    {
-    "criterion": "criancas",
-    "label": "Pode crianças?",
+    "criterion": "tattoo",
+    "label": "Pode tatuagem?",
     "verdict": "nao_diz",
     "quote": ""
    },
    {
-    "criterion": "tatuagem",
-    "label": "Pode tatuagem?",
+    "criterion": "criança",
+    "label": "Pode crianças?",
     "verdict": "nao_diz",
     "quote": ""
    }
   ],
-  "read_at": "2026-11-28T12:30:34+09:00",
+  "read_at": "2026-11-28T12:50:45+09:00",
   "want_number": 2
  },
  {
@@ -77,6 +77,26 @@
    }
   ],
   "read_at": "2026-11-28T12:30:34+09:00",
+  "want_number": 2
+ },
+ {
+  "name": "信州 渋温泉旅行館組合",
+  "url": "https://shibuonsen.net/",
+  "answers": [
+   {
+    "criterion": "tattoo",
+    "label": "Pode tatuagem?",
+    "verdict": "nao_diz",
+    "quote": ""
+   },
+   {
+    "criterion": "criança",
+    "label": "Pode crianças?",
+    "verdict": "nao_diz",
+    "quote": ""
+   }
+  ],
+  "read_at": "2026-11-28T12:50:45+09:00",
   "want_number": 2
  }
 ]
