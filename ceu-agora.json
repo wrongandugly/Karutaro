@@ -1,0 +1,26 @@
+{
+ "gerado_em": "2026-11-28 19:24 JST",
+ "fogos": {
+  "mundo": 0,
+  "japao": 0,
+  "fonte": "NASA FIRMS · VIIRS · ultimas 24h"
+ },
+ "avioes": {
+  "mundo": 5629,
+  "japao": 258,
+  "fonte": "OpenSky · ao vivo"
+ },
+ "sismo": {
+  "n": 10,
+  "maior_mag": 5.2,
+  "maior_local": "93 km W of San Antonio de los Cobres, Argentina",
+  "fonte": "USGS · M4.5+ · 24h"
+ },
+ "iss": {
+  "lat": 27.4,
+  "lon": 7.9,
+  "alt_km": 415,
+  "vel_kmh": 27605,
+  "fonte": "wheretheiss.at · ISS agora"
+ }
+}
