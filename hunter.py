@@ -967,7 +967,7 @@ def gemini_json(prompt):
         headers={"Content-Type": "application/json",
                  "User-Agent": UA,
                  "x-goog-api-key": GEMINI_KEY})
-    with urllib.request.urlopen(req, timeout=60) as r:
+    with urllib.request.urlopen(req, timeout=120) as r:
         data = json.loads(r.read().decode("utf-8", "replace"))
     text = data["candidates"][0]["content"]["parts"][0]["text"]
     return json.loads(text)
@@ -988,7 +988,7 @@ def groq_json(prompt):
         headers={"Content-Type": "application/json",
                  "User-Agent": UA,
                  "Authorization": "Bearer " + GROQ_KEY})
-    with urllib.request.urlopen(req, timeout=60) as r:
+    with urllib.request.urlopen(req, timeout=120) as r:
         data = json.loads(r.read().decode("utf-8", "replace"))
     text = (data["choices"][0]["message"]["content"] or "").strip()
     if text.startswith("```"):
@@ -1048,10 +1048,14 @@ def eye_json(prompt):
             except Exception as e:
                 last_err = e
                 code = getattr(e, "code", None)
-                if code in (500, 502, 503, 504) and attempt == 1:
-                    log(f"eye: {name} answered {code} (transient) — "
-                        "waiting 20s, retrying this lens")
-                    time.sleep(20)
+                is_timeout = isinstance(e, TimeoutError)
+                if attempt == 1 and (code in (500, 502, 503, 504)
+                                     or is_timeout):
+                    wait = 10 if is_timeout else 20
+                    why = "timed out" if is_timeout else f"answered {code}"
+                    log(f"eye: {name} {why} (transient) — "
+                        f"waiting {wait}s, retrying this lens")
+                    time.sleep(wait)
                     continue
                 if _is_limit_error(e):
                     _EYE_DOWN.add(name)
