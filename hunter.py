@@ -21,10 +21,23 @@ WANTS_FILE = BASE / "wants.json"
 BOARD_FILE = BASE / "board.json"
 LOG_FILE = BASE / "hunter.log"
 FACTS_FILE = BASE / "facts.json"
+REP_FILE = BASE / "rep.json"
+CHANGES_FILE = BASE / "changes.json"
+HEART_FILE = BASE / "heartbeat.json"
+WATCH_FILE = BASE / "watch.json"
+SHOUTLOG_FILE = BASE / "shout-log.json"
 GEMINI_KEY = os.environ.get("GEMINI_API_KEY", "")
 GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-3.8-flash")
 GROQ_KEY = os.environ.get("GROQ_API_KEY", "")
 GROQ_MODEL = os.environ.get("GROQ_MODEL", "openai/gpt-oss-120b")
+# Plugs that sleep until their key exists in the vault (same pattern
+# as JINA_API_KEY): Tavily search, OpenRouter 3rd lens, eBay arm,
+# Rakuten new-price ruler. No key = the feature is simply off.
+TAVILY_KEY = os.environ.get("TAVILY_API_KEY", "")
+OR_KEY = os.environ.get("OPENROUTER_API_KEY", "")
+EBAY_ID = os.environ.get("EBAY_CLIENT_ID", "")
+EBAY_SECRET = os.environ.get("EBAY_CLIENT_SECRET", "")
+RAKUTEN_APP_ID = os.environ.get("RAKUTEN_APP_ID", "")
 
 UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/126.0 Safari/537.36")
@@ -503,6 +516,79 @@ def sweep_mercari(queries):
     return items
 
 
+def sweep_ebay(queries):
+    """eBay Browse API (official): auctions with bids and end
+    times. Sleeps until EBAY_CLIENT_ID/SECRET exist in the vault.
+    Prices come in USD — converted at the day's public rate
+    (frankfurter.app, ECB); no rate, no price (never invented)."""
+    if not (EBAY_ID and EBAY_SECRET):
+        return []
+    import base64 as _b64
+    cred = _b64.b64encode(
+        f"{EBAY_ID}:{EBAY_SECRET}".encode()).decode()
+    req = urllib.request.Request(
+        "https://api.ebay.com/identity/v1/oauth2/token",
+        data=("grant_type=client_credentials&scope="
+              "https%3A%2F%2Fapi.ebay.com%2Foauth%2Fapi_scope"
+              ).encode(),
+        method="POST",
+        headers={"Content-Type": "application/x-www-form-urlencoded",
+                 "User-Agent": UA, "Authorization": "Basic " + cred})
+    with urllib.request.urlopen(req, timeout=30) as r:
+        token = json.loads(r.read().decode())["access_token"]
+    rate = None
+    try:
+        fx = json.loads(fetch(
+            "https://api.frankfurter.app/latest?from=USD&to=JPY"))
+        rate = fx["rates"]["JPY"]
+        log(f"eBay: USD->JPY rate {rate} (frankfurter/ECB)")
+    except Exception:
+        log("eBay: no FX rate - prices stay unknown")
+    out = []
+    for q in queries[:2]:
+        req = urllib.request.Request(
+            "https://api.ebay.com/buy/browse/v1/item_summary/search"
+            f"?q={urllib.parse.quote(q)}&limit=20",
+            headers={"User-Agent": UA,
+                     "Authorization": "Bearer " + token,
+                     "X-EBAY-C-MARKETPLACE-ID": "EBAY_US"})
+        with urllib.request.urlopen(req, timeout=30) as r:
+            data = json.loads(r.read().decode("utf-8", "replace"))
+        for it in data.get("itemSummaries", []):
+            price = None
+            p = it.get("price") or {}
+            if rate and p.get("currency") == "USD" \
+                    and p.get("value"):
+                price = int(float(p["value"]) * rate)
+            out.append({"title": it.get("title", ""),
+                        "price": price,
+                        "url": it.get("itemWebUrl", ""),
+                        "source": "eBay"})
+    return out
+
+
+def rakuten_new_price_note(queries):
+    """The new-price ruler, from Rakuten's official Ichiba API.
+    Sleeps until RAKUTEN_APP_ID exists in the vault."""
+    if not RAKUTEN_APP_ID or not queries:
+        return ""
+    try:
+        url = ("https://app.rakuten.co.jp/services/api/IchibaItem/"
+               "Search/20170706?applicationId=" + RAKUTEN_APP_ID
+               + "&keyword=" + urllib.parse.quote(queries[0])
+               + "&hits=10&sort=standard&format=json")
+        data = json.loads(fetch(url))
+        prices = [i["Item"]["itemPrice"]
+                  for i in data.get("Items", [])]
+        if not prices:
+            return ""
+        return (f"Régua de preço novo (Rakuten, API oficial): "
+                f"de ¥{min(prices):,} a ¥{max(prices):,} - "
+                "compare com os usados da entrega.")
+    except Exception:
+        return ""
+
+
 SOURCES = [
     ("Yahoo! Auctions", sweep_yahoo),
     ("Yahoo!フリマ", sweep_yahoo_furima),
@@ -510,6 +596,7 @@ SOURCES = [
     ("Up Garage", sweep_upgarage),
     ("Mercari", sweep_mercari),
     ("Rakuten", sweep_rakuten),
+    ("eBay", sweep_ebay),
 ]
 
 
@@ -855,6 +942,7 @@ def hunt(want):
             log(f"{name}: FAILED {type(e).__name__}: {e}")
         time.sleep(SLEEP_BETWEEN)
 
+    rakuten_note = rakuten_new_price_note(queries)
     swept = len(all_items)
     fits, near, unconfirmed, examples = [], [], [], []
     rejected, seen_urls = 0, set()
@@ -910,6 +998,8 @@ def hunt(want):
     ok_sources = [s["name"] for s in source_status if s["status"] == "ok"]
     bad_sources = [s["name"] for s in source_status if s["status"] != "ok"]
     if bad_sources:
+        if rakuten_note:
+            notes.append(rakuten_note)
         notes.append("Fontes que não responderam nesta varredura: " + ", ".join(bad_sources) +
                      ". O robô tenta de novo na próxima.")
     if any(f["kind"] == "auction" and f["source"] == "Yahoo! Auctions"
@@ -1077,6 +1167,28 @@ def _err_detail(e):
     return f"{type(e).__name__} code={code}: {body}".strip()
 
 
+def openrouter_json(prompt):
+    if not OR_KEY:
+        raise RuntimeError("OPENROUTER_API_KEY missing — lens off")
+    payload = {
+        "model": "openrouter/free",
+        "messages": [{"role": "user", "content": prompt}],
+        "temperature": 0.1,
+    }
+    req = urllib.request.Request(
+        "https://openrouter.ai/api/v1/chat/completions",
+        data=json.dumps(payload).encode("utf-8"), method="POST",
+        headers={"Content-Type": "application/json",
+                 "User-Agent": UA,
+                 "Authorization": "Bearer " + OR_KEY})
+    with urllib.request.urlopen(req, timeout=120) as r:
+        data = json.loads(r.read().decode("utf-8", "replace"))
+    text = (data["choices"][0]["message"]["content"] or "").strip()
+    if text.startswith("```"):
+        text = re.sub(r"^```[a-z]*\s*|\s*```$", "", text).strip()
+    return json.loads(text)
+
+
 def eye_json(prompt):
     """The eye, with two lenses (Fabricio's call, 2026-11-25): Groq
     reads first; when its free quota ends, Gemini takes over. A lens
@@ -1089,6 +1201,8 @@ def eye_json(prompt):
         providers.append(("groq", groq_json))
     if GEMINI_KEY:
         providers.append(("gemini", gemini_json))
+    if OR_KEY:
+        providers.append(("openrouter", openrouter_json))
     if not providers:
         raise RuntimeError(
             "no eye key (GROQ_API_KEY/GEMINI_API_KEY) — the eye is off")
@@ -1230,10 +1344,31 @@ def _parse_yahoo(html, limit):
     return out
 
 
+def _tavily_search(query, limit):
+    payload = {"api_key": TAVILY_KEY, "query": query,
+               "max_results": limit, "search_depth": "basic"}
+    req = urllib.request.Request(
+        "https://api.tavily.com/search",
+        data=json.dumps(payload).encode("utf-8"), method="POST",
+        headers={"Content-Type": "application/json", "User-Agent": UA})
+    with urllib.request.urlopen(req, timeout=30) as r:
+        data = json.loads(r.read().decode("utf-8", "replace"))
+    return [{"title": x.get("title", ""), "url": x.get("url", "")}
+            for x in data.get("results", []) if x.get("url")]
+
+
 def web_search(query, limit=10):
     """Search for the fact hunt — no key needed. DuckDuckGo first;
     from GitHub's runners DDG answers empty (IP reputation), so
     Yahoo! Japan is the second engine. Returns [{title, url}]."""
+    if TAVILY_KEY:
+        try:
+            out = _tavily_search(query, limit)
+            log(f"web search (tavily): {len(out)} results")
+            if out:
+                return out
+        except Exception as e:
+            log(f"web search failed (tavily): {type(e).__name__}")
     engines = (
         ("ddg", "https://html.duckduckgo.com/html/?q=", _parse_ddg),
         ("ddg-lite", "https://lite.duckduckgo.com/lite/?q=", _parse_ddg),
@@ -1390,6 +1525,332 @@ def follow_rule_links(page_url, page_html, cache):
     return "\n\n".join(texts), found
 
 
+def _rep_load():
+    try:
+        return json.loads(REP_FILE.read_text(encoding="utf-8"))
+    except Exception:
+        return {}
+
+
+def _rep_bump(host, kind):
+    if not host:
+        return
+    rep = _rep_load()
+    e = rep.setdefault(host, {"ok": 0, "blocked": 0})
+    e[kind] = e.get(kind, 0) + 1
+    try:
+        REP_FILE.write_text(json.dumps(rep, ensure_ascii=False,
+                                       indent=1), encoding="utf-8")
+    except Exception:
+        pass
+
+
+def _read_url_text(url):
+    """Read one page for the revisit/watch arms: reputation-aware
+    (a host that blocked us twice and never answered goes straight
+    to the Jina rescue), Jina as the net, bumps the reputation."""
+    host = urllib.parse.urlparse(url).netloc.lower()
+    e = _rep_load().get(host, {})
+    jina_first = e.get("blocked", 0) >= 2 and e.get("ok", 0) == 0
+    text = ""
+    if not jina_first:
+        try:
+            text = html_to_text(fetch(url))
+            if len(text) >= 200:
+                _rep_bump(host, "ok")
+        except Exception:
+            _rep_bump(host, "blocked")
+    if len(text) < 200:
+        text = rescue_text(url, text)
+    return text
+
+
+def _changes_load():
+    try:
+        return json.loads(CHANGES_FILE.read_text(encoding="utf-8"))
+    except Exception:
+        return []
+
+
+def _changes_save(changes):
+    try:
+        CHANGES_FILE.write_text(json.dumps(changes[-50:],
+                                ensure_ascii=False, indent=1),
+                                encoding="utf-8")
+    except Exception:
+        pass
+
+
+def _diff_answers(old_answers, new_answers):
+    old = {a["criterion"]: a["verdict"] for a in old_answers}
+    diffs = []
+    for a in new_answers:
+        cid = a["criterion"]
+        if cid in old and old[cid] != a["verdict"]:
+            diffs.append({"criterion": cid, "label": a["label"],
+                          "from": old[cid], "to": a["verdict"],
+                          "quote": a["quote"]})
+    return diffs
+
+
+REVISIT_MIN_AGE_H = 48
+
+
+def revisit_facts():
+    """Living memory: re-read the stalest known places (max 2 per
+    run), compare verdicts, record what CHANGED. Facts with no
+    stored criteria borrow the plan from their want, once."""
+    if not FACTS_FILE.exists() or not (GROQ_KEY or GEMINI_KEY):
+        return []
+    try:
+        facts = json.loads(FACTS_FILE.read_text(encoding="utf-8"))
+    except Exception:
+        return []
+    now_dt = datetime.now(JST)
+    stale = []
+    for x in facts:
+        if x.get("layer") == "artigo":
+            continue
+        try:
+            age = (now_dt - datetime.fromisoformat(
+                x["read_at"])).total_seconds() / 3600
+        except Exception:
+            continue
+        if age >= REVISIT_MIN_AGE_H:
+            stale.append((age, x))
+    stale.sort(key=lambda t: -t[0])
+    if not stale:
+        return []
+    wants_by_n = {}
+    if WANTS_FILE.exists():
+        try:
+            wants_by_n = {w.get("number"): w for w in
+                          json.loads(WANTS_FILE.read_text(
+                              encoding="utf-8"))}
+        except Exception:
+            pass
+    changes = _changes_load()
+    found, done = [], 0
+    for age, x in stale[:2]:
+        criteria = x.get("criteria")
+        if not criteria:
+            w = wants_by_n.get(x.get("want_number"))
+            if not w:
+                continue
+            try:
+                _, criteria = eye_plan(w)
+            except Exception:
+                continue
+            x["criteria"] = criteria
+        text = _read_url_text(x["url"])
+        if len(text) < 200:
+            log(f"revisit: could not re-read {x['url']}")
+            continue
+        name, answers = eye_read_page(
+            x["url"], _excerpts(text, criteria), criteria)
+        diffs = _diff_answers(x["answers"], answers)
+        x["answers"] = answers
+        x["read_at"] = now_dt.isoformat(timespec="seconds")
+        if diffs:
+            rec = {"name": x["name"], "url": x["url"],
+                   "at": x["read_at"], "diffs": diffs}
+            changes.append(rec)
+            found.append(rec)
+            x["last_change"] = rec
+            log(f"revisit MUDOU: {x['name']} - " + ", ".join(
+                f"{d['label']}: {d['from']}->{d['to']}" for d in diffs))
+        else:
+            log(f"revisit ok (sem mudanca): {x['name']}")
+        done += 1
+        eye_pace()
+    if done:
+        try:
+            FACTS_FILE.write_text(json.dumps(facts, ensure_ascii=False,
+                                  indent=1), encoding="utf-8")
+        except Exception:
+            pass
+        _changes_save(changes)
+    return found
+
+
+def _fact_skeleton(want, kind):
+    return {
+        "kind": kind, "want_number": want.get("number"),
+        "want_what": want.get("what"),
+        "swept_at": datetime.now(JST).isoformat(timespec="seconds"),
+        "fits": [], "fits_total": 0, "near": [], "near_total": 0,
+        "unconfirmed": [], "unconfirmed_total": 0, "examples": [],
+        "swept": 0, "rejected": 0, "notes": [], "sources": [],
+        "criteria": [], "places": [], "answered": 0,
+    }
+
+
+def hunt_deadline(want):
+    """kind=prazo: a date that matters. Pure calendar math, no web,
+    no eye — the robot counts the days and shouts when it nears."""
+    base = _fact_skeleton(want, "prazo")
+    try:
+        target = datetime.strptime(want["date"], "%Y-%m-%d").date()
+    except Exception:
+        base["verdict"] = ["QUERO de prazo sem data válida "
+                           "(use AAAA-MM-DD)."]
+        return base
+    days = (target - datetime.now(JST).date()).days
+    base["days_left"] = days
+    when = target.strftime("%d/%m/%Y")
+    if days < 0:
+        base["verdict"] = [f"⏰ 【{want['what']}】 já passou "
+                           f"({when}, há {-days} dias)."]
+    elif days == 0:
+        base["verdict"] = [f"🚨 【{want['what']}】 é HOJE ({when})."]
+        base["shout"] = [f"PRAZO HOJE: {want['what']} ({when})"]
+    elif days == 1:
+        base["verdict"] = [f"🚨 【{want['what']}】 é AMANHÃ ({when})."]
+        base["shout"] = [f"PRAZO AMANHÃ: {want['what']} ({when})"]
+    elif days <= 7:
+        base["verdict"] = [f"⚠️ 【{want['what']}】 faltam {days} dias "
+                           f"({when})."]
+        base["shout"] = [f"PRAZO em {days} dias: {want['what']} "
+                         f"({when})"]
+    else:
+        base["verdict"] = [f"⏳ 【{want['what']}】 faltam {days} dias "
+                           f"({when})."]
+    log(f"deadline: {want['what']} -> {days} days left")
+    return base
+
+
+def hunt_watch(want):
+    """kind=vigia: watch ONE page. The eye answers the want's
+    questions on every run; the answers go into a history and any
+    change from the last watch is a MUDOU (and a shout)."""
+    base = _fact_skeleton(want, "vigia")
+    url = want.get("url") or ""
+    if not url:
+        base["verdict"] = ["QUERO de vigia sem URL pra vigiar."]
+        return base
+    if not (GROQ_KEY or GEMINI_KEY):
+        base["eye"] = "off"
+        base["verdict"] = ["O olho está desligado — sem vigia."]
+        return base
+    base["eye"] = "on"
+    try:
+        _, criteria = eye_plan(want)
+    except Exception as e:
+        base["verdict"] = ["O olho piscou ao planejar a vigia."]
+        base["eye_error"] = _err_detail(e)
+        return base
+    base["criteria"] = [{"id": c["id"], "label": c["label"]}
+                        for c in criteria]
+    text = _read_url_text(url)
+    if len(text) < 200:
+        base["verdict"] = [f"Não consegui ler a página vigiada "
+                           f"({url})."]
+        return base
+    name, answers = eye_read_page(url, _excerpts(text, criteria),
+                                  criteria)
+    now = base["swept_at"]
+    try:
+        hist = json.loads(WATCH_FILE.read_text(encoding="utf-8"))
+    except Exception:
+        hist = {}
+    entries = hist.get(url, [])
+    diffs = _diff_answers(entries[-1]["answers"], answers) \
+        if entries else []
+    entries.append({"at": now, "answers": answers})
+    hist[url] = entries[-30:]
+    try:
+        WATCH_FILE.write_text(json.dumps(hist, ensure_ascii=False,
+                              indent=1), encoding="utf-8")
+    except Exception:
+        pass
+    base["places"] = [{"name": name or want["what"], "url": url,
+                       "domain": urllib.parse.urlparse(url).netloc,
+                       "answers": answers, "read_at": now,
+                       "read_pages": [url], "layer": "oficial"}]
+    base["answered"] = sum(1 for a in answers
+                           if a["verdict"] != "nao_diz")
+    base["swept"] = 1
+    vlabel = {"sim": "PODE", "nao": "NÃO PODE", "nao_diz": "NÃO DIZ"}
+    parts = " · ".join(
+        f"{a['label'].replace('?', '')}: {vlabel[a['verdict']]}"
+        for a in answers)
+    verdict = [f"Vigiando 【{name or want['what']}】 {parts}"]
+    if diffs:
+        changes = _changes_load()
+        changes.append({"name": name or want["what"], "url": url,
+                        "at": now, "diffs": diffs})
+        _changes_save(changes)
+        verdict.append("MUDOU desde a última vigia: " + " · ".join(
+            f"{d['label']}: {vlabel[d['from']]} → {vlabel[d['to']]}"
+            for d in diffs))
+        base["shout"] = [f"MUDOU na página vigiada "
+                         f"【{name or want['what']}】: " + " · ".join(
+                             f"{d['label']}: {d['from']}->{d['to']}"
+                             for d in diffs)]
+    base["verdict"] = verdict
+    base["eye_errors"] = dict(EYE_ERRORS)
+    log(f"watch: {url} -> {base['answered']} answered, "
+        f"{len(diffs)} changes")
+    return base
+
+
+def _shout(items):
+    """Speak louder: ONE GitHub issue per new shout, deduped by
+    shout-log.json. Uses the workflow's built-in GH_TOKEN; without
+    a token the shout stays in the log and on the board."""
+    items = [i for i in items if i]
+    if not items:
+        return
+    key = "||".join(items)[:220]
+    try:
+        seen = json.loads(SHOUTLOG_FILE.read_text(encoding="utf-8"))
+    except Exception:
+        seen = []
+    if key in seen:
+        return
+    token = os.environ.get("GH_TOKEN", "")
+    repo = os.environ.get("GITHUB_REPOSITORY", "")
+    if token and repo:
+        body = ("O Karutaro achou algo que merece seus olhos:\n\n"
+                + "\n".join(f"- {i}" for i in items)
+                + "\n\nQuadro: https://wrongandugly.github.io/Karutaro/")
+        req = urllib.request.Request(
+            f"https://api.github.com/repos/{repo}/issues",
+            data=json.dumps({"title": "🐾 Karutaro: novidade na caça",
+                             "body": body}).encode("utf-8"),
+            method="POST",
+            headers={"Content-Type": "application/json",
+                     "User-Agent": UA,
+                     "Authorization": "Bearer " + token,
+                     "Accept": "application/vnd.github+json"})
+        try:
+            with urllib.request.urlopen(req, timeout=30):
+                pass
+            log("shout: issue aberta no GitHub")
+        except Exception as e:
+            log(f"shout: issue falhou ({type(e).__name__}) - "
+                "fica no quadro")
+    else:
+        log("shout (sem token aqui): " + " | ".join(items))
+    seen.append(key)
+    try:
+        SHOUTLOG_FILE.write_text(json.dumps(seen[-100:],
+                                 ensure_ascii=False, indent=1),
+                                 encoding="utf-8")
+    except Exception:
+        pass
+
+
+def _heartbeat():
+    try:
+        HEART_FILE.write_text(json.dumps(
+            {"last_run": datetime.now(JST).isoformat(
+                timespec="seconds")}, ensure_ascii=False),
+            encoding="utf-8")
+    except Exception:
+        pass
+
+
 def hunt_fact(want):
     """Fact/place hunt: search official pages, read them with the eye,
     verify every quote, deliver per-place verdicts + the library."""
@@ -1475,6 +1936,11 @@ def hunt_fact(want):
                 text = html_to_text(page_html)
             except Exception as e:
                 log(f"fact fetch failed {cand['url']}: {type(e).__name__}")
+                _rep_bump(urllib.parse.urlparse(
+                    cand["url"]).netloc.lower(), "blocked")
+            if len(text) >= 200:
+                _rep_bump(urllib.parse.urlparse(
+                    cand["url"]).netloc.lower(), "ok")
             if len(text) < 200:
                 text = rescue_text(cand["url"], text)
                 if len(text) >= 200:
@@ -1560,6 +2026,11 @@ def hunt_fact(want):
                        "dito por artigo/blog; a página oficial não "
                        "confirmou.")
     base["verdict"] = verdict
+    if full:
+        base["shout"] = [
+            f"QUERO Nº {want.get('number')}: "
+            f"【{full[0]['name']}】 responde SIM pra tudo - "
+            f"{full[0]['url']}"]
 
     # the library: every place read stays on record, date-stamped
     try:
@@ -1572,6 +2043,7 @@ def hunt_fact(want):
                                 "answers": p["answers"],
                                 "read_at": p["read_at"],
                                 "layer": p.get("layer", "oficial"),
+                                "criteria": criteria,
                                 "want_number": want.get("number")}
         FACTS_FILE.write_text(json.dumps(list(by_url.values()),
                                          ensure_ascii=False, indent=1),
@@ -1590,19 +2062,45 @@ def main():
         wants = json.loads(WANTS_FILE.read_text(encoding="utf-8"))
     elif WANT_FILE.exists():
         wants = [json.loads(WANT_FILE.read_text(encoding="utf-8"))]
+    _heartbeat()
+    changes = revisit_facts()
+    shouts = []
+    for c in changes:
+        shouts.append(
+            f"MUDOU: 【{c['name']}】 " + " · ".join(
+                f"{d['label']}: {d['from']}->{d['to']}"
+                for d in c["diffs"]) + f" - {c['url']}")
     active = [w for w in wants if w.get("active") and w.get("what")]
     if not active:
         log("no active wants — robot idle")
+        _shout(shouts)
         return 0
     board_want, board_results = None, None
     for want in active:
         log(f"=== QUERO Nº {want.get('number')}: {want.get('what')} ===")
-        results = hunt_fact(want) if want.get("kind") == "fato" else hunt(want)
+        kind = want.get("kind")
+        if kind == "fato":
+            results = hunt_fact(want)
+        elif kind == "prazo":
+            results = hunt_deadline(want)
+        elif kind == "vigia":
+            results = hunt_watch(want)
+        else:
+            results = hunt(want)
+        if results.get("shout"):
+            shouts.extend(results["shout"])
+        elif results.get("fits_total"):
+            shouts.append(
+                f"QUERO Nº {want.get('number')} "
+                f"({want.get('what')}): {results['fits_total']} "
+                "fit(s) na entrega de agora")
         out = BASE / f"results-{want.get('number')}.json"
         out.write_text(json.dumps(results, ensure_ascii=False, indent=1),
                        encoding="utf-8")
         board_want, board_results = want, results
-    board = {"want": board_want, "results": board_results, "wants": wants}
+    board = {"want": board_want, "results": board_results,
+             "wants": wants, "changes": changes}
+    _shout(shouts)
     BOARD_FILE.write_text(json.dumps(board, ensure_ascii=False, indent=1),
                           encoding="utf-8")
     log(f"board updated for QUERO Nº {board_want.get('number')}")
