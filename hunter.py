@@ -1133,6 +1133,23 @@ def candidate_layer(cand):
     return "oficial"
 
 
+def extract_main_text(html):
+    """The sieve (trafilatura, Apache-2.0, plugged 2026-11-28):
+    strips menus/footers/ads and keeps the page's real body.
+    Measured on the Tonbo page it kept both facts but threw away
+    95% of the page - so it is used ONLY where losing side boxes
+    costs nothing (article layer) or where the crude strip came
+    back empty. Official pages keep the full crude text: rules
+    live in tables and footers, and a fact hunter loses nothing.
+    Lazy import: absent library = no sieve, nothing breaks."""
+    try:
+        import trafilatura
+        t = trafilatura.extract(html or "", favor_precision=True)
+        return (t or "").strip()
+    except Exception:
+        return ""
+
+
 def html_to_text(html):
     h = re.sub(r"(?is)<(script|style|noscript)[^>]*>.*?</\\1>", " ", html or "")
     h = re.sub(r"(?s)<[^>]+>", " ", h)
@@ -2149,6 +2166,16 @@ def hunt_fact(want):
                 log(f"fact fetch failed {cand['url']}: {type(e).__name__}")
                 _rep_bump(urllib.parse.urlparse(
                     cand["url"]).netloc.lower(), "blocked")
+            layer = candidate_layer(cand)
+            if page_html:
+                main_text = extract_main_text(page_html)
+                if main_text and ((layer == "artigo"
+                                   and len(main_text) >= 800)
+                                  or (len(text) < 200
+                                      and len(main_text) >= 200)):
+                    log(f"fact read via peneira (trafilatura): "
+                        f"{cand['url']}")
+                    text = main_text
             if len(text) >= 200:
                 _rep_bump(urllib.parse.urlparse(
                     cand["url"]).netloc.lower(), "ok")
