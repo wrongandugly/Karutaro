@@ -22,7 +22,7 @@ BOARD_FILE = BASE / "board.json"
 LOG_FILE = BASE / "hunter.log"
 FACTS_FILE = BASE / "facts.json"
 GEMINI_KEY = os.environ.get("GEMINI_API_KEY", "")
-GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-2.5-flash")
+GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-3.8-flash")
 GROQ_KEY = os.environ.get("GROQ_API_KEY", "")
 GROQ_MODEL = os.environ.get("GROQ_MODEL", "openai/gpt-oss-120b")
 
@@ -996,6 +996,7 @@ def groq_json(prompt):
 
 _EYE_DOWN = set()        # lenses resting for the rest of this run
 _EYE_LAST = {"provider": None}
+EYE_ERRORS = {}   # per-lens last error detail, copied into the delivery
 
 
 def _is_limit_error(e):
@@ -1047,6 +1048,7 @@ def eye_json(prompt):
                 _EYE_DOWN.add(name)
                 log(f"eye: {name} hit its free limit — switching lens")
             else:
+                EYE_ERRORS[name] = _err_detail(e)
                 log(f"eye: {name} failed ({type(e).__name__}) "
                     "— trying the other lens")
     if last_err is not None:
@@ -1206,6 +1208,7 @@ def hunt_fact(want):
                                "tenta de novo na próxima varredura."]
         base["criteria"], base["places"] = [], []
         base["answered"] = 0
+        base["eye_errors"] = dict(EYE_ERRORS)
         return base
     base["criteria"] = [{"id": c["id"], "label": c["label"]} for c in criteria]
     log(f"eye plan: {len(queries)} queries, {len(criteria)} criteria")
@@ -1303,6 +1306,7 @@ def hunt_fact(want):
                               encoding="utf-8")
     except Exception as e:
         log(f"facts library write failed: {type(e).__name__}")
+    base["eye_errors"] = dict(EYE_ERRORS)
     log(f"fact delivery ready: {len(places)} places read, "
         f"{len(answered_places)} answered, {len(full)} full matches")
     return base
