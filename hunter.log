@@ -209,3 +209,10 @@
 [2026-11-28T13:33:07+09:00] === QUERO Nº 2: Onsen em Nagano ===
 [2026-11-28T13:33:07+09:00] fact delivery still fresh (0.4h) — facts change slowly; skipping the re-read
 [2026-11-28T13:33:07+09:00] board updated for QUERO Nº 2
+[2026-11-28T13:35:03+09:00] eye leash: criterion tatuagem downgraded to nao_diz - the quote was not in the read text
+[2026-11-28T13:35:03+09:00] eye leash: criterion crianca downgraded to nao_diz - the quote was not in the read text
+[2026-11-28T13:35:03+09:00] revisit read: 星野温泉 トンボの湯 -> [('tatuagem', 'nao_diz'), ('crianca', 'nao_diz')]
+[2026-11-28T13:35:03+09:00] revisit ok (sem mudanca): 星野温泉 トンボの湯
+[2026-11-28T13:35:06+09:00] === QUERO Nº 2: Onsen em Nagano ===
+[2026-11-28T13:35:06+09:00] fact delivery still fresh (0.4h) — facts change slowly; skipping the re-read
+[2026-11-28T13:35:06+09:00] board updated for QUERO Nº 2

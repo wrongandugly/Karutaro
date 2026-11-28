@@ -9,7 +9,7 @@
   "active": true,
   "via_issue": 1,
   "kind": "fato",
-  "note": "rodada 11 — pacote completo (memoria viva testa a Tonbo)"
+  "note": "rodada 12 — diagnostico da revisita da Tonbo"
  },
  "results": {
   "kind": "fato",
@@ -256,7 +256,7 @@
    "active": true,
    "via_issue": 1,
    "kind": "fato",
-   "note": "rodada 11 — pacote completo (memoria viva testa a Tonbo)"
+   "note": "rodada 12 — diagnostico da revisita da Tonbo"
   }
  ],
  "changes": []
