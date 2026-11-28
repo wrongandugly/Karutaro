@@ -26,6 +26,7 @@ a abrir o código próprio.
 | Trafilatura | Peneira de texto (limpa artigos) | Apache-2.0 | github.com/adbar/trafilatura |
 | Crawl4AI | Varredor de sites (ferramenta de onda) | Apache-2.0 | github.com/unclecode/crawl4ai |
 | curl_cffi | Disfarce leve de conexão | MIT | github.com/lexiforest/curl_cffi |
+| WeasyPrint | Molde do livro (fichas viram PDF) | BSD-3-Clause | github.com/Kozea/WeasyPrint |
 | Playwright | Navegador dos braços de produto | Apache-2.0 | github.com/microsoft/playwright |
 
 Condições dessas licenças (resumo): pode usar, modificar e vender
