@@ -1,1 +1,82 @@
-[]
+[
+ {
+  "name": "Go! NAGANO 長野県公式観光サイト",
+  "url": "https://www.go-nagano.net/hot-springs-and-relaxation/id19599",
+  "answers": [
+   {
+    "criterion": "criancas",
+    "label": "Pode crianças?",
+    "verdict": "nao_diz",
+    "quote": ""
+   },
+   {
+    "criterion": "tatuagem",
+    "label": "Pode tatuagem?",
+    "verdict": "nao_diz",
+    "quote": ""
+   }
+  ],
+  "read_at": "2026-11-28T12:30:34+09:00",
+  "want_number": 2
+ },
+ {
+  "name": "物味湯産手形",
+  "url": "https://www.monomiyusan.jp/",
+  "answers": [
+   {
+    "criterion": "criancas",
+    "label": "Pode crianças?",
+    "verdict": "nao_diz",
+    "quote": ""
+   },
+   {
+    "criterion": "tatuagem",
+    "label": "Pode tatuagem?",
+    "verdict": "nao_diz",
+    "quote": ""
+   }
+  ],
+  "read_at": "2026-11-28T12:30:34+09:00",
+  "want_number": 2
+ },
+ {
+  "name": "南信州 昼神温泉公式観光サイト",
+  "url": "https://hirugamionsen.jp/",
+  "answers": [
+   {
+    "criterion": "criancas",
+    "label": "Pode crianças?",
+    "verdict": "nao_diz",
+    "quote": ""
+   },
+   {
+    "criterion": "tatuagem",
+    "label": "Pode tatuagem?",
+    "verdict": "nao_diz",
+    "quote": ""
+   }
+  ],
+  "read_at": "2026-11-28T12:30:34+09:00",
+  "want_number": 2
+ },
+ {
+  "name": "白骨温泉",
+  "url": "https://www.shirahone.org/",
+  "answers": [
+   {
+    "criterion": "criancas",
+    "label": "Pode crianças?",
+    "verdict": "nao_diz",
+    "quote": ""
+   },
+   {
+    "criterion": "tatuagem",
+    "label": "Pode tatuagem?",
+    "verdict": "nao_diz",
+    "quote": ""
+   }
+  ],
+  "read_at": "2026-11-28T12:30:34+09:00",
+  "want_number": 2
+ }
+]

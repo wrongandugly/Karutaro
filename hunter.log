@@ -39,3 +39,27 @@
 [2026-11-28T12:24:30+09:00] fact candidates: 0 official pages (0 aggregator results skipped)
 [2026-11-28T12:24:33+09:00] fact delivery ready: 0 places read, 0 answered, 0 full matches
 [2026-11-28T12:24:33+09:00] board updated for QUERO Nº 2
+[2026-11-28T12:30:34+09:00] === QUERO Nº 2: Onsen em Nagano ===
+[2026-11-28T12:30:35+09:00] eye plan: 3 queries, 2 criteria
+[2026-11-28T12:30:35+09:00] fact queries: ['長野県 温泉 公式サイト', '長野県 子連れ 温泉 公式', '長野県 タトゥー 可 温泉']
+[2026-11-28T12:30:35+09:00] web search (ddg): 0 results
+[2026-11-28T12:30:36+09:00] web search (ddg-lite): 0 results
+[2026-11-28T12:30:37+09:00] web search (yahoo): 9 results
+[2026-11-28T12:30:38+09:00] web search (ddg): 0 results
+[2026-11-28T12:30:39+09:00] web search (ddg-lite): 10 results
+[2026-11-28T12:30:41+09:00] web search (ddg): 0 results
+[2026-11-28T12:30:41+09:00] web search (ddg-lite): 0 results
+[2026-11-28T12:30:42+09:00] web search (yahoo): 9 results
+[2026-11-28T12:30:43+09:00] fact candidates: 6 official pages (3 aggregator results skipped)
+[2026-11-28T12:30:48+09:00] eye read: Go! NAGANO 長野県公式観光サイト (0 answered)
+[2026-11-28T12:30:52+09:00] eye: groq hit its free limit — switching lens
+[2026-11-28T12:31:29+09:00] eye read: 物味湯産手形 (0 answered)
+[2026-11-28T12:32:43+09:00] eye: gemini failed (TimeoutError) — trying the other lens
+[2026-11-28T12:32:43+09:00] eye read failed https://www.bessho-spa.jp/: TimeoutError: The read operation timed out
+[2026-11-28T12:33:57+09:00] eye: gemini failed (TimeoutError) — trying the other lens
+[2026-11-28T12:33:57+09:00] eye read failed https://shibuonsen.net/: TimeoutError: The read operation timed out
+[2026-11-28T12:34:57+09:00] eye read: 南信州 昼神温泉公式観光サイト (0 answered)
+[2026-11-28T12:35:15+09:00] eye: gemini answered 503 (transient) — waiting 20s, retrying this lens
+[2026-11-28T12:36:18+09:00] eye read: 白骨温泉 (0 answered)
+[2026-11-28T12:36:31+09:00] fact delivery ready: 4 places read, 0 answered, 0 full matches
+[2026-11-28T12:36:31+09:00] board updated for QUERO Nº 2
