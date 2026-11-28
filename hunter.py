@@ -974,8 +974,28 @@ AGGREGATOR_HOSTS = (
     "jalan.net", "rakuten.co.jp", "tripadvisor", "jtb.co.jp",
     "booking.com", "expedia", "hotels.com", "ikyu.com", "agoda",
     "trivago", "relux.jp", "rurubu", "nifty.com", "yahoo.co.jp", "google.",
-    "amazon.", "trip.com", "kkday", "klook",
+    "amazon.", "trip.com", "kkday", "klook", "iko-yo.net", "rtrp.jp",
 )
+
+# The mix, with hierarchy (Fabricio, 2026-11-28): a place's OWN page
+# (or an official body speaking for it) carries the verdict; articles,
+# blogs and roundups only add context WITHOUT the seal — they help
+# find places and tell the mood, they never change a verdict.
+ARTICLE_HOSTS = (
+    "web-komachi.com", "nagano-webtown.net", "mamnavi.com",
+    "oyakotabimap.com",
+)
+ARTICLE_TITLE_MARKS = ("まとめ", "ランキング", "おすすめ", "特集",
+                       "厳選", "レポ", "体験談", "口コミ")
+
+
+def candidate_layer(cand):
+    host = urllib.parse.urlparse(cand["url"]).netloc.lower()
+    if any(a in host for a in ARTICLE_HOSTS):
+        return "artigo"
+    if any(m in (cand.get("title") or "") for m in ARTICLE_TITLE_MARKS):
+        return "artigo"
+    return "oficial"
 
 
 def html_to_text(html):
@@ -1148,6 +1168,9 @@ def eye_plan(want):
         "lugares (inclua a palavra 公式 em pelo menos duas). Uma das "
         "buscas deve mirar a página de REGRAS do lugar — inclua nela "
         "よくある質問 ou 利用案内.\n"
+        "- As buscas miram lugares INDIVIDUAIS (um banho, um parque), "
+        "nunca matérias sobre o tema — artigos aparecem sozinhos nos "
+        "resultados e viram contexto, sem selo.\n"
         "- criteria: UMA pergunta por critério citado nos detalhes. "
         "id = palavra curta sem espaços; label = a pergunta em português, "
         "curta (ex.: \"Pode tatuagem?\"); ask_jp = a mesma pergunta em "
@@ -1431,14 +1454,19 @@ def hunt_fact(want):
             seen_hosts.add(host)
             candidates.append(r)
         time.sleep(SLEEP_BETWEEN)
-    candidates = candidates[:6]
-    log(f"fact candidates: {len(candidates)} official pages "
+    officials, articles = [], []
+    for cand in candidates:
+        (officials if candidate_layer(cand) == "oficial"
+         else articles).append(cand)
+    officials, articles = officials[:6], articles[:3]
+    log(f"fact candidates: {len(officials)} official + "
+        f"{len(articles)} article pages "
         f"({skipped} aggregator results skipped)")
 
     places = []
     eye_pace()  # free-tier pace before the first read
     nav_cache = {}
-    for cand in candidates:
+    for cand in officials + articles:
         try:
             page_html = ""
             text = ""
@@ -1462,6 +1490,7 @@ def hunt_fact(want):
             read_text = _excerpts(full_text, criteria)
             name, answers = eye_read_page(cand["url"], read_text, criteria)
             places.append({
+                "layer": candidate_layer(cand),
                 "name": name or cand["title"], "url": cand["url"],
                 "domain": urllib.parse.urlparse(cand["url"]).netloc,
                 "answers": answers, "read_at": now,
@@ -1475,16 +1504,26 @@ def hunt_fact(want):
                 base["eye_error"] = _err_detail(e)
         eye_pace()  # free-tier pace between eye calls
 
-    answered_places = [p for p in places
+    off_places = [p for p in places if p.get("layer") == "oficial"]
+    answered_places = [p for p in off_places
                        if any(a["verdict"] != "nao_diz" for a in p["answers"])]
-    full = [p for p in places
+    full = [p for p in off_places
             if all(a["verdict"] == "sim" for a in p["answers"])]
     base["places"] = places
     base["answered"] = len(answered_places)
     base["fits_total"] = len(answered_places)
     base["swept"] = len(places)
     base["sources"] = [{"name": "Páginas oficiais (olho)",
-                        "status": "ok", "found": len(places)}]
+                        "status": "ok", "found": len(off_places)}]
+    art_places = [p for p in places if p.get("layer") == "artigo"]
+    if art_places:
+        base["sources"].append(
+            {"name": "Artigos/blogs (contexto, sem selo)",
+             "status": "ok", "found": len(art_places)})
+        base["notes"].append(
+            f"{len(art_places)} artigo(s)/blog(s) lidos como CONTEXTO "
+            "(sem selo): ajudam a achar lugares e contam o clima, mas "
+            "nunca mudam o veredito — quem manda é a página oficial.")
     if skipped:
         base["notes"].append(
             f"{skipped} resultado(s) de agregadores (reservas/guias) foram "
@@ -1512,6 +1551,14 @@ def hunt_fact(want):
         parts = " · ".join(f"{a['label'].replace('?', '')}: {vlabel[a['verdict']]}"
                            for a in p["answers"])
         verdict.append(f"【{p['name']}】 {parts}")
+    art_hits = [p for p in art_places
+                if any(a["verdict"] != "nao_diz" for a in p["answers"])]
+    for p in art_hits[:3]:
+        parts = " · ".join(f"{a['label'].replace('?', '')}: {vlabel[a['verdict']]}"
+                           for a in p["answers"])
+        verdict.append(f"Contexto (sem selo): 【{p['name']}】 {parts} — "
+                       "dito por artigo/blog; a página oficial não "
+                       "confirmou.")
     base["verdict"] = verdict
 
     # the library: every place read stays on record, date-stamped
@@ -1524,6 +1571,7 @@ def hunt_fact(want):
             by_url[p["url"]] = {"name": p["name"], "url": p["url"],
                                 "answers": p["answers"],
                                 "read_at": p["read_at"],
+                                "layer": p.get("layer", "oficial"),
                                 "want_number": want.get("number")}
         FACTS_FILE.write_text(json.dumps(list(by_url.values()),
                                          ensure_ascii=False, indent=1),
