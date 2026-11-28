@@ -28,7 +28,7 @@ jobs:
         run: |
           git config user.name "karutaro"
           git config user.email "karutaro@wrongandugly.github.io"
-          for f in ceu-agora.json ceu.log; do
+          for f in ceu-agora.json ceu-pontos.json ceu.log; do
             if [ -e "$f" ]; then git add "$f"; fi
           done
           git commit -m "ceu: leitura da sala O CEU AGORA" || echo "nada novo"
