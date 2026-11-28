@@ -1,0 +1,35 @@
+name: karutaro-ceu
+on:
+  push:
+    paths: ["ceu-request.json"]
+  schedule:
+    - cron: "17 * * * *"   # de hora em hora (creditos OpenSky anonimos: ~7/rodada)
+  workflow_dispatch:
+jobs:
+  ceu:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    concurrency:
+      group: karutaro-ceu
+      cancel-in-progress: false
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Ler o ceu
+        env:
+          NASA_FIRMS_KEY: ${{ secrets.NASA_FIRMS_KEY }}
+        run: python3 ceu.py
+      - name: Gravar no caderno
+        if: always()
+        run: |
+          git config user.name "karutaro"
+          git config user.email "karutaro@wrongandugly.github.io"
+          for f in ceu-agora.json ceu.log; do
+            if [ -e "$f" ]; then git add "$f"; fi
+          done
+          git commit -m "ceu: leitura da sala O CEU AGORA" || echo "nada novo"
+          git push || echo "push falhou (provavel corrida) — proxima rodada grava"
