@@ -32,6 +32,9 @@ jobs:
       - name: Peneira (Trafilatura)
         continue-on-error: true
         run: pip install trafilatura
+      - name: Disfarce leve (curl_cffi)
+        continue-on-error: true
+        run: pip install curl_cffi
       - name: Intake (issue da pagina -> wants.json)
         if: github.event_name == 'issues'
         env:
