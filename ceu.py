@@ -34,6 +34,13 @@ def fogos(key):
     """NASA FIRMS: CSV do mundo (VIIRS SNPP, 1 dia). Conta mundo + caixa do Japao."""
     url = "https://firms.modaps.eosdis.nasa.gov/api/area/csv/%s/VIIRS_SNPP_NRT/world/1" % key
     raw = get(url, timeout=120).decode("utf-8", "replace")
+    primeira = raw.splitlines()[0] if raw.splitlines() else ""
+    if "latitude" not in primeira:
+        # a FIRMS respondeu texto de erro (ex.: chave invalida) em vez de CSV:
+        # NUNCA contar isso como zero fogos — registra o comeco da resposta e falha.
+        with open("ceu.log", "a", encoding="utf-8") as f:
+            f.write("[ceu debug] FIRMS respondeu: " + raw[:160].replace("\n", " ") + "\n")
+        raise ValueError("resposta inesperada da FIRMS")
     rows = list(csv.DictReader(io.StringIO(raw)))
     mundo = len(rows)
     japao = 0
