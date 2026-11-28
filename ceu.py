@@ -57,14 +57,6 @@ def fogos(key):
             rows = r
     if rows is None:
         raise ValueError("FIRMS nao respondeu em nenhuma fonte")
-    primeira = raw.splitlines()[0] if raw.splitlines() else ""
-    if "latitude" not in primeira:
-        # a FIRMS respondeu texto de erro (ex.: chave invalida) em vez de CSV:
-        # NUNCA contar isso como zero fogos — registra o comeco da resposta e falha.
-        with open("ceu.log", "a", encoding="utf-8") as f:
-            f.write("[ceu debug] FIRMS respondeu: " + raw[:160].replace("\n", " ") + "\n")
-        raise ValueError("resposta inesperada da FIRMS")
-    rows = list(csv.DictReader(io.StringIO(raw)))
     mundo = len(rows)
     japao = 0
     for r in rows:
