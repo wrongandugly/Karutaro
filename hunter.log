@@ -240,3 +240,6 @@
 [2026-11-28T14:07:55+09:00] furtivo: usando o chromium /home/runner/.cache/ms-playwright/chromium-1255/chrome-linux64/chrome
 [2026-11-28T14:08:03+09:00] fact read via scrapling (furtivo forcado): https://www.web-komachi.com/?p=311022
 [2026-11-28T14:08:03+09:00] board updated for QUERO Nº 90
+[2026-11-28T14:09:41+09:00] === QUERO Nº 2: Onsen em Nagano ===
+[2026-11-28T14:09:41+09:00] fact delivery still fresh (1.0h) — facts change slowly; skipping the re-read
+[2026-11-28T14:09:41+09:00] board updated for QUERO Nº 2
