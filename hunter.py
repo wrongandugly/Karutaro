@@ -996,9 +996,11 @@ def groq_json(prompt):
     return json.loads(text)
 
 
-_EYE_DOWN = set()        # lenses resting for the rest of this run
-_EYE_LAST = {"provider": None}
-EYE_ERRORS = {}   # per-lens last error detail, copied into the delivery
+_EYE_DOWN = set()
+_EYE_LAST = {"provider": "groq"}
+EYE_ERRORS = {}
+_EYE_REST_UNTIL = {}
+_EYE_STRIKES = {}
 
 
 def _is_limit_error(e):
@@ -1026,8 +1028,10 @@ def _err_detail(e):
 def eye_json(prompt):
     """The eye, with two lenses (Fabricio's call, 2026-11-25): Groq
     reads first; when its free quota ends, Gemini takes over. A lens
-    that hits its limit rests for the rest of the run — the queue
-    never stops."""
+    that hits its PER-MINUTE free limit rests (65s, then 5 min) and
+    comes back — the other lens keeps working meanwhile. Only a
+    lens that hits the limit 3 times sits out the rest of the run.
+    The queue never stops."""
     providers = []
     if GROQ_KEY:
         providers.append(("groq", groq_json))
@@ -1037,34 +1041,56 @@ def eye_json(prompt):
         raise RuntimeError(
             "no eye key (GROQ_API_KEY/GEMINI_API_KEY) — the eye is off")
     last_err = None
-    for name, fn in providers:
-        if name in _EYE_DOWN:
-            continue
-        for attempt in (1, 2):
-            try:
-                out = fn(prompt)
-                _EYE_LAST["provider"] = name
-                return out
-            except Exception as e:
-                last_err = e
-                code = getattr(e, "code", None)
-                is_timeout = isinstance(e, TimeoutError)
-                if attempt == 1 and (code in (500, 502, 503, 504)
-                                     or is_timeout):
-                    wait = 10 if is_timeout else 20
-                    why = "timed out" if is_timeout else f"answered {code}"
-                    log(f"eye: {name} {why} (transient) — "
-                        f"waiting {wait}s, retrying this lens")
+    for _pass in range(2):
+        for name, fn in providers:
+            if name in _EYE_DOWN:
+                continue
+            if time.time() < _EYE_REST_UNTIL.get(name, 0):
+                continue
+            for attempt in (1, 2):
+                try:
+                    out = fn(prompt)
+                    _EYE_LAST["provider"] = name
+                    return out
+                except Exception as e:
+                    last_err = e
+                    code = getattr(e, "code", None)
+                    is_timeout = isinstance(e, TimeoutError)
+                    if attempt == 1 and (code in (500, 502, 503, 504)
+                                         or is_timeout):
+                        wait = 10 if is_timeout else 20
+                        why = ("timed out" if is_timeout
+                               else f"answered {code}")
+                        log(f"eye: {name} {why} (transient) — "
+                            f"waiting {wait}s, retrying this lens")
+                        time.sleep(wait)
+                        continue
+                    if _is_limit_error(e):
+                        _EYE_STRIKES[name] = _EYE_STRIKES.get(name, 0) + 1
+                        if _EYE_STRIKES[name] >= 3:
+                            _EYE_DOWN.add(name)
+                            log(f"eye: {name} hit its free limit 3x — "
+                                "sitting out this run")
+                        else:
+                            rest = 65 if _EYE_STRIKES[name] == 1 else 300
+                            _EYE_REST_UNTIL[name] = time.time() + rest
+                            log(f"eye: {name} hit its free limit — "
+                                f"resting {rest}s, other lens keeps going")
+                    else:
+                        EYE_ERRORS[name] = _err_detail(e)
+                        log(f"eye: {name} failed ({type(e).__name__}) "
+                            "— trying the other lens")
+                    break
+        if _pass == 0 and last_err is None:
+            resting = [t for n, t in _EYE_REST_UNTIL.items()
+                       if n not in _EYE_DOWN and t > time.time()]
+            if resting:
+                wait = min(resting) - time.time() + 2
+                if wait <= 320:
+                    log(f"eye: all lenses resting — waiting {int(wait)}s")
                     time.sleep(wait)
                     continue
-                if _is_limit_error(e):
-                    _EYE_DOWN.add(name)
-                    log(f"eye: {name} hit its free limit — switching lens")
-                else:
-                    EYE_ERRORS[name] = _err_detail(e)
-                    log(f"eye: {name} failed ({type(e).__name__}) "
-                        "— trying the other lens")
-                break
+        break
     if last_err is not None:
         raise last_err
     raise RuntimeError("both eye lenses are resting")
@@ -1087,7 +1113,9 @@ def eye_plan(want):
         '{"queries": ["...","...","..."], "criteria": '
         '[{"id":"...","label":"...","ask_jp":"..."}]}\n'
         "- queries: 3 buscas em JAPONÊS para achar as páginas OFICIAIS dos "
-        "lugares (inclua a palavra 公式 em pelo menos duas).\n"
+        "lugares (inclua a palavra 公式 em pelo menos duas). Uma das "
+        "buscas deve mirar a página de REGRAS do lugar — inclua nela "
+        "よくある質問 ou 利用案内.\n"
         "- criteria: UMA pergunta por critério citado nos detalhes. "
         "id = palavra curta sem espaços; label = a pergunta em português, "
         "curta (ex.: \"Pode tatuagem?\"); ask_jp = a mesma pergunta em "
@@ -1206,6 +1234,61 @@ def eye_read_page(url, page_text, criteria):
     return (got.get("place_name") or "").strip(), out
 
 
+RULE_LINK_WORDS = ("よくある質問", "faq", "ご利用案内", "利用案内",
+                   "ご利用について", "入浴", "注意事項", "お願い",
+                   "ルール", "規則", "施設案内", "営業案内",
+                   "annai", "guide", "rules")
+
+
+def follow_rule_links(page_url, page_html, cache):
+    """Teach the feet: from a site's front page, follow up to 2
+    same-host links that smell like rules (FAQ / usage guide) and
+    bring their text back — that is where tattoo/children rules
+    live, never on the front page. Returns (text, [urls])."""
+    host = urllib.parse.urlparse(page_url).netloc.lower()
+    found = []
+    for m in re.finditer(r'<a[^>]+href="([^"]+)"[^>]*>(.*?)</a>',
+                         page_html, re.S | re.I):
+        href = unescape(m.group(1)).strip()
+        label = unescape(re.sub(r"<[^>]+>", "", m.group(2))).strip().lower()
+        if not href or href.startswith(("#", "javascript:", "mailto:",
+                                         "tel:")):
+            continue
+        full = urllib.parse.urljoin(page_url, href)
+        p = urllib.parse.urlparse(full)
+        if p.netloc.lower() != host:
+            continue
+        hay = label + " " + p.path.lower()
+        if any(w in hay for w in RULE_LINK_WORDS):
+            clean = full.split("#")[0]
+            if clean != page_url.split("#")[0] and clean not in found:
+                found.append(clean)
+        if len(found) >= 2:
+            break
+    def _score(u):
+        p = urllib.parse.urlparse(u).path.lower()
+        s = 0
+        if "faq" in p:
+            s += 3
+        if "day-use" in p or "%e6%97%a5%e5%b8%b0" in p:
+            s += 3
+        if "annai" in p:
+            s += 2
+        return s
+    found.sort(key=_score, reverse=True)
+    texts = []
+    for u in found:
+        if u not in cache:
+            try:
+                cache[u] = html_to_text(fetch(u))
+            except Exception as e:
+                log(f"fact nav failed {u}: {type(e).__name__}")
+                cache[u] = ""
+        if cache[u]:
+            texts.append(cache[u][:4500])
+    return "\n\n".join(texts), found
+
+
 def hunt_fact(want):
     """Fact/place hunt: search official pages, read them with the eye,
     verify every quote, deliver per-place verdicts + the library."""
@@ -1276,17 +1359,25 @@ def hunt_fact(want):
 
     places = []
     eye_pace()  # free-tier pace before the first read
+    nav_cache = {}
     for cand in candidates:
         try:
-            text = html_to_text(fetch(cand["url"]))
+            page_html = fetch(cand["url"])
+            text = html_to_text(page_html)
             if len(text) < 200:
                 log(f"fact page too short ({len(text)} chars): {cand['url']}")
                 continue
-            name, answers = eye_read_page(cand["url"], text, criteria)
+            nav_text, nav_urls = follow_rule_links(cand["url"], page_html,
+                                                   nav_cache)
+            if nav_urls:
+                log(f"fact nav: {cand['url']} -> {nav_urls}")
+            full_text = (nav_text + "\n\n" + text) if nav_text else text
+            name, answers = eye_read_page(cand["url"], full_text, criteria)
             places.append({
                 "name": name or cand["title"], "url": cand["url"],
                 "domain": urllib.parse.urlparse(cand["url"]).netloc,
                 "answers": answers, "read_at": now,
+                "read_pages": [cand["url"]] + nav_urls,
             })
             log(f"eye read: {name or cand['url']} "
                 f"({sum(1 for a in answers if a['verdict'] != 'nao_diz')} answered)")
