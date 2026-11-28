@@ -117,7 +117,8 @@ def rescue_text(url, direct_text, force_stealth=False):
                 log(f"fact read via scrapling (furtivo forcado): {url}")
                 return st
         except Exception as e:
-            log(f"scrapling falhou ({type(e).__name__}): {url}")
+            log(f"scrapling falhou ({type(e).__name__}: "
+                f"{str(e)[:200]}): {url}")
         return best
     if len(best) >= 200:
         return best
@@ -137,7 +138,7 @@ def rescue_text(url, direct_text, force_stealth=False):
             best = st
     except Exception as e:
         log(f"scrapling indisponivel/falhou "
-            f"({type(e).__name__}): {url}")
+            f"({type(e).__name__}: {str(e)[:200]}): {url}")
     return best
 
 
