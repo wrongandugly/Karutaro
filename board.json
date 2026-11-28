@@ -1,21 +1,20 @@
 {
  "want": {
-  "number": 2,
-  "what": "Onsen em Nagano",
-  "ceiling": null,
-  "details": "Pode crianças e tatuagem",
-  "deadline": "<!-- karutaro:quero -->",
-  "posted_at": "2026-11-24T23:32:38+09:00",
+  "number": 90,
+  "kind": "vigia",
   "active": true,
-  "via_issue": 1,
-  "kind": "fato",
-  "note": "rodada 13 — onda 2 completa (a Tonbo tem que virar MUDOU)"
+  "furtivo": false,
+  "url": "https://www.web-komachi.com/?p=311022",
+  "what": "Teste do furtivo: artigo da web-komachi sobre banho em Nagano",
+  "details": "Rodada 17: teste do disfarce leve (curl_cffi) — esta página devolveu 403 pro robô e segurou até o furtivo. Leia com o disfarce de conexão e diga o que ela afirma sobre o banho citado (nome, preço, regras), só o que estiver escrito nela.",
+  "disfarce": true,
+  "note": "rodada 17b — repetição limpa após corrida de salvamentos"
  },
  "results": {
-  "kind": "fato",
-  "want_number": 2,
-  "want_what": "Onsen em Nagano",
-  "swept_at": "2026-11-28T13:11:29+09:00",
+  "kind": "vigia",
+  "want_number": 90,
+  "want_what": "Teste do furtivo: artigo da web-komachi sobre banho em Nagano",
+  "swept_at": "2026-11-28T14:27:30+09:00",
   "fits": [],
   "fits_total": 0,
   "near": [],
@@ -23,218 +22,30 @@
   "unconfirmed": [],
   "unconfirmed_total": 0,
   "examples": [],
-  "swept": 7,
+  "swept": 0,
   "rejected": 0,
-  "notes": [
-   "1 artigo(s)/blog(s) lidos como CONTEXTO (sem selo): ajudam a achar lugares e contam o clima, mas nunca mudam o veredito — quem manda é a página oficial.",
-   "4 resultado(s) de agregadores (reservas/guias) foram ignorados — o olho lê a página oficial do lugar.",
-   "Cada veredito só vale com o trecho da página ao lado — sem trecho, o Karutaro marca NÃO DIZ. Leitura de 28/11/2026."
-  ],
-  "sources": [
-   {
-    "name": "Páginas oficiais (olho)",
-    "status": "ok",
-    "found": 6
-   },
-   {
-    "name": "Artigos/blogs (contexto, sem selo)",
-    "status": "ok",
-    "found": 1
-   }
-  ],
-  "eye": "on",
+  "notes": [],
+  "sources": [],
   "criteria": [
    {
-    "id": "crianca",
-    "label": "Pode crianças?"
+    "id": "nome",
+    "label": "Nome do banho?"
    },
    {
-    "id": "tatuagem",
-    "label": "Pode tatuagem?"
+    "id": "preco",
+    "label": "Preço?"
+   },
+   {
+    "id": "regras",
+    "label": "Regras?"
    }
   ],
-  "places": [
-   {
-    "layer": "oficial",
-    "name": "物味湯産手形",
-    "url": "https://www.monomiyusan.jp/",
-    "domain": "www.monomiyusan.jp",
-    "answers": [
-     {
-      "criterion": "crianca",
-      "label": "Pode crianças?",
-      "verdict": "nao_diz",
-      "quote": ""
-     },
-     {
-      "criterion": "tatuagem",
-      "label": "Pode tatuagem?",
-      "verdict": "nao_diz",
-      "quote": ""
-     }
-    ],
-    "read_at": "2026-11-28T13:11:29+09:00",
-    "read_pages": [
-     "https://www.monomiyusan.jp/",
-     "https://www.monomiyusan.jp/faq",
-     "https://www.monomiyusan.jp/guide-camera"
-    ]
-   },
-   {
-    "layer": "oficial",
-    "name": "別所温泉観光協会",
-    "url": "https://www.bessho-spa.jp/",
-    "domain": "www.bessho-spa.jp",
-    "answers": [
-     {
-      "criterion": "crianca",
-      "label": "Pode crianças?",
-      "verdict": "nao_diz",
-      "quote": ""
-     },
-     {
-      "criterion": "tatuagem",
-      "label": "Pode tatuagem?",
-      "verdict": "nao_diz",
-      "quote": ""
-     }
-    ],
-    "read_at": "2026-11-28T13:11:29+09:00",
-    "read_pages": [
-     "https://www.bessho-spa.jp/",
-     "https://www.bessho-spa.jp/sight/guide.html"
-    ]
-   },
-   {
-    "layer": "oficial",
-    "name": "旅館一覧",
-    "url": "https://shibuonsen.net/",
-    "domain": "shibuonsen.net",
-    "answers": [
-     {
-      "criterion": "crianca",
-      "label": "Pode crianças?",
-      "verdict": "nao_diz",
-      "quote": ""
-     },
-     {
-      "criterion": "tatuagem",
-      "label": "Pode tatuagem?",
-      "verdict": "nao_diz",
-      "quote": ""
-     }
-    ],
-    "read_at": "2026-11-28T13:11:29+09:00",
-    "read_pages": [
-     "https://shibuonsen.net/",
-     "https://shibuonsen.net/guide/day-use-onsen/",
-     "https://shibuonsen.net/guide/"
-    ]
-   },
-   {
-    "layer": "oficial",
-    "name": "南信州 昼神温泉公式観光サイト",
-    "url": "https://hirugamionsen.jp/",
-    "domain": "hirugamionsen.jp",
-    "answers": [
-     {
-      "criterion": "crianca",
-      "label": "Pode crianças?",
-      "verdict": "nao_diz",
-      "quote": ""
-     },
-     {
-      "criterion": "tatuagem",
-      "label": "Pode tatuagem?",
-      "verdict": "nao_diz",
-      "quote": ""
-     }
-    ],
-    "read_at": "2026-11-28T13:11:29+09:00",
-    "read_pages": [
-     "https://hirugamionsen.jp/"
-    ]
-   },
-   {
-    "layer": "oficial",
-    "name": "白骨温泉",
-    "url": "https://www.shirahone.org/",
-    "domain": "www.shirahone.org",
-    "answers": [
-     {
-      "criterion": "crianca",
-      "label": "Pode crianças?",
-      "verdict": "nao_diz",
-      "quote": ""
-     },
-     {
-      "criterion": "tatuagem",
-      "label": "Pode tatuagem?",
-      "verdict": "nao_diz",
-      "quote": ""
-     }
-    ],
-    "read_at": "2026-11-28T13:11:29+09:00",
-    "read_pages": [
-     "https://www.shirahone.org/"
-    ]
-   },
-   {
-    "layer": "oficial",
-    "name": "野沢温泉村",
-    "url": "https://www.vill.nozawaonsen.nagano.jp/",
-    "domain": "www.vill.nozawaonsen.nagano.jp",
-    "answers": [
-     {
-      "criterion": "crianca",
-      "label": "Pode crianças?",
-      "verdict": "nao_diz",
-      "quote": ""
-     },
-     {
-      "criterion": "tatuagem",
-      "label": "Pode tatuagem?",
-      "verdict": "nao_diz",
-      "quote": ""
-     }
-    ],
-    "read_at": "2026-11-28T13:11:29+09:00",
-    "read_pages": [
-     "https://www.vill.nozawaonsen.nagano.jp/"
-    ]
-   },
-   {
-    "layer": "artigo",
-    "name": "Go! NAGANO 長野県公式観光サイト",
-    "url": "https://www.go-nagano.net/hot-springs-and-relaxation/id19599",
-    "domain": "www.go-nagano.net",
-    "answers": [
-     {
-      "criterion": "crianca",
-      "label": "Pode crianças?",
-      "verdict": "nao_diz",
-      "quote": ""
-     },
-     {
-      "criterion": "tatuagem",
-      "label": "Pode tatuagem?",
-      "verdict": "nao_diz",
-      "quote": ""
-     }
-    ],
-    "read_at": "2026-11-28T13:11:29+09:00",
-    "read_pages": [
-     "https://www.go-nagano.net/hot-springs-and-relaxation/id19599",
-     "https://www.go-nagano.net/area-guide/",
-     "https://www.go-nagano.net/travel-guide/"
-    ]
-   }
-  ],
+  "places": [],
   "answered": 0,
+  "eye": "on",
   "verdict": [
-   "Li 7 páginas oficiais e nenhuma respondeu às suas perguntas — sigo vigiando."
-  ],
-  "eye_errors": {}
+   "Não consegui ler a página vigiada (https://www.web-komachi.com/?p=311022)."
+  ]
  },
  "wants": [
   {
@@ -261,12 +72,13 @@
   {
    "number": 90,
    "kind": "vigia",
-   "active": false,
-   "furtivo": true,
+   "active": true,
+   "furtivo": false,
    "url": "https://www.web-komachi.com/?p=311022",
    "what": "Teste do furtivo: artigo da web-komachi sobre banho em Nagano",
-   "details": "Esta página devolveu 403 pro robô. Leia com o navegador furtivo e diga o que ela afirma sobre o banho citado (nome do lugar, preço, regras) — só o que estiver escrito nela. (rodada 15: diagnostico com o erro completo no diario) (rodada 16: com o conserto do chromium)",
-   "note": "teste do furtivo encerrado 2026-11-28: mecanica provada, komachi segue muralha"
+   "details": "Rodada 17: teste do disfarce leve (curl_cffi) — esta página devolveu 403 pro robô e segurou até o furtivo. Leia com o disfarce de conexão e diga o que ela afirma sobre o banho citado (nome, preço, regras), só o que estiver escrito nela.",
+   "disfarce": true,
+   "note": "rodada 17b — repetição limpa após corrida de salvamentos"
   }
  ],
  "changes": []

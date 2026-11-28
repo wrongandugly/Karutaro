@@ -2,7 +2,7 @@
  "kind": "vigia",
  "want_number": 90,
  "want_what": "Teste do furtivo: artigo da web-komachi sobre banho em Nagano",
- "swept_at": "2026-11-28T14:07:53+09:00",
+ "swept_at": "2026-11-28T14:27:30+09:00",
  "fits": [],
  "fits_total": 0,
  "near": [],
@@ -17,15 +17,15 @@
  "criteria": [
   {
    "id": "nome",
-   "label": "Nome do lugar"
+   "label": "Nome do banho?"
   },
   {
    "id": "preco",
-   "label": "Preço"
+   "label": "Preço?"
   },
   {
    "id": "regras",
-   "label": "Regras"
+   "label": "Regras?"
   }
  ],
  "places": [],
