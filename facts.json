@@ -131,17 +131,17 @@
    {
     "criterion": "tatuagem",
     "label": "Pode tatuagem?",
-    "verdict": "nao_diz",
-    "quote": ""
+    "verdict": "sim",
+    "quote": "タトゥー、刺青がある方の入浴 ただし、指定のカバーシール8枚でタトゥー等が隠せる場合に限り、入浴可能です。カバーシールの寸法は、10 × 8センチです。受付でお買い求めください。"
    },
    {
     "criterion": "crianca",
     "label": "Pode crianças?",
-    "verdict": "nao_diz",
-    "quote": ""
+    "verdict": "sim",
+    "quote": "子供（3歳～小学生）1,050円"
    }
   ],
-  "read_at": "2026-11-25T10:00:00+09:00",
+  "read_at": "2026-11-28T13:48:18+09:00",
   "want_number": 2,
   "criteria": [
    {
@@ -166,7 +166,28 @@
      "幼児"
     ]
    }
-  ]
+  ],
+  "last_change": {
+   "name": "星野温泉 トンボの湯",
+   "url": "https://www.hoshino-area.jp/tombo-no-yu/",
+   "at": "2026-11-28T13:48:18+09:00",
+   "diffs": [
+    {
+     "criterion": "tatuagem",
+     "label": "Pode tatuagem?",
+     "from": "nao_diz",
+     "to": "sim",
+     "quote": "タトゥー、刺青がある方の入浴 ただし、指定のカバーシール8枚でタトゥー等が隠せる場合に限り、入浴可能です。カバーシールの寸法は、10 × 8センチです。受付でお買い求めください。"
+    },
+    {
+     "criterion": "crianca",
+     "label": "Pode crianças?",
+     "from": "nao_diz",
+     "to": "sim",
+     "quote": "子供（3歳～小学生）1,050円"
+    }
+   ]
+  }
  },
  {
   "name": "高峰温泉",
