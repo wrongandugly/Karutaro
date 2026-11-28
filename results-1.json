@@ -1,7 +1,7 @@
 {
  "want_number": 1,
  "want_what": "CX-5 キャリア",
- "swept_at": "2026-11-28T04:03:50+09:00",
+ "swept_at": "2026-11-28T10:21:16+09:00",
  "fits": [
   {
    "title": "US.67 INNOエアロベース キャリアセット マツダ KE2fw CX-5",
@@ -46,6 +46,16 @@
    "has_bolts": false
   },
   {
+   "title": "【未使用未開封・在庫品】カーメイト INNO TR151 システムキャリア ウィンターキャリア 取付フック マツダ CX-5 XS300",
+   "price": 4400,
+   "url": "https://auctions.yahoo.co.jp/jp/auction/1201873010",
+   "image": "https://auc-pctr.c.yimg.jp/i/auctions.c.yimg.jp/images.auctions.yahoo.co.jp/image/dr000/auc0109/user/3cdef80869895a768cc89a52e78062ebc989931533fe204e779a5b78f19218db/i-img1200x900-17590622033085zrhd4x355485.jpg?pri=l&w=300&h=300&up=0&nf_src=sy&nf_path=images/auc/pc/top/image/1.0.3/na_170x170.png&nf_st=200",
+   "source": "Yahoo! Auctions",
+   "kind": "auction",
+   "reason": "passou do teto em ¥400",
+   "over": 400
+  },
+  {
    "title": "【未使用未開封・在庫品】カーメイト INNO TR151 TR取付フック CX-5 XS300用 システムキャリア ウィンターキャリア",
    "price": 4400,
    "url": "https://auctions.yahoo.co.jp/jp/auction/w1195816775",
@@ -79,16 +89,6 @@
    "kind": "auction",
    "reason": "passou do teto em ¥2,000",
    "over": 2000
-  },
-  {
-   "title": "カーメイト(CARMATE) ルーフキャリア inno ベーシック取付フック マツダ CX5(H.24-)他 TR151",
-   "price": 6926,
-   "url": "https://auctions.yahoo.co.jp/jp/auction/q1199102903",
-   "image": "https://auc-pctr.c.yimg.jp/i/auctions.c.yimg.jp/images.auctions.yahoo.co.jp/image/dr000/auc0109/user/8a115c057c8d98e5ea8a6e3b060fe5e16c35aad79730deed108c03f7d763be70/i-img500x500-17570906451008cudqjp122401.jpg?pri=l&w=300&h=300&up=0&nf_src=sy&nf_path=images/auc/pc/top/image/1.0.3/na_170x170.png&nf_st=200",
-   "source": "Yahoo! Auctions",
-   "kind": "auction",
-   "reason": "passou do teto em ¥2,926",
-   "over": 2926
   }
  ],
  "near_total": 59,
@@ -136,7 +136,7 @@
    "has_bolts": false
   }
  ],
- "unconfirmed_total": 28,
+ "unconfirmed_total": 27,
  "examples": [
   {
    "title": "【THULE】727 スノーキャリア",
@@ -167,8 +167,8 @@
    "has_bolts": false
   }
  ],
- "swept": 121,
- "rejected": 118,
+ "swept": 120,
+ "rejected": 117,
  "sources": [
   {
    "name": "Yahoo! Auctions",
@@ -193,7 +193,7 @@
   {
    "name": "Mercari",
    "status": "ok",
-   "found": 10
+   "found": 9
   },
   {
    "name": "Rakuten",
