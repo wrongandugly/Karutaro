@@ -28,6 +28,7 @@
   "url": "https://www.web-komachi.com/?p=311022",
   "what": "Teste do furtivo: artigo da web-komachi sobre banho em Nagano",
   "details": "Rodada 17: teste do disfarce leve (curl_cffi) — esta página devolveu 403 pro robô e segurou até o furtivo. Leia com o disfarce de conexão e diga o que ela afirma sobre o banho citado (nome, preço, regras), só o que estiver escrito nela.",
-  "disfarce": true
+  "disfarce": true,
+  "note": "rodada 17b — repetição limpa após corrida de salvamentos"
  }
 ]
