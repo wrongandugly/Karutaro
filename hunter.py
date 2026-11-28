@@ -1463,6 +1463,8 @@ def eye_read_page(url, page_text, criteria):
         a = answers.get(c["id"], {"verdict": "nao_diz", "quote": ""})
         if a["verdict"] != "nao_diz":
             if not a["quote"] or _squash(a["quote"]) not in squashed:
+                log(f"eye leash: criterion {c['id']} downgraded to "
+                    "nao_diz - the quote was not in the read text")
                 a = {"verdict": "nao_diz", "quote": ""}
         out.append({"criterion": c["id"], "label": c["label"],
                     "verdict": a["verdict"], "quote": a["quote"]})
@@ -1648,6 +1650,8 @@ def revisit_facts():
             continue
         name, answers = eye_read_page(
             x["url"], _excerpts(text, criteria), criteria)
+        log(f"revisit read: {x['name']} -> "
+            f"{[(a['criterion'], a['verdict']) for a in answers]}")
         diffs = _diff_answers(x["answers"], answers)
         x["answers"] = answers
         x["read_at"] = now_dt.isoformat(timespec="seconds")
