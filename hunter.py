@@ -122,11 +122,53 @@ def fetch_via_scrapling(url):
     return page.get_all_text() or ""
 
 
-def rescue_text(url, direct_text, force_stealth=False):
+def fetch_via_curlcffi(url):
+    """The light disguise (curl_cffi, MIT, plugged 2026-11-28):
+    imitates a real Chrome's CONNECTION fingerprint - many 403s
+    are the site recognizing a robot's connection, not its face.
+    Fast, no browser. Lazy import: absent = the rung is missing."""
+    from curl_cffi import requests as creq
+    r = creq.get(url, impersonate="chrome",
+                 headers={"User-Agent": UA}, timeout=30)
+    if r.status_code >= 400:
+        return ""
+    return html_to_text(r.text or "")
+
+
+def fetch_via_wayback(url):
+    """The time machine (archive.org Wayback API, free, no key,
+    plugged 2026-11-28): when a page is dead or gone, read its
+    last archived photo instead of giving up."""
+    api = ("https://archive.org/wayback/available?url="
+           + urllib.parse.quote(url, safe=""))
+    req = urllib.request.Request(api, headers={"User-Agent": UA})
+    with urllib.request.urlopen(req, timeout=30) as resp:
+        d = json.loads(resp.read().decode("utf-8", "replace"))
+    snap = (d.get("archived_snapshots") or {}).get("closest") or {}
+    if not snap.get("available") or not snap.get("url"):
+        return ""
+    log(f"wayback: foto de {snap.get('timestamp', '?')} de {url}")
+    return html_to_text(fetch(snap["url"]))
+
+
+def rescue_text(url, direct_text, force_stealth=False,
+                force_disguise=False):
     """The read ladder: direct (done by the caller) -> Jina ->
-    Scrapling stealth. Keeps the longest text. force_stealth
-    skips straight to the disguised browser (known fortresses)."""
+    light disguise (curl_cffi) -> Scrapling stealth -> Wayback
+    photo. Keeps the longest text. force_stealth / force_disguise
+    skip straight to that rung (known fortresses, tests)."""
     best = direct_text
+    if force_disguise:
+        try:
+            st = fetch_via_curlcffi(url)
+            if len(st) > len(best):
+                log(f"fact read via curl_cffi (disfarce forcado): "
+                    f"{url}")
+                return st
+        except Exception as e:
+            log(f"curl_cffi falhou ({type(e).__name__}: "
+                f"{str(e)[:200]}): {url}")
+        return best
     if force_stealth:
         try:
             st = fetch_via_scrapling(url)
@@ -149,6 +191,16 @@ def rescue_text(url, direct_text, force_stealth=False):
     if len(best) >= 200:
         return best
     try:
+        ct = fetch_via_curlcffi(url)
+        if len(ct) > len(best):
+            log(f"fact read via curl_cffi (disfarce leve): {url}")
+            best = ct
+    except Exception as e:
+        log(f"curl_cffi indisponivel/falhou "
+            f"({type(e).__name__}: {str(e)[:200]}): {url}")
+    if len(best) >= 200:
+        return best
+    try:
         st = fetch_via_scrapling(url)
         if len(st) > len(best):
             log(f"fact read via scrapling (resgate final): {url}")
@@ -156,6 +208,15 @@ def rescue_text(url, direct_text, force_stealth=False):
     except Exception as e:
         log(f"scrapling indisponivel/falhou "
             f"({type(e).__name__}: {str(e)[:200]}): {url}")
+    if len(best) >= 200:
+        return best
+    try:
+        wt = fetch_via_wayback(url)
+        if len(wt) > len(best):
+            log(f"fact read via wayback (pagina morta): {url}")
+            best = wt
+    except Exception:
+        pass
     return best
 
 
@@ -1660,15 +1721,16 @@ def _rep_bump(host, kind):
         pass
 
 
-def _read_url_text(url, force_stealth=False):
+def _read_url_text(url, force_stealth=False, force_disguise=False):
     """Read one page for the revisit/watch arms: reputation-aware
     (a host that blocked us twice and never answered goes straight
     to the Jina rescue), the ladder as the net, bumps the
     reputation. force_stealth goes straight to the disguised
     browser (Scrapling) - for known fortresses and for tests."""
     host = urllib.parse.urlparse(url).netloc.lower()
-    if force_stealth:
-        text = rescue_text(url, "", force_stealth=True)
+    if force_stealth or force_disguise:
+        text = rescue_text(url, "", force_stealth=force_stealth,
+                           force_disguise=force_disguise)
         _rep_bump(host, "ok" if len(text) >= 200 else "blocked")
         return text
     e = _rep_load().get(host, {})
@@ -1865,7 +1927,8 @@ def hunt_watch(want):
     base["criteria"] = [{"id": c["id"], "label": c["label"]}
                         for c in criteria]
     text = _read_url_text(url,
-                          force_stealth=bool(want.get("furtivo")))
+                          force_stealth=bool(want.get("furtivo")),
+                          force_disguise=bool(want.get("disfarce")))
     if len(text) < 200:
         base["verdict"] = [f"Não consegui ler a página vigiada "
                            f"({url})."]
