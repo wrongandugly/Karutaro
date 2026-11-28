@@ -29,3 +29,8 @@
 [2026-11-28T12:13:19+09:00] === QUERO Nº 2: Onsen em Nagano ===
 [2026-11-28T12:13:19+09:00] fact delivery still fresh (0.1h) — facts change slowly; skipping the re-read
 [2026-11-28T12:13:19+09:00] board updated for QUERO Nº 2
+[2026-11-28T12:22:00+09:00] === QUERO Nº 2: Onsen em Nagano ===
+[2026-11-28T12:22:00+09:00] eye: groq failed (HTTPError) — trying the other lens
+[2026-11-28T12:22:02+09:00] eye: gemini failed (HTTPError) — trying the other lens
+[2026-11-28T12:22:02+09:00] eye plan failed: HTTPError: HTTP Error 503: Service Unavailable
+[2026-11-28T12:22:02+09:00] board updated for QUERO Nº 2
