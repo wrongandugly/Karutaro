@@ -965,6 +965,7 @@ def gemini_json(prompt):
     req = urllib.request.Request(
         url, data=json.dumps(payload).encode("utf-8"), method="POST",
         headers={"Content-Type": "application/json",
+                 "User-Agent": UA,
                  "x-goog-api-key": GEMINI_KEY})
     with urllib.request.urlopen(req, timeout=60) as r:
         data = json.loads(r.read().decode("utf-8", "replace"))
@@ -985,6 +986,7 @@ def groq_json(prompt):
         "https://api.groq.com/openai/v1/chat/completions",
         data=json.dumps(payload).encode("utf-8"), method="POST",
         headers={"Content-Type": "application/json",
+                 "User-Agent": UA,
                  "Authorization": "Bearer " + GROQ_KEY})
     with urllib.request.urlopen(req, timeout=60) as r:
         data = json.loads(r.read().decode("utf-8", "replace"))
@@ -1038,19 +1040,27 @@ def eye_json(prompt):
     for name, fn in providers:
         if name in _EYE_DOWN:
             continue
-        try:
-            out = fn(prompt)
-            _EYE_LAST["provider"] = name
-            return out
-        except Exception as e:
-            last_err = e
-            if _is_limit_error(e):
-                _EYE_DOWN.add(name)
-                log(f"eye: {name} hit its free limit — switching lens")
-            else:
-                EYE_ERRORS[name] = _err_detail(e)
-                log(f"eye: {name} failed ({type(e).__name__}) "
-                    "— trying the other lens")
+        for attempt in (1, 2):
+            try:
+                out = fn(prompt)
+                _EYE_LAST["provider"] = name
+                return out
+            except Exception as e:
+                last_err = e
+                code = getattr(e, "code", None)
+                if code in (500, 502, 503, 504) and attempt == 1:
+                    log(f"eye: {name} answered {code} (transient) — "
+                        "waiting 20s, retrying this lens")
+                    time.sleep(20)
+                    continue
+                if _is_limit_error(e):
+                    _EYE_DOWN.add(name)
+                    log(f"eye: {name} hit its free limit — switching lens")
+                else:
+                    EYE_ERRORS[name] = _err_detail(e)
+                    log(f"eye: {name} failed ({type(e).__name__}) "
+                        "— trying the other lens")
+                break
     if last_err is not None:
         raise last_err
     raise RuntimeError("both eye lenses are resting")
