@@ -1,72 +1,24 @@
 {
+ "kind": "fato",
  "want_number": 2,
  "want_what": "Onsen em Nagano",
- "swept_at": "2026-11-28T10:22:22+09:00",
+ "swept_at": "2026-11-28T12:09:56+09:00",
  "fits": [],
  "fits_total": 0,
  "near": [],
  "near_total": 0,
  "unconfirmed": [],
  "unconfirmed_total": 0,
- "examples": [
-  {
-   "title": "ROYAL FOLKLORIC TROUPE OF TAHITI(タヒチ王立民俗劇団)/COCO'S TEMAEVA ※タヒチ(ポリネシア)",
-   "price": 800,
-   "url": "https://auctions.yahoo.co.jp/jp/auction/p1113988220",
-   "image": "https://auc-pctr.c.yimg.jp/i/auctions.c.yimg.jp/images.auctions.yahoo.co.jp/image/dr000/auc0411/users/4fb7087981b3576f274761b876cebd4e9d2abaef/i-img640x480-1700050566vdknyq2433268.jpg?pri=l&w=300&h=300&up=0&nf_src=sy&nf_path=images/auc/pc/top/image/1.0.3/na_170x170.png&nf_st=200",
-   "source": "Yahoo! Auctions",
-   "kind": "auction",
-   "reason": "o título não menciona 'onsen'"
-  },
-  {
-   "title": "トゥンバトゥ・クンバ●輸入盤「TUMBATU CUMBA」●パーカッション集団,アルゼンチン音楽手帖,Nico Falcoff●JOAO DONATO EMORIOカバー他",
-   "price": 1000,
-   "url": "https://auctions.yahoo.co.jp/jp/auction/c912710767",
-   "image": "https://auc-pctr.c.yimg.jp/i/auctions.c.yimg.jp/images.auctions.yahoo.co.jp/image/dr000/auc0206/users/5b846b76666a93973bf19dfc7a59b39f8dee92b4/i-img1200x900-1623760011qvc9by1001341.jpg?pri=l&w=300&h=300&up=0&nf_src=sy&nf_path=images/auc/pc/top/image/1.0.3/na_170x170.png&nf_st=200",
-   "source": "Yahoo! Auctions",
-   "kind": "auction",
-   "reason": "o título não menciona 'onsen'"
-  }
- ],
- "swept": 109,
- "rejected": 109,
- "sources": [
-  {
-   "name": "Yahoo! Auctions",
-   "status": "ok",
-   "found": 101
-  },
-  {
-   "name": "Yahoo!フリマ",
-   "status": "error: HTTPError",
-   "found": 0
-  },
-  {
-   "name": "Jimoty",
-   "status": "error: RuntimeError",
-   "found": 0
-  },
-  {
-   "name": "Up Garage",
-   "status": "ok",
-   "found": 0
-  },
-  {
-   "name": "Mercari",
-   "status": "ok",
-   "found": 8
-  },
-  {
-   "name": "Rakuten",
-   "status": "error: RuntimeError",
-   "found": 0
-  }
- ],
- "notes": [
-  "Fontes que não responderam nesta varredura: Yahoo!フリマ, Jimoty, Rakuten. O robô tenta de novo na próxima.",
-  "Nada dentro do teto e das especificações por enquanto — a procura continua viva e o robô segue vigiando."
- ],
+ "examples": [],
+ "swept": 0,
+ "rejected": 0,
+ "notes": [],
+ "sources": [],
+ "eye": "on",
  "verdict": [
-  "Nada fechado hoje — e nada nem perto do teto nesta varredura."
- ]
+  "O olho piscou na hora de planejar a busca — tenta de novo na próxima varredura."
+ ],
+ "criteria": [],
+ "places": [],
+ "answered": 0
 }

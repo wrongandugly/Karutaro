@@ -1,10 +1,10 @@
 {
  "want_number": 1,
  "want_what": "CX-5 キャリア",
- "swept_at": "2026-11-28T10:21:16+09:00",
+ "swept_at": "2026-11-28T12:09:56+09:00",
  "fits": [
   {
-   "title": "US.67 INNOエアロベース キャリアセット マツダ KE2fw CX-5",
+   "title": "US.54 INNOエアロベース キャリアセット マツダ KE2fw CX-5",
    "price": null,
    "url": "https://jp.mercari.com/item/m28673233035",
    "image": null,
@@ -12,7 +12,7 @@
    "kind": "classified"
   },
   {
-   "title": "US.17 THULE ルーフキャリア バーのみ CX-8 CX-5 MAZDA",
+   "title": "US.06 THULE ルーフキャリア バーのみ CX-8 CX-5 MAZDA",
    "price": null,
    "url": "https://jp.mercari.com/item/m65614899476",
    "image": null,
@@ -20,7 +20,15 @@
    "kind": "classified"
   },
   {
-   "title": "US.90 マツダcx-5 （平成28后期）ルーフキャリア SUV用",
+   "title": "US.19 なみのりこぞう マツダ cx8 cx5 キャリア 0147",
+   "price": null,
+   "url": "https://jp.mercari.com/item/m81870490329",
+   "image": null,
+   "source": "Mercari",
+   "kind": "classified"
+  },
+  {
+   "title": "US.80 マツダcx-5 （平成28后期）ルーフキャリア SUV用",
    "price": null,
    "url": "https://jp.mercari.com/item/m87924358247",
    "image": null,
@@ -28,7 +36,7 @@
    "kind": "classified"
   }
  ],
- "fits_total": 3,
+ "fits_total": 4,
  "near": [
   {
    "title": "【THULE】 ベースキャリア CX-5/KE系",
@@ -91,7 +99,7 @@
    "over": 2000
   }
  ],
- "near_total": 59,
+ "near_total": 60,
  "unconfirmed": [
   {
    "title": "ワケアリ!【メーカー不明】キャリアステー",
@@ -136,7 +144,7 @@
    "has_bolts": false
   }
  ],
- "unconfirmed_total": 27,
+ "unconfirmed_total": 26,
  "examples": [
   {
    "title": "【THULE】727 スノーキャリア",
@@ -168,12 +176,12 @@
   }
  ],
  "swept": 120,
- "rejected": 117,
+ "rejected": 116,
  "sources": [
   {
    "name": "Yahoo! Auctions",
    "status": "ok",
-   "found": 62
+   "found": 61
   },
   {
    "name": "Yahoo!フリマ",
@@ -193,7 +201,7 @@
   {
    "name": "Mercari",
    "status": "ok",
-   "found": 9
+   "found": 10
   },
   {
    "name": "Rakuten",
@@ -207,7 +215,7 @@
   "3 anúncio(s) do tipo certo, mas o título não confirma o encaixe na CX-5 (KE) — estão no QUASE pra você conferir."
  ],
  "verdict": [
-  "O achado: US.67 INNOエアロベース キャリアセット マツダ KE2fw CX-5 por preço no anúncio — encaixe confirmado.",
+  "O achado: US.54 INNOエアロベース キャリアセット マツダ KE2fw CX-5 por preço no anúncio — encaixe confirmado.",
   "Cuidado: 【THULE】 ベースキャリア CX-5/KE系 por ¥4,389 — loja longe, em Kagoshima — some o frete antes de comparar; o anúncio lista corpo e chaves, mas não os parafusos de fixação.",
   "Conjunto completo de verdade começa em ¥4,400 (Up Garage) — com chaves e parafusos listados no anúncio; mas a loja é em Sapporo, longe — some o frete antes de comparar."
  ]
