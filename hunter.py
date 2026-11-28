@@ -95,10 +95,27 @@ def fetch_via_scrapling(url):
     is not installed this rescue does not exist and the ladder
     simply ends at Jina."""
     from scrapling.fetchers import StealthyFetcher
-    page = StealthyFetcher.fetch(url, headless=True,
-                                 network_idle=True,
-                                 solve_cloudflare=True,
-                                 timeout=60000)
+    kwargs = dict(headless=True, network_idle=True,
+                  solve_cloudflare=True, timeout=60000)
+    # Round-15 diagnosis: the fetcher's OWN chromium build was
+    # missing from the cache (Executable doesn't exist at
+    # chromium-1248/...) even though the install step reported
+    # success. Fallback: point it at ANY chromium actually
+    # installed in the cache (the workflow installs one for
+    # Playwright) instead of dying on the missing default.
+    import glob as _glob
+    import os as _os
+    for pat in ("~/.cache/ms-playwright/chromium-*/"
+                "chrome-linux*/chrome",
+                "~/.cache/ms-playwright/"
+                "chromium_headless_shell-*/chrome-linux*/"
+                "headless_shell"):
+        hits = sorted(_glob.glob(_os.path.expanduser(pat)))
+        if hits:
+            kwargs["executable_path"] = hits[-1]
+            log(f"furtivo: usando o chromium {hits[-1]}")
+            break
+    page = StealthyFetcher.fetch(url, **kwargs)
     html = getattr(page, "html_content", "") or ""
     if html:
         return html_to_text(html)
