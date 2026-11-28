@@ -941,7 +941,7 @@ def hunt(want):
 AGGREGATOR_HOSTS = (
     "jalan.net", "rakuten.co.jp", "tripadvisor", "jtb.co.jp",
     "booking.com", "expedia", "hotels.com", "ikyu.com", "agoda",
-    "trivago", "relux.jp", "rurubu", "yahoo.co.jp", "google.",
+    "trivago", "relux.jp", "rurubu", "nifty.com", "yahoo.co.jp", "google.",
     "amazon.", "trip.com", "kkday", "klook",
 )
 
@@ -1081,7 +1081,7 @@ def eye_json(prompt):
                         log(f"eye: {name} failed ({type(e).__name__}) "
                             "— trying the other lens")
                     break
-        if _pass == 0 and last_err is None:
+        if _pass == 0:
             resting = [t for n, t in _EYE_REST_UNTIL.items()
                        if n not in _EYE_DOWN and t > time.time()]
             if resting:
@@ -1119,7 +1119,7 @@ def eye_plan(want):
         "- criteria: UMA pergunta por critério citado nos detalhes. "
         "id = palavra curta sem espaços; label = a pergunta em português, "
         "curta (ex.: \"Pode tatuagem?\"); ask_jp = a mesma pergunta em "
-        "japonês. Se os detalhes não citarem critério, crie um critério "
+        "japonês; keywords = 2 a 4 palavras japonesas que a página usaria ao tratar do assunto (ex.: para tatuagem: タトゥー, 刺青, 入れ墨). Se os detalhes não citarem critério, crie um critério "
         "único a partir da procura."
     )
     plan = eye_json(prompt)
@@ -1129,7 +1129,8 @@ def eye_plan(want):
         if c.get("id") and c.get("ask_jp"):
             criteria.append({"id": str(c["id"]),
                              "label": str(c.get("label") or c["id"]),
-                             "ask_jp": str(c["ask_jp"])})
+                             "ask_jp": str(c["ask_jp"]),
+                             "keywords": [str(k) for k in (c.get("keywords") or [])][:4]})
     if not queries:
         queries = [(want.get("what") or "") + " 公式"]
     if not criteria:
@@ -1198,6 +1199,50 @@ def web_search(query, limit=10):
 
 def _squash(s):
     return re.sub(r"\\s+", "", (s or "")).lower()
+
+
+def _excerpts(text, criteria, budget=11000):
+    """Ctrl+F reading: instead of the page's first N chars, cut
+    windows around the criteria's keywords — the rules live deep
+    in long pages (Tonbo no Yu's tattoo rule sits at char 29,690
+    of 39,785; a head-only read never reaches it)."""
+    words = []
+    for c in criteria:
+        for k in c.get("keywords") or []:
+            if k and k not in words:
+                words.append(k)
+    if not words or not text:
+        return text[:6000]
+    spans = []
+    for w in words:
+        start = 0
+        for _ in range(3):
+            i = text.find(w, start)
+            if i < 0:
+                break
+            spans.append((max(0, i - 700),
+                          min(len(text), i + len(w) + 700)))
+            start = i + len(w)
+    if not spans:
+        return text[:6000]
+    spans.sort()
+    merged = [list(spans[0])]
+    for a, b in spans[1:]:
+        if a <= merged[-1][1]:
+            merged[-1][1] = max(merged[-1][1], b)
+        else:
+            merged.append([a, b])
+    out, total = [], 0
+    for a, b in merged:
+        seg = text[a:b]
+        if total + len(seg) > budget:
+            seg = seg[:budget - total]
+        if seg:
+            out.append(seg)
+            total += len(seg)
+        if total >= budget:
+            break
+    return "\n…\n".join(out)
 
 
 def eye_read_page(url, page_text, criteria):
@@ -1372,7 +1417,8 @@ def hunt_fact(want):
             if nav_urls:
                 log(f"fact nav: {cand['url']} -> {nav_urls}")
             full_text = (nav_text + "\n\n" + text) if nav_text else text
-            name, answers = eye_read_page(cand["url"], full_text, criteria)
+            read_text = _excerpts(full_text, criteria)
+            name, answers = eye_read_page(cand["url"], read_text, criteria)
             places.append({
                 "name": name or cand["title"], "url": cand["url"],
                 "domain": urllib.parse.urlparse(cand["url"]).netloc,
