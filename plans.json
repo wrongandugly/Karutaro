@@ -37,5 +37,44 @@
     ]
    }
   ]
+ },
+ "90|Teste do furtivo: artigo da web-komachi sobre banho em Nagano|Esta página devolveu 403 pro robô. Leia com o navegador furtivo e diga o que ela afirma sobre o banho citado (nome do lugar, preço, regras) — só o que estiver escrito nela. (rodada 15: diagnostico com o erro completo no diario)|https://www.web-komachi.com/?p=311022": {
+  "queries": [
+   "長野 温泉 公式 サイト",
+   "長野 温泉 公式 料金",
+   "長野 温泉 利用案内 よくある質問 公式"
+  ],
+  "criteria": [
+   {
+    "id": "nome",
+    "label": "Nome do lugar?",
+    "ask_jp": "場所の名前は？",
+    "keywords": [
+     "温泉",
+     "名称",
+     "施設名"
+    ]
+   },
+   {
+    "id": "preco",
+    "label": "Preço?",
+    "ask_jp": "料金は？",
+    "keywords": [
+     "料金",
+     "入浴料",
+     "価格"
+    ]
+   },
+   {
+    "id": "regras",
+    "label": "Regras?",
+    "ask_jp": "利用規則は？",
+    "keywords": [
+     "利用案内",
+     "よくある質問",
+     "規則"
+    ]
+   }
+  ]
  }
 }

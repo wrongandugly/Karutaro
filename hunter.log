@@ -227,3 +227,10 @@
 [2026-11-28T13:50:18+09:00] === QUERO Nº 90: Teste do furtivo: artigo da web-komachi sobre banho em Nagano ===
 [2026-11-28T13:50:21+09:00] scrapling falhou (Error): https://www.web-komachi.com/?p=311022
 [2026-11-28T13:50:21+09:00] board updated for QUERO Nº 90
+[2026-11-28T14:06:20+09:00] === QUERO Nº 2: Onsen em Nagano ===
+[2026-11-28T14:06:20+09:00] fact delivery still fresh (0.9h) — facts change slowly; skipping the re-read
+[2026-11-28T14:06:20+09:00] === QUERO Nº 90: Teste do furtivo: artigo da web-komachi sobre banho em Nagano ===
+[2026-11-28T14:06:22+09:00] scrapling falhou (Error: BrowserType.launch_persistent_context: Executable doesn't exist at /home/runner/.cache/ms-playwright/chromium-1248/chrome-linux64/chrome
+╔════════════════════════════════════════════════════════════╗
+): https://www.web-komachi.com/?p=311022
+[2026-11-28T14:06:22+09:00] board updated for QUERO Nº 90
