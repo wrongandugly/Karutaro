@@ -53,6 +53,38 @@ def fetch(url):
     return raw.decode("utf-8", "replace")
 
 
+JINA_KEY = os.environ.get("JINA_API_KEY", "")
+
+
+def fetch_via_jina(url):
+    """Jina Reader rescue: the page's clean text, rendered by Jina
+    (JavaScript and all, PDFs too) via r.jina.ai. Keyless works
+    (20 reads/min per IP); a JINA_API_KEY secret raises the ceiling
+    whenever one exists — no code change needed."""
+    headers = {"User-Agent": UA, "Accept": "text/plain"}
+    if JINA_KEY:
+        headers["Authorization"] = "Bearer " + JINA_KEY
+    req = urllib.request.Request("https://r.jina.ai/" + url,
+                                 headers=headers)
+    with urllib.request.urlopen(req, timeout=60) as r:
+        return r.read().decode("utf-8", "replace")
+
+
+def rescue_text(url, direct_text):
+    """If the direct read came back thin, let Jina try; keep the
+    longer text. Returns the winning text (may be the direct one)."""
+    if len(direct_text) >= 200:
+        return direct_text
+    try:
+        jt = fetch_via_jina(url)
+        if len(jt) > len(direct_text):
+            log(f"fact read via jina: {url}")
+            return jt
+    except Exception:
+        pass
+    return direct_text
+
+
 def norm(s):
     return re.sub(r"\s+", " ", (s or "").lower()).strip()
 
@@ -1324,11 +1356,12 @@ def follow_rule_links(page_url, page_html, cache):
     texts = []
     for u in found:
         if u not in cache:
+            t = ""
             try:
-                cache[u] = html_to_text(fetch(u))
+                t = html_to_text(fetch(u))
             except Exception as e:
                 log(f"fact nav failed {u}: {type(e).__name__}")
-                cache[u] = ""
+            cache[u] = rescue_text(u, t)
         if cache[u]:
             texts.append(cache[u][:4500])
     return "\n\n".join(texts), found
@@ -1407,8 +1440,17 @@ def hunt_fact(want):
     nav_cache = {}
     for cand in candidates:
         try:
-            page_html = fetch(cand["url"])
-            text = html_to_text(page_html)
+            page_html = ""
+            text = ""
+            try:
+                page_html = fetch(cand["url"])
+                text = html_to_text(page_html)
+            except Exception as e:
+                log(f"fact fetch failed {cand['url']}: {type(e).__name__}")
+            if len(text) < 200:
+                text = rescue_text(cand["url"], text)
+                if len(text) >= 200:
+                    page_html = ""  # Jina text: no HTML links to follow
             if len(text) < 200:
                 log(f"fact page too short ({len(text)} chars): {cand['url']}")
                 continue
