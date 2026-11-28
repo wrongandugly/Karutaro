@@ -1,1 +1,189 @@
-{}
+{
+ "kind": "fato",
+ "want_number": 2,
+ "want_what": "Onsen em Nagano",
+ "swept_at": "2026-11-28T12:59:00+09:00",
+ "fits": [],
+ "fits_total": 0,
+ "near": [],
+ "near_total": 0,
+ "unconfirmed": [],
+ "unconfirmed_total": 0,
+ "examples": [],
+ "swept": 6,
+ "rejected": 0,
+ "notes": [
+  "2 resultado(s) de agregadores (reservas/guias) foram ignorados — o olho lê a página oficial do lugar.",
+  "Cada veredito só vale com o trecho da página ao lado — sem trecho, o Karutaro marca NÃO DIZ. Leitura de 28/11/2026."
+ ],
+ "sources": [
+  {
+   "name": "Páginas oficiais (olho)",
+   "status": "ok",
+   "found": 6
+  }
+ ],
+ "eye": "on",
+ "criteria": [
+  {
+   "id": "crianca",
+   "label": "Pode crianças?"
+  },
+  {
+   "id": "tatuagem",
+   "label": "Pode tatuagem?"
+  }
+ ],
+ "places": [
+  {
+   "name": "長野の温泉街・温泉地まとめGo NAGANO 長野県公式観光サイトhttps://www.go-nagano.net>hot-springs-and-relaxation",
+   "url": "https://www.go-nagano.net/hot-springs-and-relaxation/id19599",
+   "domain": "www.go-nagano.net",
+   "answers": [
+    {
+     "criterion": "crianca",
+     "label": "Pode crianças?",
+     "verdict": "nao_diz",
+     "quote": ""
+    },
+    {
+     "criterion": "tatuagem",
+     "label": "Pode tatuagem?",
+     "verdict": "nao_diz",
+     "quote": ""
+    }
+   ],
+   "read_at": "2026-11-28T12:59:00+09:00",
+   "read_pages": [
+    "https://www.go-nagano.net/hot-springs-and-relaxation/id19599",
+    "https://www.go-nagano.net/area-guide/",
+    "https://www.go-nagano.net/travel-guide/"
+   ]
+  },
+  {
+   "name": "信州物味湯産手形",
+   "url": "https://www.monomiyusan.jp/",
+   "domain": "www.monomiyusan.jp",
+   "answers": [
+    {
+     "criterion": "crianca",
+     "label": "Pode crianças?",
+     "verdict": "nao_diz",
+     "quote": ""
+    },
+    {
+     "criterion": "tatuagem",
+     "label": "Pode tatuagem?",
+     "verdict": "nao_diz",
+     "quote": ""
+    }
+   ],
+   "read_at": "2026-11-28T12:59:00+09:00",
+   "read_pages": [
+    "https://www.monomiyusan.jp/",
+    "https://www.monomiyusan.jp/faq",
+    "https://www.monomiyusan.jp/guide-camera"
+   ]
+  },
+  {
+   "name": "別所温泉観光協会",
+   "url": "https://www.bessho-spa.jp/",
+   "domain": "www.bessho-spa.jp",
+   "answers": [
+    {
+     "criterion": "crianca",
+     "label": "Pode crianças?",
+     "verdict": "nao_diz",
+     "quote": ""
+    },
+    {
+     "criterion": "tatuagem",
+     "label": "Pode tatuagem?",
+     "verdict": "nao_diz",
+     "quote": ""
+    }
+   ],
+   "read_at": "2026-11-28T12:59:00+09:00",
+   "read_pages": [
+    "https://www.bessho-spa.jp/",
+    "https://www.bessho-spa.jp/sight/guide.html"
+   ]
+  },
+  {
+   "name": "渋温泉旅館組合",
+   "url": "https://shibuonsen.net/",
+   "domain": "shibuonsen.net",
+   "answers": [
+    {
+     "criterion": "crianca",
+     "label": "Pode crianças?",
+     "verdict": "nao_diz",
+     "quote": ""
+    },
+    {
+     "criterion": "tatuagem",
+     "label": "Pode tatuagem?",
+     "verdict": "nao_diz",
+     "quote": ""
+    }
+   ],
+   "read_at": "2026-11-28T12:59:00+09:00",
+   "read_pages": [
+    "https://shibuonsen.net/",
+    "https://shibuonsen.net/guide/day-use-onsen/",
+    "https://shibuonsen.net/guide/"
+   ]
+  },
+  {
+   "name": "南信州 昼神温泉公式観光サイト",
+   "url": "https://hirugamionsen.jp/",
+   "domain": "hirugamionsen.jp",
+   "answers": [
+    {
+     "criterion": "crianca",
+     "label": "Pode crianças?",
+     "verdict": "nao_diz",
+     "quote": ""
+    },
+    {
+     "criterion": "tatuagem",
+     "label": "Pode tatuagem?",
+     "verdict": "nao_diz",
+     "quote": ""
+    }
+   ],
+   "read_at": "2026-11-28T12:59:00+09:00",
+   "read_pages": [
+    "https://hirugamionsen.jp/"
+   ]
+  },
+  {
+   "name": "白骨温泉",
+   "url": "https://www.shirahone.org/",
+   "domain": "www.shirahone.org",
+   "answers": [
+    {
+     "criterion": "crianca",
+     "label": "Pode crianças?",
+     "verdict": "nao_diz",
+     "quote": ""
+    },
+    {
+     "criterion": "tatuagem",
+     "label": "Pode tatuagem?",
+     "verdict": "nao_diz",
+     "quote": ""
+    }
+   ],
+   "read_at": "2026-11-28T12:59:00+09:00",
+   "read_pages": [
+    "https://www.shirahone.org/"
+   ]
+  }
+ ],
+ "answered": 0,
+ "verdict": [
+  "Li 6 páginas oficiais e nenhuma respondeu às suas perguntas — sigo vigiando."
+ ],
+ "eye_errors": {}
+}

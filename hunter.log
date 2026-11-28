@@ -122,3 +122,31 @@
 [2026-11-28T12:56:09+09:00] eye read failed https://www.web-komachi.com/?p=311022: HTTPError: HTTP Error 403: Forbidden
 [2026-11-28T12:56:12+09:00] fact delivery ready: 3 places read, 0 answered, 0 full matches
 [2026-11-28T12:56:12+09:00] board updated for QUERO Nº 2
+[2026-11-28T12:59:00+09:00] === QUERO Nº 2: Onsen em Nagano ===
+[2026-11-28T12:59:02+09:00] eye plan: 3 queries, 2 criteria
+[2026-11-28T12:59:02+09:00] fact queries: ['長野県 温泉 公式サイト', '長野 温泉 公式 よくある質問', '長野 温泉 タトゥー 可']
+[2026-11-28T12:59:02+09:00] web search (ddg): 0 results
+[2026-11-28T12:59:02+09:00] web search (ddg-lite): 0 results
+[2026-11-28T12:59:05+09:00] web search (yahoo): 9 results
+[2026-11-28T12:59:07+09:00] web search (ddg): 0 results
+[2026-11-28T12:59:07+09:00] web search (ddg-lite): 10 results
+[2026-11-28T12:59:08+09:00] web search (ddg): 0 results
+[2026-11-28T12:59:08+09:00] web search (ddg-lite): 0 results
+[2026-11-28T12:59:10+09:00] web search (yahoo): 9 results
+[2026-11-28T12:59:12+09:00] fact candidates: 6 official pages (2 aggregator results skipped)
+[2026-11-28T12:59:17+09:00] fact nav: https://www.go-nagano.net/hot-springs-and-relaxation/id19599 -> ['https://www.go-nagano.net/area-guide/', 'https://www.go-nagano.net/travel-guide/']
+[2026-11-28T12:59:18+09:00] eye read: https://www.go-nagano.net/hot-springs-and-relaxation/id19599 (0 answered)
+[2026-11-28T12:59:24+09:00] fact nav: https://www.monomiyusan.jp/ -> ['https://www.monomiyusan.jp/faq', 'https://www.monomiyusan.jp/guide-camera']
+[2026-11-28T12:59:25+09:00] eye read: 信州物味湯産手形 (0 answered)
+[2026-11-28T12:59:30+09:00] fact nav: https://www.bessho-spa.jp/ -> ['https://www.bessho-spa.jp/sight/guide.html']
+[2026-11-28T12:59:31+09:00] eye read: 別所温泉観光協会 (0 answered)
+[2026-11-28T12:59:37+09:00] fact nav: https://shibuonsen.net/ -> ['https://shibuonsen.net/guide/day-use-onsen/', 'https://shibuonsen.net/guide/']
+[2026-11-28T12:59:38+09:00] eye read: 渋温泉旅館組合 (0 answered)
+[2026-11-28T12:59:43+09:00] eye read: 南信州 昼神温泉公式観光サイト (0 answered)
+[2026-11-28T12:59:48+09:00] eye: groq hit its free limit — resting 65s, other lens keeps going
+[2026-11-28T12:59:58+09:00] eye: gemini answered 503 (transient) — waiting 20s, retrying this lens
+[2026-11-28T13:00:18+09:00] eye: gemini hit its free limit — resting 65s, other lens keeps going
+[2026-11-28T13:00:18+09:00] eye: all lenses resting — waiting 36s
+[2026-11-28T13:00:55+09:00] eye read: 白骨温泉 (0 answered)
+[2026-11-28T13:00:58+09:00] fact delivery ready: 6 places read, 0 answered, 0 full matches
+[2026-11-28T13:00:58+09:00] board updated for QUERO Nº 2
