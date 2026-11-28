@@ -26,3 +26,6 @@
 [2026-11-24T23:34:32+09:00] Rakuten: FAILED RuntimeError: no item links in response (bot wall or empty shell)
 [2026-11-24T23:34:33+09:00] delivery ready: 0 fits / 0 near / 0 unconfirmed / 2 examples / 100 swept / 100 rejected (sources ok: Yahoo! Auctions, Up Garage)
 [2026-11-24T23:34:33+09:00] board updated for QUERO Nº 2
+[2026-11-28T12:13:19+09:00] === QUERO Nº 2: Onsen em Nagano ===
+[2026-11-28T12:13:19+09:00] fact delivery still fresh (0.1h) — facts change slowly; skipping the re-read
+[2026-11-28T12:13:19+09:00] board updated for QUERO Nº 2

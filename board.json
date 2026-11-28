@@ -7,79 +7,32 @@
   "deadline": "<!-- karutaro:quero -->",
   "posted_at": "2026-11-24T23:32:38+09:00",
   "active": true,
-  "via_issue": 1
+  "via_issue": 1,
+  "kind": "fato"
  },
  "results": {
+  "kind": "fato",
   "want_number": 2,
   "want_what": "Onsen em Nagano",
-  "swept_at": "2026-11-24T23:34:33+09:00",
+  "swept_at": "2026-11-28T12:09:56+09:00",
   "fits": [],
   "fits_total": 0,
   "near": [],
   "near_total": 0,
   "unconfirmed": [],
   "unconfirmed_total": 0,
-  "examples": [
-   {
-    "title": "ROYAL FOLKLORIC TROUPE OF TAHITI(タヒチ王立民俗劇団)/COCO'S TEMAEVA ※タヒチ(ポリネシア)",
-    "price": 800,
-    "url": "https://auctions.yahoo.co.jp/jp/auction/p1113988220",
-    "image": "https://auc-pctr.c.yimg.jp/i/auctions.c.yimg.jp/images.auctions.yahoo.co.jp/image/dr000/auc0411/users/4fb7087981b3576f274761b876cebd4e9d2abaef/i-img640x480-1700050566vdknyq2433268.jpg?pri=l&w=300&h=300&up=0&nf_src=sy&nf_path=images/auc/pc/top/image/1.0.3/na_170x170.png&nf_st=200",
-    "source": "Yahoo! Auctions",
-    "kind": "auction",
-    "reason": "o título não menciona 'onsen'"
-   },
-   {
-    "title": "[CD] Coco's Temaeva / Royal Folkloric Troupe of Tahiti",
-    "price": 832,
-    "url": "https://auctions.yahoo.co.jp/jp/auction/e1192381572",
-    "image": "https://auc-pctr.c.yimg.jp/i/auctions.c.yimg.jp/images.auctions.yahoo.co.jp/image/dr000/auc0107/user/9b2895708eb1fb9ce7b14539032c017cec0605f02328b88b1cd8c0b45f7d164a/i-img1200x900-175231339934810niynd250412.jpg?pri=l&w=300&h=300&up=0&nf_src=sy&nf_path=images/auc/pc/top/image/1.0.3/na_170x170.png&nf_st=200",
-    "source": "Yahoo! Auctions",
-    "kind": "auction",
-    "reason": "o título não menciona 'onsen'"
-   }
-  ],
-  "swept": 100,
-  "rejected": 100,
-  "sources": [
-   {
-    "name": "Yahoo! Auctions",
-    "status": "ok",
-    "found": 100
-   },
-   {
-    "name": "Yahoo!フリマ",
-    "status": "error: HTTPError",
-    "found": 0
-   },
-   {
-    "name": "Jimoty",
-    "status": "error: RuntimeError",
-    "found": 0
-   },
-   {
-    "name": "Up Garage",
-    "status": "ok",
-    "found": 0
-   },
-   {
-    "name": "Mercari",
-    "status": "error: RuntimeError",
-    "found": 0
-   },
-   {
-    "name": "Rakuten",
-    "status": "error: RuntimeError",
-    "found": 0
-   }
-  ],
-  "notes": [
-   "Fontes que não responderam nesta varredura: Yahoo!フリマ, Jimoty, Mercari, Rakuten. O robô tenta de novo na próxima.",
-   "Nada dentro do teto e das especificações por enquanto — a procura continua viva e o robô segue vigiando."
-  ],
+  "examples": [],
+  "swept": 0,
+  "rejected": 0,
+  "notes": [],
+  "sources": [],
+  "eye": "on",
   "verdict": [
-   "Nada fechado hoje — e nada nem perto do teto nesta varredura."
-  ]
+   "O olho piscou na hora de planejar a busca — tenta de novo na próxima varredura."
+  ],
+  "criteria": [],
+  "places": [],
+  "answered": 0
  },
  "wants": [
   {
@@ -89,7 +42,7 @@
    "details": "CX-5 スキー スノーボード キャリア",
    "deadline": null,
    "posted_at": "2026-11-22T15:36:41+09:00",
-   "active": true
+   "active": false
   },
   {
    "number": 2,
@@ -99,7 +52,8 @@
    "deadline": "<!-- karutaro:quero -->",
    "posted_at": "2026-11-24T23:32:38+09:00",
    "active": true,
-   "via_issue": 1
+   "via_issue": 1,
+   "kind": "fato"
   }
  ]
 }
