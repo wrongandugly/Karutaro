@@ -1,0 +1,32 @@
+name: karutaro-book
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'book-request.json'
+permissions:
+  contents: write
+concurrency: karutaro-book
+jobs:
+  book:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Fontes e bibliotecas de impressao
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libpango-1.0-0 libharfbuzz0b fonts-noto-cjk
+      - run: pip install weasyprint
+      - name: Gera o livro
+        run: python3 book.py
+      - name: Grava o PDF
+        run: |
+          git config user.name "karutaro"
+          git config user.email "karutaro@wrongandugly.local"
+          for f in livro.pdf; do [ -e "$f" ] && git add "$f"; done
+          git commit -m "livro: PDF gerado das fichas" || echo "sem mudancas"
+          git push
