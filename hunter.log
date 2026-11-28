@@ -94,3 +94,31 @@
 [2026-11-28T12:52:41+09:00] eye read failed https://www.shirahone.org/: HTTPError: HTTP Error 429: Too Many Requests
 [2026-11-28T12:52:44+09:00] fact delivery ready: 3 places read, 0 answered, 0 full matches
 [2026-11-28T12:52:44+09:00] board updated for QUERO Nº 2
+[2026-11-28T12:54:27+09:00] === QUERO Nº 2: Onsen em Nagano ===
+[2026-11-28T12:54:29+09:00] eye plan: 3 queries, 2 criteria
+[2026-11-28T12:54:29+09:00] fact queries: ['長野 温泉 公式サイト 子供 受付', '長野 温泉 公式 タトゥー 可', '長野 温泉 よくある質問 タトゥー 子供']
+[2026-11-28T12:54:29+09:00] web search (ddg): 0 results
+[2026-11-28T12:54:30+09:00] web search (ddg-lite): 10 results
+[2026-11-28T12:54:31+09:00] web search (ddg): 0 results
+[2026-11-28T12:54:31+09:00] web search (ddg-lite): 10 results
+[2026-11-28T12:54:33+09:00] web search (ddg): 0 results
+[2026-11-28T12:54:33+09:00] web search (ddg-lite): 0 results
+[2026-11-28T12:54:35+09:00] web search (yahoo): 10 results
+[2026-11-28T12:54:36+09:00] fact candidates: 6 official pages (2 aggregator results skipped)
+[2026-11-28T12:54:43+09:00] fact nav: https://onsen.nifty.com/ft-kodure/nagano/ -> ['https://onsen.nifty.com/ueda-onsen/onsen006019/', 'https://onsen.nifty.com/ueda-onsen/onsen006019/coupon/']
+[2026-11-28T12:54:45+09:00] eye read: 地蔵温泉 十福の湯 (0 answered)
+[2026-11-28T12:54:51+09:00] fact nav: https://www.hoshino-area.jp/tombo-no-yu/ -> ['https://www.hoshino-area.jp/facility-guide', 'https://www.hoshino-area.jp/facility-guide/']
+[2026-11-28T12:54:51+09:00] eye: groq hit its free limit — resting 65s, other lens keeps going
+[2026-11-28T12:54:58+09:00] eye: gemini answered 503 (transient) — waiting 20s, retrying this lens
+[2026-11-28T12:55:23+09:00] eye read: 星野温泉 トンボの湯 (0 answered)
+[2026-11-28T12:55:39+09:00] eye: gemini hit its free limit — resting 65s, other lens keeps going
+[2026-11-28T12:55:39+09:00] eye read failed https://nagano-webtown.net/archives/5927: HTTPError: HTTP Error 429: Too Many Requests
+[2026-11-28T12:55:55+09:00] fact nav: https://www.takamine.co.jp/ -> ['https://www.takamine.co.jp/faq/']
+[2026-11-28T12:55:55+09:00] eye: all lenses resting — waiting 2s
+[2026-11-28T12:55:59+09:00] eye read: 高峰温泉 (0 answered)
+[2026-11-28T12:56:03+09:00] fact nav: https://www.city.nagano.nagano.jp/n150800/kanko/p002580.html -> ['https://www.city.nagano.nagano.jp/userguide.html']
+[2026-11-28T12:56:03+09:00] eye: groq hit its free limit — resting 300s, other lens keeps going
+[2026-11-28T12:56:03+09:00] eye read failed https://www.city.nagano.nagano.jp/n150800/kanko/p002580.html: HTTPError: HTTP Error 429: Too Many Requests
+[2026-11-28T12:56:09+09:00] eye read failed https://www.web-komachi.com/?p=311022: HTTPError: HTTP Error 403: Forbidden
+[2026-11-28T12:56:12+09:00] fact delivery ready: 3 places read, 0 answered, 0 full matches
+[2026-11-28T12:56:12+09:00] board updated for QUERO Nº 2

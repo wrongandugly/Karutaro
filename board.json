@@ -9,13 +9,13 @@
   "active": true,
   "via_issue": 1,
   "kind": "fato",
-  "note": "teste do olho — rodada 7 (pacote completo: navegação + descanso)"
+  "note": "teste do olho — rodada 7 (pacote completo: navegação + descanso) — disparo 2"
  },
  "results": {
   "kind": "fato",
   "want_number": 2,
   "want_what": "Onsen em Nagano",
-  "swept_at": "2026-11-28T12:50:45+09:00",
+  "swept_at": "2026-11-28T12:54:27+09:00",
   "fits": [],
   "fits_total": 0,
   "near": [],
@@ -26,7 +26,7 @@
   "swept": 3,
   "rejected": 0,
   "notes": [
-   "1 resultado(s) de agregadores (reservas/guias) foram ignorados — o olho lê a página oficial do lugar.",
+   "2 resultado(s) de agregadores (reservas/guias) foram ignorados — o olho lê a página oficial do lugar.",
    "Cada veredito só vale com o trecho da página ao lado — sem trecho, o Karutaro marca NÃO DIZ. Leitura de 28/11/2026."
   ],
   "sources": [
@@ -39,89 +39,88 @@
   "eye": "on",
   "criteria": [
    {
-    "id": "tattoo",
-    "label": "Pode tatuagem?"
+    "id": "criancas",
+    "label": "Pode crianças?"
    },
    {
-    "id": "criança",
-    "label": "Pode crianças?"
+    "id": "tatuagem",
+    "label": "Pode tatuagem?"
    }
   ],
   "eye_error": "HTTPError code=429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To m",
   "places": [
    {
-    "name": "一般社団法人 長野県観光機構",
-    "url": "https://www.go-nagano.net/hot-springs-and-relaxation/id19599",
-    "domain": "www.go-nagano.net",
+    "name": "地蔵温泉 十福の湯",
+    "url": "https://onsen.nifty.com/ft-kodure/nagano/",
+    "domain": "onsen.nifty.com",
     "answers": [
      {
-      "criterion": "tattoo",
-      "label": "Pode tatuagem?",
+      "criterion": "criancas",
+      "label": "Pode crianças?",
       "verdict": "nao_diz",
       "quote": ""
      },
      {
-      "criterion": "criança",
-      "label": "Pode crianças?",
+      "criterion": "tatuagem",
+      "label": "Pode tatuagem?",
       "verdict": "nao_diz",
       "quote": ""
      }
     ],
-    "read_at": "2026-11-28T12:50:45+09:00",
+    "read_at": "2026-11-28T12:54:27+09:00",
     "read_pages": [
-     "https://www.go-nagano.net/hot-springs-and-relaxation/id19599",
-     "https://www.go-nagano.net/area-guide/",
-     "https://www.go-nagano.net/travel-guide/"
+     "https://onsen.nifty.com/ft-kodure/nagano/",
+     "https://onsen.nifty.com/ueda-onsen/onsen006019/",
+     "https://onsen.nifty.com/ueda-onsen/onsen006019/coupon/"
     ]
    },
    {
-    "name": "信州物味湯産手形",
-    "url": "https://www.monomiyusan.jp/",
-    "domain": "www.monomiyusan.jp",
+    "name": "星野温泉 トンボの湯",
+    "url": "https://www.hoshino-area.jp/tombo-no-yu/",
+    "domain": "www.hoshino-area.jp",
     "answers": [
      {
-      "criterion": "tattoo",
-      "label": "Pode tatuagem?",
+      "criterion": "criancas",
+      "label": "Pode crianças?",
       "verdict": "nao_diz",
       "quote": ""
      },
      {
-      "criterion": "criança",
-      "label": "Pode crianças?",
+      "criterion": "tatuagem",
+      "label": "Pode tatuagem?",
       "verdict": "nao_diz",
       "quote": ""
      }
     ],
-    "read_at": "2026-11-28T12:50:45+09:00",
+    "read_at": "2026-11-28T12:54:27+09:00",
     "read_pages": [
-     "https://www.monomiyusan.jp/",
-     "https://www.monomiyusan.jp/faq",
-     "https://www.monomiyusan.jp/guide-camera"
+     "https://www.hoshino-area.jp/tombo-no-yu/",
+     "https://www.hoshino-area.jp/facility-guide",
+     "https://www.hoshino-area.jp/facility-guide/"
     ]
    },
    {
-    "name": "信州 渋温泉旅行館組合",
-    "url": "https://shibuonsen.net/",
-    "domain": "shibuonsen.net",
+    "name": "高峰温泉",
+    "url": "https://www.takamine.co.jp/",
+    "domain": "www.takamine.co.jp",
     "answers": [
      {
-      "criterion": "tattoo",
-      "label": "Pode tatuagem?",
+      "criterion": "criancas",
+      "label": "Pode crianças?",
       "verdict": "nao_diz",
       "quote": ""
      },
      {
-      "criterion": "criança",
-      "label": "Pode crianças?",
+      "criterion": "tatuagem",
+      "label": "Pode tatuagem?",
       "verdict": "nao_diz",
       "quote": ""
      }
     ],
-    "read_at": "2026-11-28T12:50:45+09:00",
+    "read_at": "2026-11-28T12:54:27+09:00",
     "read_pages": [
-     "https://shibuonsen.net/",
-     "https://shibuonsen.net/guide/day-use-onsen/",
-     "https://shibuonsen.net/guide/"
+     "https://www.takamine.co.jp/",
+     "https://www.takamine.co.jp/faq/"
     ]
    }
   ],
@@ -151,7 +150,7 @@
    "active": true,
    "via_issue": 1,
    "kind": "fato",
-   "note": "teste do olho — rodada 7 (pacote completo: navegação + descanso)"
+   "note": "teste do olho — rodada 7 (pacote completo: navegação + descanso) — disparo 2"
   }
  ]
 }

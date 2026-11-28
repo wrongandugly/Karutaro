@@ -98,5 +98,65 @@
   ],
   "read_at": "2026-11-28T12:50:45+09:00",
   "want_number": 2
+ },
+ {
+  "name": "地蔵温泉 十福の湯",
+  "url": "https://onsen.nifty.com/ft-kodure/nagano/",
+  "answers": [
+   {
+    "criterion": "criancas",
+    "label": "Pode crianças?",
+    "verdict": "nao_diz",
+    "quote": ""
+   },
+   {
+    "criterion": "tatuagem",
+    "label": "Pode tatuagem?",
+    "verdict": "nao_diz",
+    "quote": ""
+   }
+  ],
+  "read_at": "2026-11-28T12:54:27+09:00",
+  "want_number": 2
+ },
+ {
+  "name": "星野温泉 トンボの湯",
+  "url": "https://www.hoshino-area.jp/tombo-no-yu/",
+  "answers": [
+   {
+    "criterion": "criancas",
+    "label": "Pode crianças?",
+    "verdict": "nao_diz",
+    "quote": ""
+   },
+   {
+    "criterion": "tatuagem",
+    "label": "Pode tatuagem?",
+    "verdict": "nao_diz",
+    "quote": ""
+   }
+  ],
+  "read_at": "2026-11-28T12:54:27+09:00",
+  "want_number": 2
+ },
+ {
+  "name": "高峰温泉",
+  "url": "https://www.takamine.co.jp/",
+  "answers": [
+   {
+    "criterion": "criancas",
+    "label": "Pode crianças?",
+    "verdict": "nao_diz",
+    "quote": ""
+   },
+   {
+    "criterion": "tatuagem",
+    "label": "Pode tatuagem?",
+    "verdict": "nao_diz",
+    "quote": ""
+   }
+  ],
+  "read_at": "2026-11-28T12:54:27+09:00",
+  "want_number": 2
  }
 ]
