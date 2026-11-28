@@ -1106,32 +1106,62 @@ def eye_plan(want):
     return queries, criteria
 
 
-def ddg_search(query, limit=10):
-    """DuckDuckGo HTML/Lite search — no key needed. Returns [{title,url}]."""
+def _parse_ddg(html, limit):
     out, seen = [], set()
-    for base in ("https://html.duckduckgo.com/html/?q=",
-                 "https://lite.duckduckgo.com/lite/?q="):
-        try:
-            html = fetch(base + urllib.parse.quote(query))
-        except Exception as e:
-            log(f"ddg search failed ({base.split('/')[2]}): {type(e).__name__}")
+    for m in re.finditer(r'href="([^"]+)"[^>]*>([^<]{2,120})</a>', html):
+        href, title = m.group(1), unescape(m.group(2)).strip()
+        um = re.search(r"[?&]uddg=([^&]+)", href)
+        if um:
+            href = urllib.parse.unquote(um.group(1))
+        if not href.startswith("http") or href in seen:
             continue
-        for m in re.finditer(r'href="([^"]+)"[^>]*>([^<]{2,120})</a>', html):
-            href, title = m.group(1), unescape(m.group(2)).strip()
-            um = re.search(r"[?&]uddg=([^&]+)", href)
-            if um:
-                href = urllib.parse.unquote(um.group(1))
-            if not href.startswith("http") or href in seen:
-                continue
-            if "duckduckgo.com" in href:
-                continue
-            seen.add(href)
-            out.append({"title": title, "url": href})
-            if len(out) >= limit:
-                return out
+        if "duckduckgo.com" in href:
+            continue
+        seen.add(href)
+        out.append({"title": title, "url": href})
+        if len(out) >= limit:
+            break
+    return out
+
+
+def _parse_yahoo(html, limit):
+    """Yahoo! Japan search: result titles are direct links
+    (class sw-Card__titleInner) — no redirect wrapper."""
+    out, seen = [], set()
+    for m in re.finditer(
+            r'<a href="([^"]+)" class="sw-Card__titleInner"[^>]*>(.*?)</a>',
+            html, re.S):
+        href = unescape(m.group(1))
+        title = unescape(re.sub(r"<[^>]+>", "", m.group(2))).strip()
+        if not href.startswith("http") or href in seen:
+            continue
+        seen.add(href)
+        out.append({"title": title, "url": href})
+        if len(out) >= limit:
+            break
+    return out
+
+
+def web_search(query, limit=10):
+    """Search for the fact hunt — no key needed. DuckDuckGo first;
+    from GitHub's runners DDG answers empty (IP reputation), so
+    Yahoo! Japan is the second engine. Returns [{title, url}]."""
+    engines = (
+        ("ddg", "https://html.duckduckgo.com/html/?q=", _parse_ddg),
+        ("ddg-lite", "https://lite.duckduckgo.com/lite/?q=", _parse_ddg),
+        ("yahoo", "https://search.yahoo.co.jp/search?p=", _parse_yahoo),
+    )
+    for name, base, parse in engines:
+        try:
+            page = fetch(base + urllib.parse.quote(query))
+            out = parse(page, limit)
+        except Exception as e:
+            log(f"web search failed ({name}): {type(e).__name__}")
+            continue
+        log(f"web search ({name}): {len(out)} results")
         if out:
             return out
-    return out
+    return []
 
 
 def _squash(s):
@@ -1222,10 +1252,11 @@ def hunt_fact(want):
         return base
     base["criteria"] = [{"id": c["id"], "label": c["label"]} for c in criteria]
     log(f"eye plan: {len(queries)} queries, {len(criteria)} criteria")
+    log(f"fact queries: {queries}")
 
     candidates, seen_hosts, skipped = [], set(), 0
     for q in queries:
-        for r in ddg_search(q):
+        for r in web_search(q):
             host = urllib.parse.urlparse(r["url"]).netloc.lower()
             if any(a in host for a in AGGREGATOR_HOSTS):
                 skipped += 1
