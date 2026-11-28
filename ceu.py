@@ -13,6 +13,7 @@ import io
 import json
 import os
 import sys
+import time
 import urllib.request
 from datetime import datetime, timezone, timedelta
 
@@ -85,7 +86,9 @@ def avioes():
         d = json.loads(get("https://opensky-network.org/api/states/all", timeout=90).decode())
         st = d.get("states") or []
         out["mundo"] = sum(1 for s in st if s[8] is False)
-        out["pontos"] = [[round(s[6], 2), round(s[5], 2)] for s in st
+        out["pontos"] = [[round(s[6], 2), round(s[5], 2),
+                          int(s[10]) if s[10] is not None else 0,
+                          int(s[9]) if s[9] is not None else 0] for s in st
                          if s[8] is False and s[5] is not None and s[6] is not None][:6000]
     except Exception as e:
         out["nota_mundo"] = type(e).__name__
@@ -108,17 +111,36 @@ def sismo():
         return {"n": 0, "maior_mag": None, "maior_local": None, "fonte": "USGS · M4.5+ · 24h"}
     m = max(fs, key=lambda f: f["properties"]["mag"])
     pts = [{"lat": f["geometry"]["coordinates"][1], "lon": f["geometry"]["coordinates"][0],
-            "mag": f["properties"]["mag"], "local": f["properties"].get("place")} for f in fs]
+            "mag": f["properties"]["mag"], "local": f["properties"].get("place"),
+            "hora": f["properties"].get("time")} for f in fs]
     return {"n": len(fs), "maior_mag": m["properties"]["mag"],
             "maior_local": m["properties"].get("place"), "pontos": pts,
             "fonte": "USGS · M4.5+ · 24h"}
 
 
+def _rumo(la1, lo1, la2, lo2):
+    import math
+    p1, p2 = math.radians(la1), math.radians(la2)
+    dl = math.radians(lo2 - lo1)
+    x = math.sin(dl) * math.cos(p2)
+    y = math.cos(p1) * math.sin(p2) - math.sin(p1) * math.cos(p2) * math.cos(dl)
+    return round((math.degrees(math.atan2(x, y)) + 360) % 360, 1)
+
+
 def iss():
     d = json.loads(get("https://api.wheretheiss.at/v1/satellites/25544", timeout=30).decode())
-    return {"lat": round(d["latitude"], 1), "lon": round(d["longitude"], 1),
-            "alt_km": round(d["altitude"]), "vel_kmh": round(d["velocity"]),
-            "fonte": "wheretheiss.at · ISS agora"}
+    out = {"lat": round(d["latitude"], 2), "lon": round(d["longitude"], 2),
+           "alt_km": round(d["altitude"]), "vel_kmh": round(d["velocity"]),
+           "ts": d.get("timestamp"),
+           "fonte": "wheretheiss.at · ISS agora"}
+    try:
+        time.sleep(40)
+        d2 = json.loads(get("https://api.wheretheiss.at/v1/satellites/25544", timeout=30).decode())
+        out["rumo"] = _rumo(d["latitude"], d["longitude"],
+                            d2["latitude"], d2["longitude"])
+    except Exception:
+        pass
+    return out
 
 
 def main():
@@ -139,7 +161,7 @@ def main():
             data[nome] = fn()
         except Exception as e:
             data[nome] = {"nota": type(e).__name__}
-    pontos = {"gerado_em": data["gerado_em"],
+    pontos = {"gerado_em": data["gerado_em"], "ts": int(agora.timestamp()),
               "fogos": (data.get("fogos") or {}).pop("pontos", []),
               "avioes": (data.get("avioes") or {}).pop("pontos", []),
               "sismo": (data.get("sismo") or {}).pop("pontos", []),
