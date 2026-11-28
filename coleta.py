@@ -69,8 +69,12 @@ def coletar_alvo(hunter, alvo):
             if not texto or len(texto) < 400:
                 log(f"pagina vazia ou bloqueada: {url[:60]}")
                 continue
-            r = hunter.eye_json(PROMPT + "\n\nPAGINA:\n" + texto[:11000],
-                                max_tokens=3000)
+            try:
+                r = hunter.eye_json(
+                    PROMPT + "\n\nPAGINA:\n" + texto[:11000])
+            except Exception as e:
+                log(f"olho falhou em {url[:50]}: {type(e).__name__}")
+                continue
             for an in (r or {}).get("anuncios", []):
                 try:
                     ano = int(an["ano"])
