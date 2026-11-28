@@ -1,0 +1,29 @@
+name: karutaro-wave
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'wave-request.json'
+permissions:
+  contents: write
+concurrency: karutaro-wave
+jobs:
+  wave:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install crawl4ai
+      - run: crawl4ai-setup
+      - name: A varredura
+        run: python3 wave.py
+      - name: Grava o resultado
+        run: |
+          git config user.name "karutaro"
+          git config user.email "karutaro@wrongandugly.local"
+          for f in wave-result.json; do [ -e "$f" ] && git add "$f"; done
+          git commit -m "onda: resultado da varredura" || echo "sem mudancas"
+          git push
