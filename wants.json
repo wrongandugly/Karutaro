@@ -30,5 +30,16 @@
   "details": "Rodada 17: teste do disfarce leve (curl_cffi) — esta página devolveu 403 pro robô e segurou até o furtivo. Leia com o disfarce de conexão e diga o que ela afirma sobre o banho citado (nome, preço, regras), só o que estiver escrito nela.",
   "disfarce": true,
   "note": "rodada 17b — repetição limpa após corrida de salvamentos"
+ },
+ {
+  "number": 91,
+  "what": "CX-5 rack para snow",
+  "ceiling": null,
+  "details": "Prazo:",
+  "deadline": "<!-- karutaro:quero -->",
+  "kind": "produto",
+  "posted_at": "2026-11-28T21:03:05+09:00",
+  "active": true,
+  "via_issue": 4
  }
 ]

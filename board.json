@@ -1,50 +1,400 @@
 {
  "want": {
-  "number": 90,
-  "kind": "vigia",
+  "number": 91,
+  "what": "CX-5 rack para snow",
+  "ceiling": null,
+  "details": "Prazo:",
+  "deadline": "<!-- karutaro:quero -->",
+  "kind": "produto",
+  "posted_at": "2026-11-28T21:03:05+09:00",
   "active": true,
-  "furtivo": false,
-  "url": "https://www.web-komachi.com/?p=311022",
-  "what": "Teste do furtivo: artigo da web-komachi sobre banho em Nagano",
-  "details": "Rodada 17: teste do disfarce leve (curl_cffi) — esta página devolveu 403 pro robô e segurou até o furtivo. Leia com o disfarce de conexão e diga o que ela afirma sobre o banho citado (nome, preço, regras), só o que estiver escrito nela.",
-  "disfarce": true,
-  "note": "rodada 17b — repetição limpa após corrida de salvamentos"
+  "via_issue": 4
  },
  "results": {
-  "kind": "vigia",
-  "want_number": 90,
-  "want_what": "Teste do furtivo: artigo da web-komachi sobre banho em Nagano",
-  "swept_at": "2026-11-28T16:19:44+09:00",
-  "fits": [],
-  "fits_total": 0,
-  "near": [],
-  "near_total": 0,
-  "unconfirmed": [],
-  "unconfirmed_total": 0,
-  "examples": [],
-  "swept": 0,
-  "rejected": 0,
-  "notes": [],
-  "sources": [],
-  "criteria": [
+  "want_number": 91,
+  "want_what": "CX-5 rack para snow",
+  "swept_at": "2026-11-28T21:04:18+09:00",
+  "fits": [
    {
-    "id": "nome",
-    "label": "Nome do banho?"
+    "title": "【THULE】 ベースキャリア CX-5/KE系",
+    "price": 4389,
+    "url": "https://www.upgarage.com/ec/item/24707127",
+    "image": "https://static.upgcf.com/image/00000/2609/2609059/2609059000047/2609059000047s0.jpg",
+    "source": "Up Garage",
+    "kind": "shop",
+    "item_id": "24707127",
+    "shop": "アップガレージ 鹿児島吉野店",
+    "unit_only": false,
+    "has_keys": true,
+    "has_bolts": false
    },
    {
-    "id": "preco",
-    "label": "Preço?"
+    "title": "マツダ純正 CX-5/KE系 ベースキャリア",
+    "price": 4400,
+    "url": "https://www.upgarage.com/ec/item/25227294",
+    "image": "https://static.upgcf.com/image/00000/2611/2611238/2611238005309/2611238005309s0.jpg",
+    "source": "Up Garage",
+    "kind": "shop",
+    "item_id": "25227294",
+    "shop": "アップガレージ 札幌新発寒店",
+    "unit_only": false,
+    "has_keys": true,
+    "has_bolts": true
    },
    {
-    "id": "regras",
-    "label": "Regras?"
+    "title": "マツダ純正[THULE製]システムキャリアベース+ウィンターキャリア CX-5/KE系",
+    "price": 7700,
+    "url": "https://www.upgarage.com/ec/item/23683098",
+    "image": "https://static.upgcf.com/image/00000/2603/2603179/2603179006224/2603179006224s0.jpg",
+    "source": "Up Garage",
+    "kind": "shop",
+    "item_id": "23683098",
+    "shop": "アップガレージ ひたちなか店",
+    "unit_only": false,
+    "has_keys": false,
+    "has_bolts": true
+   },
+   {
+    "title": "MAZDA純正OP THULE  システムキャリアベース【CX-5 KE系】",
+    "price": 13090,
+    "url": "https://www.upgarage.com/ec/item/24919342",
+    "image": "https://static.upgcf.com/image/00000/2610/2610032/2610032001036/2610032001036s0.jpg",
+    "source": "Up Garage",
+    "kind": "shop",
+    "item_id": "24919342",
+    "shop": "アップガレージ 横須賀根岸店",
+    "unit_only": false,
+    "has_keys": true,
+    "has_bolts": false
+   },
+   {
+    "title": "[26P04337E] マツダ CX-5(LDA-KE2AW) 純正OP ルーフキャリア ルーフラック キャリアベース 【XD L Package】",
+    "price": 16038,
+    "url": "https://auctions.yahoo.co.jp/jp/auction/u1241999162",
+    "image": "https://auc-pctr.c.yimg.jp/i/auctions.c.yimg.jp/images.auctions.yahoo.co.jp/image/dr000/auc0208/user/9fa0a878da2c35675fff81f4fdaae92a26cb5b2b7603676314b6d10657b11177/i-img1200x1200-17876262994502qb4xeg127987.jpg?pri=l&w=300&h=300&up=0&nf_src=sy&nf_path=images/auc/pc/top/image/1.0.3/na_170x170.png&nf_st=200",
+    "source": "Yahoo! Auctions",
+    "kind": "auction"
+   },
+   {
+    "title": "4kurudepa R2年 CX-5 3DA-KF2P ルーフキャリア KF5P ルーフラック 純正オプション",
+    "price": 16500,
+    "url": "https://auctions.yahoo.co.jp/jp/auction/m1221849355",
+    "image": "https://auc-pctr.c.yimg.jp/i/auctions.c.yimg.jp/images.auctions.yahoo.co.jp/image/dr000/auc0203/user/b680d733160210fc8f4eabaf8954fc9edbb12f181c9167021be8c00c2c043772/i-img640x480-1772683442392643lh8a201938.jpg?pri=l&w=300&h=300&up=0&nf_src=sy&nf_path=images/auc/pc/top/image/1.0.3/na_170x170.png&nf_st=200",
+    "source": "Yahoo! Auctions",
+    "kind": "auction"
+   },
+   {
+    "title": "マツダ CX 5 CX5 2017 2026 ルーフラッククロスバー 耐荷重アルミ 製キャリア キャリア 自転車 カヌー クロスバー CHK952",
+    "price": 17580,
+    "url": "https://auctions.yahoo.co.jp/jp/auction/o1242934728",
+    "image": "https://auc-pctr.c.yimg.jp/i/auctions.c.yimg.jp/images.auctions.yahoo.co.jp/image/dr000/auc0209/user/b03570746f815f1b005dd6968cd21bb4825de4d251a39f633185c45e1c03ab81/i-img1000x1000-17883037061598z2mwen35.jpg?pri=l&w=300&h=300&up=0&nf_src=sy&nf_path=images/auc/pc/top/image/1.0.3/na_170x170.png&nf_st=200",
+    "source": "Yahoo! Auctions",
+    "kind": "auction"
+   },
+   {
+    "title": "カーメイト ルーフキャリア 車のルーフラックマツダ CX-5 2016-2022 レールバー荷物キャリアバートップクロスバーラックレールボックスアル",
+    "price": 18150,
+    "url": "https://auctions.yahoo.co.jp/jp/auction/k1154502771",
+    "image": "https://auc-pctr.c.yimg.jp/i/auctions.c.yimg.jp/images.auctions.yahoo.co.jp/image/dr000/auc0509/user/b36eb12ad8941099098f8e4ba5d687b3c38ac2fdb607c59ee718ccd01adbc075/i-img1200x905-172741015226551qrma51050941.jpg?pri=l&w=300&h=300&up=0&nf_src=sy&nf_path=images/auc/pc/top/image/1.0.3/na_170x170.png&nf_st=200",
+    "source": "Yahoo! Auctions",
+    "kind": "auction"
+   },
+   {
+    "title": "カーメイト ルーフキャリア 車のルーフラックマツダ CX-5 2016-2022 レールバー荷物キャリアバートップクロスバーラックレールボックスアル",
+    "price": 18285,
+    "url": "https://auctions.yahoo.co.jp/jp/auction/e1207713043",
+    "image": "https://auc-pctr.c.yimg.jp/i/auctions.c.yimg.jp/images.auctions.yahoo.co.jp/image/dr000/auc0111/user/b36eb12ad8941099098f8e4ba5d687b3c38ac2fdb607c59ee718ccd01adbc075/i-img1200x905-17630280099662bcsvdx1334.jpg?pri=l&w=300&h=300&up=0&nf_src=sy&nf_path=images/auc/pc/top/image/1.0.3/na_170x170.png&nf_st=200",
+    "source": "Yahoo! Auctions",
+    "kind": "auction"
+   },
+   {
+    "title": "合金 ルーフラッククロスバーマツダ CX 5 CX5 2016 2025 レールバーキャリア キャリア バートップラックレールボックス CHK800",
+    "price": 18780,
+    "url": "https://auctions.yahoo.co.jp/jp/auction/q1242907384",
+    "image": "https://auc-pctr.c.yimg.jp/i/auctions.c.yimg.jp/images.auctions.yahoo.co.jp/image/dr000/auc0209/user/b03570746f815f1b005dd6968cd21bb4825de4d251a39f633185c45e1c03ab81/i-img800x800-17882991528091hgbegf37.jpg?pri=l&w=300&h=300&up=0&nf_src=sy&nf_path=images/auc/pc/top/image/1.0.3/na_170x170.png&nf_st=200",
+    "source": "Yahoo! Auctions",
+    "kind": "auction"
+   },
+   {
+    "title": "☆TUFREQシステムキャリア CX-5 KE2FW/KE2AW ルーフレール無車用 ベースキット1台分",
+    "price": 20183,
+    "url": "https://auctions.yahoo.co.jp/jp/auction/q1242701903",
+    "image": "https://auc-pctr.c.yimg.jp/i/auctions.c.yimg.jp/images.auctions.yahoo.co.jp/image/dr000/auc0208/user/eca18c44ce73fb86253e780a73cf43165523ba2b2a742c46cf5bb1b4b4bd2c47/i-img541x345-17881508135276hyvlcu36.jpg?pri=l&w=300&h=300&up=0&nf_src=sy&nf_path=images/auc/pc/top/image/1.0.3/na_170x170.png&nf_st=200",
+    "source": "Yahoo! Auctions",
+    "kind": "auction"
+   },
+   {
+    "title": "☆TUFREQシステムキャリア CX-5 KE2FW/KE2AW ルーフレール無車用 ベースキット1台分",
+    "price": 20183,
+    "url": "https://auctions.yahoo.co.jp/jp/auction/s1242719357",
+    "image": "https://auc-pctr.c.yimg.jp/i/auctions.c.yimg.jp/images.auctions.yahoo.co.jp/image/dr000/auc0208/user/4bc19583be9229db10d5e91bed8e593f0fcf3262a8d686412c8ec137d4a654c8/i-img541x345-17881508383609qofmy528.jpg?pri=l&w=300&h=300&up=0&nf_src=sy&nf_path=images/auc/pc/top/image/1.0.3/na_170x170.png&nf_st=200",
+    "source": "Yahoo! Auctions",
+    "kind": "auction"
+   },
+   {
+    "title": "☆TUFREQシステムキャリア CX-5 KEEFW/KEEAW ルーフレール無車用 ベースキット1台分",
+    "price": 20183,
+    "url": "https://auctions.yahoo.co.jp/jp/auction/f1242703384",
+    "image": "https://auc-pctr.c.yimg.jp/i/auctions.c.yimg.jp/images.auctions.yahoo.co.jp/image/dr000/auc0208/user/eca18c44ce73fb86253e780a73cf43165523ba2b2a742c46cf5bb1b4b4bd2c47/i-img541x345-17881508081179mkuqi135.jpg?pri=l&w=300&h=300&up=0&nf_src=sy&nf_path=images/auc/pc/top/image/1.0.3/na_170x170.png&nf_st=200",
+    "source": "Yahoo! Auctions",
+    "kind": "auction"
+   },
+   {
+    "title": "☆TUFREQシステムキャリア CX-5 KE5FW/KE5AW ルーフレール無車用 ベースキット1台分",
+    "price": 20183,
+    "url": "https://auctions.yahoo.co.jp/jp/auction/f1242703385",
+    "image": "https://auc-pctr.c.yimg.jp/i/auctions.c.yimg.jp/images.auctions.yahoo.co.jp/image/dr000/auc0208/user/eca18c44ce73fb86253e780a73cf43165523ba2b2a742c46cf5bb1b4b4bd2c47/i-img541x345-17881508146618kkwqfl286374.jpg?pri=l&w=300&h=300&up=0&nf_src=sy&nf_path=images/auc/pc/top/image/1.0.3/na_170x170.png&nf_st=200",
+    "source": "Yahoo! Auctions",
+    "kind": "auction"
+   },
+   {
+    "title": "☆TUFREQシステムキャリア CX-5 KE5FW/KE5AW ルーフレール無車用 ベースキット1台分",
+    "price": 20183,
+    "url": "https://auctions.yahoo.co.jp/jp/auction/q1242694794",
+    "image": "https://auc-pctr.c.yimg.jp/i/auctions.c.yimg.jp/images.auctions.yahoo.co.jp/image/dr000/auc0208/user/4bc19583be9229db10d5e91bed8e593f0fcf3262a8d686412c8ec137d4a654c8/i-img541x345-17881508442890b3mnac277766.jpg?pri=l&w=300&h=300&up=0&nf_src=sy&nf_path=images/auc/pc/top/image/1.0.3/na_170x170.png&nf_st=200",
+    "source": "Yahoo! Auctions",
+    "kind": "auction"
+   },
+   {
+    "title": "☆TUFREQシステムキャリア CX-5 KEEFW/KEEAW ルーフレール無車用 ベースキット1台分",
+    "price": 20183,
+    "url": "https://auctions.yahoo.co.jp/jp/auction/b1242694946",
+    "image": "https://auc-pctr.c.yimg.jp/i/auctions.c.yimg.jp/images.auctions.yahoo.co.jp/image/dr000/auc0208/user/4bc19583be9229db10d5e91bed8e593f0fcf3262a8d686412c8ec137d4a654c8/i-img541x345-17881508372164ucpz4433.jpg?pri=l&w=300&h=300&up=0&nf_src=sy&nf_path=images/auc/pc/top/image/1.0.3/na_170x170.png&nf_st=200",
+    "source": "Yahoo! Auctions",
+    "kind": "auction"
+   },
+   {
+    "title": "[CX-5/KE系!] INNO システムキャリア セット [ XS300 + TR151 + XB108BK ]",
+    "price": 21890,
+    "url": "https://www.upgarage.com/ec/item/24332072",
+    "image": "https://static.upgcf.com/image/00000/2607/2607239/2607239900460/2607239900460s0.jpg",
+    "source": "Up Garage",
+    "kind": "shop",
+    "item_id": "24332072",
+    "shop": "アップガレージ 群馬高崎店"
+   },
+   {
+    "title": "【条件付き送料無料】システムキャリアセット■マツダ■CX-5 KE系(ルーフレール無車専用) 平成24年2月～",
+    "price": 22700,
+    "url": "https://auctions.yahoo.co.jp/jp/auction/h1253068759",
+    "image": "https://auc-pctr.c.yimg.jp/i/auctions.c.yimg.jp/images.auctions.yahoo.co.jp/image/dr000/auc0211/user/20502b78d82b54b5cf382c13196d401d972f06534bc34b3b7927fc2490cdb626/i-img600x600-1795152188474941qeac3819.jpg?pri=l&w=300&h=300&up=0&nf_src=sy&nf_path=images/auc/pc/top/image/1.0.3/na_170x170.png&nf_st=200",
+    "source": "Yahoo! Auctions",
+    "kind": "auction"
+   },
+   {
+    "title": "【条件付き送料無料】システムキャリアセット■マツダ■CX-5 KE系(ルーフレール無車専用) 平成24年2月～",
+    "price": 22700,
+    "url": "https://auctions.yahoo.co.jp/jp/auction/n1253667046",
+    "image": "https://auc-pctr.c.yimg.jp/i/auctions.c.yimg.jp/images.auctions.yahoo.co.jp/image/dr000/auc0211/user/20502b78d82b54b5cf382c13196d401d972f06534bc34b3b7927fc2490cdb626/i-img600x600-17955856306494alvin5588.jpg?pri=l&w=300&h=300&up=0&nf_src=sy&nf_path=images/auc/pc/top/image/1.0.3/na_170x170.png&nf_st=200",
+    "source": "Yahoo! Auctions",
+    "kind": "auction"
+   },
+   {
+    "title": "【条件付き送料無料】システムキャリアセット■マツダ■CX-5 KE系(ルーフレール無車専用) 平成24年2月～",
+    "price": 22700,
+    "url": "https://auctions.yahoo.co.jp/jp/auction/t1253943399",
+    "image": "https://auc-pctr.c.yimg.jp/i/auctions.c.yimg.jp/images.auctions.yahoo.co.jp/image/dr000/auc0211/user/20502b78d82b54b5cf382c13196d401d972f06534bc34b3b7927fc2490cdb626/i-img600x600-17957579503122viowo336.jpg?pri=l&w=300&h=300&up=0&nf_src=sy&nf_path=images/auc/pc/top/image/1.0.3/na_170x170.png&nf_st=200",
+    "source": "Yahoo! Auctions",
+    "kind": "auction"
+   },
+   {
+    "title": "【条件付き送料無料】システムキャリアセット■マツダ■CX-5 KE系(ルーフレール無車専用) 平成24年2月～",
+    "price": 22700,
+    "url": "https://auctions.yahoo.co.jp/jp/auction/d1252675042",
+    "image": "https://auc-pctr.c.yimg.jp/i/auctions.c.yimg.jp/images.auctions.yahoo.co.jp/image/dr000/auc0211/user/20502b78d82b54b5cf382c13196d401d972f06534bc34b3b7927fc2490cdb626/i-img600x600-17948916558606qjmear120360.jpg?pri=l&w=300&h=300&up=0&nf_src=sy&nf_path=images/auc/pc/top/image/1.0.3/na_170x170.png&nf_st=200",
+    "source": "Yahoo! Auctions",
+    "kind": "auction"
+   },
+   {
+    "title": "cx-5 ベースキャリア　スキーアタッチメント",
+    "price": 25000,
+    "url": "https://auctions.yahoo.co.jp/jp/auction/z657425578",
+    "image": "https://auc-pctr.c.yimg.jp/i/auctions.c.yimg.jp/images.auctions.yahoo.co.jp/image/dr000/auc0208/users/20a8bfe6578b296d18ba5db833dd29bf5d0962d0/i-img900x1200-178677991868524xz7f.jpg?pri=l&w=300&h=300&up=0&nf_src=sy&nf_path=images/auc/pc/top/image/1.0.3/na_170x170.png&nf_st=200",
+    "source": "Yahoo! Auctions",
+    "kind": "auction"
+   },
+   {
+    "title": "マツダ CX 5 CX5 2017 2026 ルーフラック キャリア キャリア ラック レールバー トップレール ボックス アップグレー ド カスタム CHK954",
+    "price": 27680,
+    "url": "https://auctions.yahoo.co.jp/jp/auction/k1242923139",
+    "image": "https://auc-pctr.c.yimg.jp/i/auctions.c.yimg.jp/images.auctions.yahoo.co.jp/image/dr000/auc0209/user/b03570746f815f1b005dd6968cd21bb4825de4d251a39f633185c45e1c03ab81/i-img800x800-17883037636380ed3aht35.jpg?pri=l&w=300&h=300&up=0&nf_src=sy&nf_path=images/auc/pc/top/image/1.0.3/na_170x170.png&nf_st=200",
+    "source": "Yahoo! Auctions",
+    "kind": "auction"
+   },
+   {
+    "title": "マツダ CX-5 KF ルーフ ラック 鉄製 耐荷重68kg 990ｍｍ×1660mm×160ｍｍ 新品 クロスバー ベース キャリア",
+    "price": 27800,
+    "url": "https://auctions.yahoo.co.jp/jp/auction/g1194316795",
+    "image": "https://auc-pctr.c.yimg.jp/i/auctions.c.yimg.jp/images.auctions.yahoo.co.jp/image/dr000/auc0107/user/9dbce9b53d7112336ec806dbc58a746b74e37b735038047340a297482151642b/i-img700x700-17536829742498oacqyu1756.jpg?pri=l&w=300&h=300&up=0&nf_src=sy&nf_path=images/auc/pc/top/image/1.0.3/na_170x170.png&nf_st=200",
+    "source": "Yahoo! Auctions",
+    "kind": "auction"
+   },
+   {
+    "title": "マツダ CX-5 KE ルーフ ラック 鉄製 耐荷重68kg 990ｍｍ×1660mm×160ｍｍ 新品 クロスバー ベース キャリア",
+    "price": 27800,
+    "url": "https://auctions.yahoo.co.jp/jp/auction/b1194323752",
+    "image": "https://auc-pctr.c.yimg.jp/i/auctions.c.yimg.jp/images.auctions.yahoo.co.jp/image/dr000/auc0107/user/9dbce9b53d7112336ec806dbc58a746b74e37b735038047340a297482151642b/i-img700x700-17536829702976no31mh36802.jpg?pri=l&w=300&h=300&up=0&nf_src=sy&nf_path=images/auc/pc/top/image/1.0.3/na_170x170.png&nf_st=200",
+    "source": "Yahoo! Auctions",
+    "kind": "auction"
+   },
+   {
+    "title": "スキースノーボード専用キャリアセット ブラック CX-5 KFEP.KF2P.KF5P H29.2～R8.4 ルーフレール無車 Terzo SS102B + EH433",
+    "price": 31060,
+    "url": "https://auctions.yahoo.co.jp/jp/auction/u1250986763",
+    "image": "https://auc-pctr.c.yimg.jp/i/auctions.c.yimg.jp/images.auctions.yahoo.co.jp/image/dr000/auc0211/user/33c76cc90350e1e9e2472cae4a2e0ce5f69dd026579ac916d2949413c09eff30/i-img800x800-17937834160614clax5h41904.jpg?pri=l&w=300&h=300&up=0&nf_src=sy&nf_path=images/auc/pc/top/image/1.0.3/na_170x170.png&nf_st=200",
+    "source": "Yahoo! Auctions",
+    "kind": "auction"
+   },
+   {
+    "title": "スキースノーボード専用キャリアセット ブラック CX-5 KFEP.KF2P.KF5P H29.2～R8.4 ルーフレール無車 Terzo SS102B + EH433",
+    "price": 31060,
+    "url": "https://auctions.yahoo.co.jp/jp/auction/q1251108526",
+    "image": "https://auc-pctr.c.yimg.jp/i/auctions.c.yimg.jp/images.auctions.yahoo.co.jp/image/dr000/auc0211/user/f2b299a85581082e7d08f9167a82577e153b26538ea688f017185f2c98e81aee/i-img800x800-17938665084946vqxqtz34.jpg?pri=l&w=300&h=300&up=0&nf_src=sy&nf_path=images/auc/pc/top/image/1.0.3/na_170x170.png&nf_st=200",
+    "source": "Yahoo! Auctions",
+    "kind": "auction"
+   },
+   {
+    "title": "スキースノーボード専用キャリアセット ブラック CX-5 KFEP.KF2P.KF5P H29.2～R8.4 ルーフレール無車 Terzo SS102B + EH433",
+    "price": 31060,
+    "url": "https://auctions.yahoo.co.jp/jp/auction/p1254012064",
+    "image": "https://auc-pctr.c.yimg.jp/i/auctions.c.yimg.jp/images.auctions.yahoo.co.jp/image/dr000/auc0211/user/5cc1497b0ea18759fee4a382e44e17499e36de26cd69573e7f95d23f2f2c522f/i-img800x800-17957933579498xpgqyu580.jpg?pri=l&w=300&h=300&up=0&nf_src=sy&nf_path=images/auc/pc/top/image/1.0.3/na_170x170.png&nf_st=200",
+    "source": "Yahoo! Auctions",
+    "kind": "auction"
+   },
+   {
+    "title": "スキースノーボード専用キャリアセット ブラック CX-5 KFEP.KF2P.KF5P H29.2～R8.4 ルーフレール無車 Terzo SS102B + EH433",
+    "price": 31060,
+    "url": "https://auctions.yahoo.co.jp/jp/auction/b1251391202",
+    "image": "https://auc-pctr.c.yimg.jp/i/auctions.c.yimg.jp/images.auctions.yahoo.co.jp/image/dr000/auc0211/user/b7d947698ee0d8a7db2f09bbccd77f8977e2ea185b94920408e1186cdb2fd9ff/i-img800x800-17940261460973d5ernu62174.jpg?pri=l&w=300&h=300&up=0&nf_src=sy&nf_path=images/auc/pc/top/image/1.0.3/na_170x170.png&nf_st=200",
+    "source": "Yahoo! Auctions",
+    "kind": "auction"
+   },
+   {
+    "title": "スキースノーボード専用キャリアセット ブラック CX-5 KFEP.KF2P.KF5P H29.2～R8.4 ルーフレール無車 Terzo SS102B + EH433",
+    "price": 31060,
+    "url": "https://auctions.yahoo.co.jp/jp/auction/h1251232166",
+    "image": "https://auc-pctr.c.yimg.jp/i/auctions.c.yimg.jp/images.auctions.yahoo.co.jp/image/dr000/auc0211/user/3f2f81ae8463b6b40d873f1100ee7e6795e9353f64866005287b623e967c8173/i-img800x800-17939393444144xfymut85242.jpg?pri=l&w=300&h=300&up=0&nf_src=sy&nf_path=images/auc/pc/top/image/1.0.3/na_170x170.png&nf_st=200",
+    "source": "Yahoo! Auctions",
+    "kind": "auction"
    }
   ],
-  "places": [],
-  "answered": 0,
-  "eye": "on",
+  "fits_total": 38,
+  "near": [],
+  "near_total": 0,
+  "unconfirmed": [
+   {
+    "title": "【マツダ純正】THULE製OPシステムキャリア+ウインターキャリア KD45-V4-701",
+    "price": 4400,
+    "url": "https://www.upgarage.com/ec/item/23355532",
+    "image": "https://static.upgcf.com/image/00000/2602/2602259/2602259001883/2602259001883s0.jpg",
+    "source": "Up Garage",
+    "kind": "shop",
+    "item_id": "23355532",
+    "shop": "アップガレージ 山口店",
+    "reason": "o título diz Mazda, mas não diz o modelo — precisa conferir se é da CX-5 (KE)",
+    "unit_only": false,
+    "has_keys": false,
+    "has_bolts": false
+   },
+   {
+    "title": "送料無料　未使用　カーメイト ルーフキャリア inno アルミラック80 IN556",
+    "price": 5000,
+    "url": "https://auctions.yahoo.co.jp/jp/auction/k1254095671",
+    "image": "https://auc-pctr.c.yimg.jp/i/auctions.c.yimg.jp/images.auctions.yahoo.co.jp/image/dr000/auc0211/user/d1d713c475075958c3b2609dac70f17db8d02002721abf4c526018bc52a86977/i-img1200x900-17958400206058fqjtle1322.jpg?pri=l&w=300&h=300&up=0&nf_src=sy&nf_path=images/auc/pc/top/image/1.0.3/na_170x170.png&nf_st=200",
+    "source": "Yahoo! Auctions",
+    "kind": "auction",
+    "reason": "o título não confirma se serve na CX-5 (KE) — precisa conferir o encaixe"
+   },
+   {
+    "title": "THULE エアロベースキャリア",
+    "price": 6600,
+    "url": "https://www.upgarage.com/ec/item/24770188",
+    "image": "https://static.upgcf.com/image/00000/2609/2609139/2609139002688/2609139002688s0.jpg",
+    "source": "Up Garage",
+    "kind": "shop",
+    "item_id": "24770188",
+    "shop": "アップガレージ 広島中央店",
+    "reason": "o título não confirma se serve na CX-5 (KE) — precisa conferir o encaixe",
+    "unit_only": false,
+    "has_keys": false,
+    "has_bolts": false
+   }
+  ],
+  "unconfirmed_total": 12,
+  "examples": [
+   {
+    "title": "TERZO  スキーキャリア",
+    "price": 15290,
+    "url": "https://www.upgarage.com/ec/item/25090456",
+    "image": "https://static.upgcf.com/image/00000/2610/2610103/2610103011865/2610103011865s0.jpg",
+    "source": "Up Garage",
+    "kind": "shop",
+    "item_id": "25090456",
+    "shop": "アップガレージ 美原北インター店",
+    "reason": "parece ser só o acessório de prancha, sem a base — e você ainda não tem a base",
+    "unit_only": false,
+    "has_keys": false,
+    "has_bolts": false
+   },
+   {
+    "title": "MAZDA6ワゴン GJ2AW GJ2FW GJ5FW GJEFW（ルーフレール付車）TERZO スキースノーボードキャリア SS112B",
+    "price": 19450,
+    "url": "https://auctions.yahoo.co.jp/jp/auction/f1250478236",
+    "image": "https://auc-pctr.c.yimg.jp/i/auctions.c.yimg.jp/images.auctions.yahoo.co.jp/image/dr000/auc0210/user/a0382380638c98ec0f5d493162327d770b67e952bfdfbe24958220e2f60a67c1/i-img1182x844-17934361729602s34o1l36.jpg?pri=l&w=300&h=300&up=0&nf_src=sy&nf_path=images/auc/pc/top/image/1.0.3/na_170x170.png&nf_st=200",
+    "source": "Yahoo! Auctions",
+    "kind": "auction",
+    "reason": "parece ser só o acessório de prancha, sem a base — e você ainda não tem a base"
+   }
+  ],
+  "swept": 134,
+  "rejected": 96,
+  "sources": [
+   {
+    "name": "Yahoo! Auctions",
+    "status": "ok",
+    "found": 106
+   },
+   {
+    "name": "Yahoo!フリマ",
+    "status": "error: HTTPError",
+    "found": 0
+   },
+   {
+    "name": "Jimoty",
+    "status": "error: RuntimeError",
+    "found": 0
+   },
+   {
+    "name": "Up Garage",
+    "status": "ok",
+    "found": 23
+   },
+   {
+    "name": "Mercari",
+    "status": "ok",
+    "found": 5
+   },
+   {
+    "name": "Rakuten",
+    "status": "error: RuntimeError",
+    "found": 0
+   },
+   {
+    "name": "eBay",
+    "status": "ok",
+    "found": 0
+   }
+  ],
+  "notes": [
+   "Fontes que não responderam nesta varredura: Yahoo!フリマ, Jimoty, Rakuten. O robô tenta de novo na próxima.",
+   "Itens do Yahoo! Auctions mostram o lance atual — o preço pode subir até o fim do leilão.",
+   "3 anúncio(s) do tipo certo, mas o título não confirma o encaixe na CX-5 (KE) — estão no QUASE pra você conferir."
+  ],
+  "shout": [],
   "verdict": [
-   "Não consegui ler a página vigiada (https://www.web-komachi.com/?p=311022)."
+   "O achado: 【THULE】 ベースキャリア CX-5/KE系 por ¥4,389 — encaixe confirmado, loja em Kagoshima.",
+   "Cuidado: マツダ純正 CX-5/KE系 ベースキャリア por ¥4,400 — loja longe, em Sapporo — some o frete antes de comparar.",
+   "Falta o acessório de prancha — ele aparece por ~¥15,290 (Up Garage); monta em cima dessa base."
   ]
  },
  "wants": [
@@ -79,6 +429,17 @@
    "details": "Rodada 17: teste do disfarce leve (curl_cffi) — esta página devolveu 403 pro robô e segurou até o furtivo. Leia com o disfarce de conexão e diga o que ela afirma sobre o banho citado (nome, preço, regras), só o que estiver escrito nela.",
    "disfarce": true,
    "note": "rodada 17b — repetição limpa após corrida de salvamentos"
+  },
+  {
+   "number": 91,
+   "what": "CX-5 rack para snow",
+   "ceiling": null,
+   "details": "Prazo:",
+   "deadline": "<!-- karutaro:quero -->",
+   "kind": "produto",
+   "posted_at": "2026-11-28T21:03:05+09:00",
+   "active": true,
+   "via_issue": 4
   }
  ],
  "changes": []
