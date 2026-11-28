@@ -1,2 +1,5 @@
 [ceu 2026-11-28T19:24] fogos=0 avioes=5629 sismo=10 iss=True
 [ceu 2026-11-28T19:26] fogos=0 avioes=5654 sismo=10 iss=True
+[ceu diag] VIIRS_SNPP_NRT -> 122 bytes, 1 linhas, cabecalho: latitude,longitude,bright_ti4,scan,track,acq_date,acq_time,satellite,instrument,confidence,version,bright_ti5,
+[ceu diag] VIIRS_NOAA20_NRT -> 857806 bytes, 10325 linhas, cabecalho: latitude,longitude,bright_ti4,scan,track,acq_date,acq_time,satellite,instrument,confidence,version,bright_ti5,
+[ceu 2026-11-28T19:28] fogos=None avioes=5660 sismo=10 iss=True
