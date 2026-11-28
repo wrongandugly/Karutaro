@@ -87,19 +87,58 @@ def fetch_via_jina(url):
         return r.read().decode("utf-8", "replace")
 
 
-def rescue_text(url, direct_text):
-    """If the direct read came back thin, let Jina try; keep the
-    longer text. Returns the winning text (may be the direct one)."""
-    if len(direct_text) >= 200:
-        return direct_text
+def fetch_via_scrapling(url):
+    """Final rescue: a real browser in disguise (Scrapling's
+    StealthyFetcher, BSD-3, plugged 2026-11-28 on Fabricio's pick)
+    for pages that defeated both the plain fetch and Jina. Slow
+    and heavy - last rung only. Imported lazily: when the library
+    is not installed this rescue does not exist and the ladder
+    simply ends at Jina."""
+    from scrapling.fetchers import StealthyFetcher
+    page = StealthyFetcher.fetch(url, headless=True,
+                                 network_idle=True,
+                                 solve_cloudflare=True,
+                                 timeout=60000)
+    html = getattr(page, "html_content", "") or ""
+    if html:
+        return html_to_text(html)
+    return page.get_all_text() or ""
+
+
+def rescue_text(url, direct_text, force_stealth=False):
+    """The read ladder: direct (done by the caller) -> Jina ->
+    Scrapling stealth. Keeps the longest text. force_stealth
+    skips straight to the disguised browser (known fortresses)."""
+    best = direct_text
+    if force_stealth:
+        try:
+            st = fetch_via_scrapling(url)
+            if len(st) > len(best):
+                log(f"fact read via scrapling (furtivo forcado): {url}")
+                return st
+        except Exception as e:
+            log(f"scrapling falhou ({type(e).__name__}): {url}")
+        return best
+    if len(best) >= 200:
+        return best
     try:
         jt = fetch_via_jina(url)
-        if len(jt) > len(direct_text):
+        if len(jt) > len(best):
             log(f"fact read via jina: {url}")
-            return jt
+            best = jt
     except Exception:
         pass
-    return direct_text
+    if len(best) >= 200:
+        return best
+    try:
+        st = fetch_via_scrapling(url)
+        if len(st) > len(best):
+            log(f"fact read via scrapling (resgate final): {url}")
+            best = st
+    except Exception as e:
+        log(f"scrapling indisponivel/falhou "
+            f"({type(e).__name__}): {url}")
+    return best
 
 
 def norm(s):
@@ -1586,11 +1625,17 @@ def _rep_bump(host, kind):
         pass
 
 
-def _read_url_text(url):
+def _read_url_text(url, force_stealth=False):
     """Read one page for the revisit/watch arms: reputation-aware
     (a host that blocked us twice and never answered goes straight
-    to the Jina rescue), Jina as the net, bumps the reputation."""
+    to the Jina rescue), the ladder as the net, bumps the
+    reputation. force_stealth goes straight to the disguised
+    browser (Scrapling) - for known fortresses and for tests."""
     host = urllib.parse.urlparse(url).netloc.lower()
+    if force_stealth:
+        text = rescue_text(url, "", force_stealth=True)
+        _rep_bump(host, "ok" if len(text) >= 200 else "blocked")
+        return text
     e = _rep_load().get(host, {})
     jina_first = e.get("blocked", 0) >= 2 and e.get("ok", 0) == 0
     text = ""
@@ -1784,7 +1829,8 @@ def hunt_watch(want):
         return base
     base["criteria"] = [{"id": c["id"], "label": c["label"]}
                         for c in criteria]
-    text = _read_url_text(url)
+    text = _read_url_text(url,
+                          force_stealth=bool(want.get("furtivo")))
     if len(text) < 200:
         base["verdict"] = [f"Não consegui ler a página vigiada "
                            f"({url})."]
