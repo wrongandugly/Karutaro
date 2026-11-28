@@ -23,6 +23,8 @@ LOG_FILE = BASE / "hunter.log"
 FACTS_FILE = BASE / "facts.json"
 GEMINI_KEY = os.environ.get("GEMINI_API_KEY", "")
 GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-2.5-flash")
+GROQ_KEY = os.environ.get("GROQ_API_KEY", "")
+GROQ_MODEL = os.environ.get("GROQ_MODEL", "openai/gpt-oss-120b")
 
 UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/126.0 Safari/537.36")
@@ -970,6 +972,79 @@ def gemini_json(prompt):
     return json.loads(text)
 
 
+def groq_json(prompt):
+    if not GROQ_KEY:
+        raise RuntimeError("GROQ_API_KEY missing — the Groq lens is off")
+    payload = {
+        "model": GROQ_MODEL,
+        "messages": [{"role": "user", "content": prompt}],
+        "temperature": 0.1,
+        "response_format": {"type": "json_object"},
+    }
+    req = urllib.request.Request(
+        "https://api.groq.com/openai/v1/chat/completions",
+        data=json.dumps(payload).encode("utf-8"), method="POST",
+        headers={"Content-Type": "application/json",
+                 "Authorization": "Bearer " + GROQ_KEY})
+    with urllib.request.urlopen(req, timeout=60) as r:
+        data = json.loads(r.read().decode("utf-8", "replace"))
+    text = (data["choices"][0]["message"]["content"] or "").strip()
+    if text.startswith("```"):
+        text = re.sub(r"^```[a-z]*\s*|\s*```$", "", text).strip()
+    return json.loads(text)
+
+
+_EYE_DOWN = set()        # lenses resting for the rest of this run
+_EYE_LAST = {"provider": None}
+
+
+def _is_limit_error(e):
+    if getattr(e, "code", None) == 429:
+        return True
+    s = str(e)
+    return "429" in s or "rate_limit" in s or "RESOURCE_EXHAUSTED" in s
+
+
+def eye_json(prompt):
+    """The eye, with two lenses (Fabricio's call, 2026-11-25): Groq
+    reads first; when its free quota ends, Gemini takes over. A lens
+    that hits its limit rests for the rest of the run — the queue
+    never stops."""
+    providers = []
+    if GROQ_KEY:
+        providers.append(("groq", groq_json))
+    if GEMINI_KEY:
+        providers.append(("gemini", gemini_json))
+    if not providers:
+        raise RuntimeError(
+            "no eye key (GROQ_API_KEY/GEMINI_API_KEY) — the eye is off")
+    last_err = None
+    for name, fn in providers:
+        if name in _EYE_DOWN:
+            continue
+        try:
+            out = fn(prompt)
+            _EYE_LAST["provider"] = name
+            return out
+        except Exception as e:
+            last_err = e
+            if _is_limit_error(e):
+                _EYE_DOWN.add(name)
+                log(f"eye: {name} hit its free limit — switching lens")
+            else:
+                log(f"eye: {name} failed ({type(e).__name__}) "
+                    "— trying the other lens")
+    if last_err is not None:
+        raise last_err
+    raise RuntimeError("both eye lenses are resting")
+
+
+def eye_pace():
+    """Free-tier pace between eye calls: Groq is fast (3s is gentle);
+    Gemini free is ~5 calls/minute, so 13s when Gemini served last."""
+    time.sleep(13 if _EYE_LAST["provider"] == "gemini" else 3)
+
+
 def eye_plan(want):
     """One eye call: turn the PT want into JP searches + criteria."""
     prompt = (
@@ -988,7 +1063,7 @@ def eye_plan(want):
         "japonês. Se os detalhes não citarem critério, crie um critério "
         "único a partir da procura."
     )
-    plan = gemini_json(prompt)
+    plan = eye_json(prompt)
     queries = [q for q in plan.get("queries", []) if q][:3]
     criteria = []
     for c in plan.get("criteria", [])[:4]:
@@ -1050,7 +1125,7 @@ def eye_read_page(url, page_text, criteria):
         "copiado da página que justifica a resposta (vazio se nao_diz)\"}]}\n"
         f"TEXTO DA PÁGINA:\n{page_text[:12000]}"
     )
-    got = gemini_json(prompt)
+    got = eye_json(prompt)
     answers = {}
     for a in got.get("answers", []):
         v = a.get("verdict")
@@ -1093,13 +1168,14 @@ def hunt_fact(want):
                 return prev
         except Exception:
             pass
-    if not GEMINI_KEY:
+    if not (GROQ_KEY or GEMINI_KEY):
         base["eye"] = "off"
-        base["verdict"] = ["O olho ainda não foi ligado — falta a chave "
-                           "do Gemini no cofre do GitHub."]
+        base["verdict"] = ["O olho ainda não foi ligado — faltam as "
+                           "chaves do olho (Groq/Gemini) no cofre "
+                           "do GitHub."]
         base["criteria"], base["places"] = [], []
         base["answered"] = 0
-        log("fact hunt skipped: eye off (no GEMINI_API_KEY)")
+        log("fact hunt skipped: eye off (no eye keys)")
         return base
     base["eye"] = "on"
     try:
@@ -1135,7 +1211,7 @@ def hunt_fact(want):
         f"({skipped} aggregator results skipped)")
 
     places = []
-    time.sleep(13)  # free-tier pace: ~5 Gemini calls/minute max
+    eye_pace()  # free-tier pace before the first read
     for cand in candidates:
         try:
             text = html_to_text(fetch(cand["url"]))
@@ -1152,7 +1228,7 @@ def hunt_fact(want):
                 f"({sum(1 for a in answers if a['verdict'] != 'nao_diz')} answered)")
         except Exception as e:
             log(f"eye read failed {cand['url']}: {type(e).__name__}: {e}")
-        time.sleep(13)  # free-tier pace between eye calls
+        eye_pace()  # free-tier pace between eye calls
 
     answered_places = [p for p in places
                        if any(a["verdict"] != "nao_diz" for a in p["answers"])]
