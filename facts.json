@@ -1,6 +1,6 @@
 [
  {
-  "name": "長野の温泉街・温泉地まとめGo NAGANO 長野県公式観光サイトhttps://www.go-nagano.net>hot-springs-and-relaxation",
+  "name": "Go! NAGANO 長野県公式観光サイト",
   "url": "https://www.go-nagano.net/hot-springs-and-relaxation/id19599",
   "answers": [
    {
@@ -16,11 +16,12 @@
     "quote": ""
    }
   ],
-  "read_at": "2026-11-28T12:59:00+09:00",
+  "read_at": "2026-11-28T13:11:29+09:00",
+  "layer": "artigo",
   "want_number": 2
  },
  {
-  "name": "信州物味湯産手形",
+  "name": "物味湯産手形",
   "url": "https://www.monomiyusan.jp/",
   "answers": [
    {
@@ -36,7 +37,8 @@
     "quote": ""
    }
   ],
-  "read_at": "2026-11-28T12:59:00+09:00",
+  "read_at": "2026-11-28T13:11:29+09:00",
+  "layer": "oficial",
   "want_number": 2
  },
  {
@@ -56,7 +58,8 @@
     "quote": ""
    }
   ],
-  "read_at": "2026-11-28T12:59:00+09:00",
+  "read_at": "2026-11-28T13:11:29+09:00",
+  "layer": "oficial",
   "want_number": 2
  },
  {
@@ -76,11 +79,12 @@
     "quote": ""
    }
   ],
-  "read_at": "2026-11-28T12:59:00+09:00",
+  "read_at": "2026-11-28T13:11:29+09:00",
+  "layer": "oficial",
   "want_number": 2
  },
  {
-  "name": "渋温泉旅館組合",
+  "name": "旅館一覧",
   "url": "https://shibuonsen.net/",
   "answers": [
    {
@@ -96,7 +100,8 @@
     "quote": ""
    }
   ],
-  "read_at": "2026-11-28T12:59:00+09:00",
+  "read_at": "2026-11-28T13:11:29+09:00",
+  "layer": "oficial",
   "want_number": 2
  },
  {
@@ -176,7 +181,8 @@
     "quote": ""
    }
   ],
-  "read_at": "2026-11-28T12:59:00+09:00",
+  "read_at": "2026-11-28T13:11:29+09:00",
+  "layer": "oficial",
   "want_number": 2
  },
  {
@@ -297,6 +303,27 @@
    }
   ],
   "read_at": "2026-11-28T13:05:48+09:00",
+  "want_number": 2
+ },
+ {
+  "name": "野沢温泉村",
+  "url": "https://www.vill.nozawaonsen.nagano.jp/",
+  "answers": [
+   {
+    "criterion": "crianca",
+    "label": "Pode crianças?",
+    "verdict": "nao_diz",
+    "quote": ""
+   },
+   {
+    "criterion": "tatuagem",
+    "label": "Pode tatuagem?",
+    "verdict": "nao_diz",
+    "quote": ""
+   }
+  ],
+  "read_at": "2026-11-28T13:11:29+09:00",
+  "layer": "oficial",
   "want_number": 2
  }
 ]

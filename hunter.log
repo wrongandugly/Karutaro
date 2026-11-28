@@ -176,3 +176,32 @@
 [2026-11-28T13:07:01+09:00] eye read: 信州健康ランド (1 answered)
 [2026-11-28T13:07:04+09:00] fact delivery ready: 6 places read, 4 answered, 0 full matches
 [2026-11-28T13:07:04+09:00] board updated for QUERO Nº 2
+[2026-11-28T13:11:29+09:00] === QUERO Nº 2: Onsen em Nagano ===
+[2026-11-28T13:11:31+09:00] eye plan: 3 queries, 2 criteria
+[2026-11-28T13:11:31+09:00] fact queries: ['長野県 温泉 公式サイト', '長野 温泉 公式 よくある質問', '長野県 子供 入浴 温泉']
+[2026-11-28T13:11:31+09:00] web search (ddg): 0 results
+[2026-11-28T13:11:31+09:00] web search (ddg-lite): 0 results
+[2026-11-28T13:11:33+09:00] web search (yahoo): 9 results
+[2026-11-28T13:11:34+09:00] web search (ddg): 0 results
+[2026-11-28T13:11:34+09:00] web search (ddg-lite): 10 results
+[2026-11-28T13:11:36+09:00] web search (ddg): 0 results
+[2026-11-28T13:11:36+09:00] web search (ddg-lite): 0 results
+[2026-11-28T13:11:38+09:00] web search (yahoo): 10 results
+[2026-11-28T13:11:39+09:00] fact candidates: 6 official + 1 article pages (4 aggregator results skipped)
+[2026-11-28T13:11:45+09:00] fact nav: https://www.monomiyusan.jp/ -> ['https://www.monomiyusan.jp/faq', 'https://www.monomiyusan.jp/guide-camera']
+[2026-11-28T13:11:46+09:00] eye read: 物味湯産手形 (0 answered)
+[2026-11-28T13:11:51+09:00] fact nav: https://www.bessho-spa.jp/ -> ['https://www.bessho-spa.jp/sight/guide.html']
+[2026-11-28T13:11:52+09:00] eye read: 別所温泉観光協会 (0 answered)
+[2026-11-28T13:11:57+09:00] fact nav: https://shibuonsen.net/ -> ['https://shibuonsen.net/guide/day-use-onsen/', 'https://shibuonsen.net/guide/']
+[2026-11-28T13:11:58+09:00] eye read: 旅館一覧 (0 answered)
+[2026-11-28T13:12:03+09:00] eye read: 南信州 昼神温泉公式観光サイト (0 answered)
+[2026-11-28T13:12:08+09:00] eye read: 白骨温泉 (0 answered)
+[2026-11-28T13:12:12+09:00] eye read: 野沢温泉村 (0 answered)
+[2026-11-28T13:12:18+09:00] fact nav: https://www.go-nagano.net/hot-springs-and-relaxation/id19599 -> ['https://www.go-nagano.net/area-guide/', 'https://www.go-nagano.net/travel-guide/']
+[2026-11-28T13:12:18+09:00] eye: groq hit its free limit — resting 65s, other lens keeps going
+[2026-11-28T13:12:20+09:00] eye: gemini answered 503 (transient) — waiting 20s, retrying this lens
+[2026-11-28T13:12:40+09:00] eye: gemini hit its free limit — resting 65s, other lens keeps going
+[2026-11-28T13:12:40+09:00] eye: all lenses resting — waiting 45s
+[2026-11-28T13:13:26+09:00] eye read: Go! NAGANO 長野県公式観光サイト (0 answered)
+[2026-11-28T13:13:29+09:00] fact delivery ready: 7 places read, 0 answered, 0 full matches
+[2026-11-28T13:13:29+09:00] board updated for QUERO Nº 2

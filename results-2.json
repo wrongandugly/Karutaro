@@ -1,1 +1,225 @@
-{}
+{
+ "kind": "fato",
+ "want_number": 2,
+ "want_what": "Onsen em Nagano",
+ "swept_at": "2026-11-28T13:11:29+09:00",
+ "fits": [],
+ "fits_total": 0,
+ "near": [],
+ "near_total": 0,
+ "unconfirmed": [],
+ "unconfirmed_total": 0,
+ "examples": [],
+ "swept": 7,
+ "rejected": 0,
+ "notes": [
+  "1 artigo(s)/blog(s) lidos como CONTEXTO (sem selo): ajudam a achar lugares e contam o clima, mas nunca mudam o veredito — quem manda é a página oficial.",
+  "4 resultado(s) de agregadores (reservas/guias) foram ignorados — o olho lê a página oficial do lugar.",
+  "Cada veredito só vale com o trecho da página ao lado — sem trecho, o Karutaro marca NÃO DIZ. Leitura de 28/11/2026."
+ ],
+ "sources": [
+  {
+   "name": "Páginas oficiais (olho)",
+   "status": "ok",
+   "found": 6
+  },
+  {
+   "name": "Artigos/blogs (contexto, sem selo)",
+   "status": "ok",
+   "found": 1
+  }
+ ],
+ "eye": "on",
+ "criteria": [
+  {
+   "id": "crianca",
+   "label": "Pode crianças?"
+  },
+  {
+   "id": "tatuagem",
+   "label": "Pode tatuagem?"
+  }
+ ],
+ "places": [
+  {
+   "layer": "oficial",
+   "name": "物味湯産手形",
+   "url": "https://www.monomiyusan.jp/",
+   "domain": "www.monomiyusan.jp",
+   "answers": [
+    {
+     "criterion": "crianca",
+     "label": "Pode crianças?",
+     "verdict": "nao_diz",
+     "quote": ""
+    },
+    {
+     "criterion": "tatuagem",
+     "label": "Pode tatuagem?",
+     "verdict": "nao_diz",
+     "quote": ""
+    }
+   ],
+   "read_at": "2026-11-28T13:11:29+09:00",
+   "read_pages": [
+    "https://www.monomiyusan.jp/",
+    "https://www.monomiyusan.jp/faq",
+    "https://www.monomiyusan.jp/guide-camera"
+   ]
+  },
+  {
+   "layer": "oficial",
+   "name": "別所温泉観光協会",
+   "url": "https://www.bessho-spa.jp/",
+   "domain": "www.bessho-spa.jp",
+   "answers": [
+    {
+     "criterion": "crianca",
+     "label": "Pode crianças?",
+     "verdict": "nao_diz",
+     "quote": ""
+    },
+    {
+     "criterion": "tatuagem",
+     "label": "Pode tatuagem?",
+     "verdict": "nao_diz",
+     "quote": ""
+    }
+   ],
+   "read_at": "2026-11-28T13:11:29+09:00",
+   "read_pages": [
+    "https://www.bessho-spa.jp/",
+    "https://www.bessho-spa.jp/sight/guide.html"
+   ]
+  },
+  {
+   "layer": "oficial",
+   "name": "旅館一覧",
+   "url": "https://shibuonsen.net/",
+   "domain": "shibuonsen.net",
+   "answers": [
+    {
+     "criterion": "crianca",
+     "label": "Pode crianças?",
+     "verdict": "nao_diz",
+     "quote": ""
+    },
+    {
+     "criterion": "tatuagem",
+     "label": "Pode tatuagem?",
+     "verdict": "nao_diz",
+     "quote": ""
+    }
+   ],
+   "read_at": "2026-11-28T13:11:29+09:00",
+   "read_pages": [
+    "https://shibuonsen.net/",
+    "https://shibuonsen.net/guide/day-use-onsen/",
+    "https://shibuonsen.net/guide/"
+   ]
+  },
+  {
+   "layer": "oficial",
+   "name": "南信州 昼神温泉公式観光サイト",
+   "url": "https://hirugamionsen.jp/",
+   "domain": "hirugamionsen.jp",
+   "answers": [
+    {
+     "criterion": "crianca",
+     "label": "Pode crianças?",
+     "verdict": "nao_diz",
+     "quote": ""
+    },
+    {
+     "criterion": "tatuagem",
+     "label": "Pode tatuagem?",
+     "verdict": "nao_diz",
+     "quote": ""
+    }
+   ],
+   "read_at": "2026-11-28T13:11:29+09:00",
+   "read_pages": [
+    "https://hirugamionsen.jp/"
+   ]
+  },
+  {
+   "layer": "oficial",
+   "name": "白骨温泉",
+   "url": "https://www.shirahone.org/",
+   "domain": "www.shirahone.org",
+   "answers": [
+    {
+     "criterion": "crianca",
+     "label": "Pode crianças?",
+     "verdict": "nao_diz",
+     "quote": ""
+    },
+    {
+     "criterion": "tatuagem",
+     "label": "Pode tatuagem?",
+     "verdict": "nao_diz",
+     "quote": ""
+    }
+   ],
+   "read_at": "2026-11-28T13:11:29+09:00",
+   "read_pages": [
+    "https://www.shirahone.org/"
+   ]
+  },
+  {
+   "layer": "oficial",
+   "name": "野沢温泉村",
+   "url": "https://www.vill.nozawaonsen.nagano.jp/",
+   "domain": "www.vill.nozawaonsen.nagano.jp",
+   "answers": [
+    {
+     "criterion": "crianca",
+     "label": "Pode crianças?",
+     "verdict": "nao_diz",
+     "quote": ""
+    },
+    {
+     "criterion": "tatuagem",
+     "label": "Pode tatuagem?",
+     "verdict": "nao_diz",
+     "quote": ""
+    }
+   ],
+   "read_at": "2026-11-28T13:11:29+09:00",
+   "read_pages": [
+    "https://www.vill.nozawaonsen.nagano.jp/"
+   ]
+  },
+  {
+   "layer": "artigo",
+   "name": "Go! NAGANO 長野県公式観光サイト",
+   "url": "https://www.go-nagano.net/hot-springs-and-relaxation/id19599",
+   "domain": "www.go-nagano.net",
+   "answers": [
+    {
+     "criterion": "crianca",
+     "label": "Pode crianças?",
+     "verdict": "nao_diz",
+     "quote": ""
+    },
+    {
+     "criterion": "tatuagem",
+     "label": "Pode tatuagem?",
+     "verdict": "nao_diz",
+     "quote": ""
+    }
+   ],
+   "read_at": "2026-11-28T13:11:29+09:00",
+   "read_pages": [
+    "https://www.go-nagano.net/hot-springs-and-relaxation/id19599",
+    "https://www.go-nagano.net/area-guide/",
+    "https://www.go-nagano.net/travel-guide/"
+   ]
+  }
+ ],
+ "answered": 0,
+ "verdict": [
+  "Li 7 páginas oficiais e nenhuma respondeu às suas perguntas — sigo vigiando."
+ ],
+ "eye_errors": {}
+}
