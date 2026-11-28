@@ -30,10 +30,33 @@ def get(url, timeout=60, headers=None):
         return r.read()
 
 
-def fogos(key):
-    """NASA FIRMS: CSV do mundo (VIIRS SNPP, 1 dia). Conta mundo + caixa do Japao."""
-    url = "https://firms.modaps.eosdis.nasa.gov/api/area/csv/%s/VIIRS_SNPP_NRT/world/1" % key
+def _conta_firms(key, fonte):
+    url = "https://firms.modaps.eosdis.nasa.gov/api/area/csv/%s/%s/world/1" % (key, fonte)
     raw = get(url, timeout=120).decode("utf-8", "replace")
+    linhas = raw.splitlines()
+    with open("ceu.log", "a", encoding="utf-8") as f:
+        f.write("[ceu diag] %s -> %d bytes, %d linhas, cabecalho: %s\n"
+                % (fonte, len(raw), len(linhas), (linhas[0][:110] if linhas else "VAZIO")))
+    if not linhas or "latitude" not in linhas[0]:
+        raise ValueError("resposta inesperada da FIRMS (%s)" % fonte)
+    return list(csv.DictReader(io.StringIO(raw)))
+
+
+def fogos(key):
+    """NASA FIRMS: tenta SNPP, NOAA20 e MODIS; usa a primeira fonte com dados."""
+    rows = None
+    for fonte in ("VIIRS_SNPP_NRT", "VIIRS_NOAA20_NRT", "MODIS_NRT"):
+        try:
+            r = _conta_firms(key, fonte)
+        except Exception:
+            continue
+        if r:
+            rows = r
+            break
+        if rows is None:
+            rows = r
+    if rows is None:
+        raise ValueError("FIRMS nao respondeu em nenhuma fonte")
     primeira = raw.splitlines()[0] if raw.splitlines() else ""
     if "latitude" not in primeira:
         # a FIRMS respondeu texto de erro (ex.: chave invalida) em vez de CSV:
