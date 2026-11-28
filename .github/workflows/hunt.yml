@@ -29,6 +29,9 @@ jobs:
       - name: Navegador do Scrapling
         continue-on-error: true
         run: scrapling install
+      - name: Peneira (Trafilatura)
+        continue-on-error: true
+        run: pip install trafilatura
       - name: Intake (issue da pagina -> wants.json)
         if: github.event_name == 'issues'
         env:
