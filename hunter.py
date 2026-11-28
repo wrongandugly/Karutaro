@@ -1538,14 +1538,14 @@ def hunt_fact(want):
         verdict.append(f"Achei: 【{full[0]['name']}】 responde SIM pra tudo "
                        "que você perguntou.")
     elif answered_places:
-        n, m = len(places), len(answered_places)
+        n, m = len(off_places), len(answered_places)
         verdict.append(f"Li {n} página{'s' if n != 1 else ''} "
                        f"oficia{'is' if n != 1 else 'l'} — {m} "
                        f"respondeu às suas perguntas." if m == 1 else
                        f"Li {n} páginas oficiais — {m} responderam às "
                        "suas perguntas.")
     else:
-        verdict.append(f"Li {len(places)} páginas oficiais e nenhuma "
+        verdict.append(f"Li {len(off_places)} páginas oficiais e nenhuma "
                        "respondeu às suas perguntas — sigo vigiando.")
     for p in answered_places[:3]:
         parts = " · ".join(f"{a['label'].replace('?', '')}: {vlabel[a['verdict']]}"
