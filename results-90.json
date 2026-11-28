@@ -1,0 +1,37 @@
+{
+ "kind": "vigia",
+ "want_number": 90,
+ "want_what": "Teste do furtivo: artigo da web-komachi sobre banho em Nagano",
+ "swept_at": "2026-11-28T13:50:18+09:00",
+ "fits": [],
+ "fits_total": 0,
+ "near": [],
+ "near_total": 0,
+ "unconfirmed": [],
+ "unconfirmed_total": 0,
+ "examples": [],
+ "swept": 0,
+ "rejected": 0,
+ "notes": [],
+ "sources": [],
+ "criteria": [
+  {
+   "id": "nome",
+   "label": "Nome do lugar"
+  },
+  {
+   "id": "preco",
+   "label": "Preço"
+  },
+  {
+   "id": "regras",
+   "label": "Regras"
+  }
+ ],
+ "places": [],
+ "answered": 0,
+ "eye": "on",
+ "verdict": [
+  "Não consegui ler a página vigiada (https://www.web-komachi.com/?p=311022)."
+ ]
+}

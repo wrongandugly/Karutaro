@@ -2,5 +2,9 @@
  "www.hoshino-area.jp": {
   "ok": 3,
   "blocked": 0
+ },
+ "www.web-komachi.com": {
+  "ok": 0,
+  "blocked": 1
  }
 }
