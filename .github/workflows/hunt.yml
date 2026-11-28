@@ -44,7 +44,7 @@ jobs:
         run: |
           git config user.name "karutaro"
           git config user.email "karutaro@wrongandugly.local"
-          for f in wants.json board.json hunter.log facts.json rep.json changes.json heartbeat.json watch.json shout-log.json; do [ -e "$f" ] && git add "$f"; done
+          for f in wants.json board.json hunter.log facts.json rep.json changes.json heartbeat.json watch.json shout-log.json plans.json track.json; do [ -e "$f" ] && git add "$f"; done
           for f in results-*.json; do [ -e "$f" ] && git add "$f"; done
           git commit -m "caca: entrega atualizada" || echo "sem mudancas"
           git push
