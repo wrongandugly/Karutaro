@@ -1,0 +1,44 @@
+name: karutaro-coleta
+
+on:
+  schedule:
+    - cron: "30 0 * * 1"
+  push:
+    paths:
+      - coleta-request.json
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: karutaro-coleta
+  cancel-in-progress: false
+
+jobs:
+  coleta:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Instala pecas da leitura (tolerante)
+        continue-on-error: true
+        run: |
+          pip install curl_cffi trafilatura
+      - name: A coleta semanal
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python3 coleta.py
+      - name: Grava o caderno
+        run: |
+          git config user.name "karutaro"
+          git config user.email "karutaro@wrongandugly.github.io"
+          for f in coleta-cx5-ke.json coleta.log; do
+            [ -e "$f" ] && git add "$f"
+          done
+          git diff --cached --quiet || git commit -m "coleta semanal de precos"
+          git push
