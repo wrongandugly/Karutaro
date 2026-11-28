@@ -26,6 +26,10 @@ CHANGES_FILE = BASE / "changes.json"
 HEART_FILE = BASE / "heartbeat.json"
 WATCH_FILE = BASE / "watch.json"
 SHOUTLOG_FILE = BASE / "shout-log.json"
+PLANS_FILE = BASE / "plans.json"
+TRACK_FILE = BASE / "track.json"
+GABARITO_FILE = BASE / "gabarito.json"
+SELFTEST_FILE = BASE / "selftest.json"
 GEMINI_KEY = os.environ.get("GEMINI_API_KEY", "")
 GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-3.8-flash")
 GROQ_KEY = os.environ.get("GROQ_API_KEY", "")
@@ -992,6 +996,7 @@ def hunt(want):
     for it in fits[:10] + near + unconfirmed + examples:
         if it["source"] == "Up Garage":
             enrich_upgarage(it)
+    track_shouts = _track_update(want, fits)
     verdict = build_verdict(want, profile, fits, near, examples)
 
     notes = []
@@ -1045,6 +1050,7 @@ def hunt(want):
         "rejected": rejected,
         "sources": source_status,
         "notes": notes,
+        "shout": track_shouts,
         "verdict": verdict,
     }
     log(f"delivery ready: {len(fits)} fits / {near_total} near / "
@@ -1388,7 +1394,39 @@ def web_search(query, limit=10):
 
 
 def _squash(s):
-    return re.sub(r"\\s+", "", (s or "")).lower()
+    import unicodedata
+    s = unicodedata.normalize("NFKC", s or "")
+    return re.sub(r"\s+", "", s).lower()
+
+
+def _quote_ok(quote, squashed_text):
+    """The leash, drift-tolerant (2026-11-28, round 12's lesson):
+    the eye copies quotes the way a person copies by hand - a
+    particle slips, a digit changes width. Exact containment
+    called those true answers inventions and killed them. Now:
+    exact match passes at once; otherwise a 12-char anchor of the
+    quote must exist in the page and the page's own passage,
+    aligned on that anchor, must be >=85% identical to the quote.
+    An invented quote shares no long anchor with the page and
+    still cannot pass. Short quotes stay strict (exact only)."""
+    q = _squash(quote)
+    if not q:
+        return False
+    if q in squashed_text:
+        return True
+    if len(q) < 16:
+        return False
+    import difflib
+    for i in range(0, len(q) - 11, 4):
+        j = squashed_text.find(q[i:i + 12])
+        if j < 0:
+            continue
+        start = max(0, j - i)
+        seg = squashed_text[start:start + len(q)]
+        if len(seg) >= len(q) * 0.8 and \
+                difflib.SequenceMatcher(None, q, seg).ratio() >= 0.85:
+            return True
+    return False
 
 
 def _excerpts(text, criteria, budget=11000):
@@ -1462,9 +1500,10 @@ def eye_read_page(url, page_text, criteria):
     for c in criteria:
         a = answers.get(c["id"], {"verdict": "nao_diz", "quote": ""})
         if a["verdict"] != "nao_diz":
-            if not a["quote"] or _squash(a["quote"]) not in squashed:
+            if not _quote_ok(a["quote"], squashed):
                 log(f"eye leash: criterion {c['id']} downgraded to "
-                    "nao_diz - the quote was not in the read text")
+                    "nao_diz - quote not found in the page: "
+                    f"{(a['quote'] or '')[:120]}")
                 a = {"verdict": "nao_diz", "quote": ""}
         out.append({"criterion": c["id"], "label": c["label"],
                     "verdict": a["verdict"], "quote": a["quote"]})
@@ -1738,7 +1777,7 @@ def hunt_watch(want):
         return base
     base["eye"] = "on"
     try:
-        _, criteria = eye_plan(want)
+        _, criteria = _plan_for(want)
     except Exception as e:
         base["verdict"] = ["O olho piscou ao planejar a vigia."]
         base["eye_error"] = _err_detail(e)
@@ -1855,6 +1894,128 @@ def _heartbeat():
         pass
 
 
+def _plan_for(want):
+    """The eye plans ONCE per want (same what+details = same plan,
+    forever): stable criterion ids across runs - the facts library
+    and the diffs depend on them - and no quota burned re-planning
+    what is already planned."""
+    key = (f"{want.get('number')}|{want.get('what')}|"
+           f"{want.get('details') or ''}|{want.get('url') or ''}")
+    try:
+        plans = json.loads(PLANS_FILE.read_text(encoding="utf-8"))
+    except Exception:
+        plans = {}
+    if key in plans:
+        p = plans[key]
+        log("eye plan: cached (planned once, reused)")
+        return p["queries"], p["criteria"]
+    queries, criteria = eye_plan(want)
+    plans[key] = {"queries": queries, "criteria": criteria}
+    try:
+        PLANS_FILE.write_text(json.dumps(plans, ensure_ascii=False,
+                              indent=1), encoding="utf-8")
+    except Exception:
+        pass
+    return queries, criteria
+
+
+def _track_update(want, fits):
+    """Living memory for products: remember every fit by URL and
+    diff each sweep - a NEW fit, a price DROP and a disappearance
+    (probably sold) are shouts. The first sweep of a want only
+    records (no shout spam). Returns shout strings."""
+    try:
+        track = json.loads(TRACK_FILE.read_text(encoding="utf-8"))
+    except Exception:
+        track = {}
+    key = str(want.get("number"))
+    old = track.get(key, {})
+    first_time = not old
+    now = datetime.now(JST).isoformat(timespec="seconds")
+    cur, shouts = {}, []
+    for it in fits:
+        u = it.get("url")
+        if not u:
+            continue
+        price = it.get("price")
+        cur[u] = {"title": it.get("title", ""), "price": price,
+                  "first": old.get(u, {}).get("first", now),
+                  "last": now, "gone": False}
+        o = old.get(u)
+        if first_time:
+            continue
+        label = (it.get("title") or "")[:55]
+        if o is None or o.get("gone"):
+            shouts.append(f"QUERO Nº {key}: fit NOVO - {label}"
+                          + (f" (¥{price:,})" if price else ""))
+        elif o.get("price") and price and price < o["price"]:
+            shouts.append(f"QUERO Nº {key}: preço CAIU - {label}: "
+                          f"¥{o['price']:,} → ¥{price:,}")
+    if not first_time:
+        for u, o in old.items():
+            if u not in cur and not o.get("gone"):
+                o["gone"] = True
+                o["gone_at"] = now
+                cur[u] = o
+                shouts.append(
+                    f"QUERO Nº {key}: um fit sumiu (pode ter "
+                    f"vendido) - {(o.get('title') or '')[:50]}")
+    track[key] = cur
+    try:
+        TRACK_FILE.write_text(json.dumps(track, ensure_ascii=False,
+                              indent=1), encoding="utf-8")
+    except Exception:
+        pass
+    if shouts:
+        log(f"track: {len(shouts)} novidade(s) no QUERO Nº {key}")
+    return shouts
+
+
+def selftest():
+    """The robot grades itself against the answer key (gabarito):
+    hand-verified pages whose verdicts were confirmed by reading
+    them. A failure means the eye/leash regressed - shout it."""
+    if not GABARITO_FILE.exists():
+        log("selftest: no gabarito.json - nothing to grade")
+        return 0
+    cases = json.loads(GABARITO_FILE.read_text(encoding="utf-8"))
+    results, fails = [], 0
+    for case in cases:
+        text = _read_url_text(case["url"])
+        if len(text) < 200:
+            results.append({"name": case["name"], "ok": False,
+                            "why": "pagina nao leu"})
+            fails += 1
+            continue
+        _, answers = eye_read_page(
+            case["url"], _excerpts(text, case["criteria"]),
+            case["criteria"])
+        got = {a["criterion"]: a["verdict"] for a in answers}
+        bad = {k: [v, got.get(k)] for k, v in
+               case["expect"].items() if got.get(k) != v}
+        results.append({"name": case["name"], "ok": not bad,
+                        "diff": bad})
+        if bad:
+            fails += 1
+        log(f"selftest: {case['name']} -> "
+            f"{'OK' if not bad else 'ERROU ' + str(bad)}")
+        eye_pace()
+    out = {"at": datetime.now(JST).isoformat(timespec="seconds"),
+           "passed": len(cases) - fails, "total": len(cases),
+           "results": results}
+    try:
+        SELFTEST_FILE.write_text(json.dumps(out, ensure_ascii=False,
+                                 indent=1), encoding="utf-8")
+    except Exception:
+        pass
+    _heartbeat()
+    if fails:
+        _shout([f"AUTO-TESTE: o olho errou {fails} de {len(cases)} "
+                "casos do gabarito - a leitura regrediu, investigar"])
+    log(f"selftest: {len(cases) - fails}/{len(cases)} certos")
+    return 0
+
+
 def hunt_fact(want):
     """Fact/place hunt: search official pages, read them with the eye,
     verify every quote, deliver per-place verdicts + the library."""
@@ -1889,7 +2050,7 @@ def hunt_fact(want):
         return base
     base["eye"] = "on"
     try:
-        queries, criteria = eye_plan(want)
+        queries, criteria = _plan_for(want)
     except Exception as e:
         log(f"eye plan failed: {type(e).__name__}: {e}")
         base["eye_error"] = _err_detail(e)
@@ -1973,6 +2134,45 @@ def hunt_fact(want):
             if "eye_error" not in base:
                 base["eye_error"] = _err_detail(e)
         eye_pace()  # free-tier pace between eye calls
+
+    # stage 2 (the mix at work): article-layer pages NAME places -
+    # hunt each name's OWN official page and read that instead.
+    seen_hosts = {urllib.parse.urlparse(p["url"]).netloc.lower()
+                  for p in places}
+    named = []
+    for p in places:
+        if p.get("layer") == "artigo" and p["name"] \
+                and len(p["name"]) >= 3 \
+                and not p["name"].endswith("県"):
+            if p["name"] not in named:
+                named.append(p["name"])
+    for nm in named[:2]:
+        try:
+            hits = web_search(f"{nm} 公式", limit=6)
+            for h in hits:
+                host = urllib.parse.urlparse(
+                    h["url"]).netloc.lower()
+                if host in seen_hosts or any(
+                        a in host for a in AGGREGATOR_HOSTS):
+                    continue
+                if candidate_layer(h) != "oficial":
+                    continue
+                text = _read_url_text(h["url"])
+                if len(text) < 200:
+                    continue
+                name2, answers2 = eye_read_page(
+                    h["url"], _excerpts(text, criteria), criteria)
+                places.append({
+                    "layer": "oficial", "name": name2 or h["title"],
+                    "url": h["url"], "domain": host,
+                    "answers": answers2, "read_at": now,
+                    "read_pages": [h["url"]]})
+                seen_hosts.add(host)
+                log(f"stage2: '{nm}' -> official page {h['url']}")
+                eye_pace()
+                break
+        except Exception as e:
+            log(f"stage2 failed for '{nm}': {type(e).__name__}")
 
     off_places = [p for p in places if p.get("layer") == "oficial"]
     answered_places = [p for p in off_places
@@ -2112,4 +2312,6 @@ def main():
 
 
 if __name__ == "__main__":
+    if "--selftest" in sys.argv:
+        sys.exit(selftest())
     sys.exit(main())
