@@ -1,26 +1,26 @@
 {
- "gerado_em": "2026-11-28 22:10 JST",
+ "gerado_em": "2026-11-28 23:13 JST",
  "fogos": {
-  "mundo": 10904,
+  "mundo": 19879,
   "japao": 10,
   "fonte": "NASA FIRMS · VIIRS · ultimas 24h"
  },
  "avioes": {
-  "mundo": 7697,
-  "japao": 157,
+  "mundo": 8942,
+  "japao": 71,
   "fonte": "OpenSky · ao vivo"
  },
  "sismo": {
-  "n": 9,
-  "maior_mag": 5.2,
-  "maior_local": "93 km W of San Antonio de los Cobres, Argentina",
+  "n": 10,
+  "maior_mag": 6.7,
+  "maior_local": "62 km NNW of Yelizovo, Russia",
   "fonte": "USGS · M4.5+ · 24h"
  },
  "iss": {
-  "lat": -30.3,
-  "lon": -85.9,
-  "alt_km": 429,
-  "vel_kmh": 27550,
+  "lat": -18.8,
+  "lon": 121.2,
+  "alt_km": 426,
+  "vel_kmh": 27555,
   "fonte": "wheretheiss.at · ISS agora"
  }
 }

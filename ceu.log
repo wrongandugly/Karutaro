@@ -15,3 +15,6 @@
 [ceu diag] VIIRS_SNPP_NRT -> 122 bytes, 1 linhas, cabecalho: latitude,longitude,bright_ti4,scan,track,acq_date,acq_time,satellite,instrument,confidence,version,bright_ti5,
 [ceu diag] VIIRS_NOAA20_NRT -> 906359 bytes, 10905 linhas, cabecalho: latitude,longitude,bright_ti4,scan,track,acq_date,acq_time,satellite,instrument,confidence,version,bright_ti5,
 [ceu 2026-11-28T22:10] fogos=10904 avioes=7697 sismo=9 iss=True
+[ceu diag] VIIRS_SNPP_NRT -> 122 bytes, 1 linhas, cabecalho: latitude,longitude,bright_ti4,scan,track,acq_date,acq_time,satellite,instrument,confidence,version,bright_ti5,
+[ceu diag] VIIRS_NOAA20_NRT -> 1655346 bytes, 19880 linhas, cabecalho: latitude,longitude,bright_ti4,scan,track,acq_date,acq_time,satellite,instrument,confidence,version,bright_ti5,
+[ceu 2026-11-28T23:13] fogos=19879 avioes=8942 sismo=10 iss=True
