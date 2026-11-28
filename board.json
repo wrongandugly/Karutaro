@@ -9,7 +9,7 @@
   "active": true,
   "via_issue": 1,
   "kind": "fato",
-  "note": "teste do olho — rodada 10 (mix com hierarquia)"
+  "note": "rodada 11 — pacote completo (memoria viva testa a Tonbo)"
  },
  "results": {
   "kind": "fato",
@@ -256,7 +256,8 @@
    "active": true,
    "via_issue": 1,
    "kind": "fato",
-   "note": "teste do olho — rodada 10 (mix com hierarquia)"
+   "note": "rodada 11 — pacote completo (memoria viva testa a Tonbo)"
   }
- ]
+ ],
+ "changes": []
 }

@@ -205,3 +205,7 @@
 [2026-11-28T13:13:26+09:00] eye read: Go! NAGANO 長野県公式観光サイト (0 answered)
 [2026-11-28T13:13:29+09:00] fact delivery ready: 7 places read, 0 answered, 0 full matches
 [2026-11-28T13:13:29+09:00] board updated for QUERO Nº 2
+[2026-11-28T13:33:04+09:00] revisit ok (sem mudanca): 星野温泉 トンボの湯
+[2026-11-28T13:33:07+09:00] === QUERO Nº 2: Onsen em Nagano ===
+[2026-11-28T13:33:07+09:00] fact delivery still fresh (0.4h) — facts change slowly; skipping the re-read
+[2026-11-28T13:33:07+09:00] board updated for QUERO Nº 2
